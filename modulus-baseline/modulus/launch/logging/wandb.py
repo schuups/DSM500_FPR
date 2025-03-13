@@ -47,6 +47,7 @@ def initialize_wandb(
     config=None,
     mode: Literal["offline", "online", "disabled"] = "offline",
     results_dir: str = None,
+    experiment_desc: str = "",
 ):
     """Function to initialize wandb client with the weights and biases server.
 
@@ -92,8 +93,9 @@ def initialize_wandb(
         if group is None:
             group = create_ddp_group_tag()
         start_time = datetime.now().astimezone()
-        time_string = start_time.strftime("%m/%d/%y_%H:%M:%S")
-        wandb_name = f"{name}_Process_{DistributedManager().rank}_{time_string}"
+        time_string = start_time.strftime("%y/%m/%d_%H:%M:%S")
+        slurm_job_id = int(os.getenv("SLURM_JOB_ID", 0))
+        wandb_name = f"{name}_{slurm_job_id}_{time_string}_{experiment_desc}"
     else:
         start_time = datetime.now().astimezone()
         time_string = start_time.strftime("%m/%d/%y_%H:%M:%S")

@@ -86,7 +86,7 @@ def silu_backward_for(
         contiguity=nvfuser.compute_contiguity(size, stride),
         dtype=dtype,
     )
-    one = fd.define_constant(1.0)
+    one = fd.define_scalar(1.0)
 
     # y = sigmoid(x)
     y = fd.ops.sigmoid(x)
@@ -133,7 +133,7 @@ def silu_double_backward_for(
         contiguity=nvfuser.compute_contiguity(size, stride),
         dtype=dtype,
     )
-    one = fd.define_constant(1.0)
+    one = fd.define_scalar(1.0)
 
     # y = sigmoid(x)
     y = fd.ops.sigmoid(x)
@@ -189,8 +189,8 @@ def silu_triple_backward_for(
         contiguity=nvfuser.compute_contiguity(size, stride),
         dtype=dtype,
     )
-    one = fd.define_constant(1.0)
-    two = fd.define_constant(2.0)
+    one = fd.define_scalar(1.0)
+    two = fd.define_scalar(2.0)
 
     # y = sigmoid(x)
     y = fd.ops.sigmoid(x)

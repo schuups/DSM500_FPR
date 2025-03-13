@@ -20,6 +20,7 @@ import netCDF4 as nc
 import torch
 from torch import Tensor
 from torch.nn.functional import interpolate
+import numpy as np
 
 from .graph_utils import deg2rad
 
@@ -57,7 +58,9 @@ class StaticData:
         Tensor
             Land-sea mask with shape (1, 1, lat, lon).
         """
-        ds = torch.tensor(nc.Dataset(self.lsm_path)["lsm"], dtype=torch.float32)
+        raw_data = nc.Dataset(self.lsm_path)["lsm"]
+        numpy_array = np.array(raw_data)
+        ds = torch.tensor(numpy_array, dtype=torch.float32)
         ds = torch.unsqueeze(ds, dim=0)
         ds = interpolate(ds, size=(self.lat.size(0), self.lon.size(0)), mode="bilinear")
         return ds
@@ -75,7 +78,9 @@ class StaticData:
         Tensor
             Normalized geopotential with shape (1, 1, lat, lon).
         """
-        ds = torch.tensor(nc.Dataset(self.geop_path)["z"], dtype=torch.float32)
+        raw_data = nc.Dataset(self.geop_path)["z"]
+        numpy_array = np.array(raw_data)
+        ds = torch.tensor(numpy_array, dtype=torch.float32)
         ds = torch.unsqueeze(ds, dim=0)
         ds = interpolate(ds, size=(self.lat.size(0), self.lon.size(0)), mode="bilinear")
         if normalize:

@@ -17,7 +17,7 @@
 import torch
 
 from contextlib import nullcontext
-from torch.cuda.amp import GradScaler
+from torch.amp import GradScaler
 from torch.nn.parallel import DistributedDataParallel
 import numpy as np
 import time
@@ -258,7 +258,7 @@ class GraphCastTrainer(BaseTrainer):
             schedulers=[scheduler1, scheduler2, scheduler3],
             milestones=[cfg.num_iters_step1, cfg.num_iters_step1 + cfg.num_iters_step2],
         )
-        self.scaler = GradScaler(enabled=self.enable_scaler)
+        self.scaler = GradScaler('cuda', enabled=self.enable_scaler)
 
         # load checkpoint
         if dist.world_size > 1:
@@ -336,6 +336,7 @@ def main(cfg: DictConfig) -> None:
             name=HydraConfig.get().job.name,
             group="group",
             mode=cfg.wb_mode,
+            experiment_desc=cfg.wb_experiment_desc,
         )  # Wandb logger
     logger = PythonLogger("main")  # General python logger
     rank_zero_logger = RankZeroLoggingWrapper(logger, dist)  # Rank 0 logger
