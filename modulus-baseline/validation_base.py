@@ -46,7 +46,7 @@ class Validation:
         }
         self.val_datapipe = ERA5HDF5Datapipe(
             data_dir=os.path.join(cfg.dataset_path, "test"),
-            stats_dir=os.path.join(cfg.dataset_path, "stats"),
+            stats_dir=os.path.join(cfg.stats_path),
             channels=[i for i in range(cfg.num_channels_climate)],
             latlon_resolution=cfg.latlon_res,
             interpolation_type=self.interpolation_type,

@@ -10,4 +10,4 @@ outputs
 venv_**
 launch.log
 inference/artifacts
-data/FCN_ERA5_data_v0
+**.h5

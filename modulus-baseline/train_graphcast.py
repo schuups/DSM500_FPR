@@ -191,7 +191,7 @@ class GraphCastTrainer(BaseTrainer):
         self.channels_list = [i for i in range(cfg.num_channels_climate)]
         self.datapipe = DataPipe(
             data_dir=to_absolute_path(os.path.join(cfg.dataset_path, "train")),
-            stats_dir=to_absolute_path(os.path.join(cfg.dataset_path, "stats")),
+            stats_dir=to_absolute_path(os.path.join(cfg.stats_path)),
             channels=self.channels_list,
             latlon_resolution=cfg.latlon_res,
             interpolation_type=self.interpolation_type,
@@ -331,9 +331,9 @@ def main(cfg: DictConfig) -> None:
     # initialize loggers
     if dist.rank == 0:
         initialize_wandb(
-            project="GraphCast",
-            entity="Modulus",
-            name=f"GraphCast-{HydraConfig.get().job.name}",
+            project="DSM500_FPR",
+            entity=cfg.wb_entity,
+            name=HydraConfig.get().job.name,
             group="group",
             mode=cfg.wb_mode,
         )  # Wandb logger
@@ -422,7 +422,7 @@ def main(cfg: DictConfig) -> None:
                     ) // cfg.step_change_freq + 2
                     trainer.datapipe = DataPipe(
                         data_dir=os.path.join(cfg.dataset_path, "train"),
-                        stats_dir=os.path.join(cfg.dataset_path, "stats"),
+                        stats_dir=os.path.join(cfg.stats_path),
                         channels=trainer.channels_list,
                         latlon_resolution=cfg.latlon_res,
                         interpolation_type=trainer.interpolation_type,

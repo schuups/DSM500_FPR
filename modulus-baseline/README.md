@@ -1,5 +1,6 @@
 # Setup notes
 
+## Copying what necessary from the modulus codebase
 Files are carefully copied from the original modulus cloned files. This is done to select just what is required, thus supporting a consise base for interested readers to explore.
 
 ```sh
@@ -77,4 +78,23 @@ cp $ORIGINAL_BASE_PATH/modulus/datapipes/meta.py modulus/datapipes/
 cp $ORIGINAL_BASE_PATH/modulus/datapipes/climate/synthetic.py modulus/datapipes/climate/
 cp $ORIGINAL_BASE_PATH/modulus/utils/graphcast/data_utils.py modulus/utils/graphcast/
 cp $ORIGINAL_BASE_PATH/examples/weather/graphcast/conf/config.yaml conf/
+cp $ORIGINAL_BASE_PATH/modulus/models/layers/fused_silu.py modulus/models/layers/
+cp $ORIGINAL_BASE_PATH/modulus/models/__init__.py modulus/models/
+cp $ORIGINAL_BASE_PATH/modulus/__init__.py modulus/
+```
+
+## Running the code
+
+### At CLI
+
+It could be that for development purposes is necessary to run a training from cli (single node).
+
+```sh
+python -m torch.distributed.run --nnodes=1 --nproc_per_node=2 train_graphcast.py
+```
+
+### Via workload manager
+
+```sh
+sbatch train_graphcast.sbatch
 ```
