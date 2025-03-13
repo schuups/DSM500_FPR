@@ -81,7 +81,21 @@ source /iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/venv_arm64/bin/activate
 
 ## Install Modulus from downloaded files
 ## Together with the 'mv' appended above, this overwrites the version persent in the container)
-pip install -e /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-a5275d8
+# pip install -e /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-a5275d8
+# The above is not desired anymore, as the experiments should be self contained (required files are copied manually from the modulus codebase)
+fix="mv /usr/local/lib/python3.10/dist-packages/modulus /usr/local/lib/python3.10/dist-packages/original_modulus 2>/dev/null"
+echo $fix >> /iopsstor/scratch/cscs/stefschu/DSM500/github/venv_arm64/bin/activate
+
+# As a result, the following is expected:
+(venv_arm64) root@clariden-ln001:/iopsstor/scratch/cscs/stefschu/DSM500_FPR# python
+Python 3.10.12 (main, Sep 11 2024, 15:47:36) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import modulus
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'modulus'
+>>>
+
 ## At this point the following command should print 0.10.0a0, before it'd have been 0.9.0
 ## python -c "import modulus; print(modulus.__version__)"
 
