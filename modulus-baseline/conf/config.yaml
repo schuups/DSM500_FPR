@@ -90,7 +90,7 @@ num_val_spy: 3              # Number of samples per year used as the initial con
 num_history: 0              # Number of historical (previous time steps) to use. With history=1, the model uses t-1 and t to predict t+1.
 use_cos_zenith: true        # If true, uses cosine zenith angle as additional channel(s). It can replace the total incident solar radiation.
 dt: 6.0                     # Time in hours between each timestep in the dataset. A dt of 6.0 means four timesteps per day.
-start_year: 1980            # Start year of the dataset, used in computing the cosine zenith angle.
+start_year: 1979            # Start year of the dataset, used in computing the cosine zenith angle.
 stride: 1                   # Number of steps between input and output variables. For example, if data is every 6 hours, stride 1 = 6 hour delta t, and stride 2 = 12 hours delta t.
 use_time_of_year_index: true  # If true, the dataloader also gives the index of the sample for calculating the time of day and year progress.
 

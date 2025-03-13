@@ -22,6 +22,29 @@
             "r_850",
             "tcwv",
             "sst"
-        ]
+        ],
+        "channel_labels": [
+             "10m_u_component_of_wind",
+             "10m_v_component_of_wind",
+             "2m_temperature",
+             "surface_pressure",
+             "mean_sea_level_pressure",
+             "temperature_at_850hPa",
+             "u_component_of_wind_at_1000hPa",
+             "v_component_of_wind_at_1000hPa",
+             "geopotential_at_1000hPa",
+             "u_component_of_wind_at_850hPa",
+             "v_component_of_wind_at_850hPa",
+             "geopotential_at_850hPa",
+             "u_component_of_wind_at_500hPa",
+             "v_component_of_wind_at_500hPa",
+             "geopotential_at_500hPa",
+             "temperature_at_500hPa",
+             "geopotential_at_50hPa",
+             "relative_humidity_at_500hPa",
+             "relative_humidity_at_850hPa",
+             "total_column_water_vapour",
+             "sea_surface_temperature"
+         ]
     }
 }
