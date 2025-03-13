@@ -1,0 +1,13 @@
+**.ipynb_checkpoints
+**.sqsh
+*.out
+*.png
+__pycache__
+core_*
+outputs
+**/checkpoints
+**/wandb
+venv_**
+launch.log
+inference/artifacts
+data/FCN_ERA5_data_v0
