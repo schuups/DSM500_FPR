@@ -67,7 +67,7 @@ def main():
 
         global_means = global_means.astype(np.float32)
         global_means = global_means.reshape(1, -1, 1, 1)
-        np.save(f"/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/00_stat_files_creation/data/global_means.npy", global_means)
+        np.save(f"/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/00_stat_files_creation/data/global_means.npy", global_means)
         print()
 
         del aggregated_means 
@@ -76,7 +76,7 @@ def main():
     comm.barrier()    
 
     # Compute stddev
-    global_means = np.load(f"/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/00_stat_files_creation/data/global_means.npy")
+    global_means = np.load(f"/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/00_stat_files_creation/data/global_means.npy")
     channel_mean = global_means.squeeze()[channel_id]
 
     local_parts = list()
@@ -125,7 +125,7 @@ def main():
 
         global_stddevs = global_stddevs.astype(np.float32)
         global_stddevs = global_stddevs.reshape(1, -1, 1, 1)
-        np.save(f"/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/00_stat_files_creation/data/global_stds.npy", global_stddevs)
+        np.save(f"/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/00_stat_files_creation/data/global_stds.npy", global_stddevs)
 
 if __name__ == "__main__":
     main()

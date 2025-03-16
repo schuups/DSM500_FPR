@@ -1,3 +1,3 @@
 # DSM500 regarding NVIDIA Modulus's GraphCast PyTorch re-implementation
 
-This repository contains a streamlined version of the code, scripts and results from the DSM500 project execution, providing clear, concise insights and reproducibility information.
+This repository contains a streamlined version of the code, scripts and results from the DSM500 project execution, providing clear, concise insights and reproducibility information - that matches and supports the Final Project Report reading flow. Given the refactoring, it might be that in the movement of files from the old repository some file paths might have not been updated. This might be the case in particular for notebooks. Nonetheless, the logic is still valid.

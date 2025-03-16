@@ -2,7 +2,7 @@
 
 ## Download data from CDS
 ```sh
-cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/03_static_files_download/data
+cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/03_static_files_download/data
 
 # Query CDS as per printscreens
 
@@ -18,6 +18,6 @@ mv 8a2fe8bcf6f938cf4c33c43dd45a9505.nc geopotential.nc
 mkdir -p /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/static
 cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/static
 
-ln -s /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/03_static_files_download/data/geopotential.nc geopotential.nc
-ln -s /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/03_static_files_download/data/land_sea_mask.nc land_sea_mask.nc
+ln -s /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/03_static_files_download/data/geopotential.nc geopotential.nc
+ln -s /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/03_static_files_download/data/land_sea_mask.nc land_sea_mask.nc
 ```

@@ -1,1 +1,1 @@
-/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/baseline/03_static_files_download/data/geopotential.nc
+/iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/03_static_files_download/data/geopotential.nc
