@@ -6,7 +6,7 @@ Files are carefully copied from the original modulus cloned files. This is done 
 ```sh
 ORIGINAL_BASE_PATH=/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-a5275d8
 
-cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline
+cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run
 
 cp $ORIGINAL_BASE_PATH/examples/weather/graphcast/train_graphcast.py .
 

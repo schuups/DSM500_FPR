@@ -364,7 +364,7 @@ def main(cfg: DictConfig) -> None:
     trainer = GraphCastTrainer(cfg, dist, rank_zero_logger)
     start = time.time()
     rank_zero_logger.info("Training started...")
-    loss_agg, iter, tagged_iter, num_rollout_steps = 0, trainer.iter_init + 1, 1, 1
+    iter, tagged_iter, num_rollout_steps = trainer.iter_init + 1, 1, 1
     terminate_training, finetune, update_dataloader = False, False, False
 
     with torch.autograd.profiler.emit_nvtx() if cfg.profile else nullcontext():
@@ -475,16 +475,19 @@ def main(cfg: DictConfig) -> None:
 
                 # training step
                 loss = trainer.train(invar_cat, outvar)
-                if dist.rank == 0:
-                    loss_agg += loss.detach().cpu()
+                loss = loss.detach().cpu()
 
                 # validation
                 if trainer.validation and iter % cfg.val_freq == 0:
                     # free up GPU memory
                     del invar, invar_cat, outvar
                     torch.cuda.empty_cache()
+                    # Generate plot at the first validation step and every val_images_freq steps
+                    generate_plots = (iter == cfg.val_freq) or (iter % cfg.val_images_freq == 0)
                     error = trainer.validation.step(
-                        channels=list(np.arange(cfg.num_channels_val)), iter=iter
+                        channels=list(np.arange(cfg.num_channels_val)), 
+                        iter=iter,
+                        generate_plots=generate_plots 
                     )
                     logger.log(f"iteration {iter}, Validation MSE: {error:.04f}")
                     wandb.log(
@@ -497,7 +500,7 @@ def main(cfg: DictConfig) -> None:
                 if dist.world_size > 1:
                     torch.distributed.barrier()
 
-                # print logs and save checkpoint
+                # save checkpoint
                 if dist.rank == 0 and iter % cfg.save_freq == 0:
                     save_checkpoint(
                         to_absolute_path(cfg.ckpt_path),
@@ -508,20 +511,21 @@ def main(cfg: DictConfig) -> None:
                         epoch=iter,
                     )
                     logger.info(f"Saved model on rank {dist.rank}")
+
+                # print logs
+                if dist.rank == 0:
                     logger.log(
-                        f"iteration: {iter}, loss: {loss_agg/cfg.save_freq:10.3e}, \
-                            time per iter: {(time.time()-start)/cfg.save_freq:10.3e}"
+                        f"iteration: {iter}, loss: {loss:10.3e}, \
+                            time per iter: {(time.time()-start):10.3e}"
                     )
-                    loss_all = loss_agg / cfg.save_freq
                     if dist.rank == 0:
                         wandb.log(
                             {
-                                "loss": loss_all,
+                                "loss": loss,
                                 "learning_rate": trainer.scheduler.get_last_lr()[0],
                             },
                             step=iter,
                         )
-                    loss_agg = 0
                     start = time.time()
                 iter += 1
 
@@ -549,10 +553,6 @@ def main(cfg: DictConfig) -> None:
                             iter,
                         )
                         logger.info(f"Saved model on rank {dist.rank}")
-                        logger.log(
-                            f"iteration: {iter}, loss: {loss_agg/cfg.save_freq:10.3e}, \
-                                time per iter: {(time.time()-start)/cfg.save_freq:10.3e}"
-                        )
                     terminate_training = True
                     break
             if terminate_training:

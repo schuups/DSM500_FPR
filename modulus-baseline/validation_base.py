@@ -70,7 +70,7 @@ class Validation:
         self.num_samples_per_year_train = cfg.num_samples_per_year_train
 
     @torch.no_grad()
-    def step(self, channels=[0, 1, 2], iter=0, time_idx=None):
+    def step(self, channels=[0, 1, 2], iter=0, time_idx=None, generate_plots=True):
         torch.cuda.nvtx.range_push("Validation")
         os.makedirs(self.val_dir, exist_ok=True)
         loss_epoch = 0
@@ -127,6 +127,9 @@ class Validation:
             loss_epoch += torch.mean(torch.pow(pred - outvar, 2))
             torch.cuda.nvtx.range_pop()
 
+            if not generate_plots:
+                continue
+            
             pred = pred.to(torch.float32).cpu().numpy()
             outvar = outvar.to(torch.float32).cpu().numpy()
 
