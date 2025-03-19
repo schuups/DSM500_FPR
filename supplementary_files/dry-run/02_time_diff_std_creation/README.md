@@ -17,7 +17,7 @@ sbatch compute_time_diff_std.sbatch
 ## Install files
 
 ```sh
-cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/dry-run/stats
+cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/stats
 
 ln -s /iopsstor/scratch/cscs/stefschu/DSM500_FPR/supplementary_files/dry-run/02_time_diff_std_creation/data/time_diff_std.npy time_diff_std.npy
 ```
