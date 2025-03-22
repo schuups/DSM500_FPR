@@ -1,0 +1,126 @@
+# channel 0
+- key: 10u
+  label: 10m_u_component_of_wind
+  title: U-Wind Component (at 10 meters)
+  tick_format: '{:,.1f} m/s'
+  group: wind-u
+# channel 1
+- key: 10v
+  label: 10m_v_component_of_wind
+  title: V-Wind Component (at 10 meters)
+  tick_format: '{:,.1f} m/s'
+  group: wind-v
+# channel 2
+- key: t2d
+  label: 2m_temperature
+  title: Air Temperature (at 2 meters)
+  tick_format: '{:,.1f} K'
+  group: temperature
+# channel 3
+- key: sp
+  label: surface_pressure
+  title: Surface Pressure
+  tick_format: '{:,.0f} Pa'
+  group: pressure
+# channel 4
+- key: msl
+  label: mean_sea_level_pressure
+  title: Mean Sea Level Pressure
+  tick_format: '{:,.0f} Pa'
+  group: pressure
+# channel 5
+- key: t_850
+  label: temperature_at_850hPa
+  title: Temperature (at 850 hPa)
+  tick_format: '{:,.1f} K'
+  group: temperature
+# channel 6
+- key: u_1000
+  label: u_component_of_wind_at_1000hPa
+  title: U-Wind Component (at 1000 hPa)
+  tick_format: '{:,.1f} m/s'
+  group: wind-u
+# channel 7
+- key: v_1000
+  label: v_component_of_wind_at_1000hPa
+  title: V-Wind Component (at 1000 hPa)
+  tick_format: '{:,.1f} m/s'
+  group: wind-v
+# channel 8
+- key: z_1000
+  label: geopotential_at_1000hPa
+  title: Geopotential (at 1000 hPa)
+  tick_format: '{:,.0f} m^2/s^2'
+  group: geopotential
+# channel 9
+- key: u_850
+  label: u_component_of_wind_at_850hPa
+  title: U-Wind Component (at 850 hPa)
+  tick_format: '{:,.1f} m/s'
+  group: wind-u
+# channel 10
+- key: v_850
+  label: v_component_of_wind_at_850hPa
+  title: V-Wind Component (at 850 hPa)
+  tick_format: '{:,.1f} m/s'
+  group: wind-v
+# channel 11
+- key: z_850
+  label: geopotential_at_850hPa
+  title: Geopotential (at 850 hPa)
+  tick_format: '{:,.0f} m^2/s^2'
+  group: geopotential
+# channel 12
+- key: u_500
+  label: u_component_of_wind_at_500hPa
+  title: U-Wind Component (at 500 hPa)
+  tick_format: '{:,.1f} m/s'
+  group: wind-u
+# channel 13
+- key: v_500
+  label: v_component_of_wind_at_500hPa
+  title: V-Wind Component (at 500 hPa)
+  tick_format: '{:,.1f} m/s'
+  group: wind-v
+# channel 14
+- key: z_500
+  label: geopotential_at_500hPa
+  title: Geopotential (at 500 hPa)
+  tick_format: '{:,.0f} m^2/s^2'
+  group: geopotential
+# channel 15
+- key: t_500
+  label: temperature_at_500hPa
+  title: Temperature (at 500 hPa)
+  tick_format: '{:,.1f} K'
+  group: temperature
+# channel 16
+- key: z_50
+  label: geopotential_at_50hPa
+  title: Geopotential (at 50 hPa)
+  tick_format: '{:,.0f} m^2/s^2'
+  group: geopotential
+# channel 17
+- key: r_500
+  label: relative_humidity_at_500hPa
+  title: Relative Humidity (at 500 hPa)
+  tick_format: '{:,.1f} %'
+  group: humidity
+# channel 18
+- key: r_850
+  label: relative_humidity_at_850hPa
+  title: Relative Humidity (at 850 hPa)
+  tick_format: '{:,.1f} %'
+  group: humidity
+# channel 19
+- key: tcwv
+  label: total_column_water_vapour
+  title: Total Column Water Vapour
+  tick_format: '{:,.1f} kg/m^2'
+  group: humidity
+# channel 20
+- key: sst
+  label: sea_surface_temperature
+  title: Sea Surface Temperature
+  tick_format: '{:,.1f} K'
+  group: temperature

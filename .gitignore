@@ -10,3 +10,4 @@ venv_**
 launch.log
 inference/artifacts
 **.h5
+cache/*
