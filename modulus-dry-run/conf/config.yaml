@@ -16,7 +16,7 @@
 
 hydra:
   job:
-    chdir: true
+    chdir: false
     name: Dry-Run
   run:
     dir: ./outputs/${hydra:job.name}
@@ -69,10 +69,10 @@ use_apex: true              # If true, uses Apex for fused Adam optimizer, typic
 # └───────────────────────────────────────────┘
 
 dataset_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0             # Path to the dataset.
-stats_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/dry-run/stats
+stats_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/stats
 static_dataset_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/static                # Path to the static datasets. Includes .nc files for land-sea mask and geopotential.
-dataset_metadata_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/dry-run/metadata.json  # Path to the dataset metadata, containing channel names.
-time_diff_std_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/dry-run/stats/time_diff_std.npy  # Path to the .npy file with standard deviation of normalized per-variable per-pressure level time differences.
+dataset_metadata_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/metadata.json  # Path to the dataset metadata, containing channel names.
+time_diff_std_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/stats/time_diff_std.npy  # Path to the .npy file with standard deviation of normalized per-variable per-pressure level time differences.
 
 
 # ┌───────────────────────────────────────────┐

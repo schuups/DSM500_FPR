@@ -1,6 +1,5 @@
 **.ipynb_checkpoints
 **.sqsh
-*.out
 *.png
 __pycache__
 core_*

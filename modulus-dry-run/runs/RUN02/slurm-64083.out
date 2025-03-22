@@ -1,0 +1,1169 @@
+[2025-03-22 17:43:44,375][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-22 17:43:44,376][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-22 17:43:44,379][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+wandb: Using wandb-core as the SDK backend. Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: schups. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.18.5
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/wandb/wandb/run-20250322_174345-dz0d3xur
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Dry-Run_64083_25/03/22_17:43:44_RUN_02
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/dz0d3xur
+[2025-03-22 17:43:45,887][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+[2025-03-22 17:43:45,890][main][INFO] - [94mUsing torch.bfloat16 dtype[0m
+[2025-03-22 17:44:01,329][main][INFO] - [94mModel parameter count is 35248149[0m
+[2025-03-22 17:44:01,447][main][INFO] - [92mLoaded training datapipe of size 13024[0m
+[2025-03-22 17:44:01,458][checkpoint][WARNING] - [93mProvided checkpoint directory /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8 does not exist, skipping load[0m
+[2025-03-22 17:44:01,459][checkpoint][WARNING] - [93mProvided checkpoint directory /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8 does not exist, skipping load[0m
+[2025-03-22 17:44:01,459][checkpoint][WARNING] - [93mProvided checkpoint directory /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8 does not exist, skipping load[0m
+[2025-03-22 17:44:01,459][checkpoint][WARNING] - [93mProvided checkpoint directory /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8 does not exist, skipping load[0m
+Loaded validation datapipe of size 2
+[2025-03-22 17:44:01,615][main][INFO] - [94mTraining started...[0m
+[2025-03-22 17:45:17,263][main][INFO] - iteration: 1, loss:  2.952e+00,                             time per iter:  7.565e+01
+[2025-03-22 17:45:18,127][main][INFO] - iteration: 2, loss:  3.015e+00,                             time per iter:  8.619e-01
+[2025-03-22 17:45:18,841][main][INFO] - iteration: 3, loss:  2.874e+00,                             time per iter:  7.132e-01
+[2025-03-22 17:45:19,551][main][INFO] - iteration: 4, loss:  3.073e+00,                             time per iter:  7.088e-01
+[2025-03-22 17:45:47,468][main][INFO] - iteration 5, Validation MSE: 1.0965
+[2025-03-22 17:45:47,722][main][INFO] - iteration: 5, loss:  3.120e+00,                             time per iter:  2.817e+01
+[2025-03-22 17:45:48,463][main][INFO] - iteration: 6, loss:  2.892e+00,                             time per iter:  7.413e-01
+[2025-03-22 17:45:49,179][main][INFO] - iteration: 7, loss:  3.227e+00,                             time per iter:  7.143e-01
+[2025-03-22 17:45:49,891][main][INFO] - iteration: 8, loss:  2.921e+00,                             time per iter:  7.104e-01
+[2025-03-22 17:45:50,605][main][INFO] - iteration: 9, loss:  2.781e+00,                             time per iter:  7.128e-01
+[2025-03-22 17:45:55,784][main][INFO] - iteration 10, Validation MSE: 1.0951
+[2025-03-22 17:45:56,038][main][INFO] - iteration: 10, loss:  2.643e+00,                             time per iter:  5.419e+00
+[2025-03-22 17:45:56,754][main][INFO] - iteration: 11, loss:  2.482e+00,                             time per iter:  7.150e-01
+[2025-03-22 17:45:57,466][main][INFO] - iteration: 12, loss:  2.419e+00,                             time per iter:  7.108e-01
+[2025-03-22 17:45:58,180][main][INFO] - iteration: 13, loss:  2.439e+00,                             time per iter:  7.127e-01
+[2025-03-22 17:45:58,890][main][INFO] - iteration: 14, loss:  2.292e+00,                             time per iter:  7.082e-01
+[2025-03-22 17:46:04,007][main][INFO] - iteration 15, Validation MSE: 1.0929
+[2025-03-22 17:46:04,262][main][INFO] - iteration: 15, loss:  2.021e+00,                             time per iter:  5.369e+00
+[2025-03-22 17:46:04,981][main][INFO] - iteration: 16, loss:  1.943e+00,                             time per iter:  7.189e-01
+[2025-03-22 17:46:05,690][main][INFO] - iteration: 17, loss:  1.799e+00,                             time per iter:  7.074e-01
+[2025-03-22 17:46:06,408][main][INFO] - iteration: 18, loss:  1.606e+00,                             time per iter:  7.167e-01
+[2025-03-22 17:46:07,120][main][INFO] - iteration: 19, loss:  1.307e+00,                             time per iter:  7.109e-01
+[2025-03-22 17:46:12,225][main][INFO] - iteration 20, Validation MSE: 1.0977
+[2025-03-22 17:46:12,479][main][INFO] - iteration: 20, loss:  1.185e+00,                             time per iter:  5.354e+00
+[2025-03-22 17:46:13,192][main][INFO] - iteration: 21, loss:  1.113e+00,                             time per iter:  7.124e-01
+[2025-03-22 17:46:13,905][main][INFO] - iteration: 22, loss:  8.789e-01,                             time per iter:  7.120e-01
+[2025-03-22 17:46:14,618][main][INFO] - iteration: 23, loss:  7.188e-01,                             time per iter:  7.111e-01
+[2025-03-22 17:46:15,328][main][INFO] - iteration: 24, loss:  6.471e-01,                             time per iter:  7.094e-01
+[2025-03-22 17:46:20,446][main][INFO] - iteration 25, Validation MSE: 1.1014
+[2025-03-22 17:46:20,700][main][INFO] - iteration: 25, loss:  6.029e-01,                             time per iter:  5.362e+00
+[2025-03-22 17:46:21,414][main][INFO] - iteration: 26, loss:  4.730e-01,                             time per iter:  7.134e-01
+[2025-03-22 17:46:22,131][main][INFO] - iteration: 27, loss:  3.858e-01,                             time per iter:  7.150e-01
+[2025-03-22 17:46:22,844][main][INFO] - iteration: 28, loss:  3.969e-01,                             time per iter:  7.124e-01
+[2025-03-22 17:46:23,558][main][INFO] - iteration: 29, loss:  3.883e-01,                             time per iter:  7.118e-01
+[2025-03-22 17:46:28,694][main][INFO] - iteration 30, Validation MSE: 1.1070
+[2025-03-22 17:46:28,948][main][INFO] - iteration: 30, loss:  3.371e-01,                             time per iter:  5.386e+00
+[2025-03-22 17:46:29,665][main][INFO] - iteration: 31, loss:  3.542e-01,                             time per iter:  7.162e-01
+[2025-03-22 17:46:30,398][main][INFO] - iteration: 32, loss:  3.502e-01,                             time per iter:  7.312e-01
+[2025-03-22 17:46:31,107][main][INFO] - iteration: 33, loss:  3.394e-01,                             time per iter:  7.081e-01
+[2025-03-22 17:46:31,818][main][INFO] - iteration: 34, loss:  3.689e-01,                             time per iter:  7.097e-01
+[2025-03-22 17:46:36,947][main][INFO] - iteration 35, Validation MSE: 1.1231
+[2025-03-22 17:46:37,202][main][INFO] - iteration: 35, loss:  2.259e-01,                             time per iter:  5.377e+00
+[2025-03-22 17:46:37,921][main][INFO] - iteration: 36, loss:  2.465e-01,                             time per iter:  7.187e-01
+[2025-03-22 17:46:38,639][main][INFO] - iteration: 37, loss:  2.324e-01,                             time per iter:  7.163e-01
+[2025-03-22 17:46:39,348][main][INFO] - iteration: 38, loss:  2.428e-01,                             time per iter:  7.078e-01
+[2025-03-22 17:46:40,062][main][INFO] - iteration: 39, loss:  1.924e-01,                             time per iter:  7.129e-01
+[2025-03-22 17:46:45,204][main][INFO] - iteration 40, Validation MSE: 1.1248
+[2025-03-22 17:46:45,459][main][INFO] - iteration: 40, loss:  2.680e-01,                             time per iter:  5.385e+00
+[2025-03-22 17:46:46,185][main][INFO] - iteration: 41, loss:  1.945e-01,                             time per iter:  7.252e-01
+[2025-03-22 17:46:46,898][main][INFO] - iteration: 42, loss:  2.334e-01,                             time per iter:  7.115e-01
+[2025-03-22 17:46:47,609][main][INFO] - iteration: 43, loss:  1.952e-01,                             time per iter:  7.099e-01
+[2025-03-22 17:46:48,323][main][INFO] - iteration: 44, loss:  1.693e-01,                             time per iter:  7.133e-01
+[2025-03-22 17:46:53,426][main][INFO] - iteration 45, Validation MSE: 1.1166
+[2025-03-22 17:46:53,687][main][INFO] - iteration: 45, loss:  1.912e-01,                             time per iter:  5.359e+00
+[2025-03-22 17:46:54,405][main][INFO] - iteration: 46, loss:  1.481e-01,                             time per iter:  7.174e-01
+[2025-03-22 17:46:55,119][main][INFO] - iteration: 47, loss:  1.702e-01,                             time per iter:  7.124e-01
+[2025-03-22 17:46:55,829][main][INFO] - iteration: 48, loss:  1.543e-01,                             time per iter:  7.085e-01
+[2025-03-22 17:46:56,539][main][INFO] - iteration: 49, loss:  1.426e-01,                             time per iter:  7.095e-01
+[2025-03-22 17:47:01,666][main][INFO] - iteration 50, Validation MSE: 1.1230
+[2025-03-22 17:47:01,920][checkpoint][WARNING] - [93mOutput directory /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8 does not exist, will attempt to create[0m
+[2025-03-22 17:47:02,009][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.50.mdlus[0m
+[2025-03-22 17:47:02,151][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.50.pt[0m
+[2025-03-22 17:47:02,152][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:47:02,152][main][INFO] - iteration: 50, loss:  1.602e-01,                             time per iter:  5.603e+00
+[2025-03-22 17:47:02,865][main][INFO] - iteration: 51, loss:  1.351e-01,                             time per iter:  7.129e-01
+[2025-03-22 17:47:03,578][main][INFO] - iteration: 52, loss:  1.731e-01,                             time per iter:  7.110e-01
+[2025-03-22 17:47:04,290][main][INFO] - iteration: 53, loss:  1.282e-01,                             time per iter:  7.109e-01
+[2025-03-22 17:47:05,003][main][INFO] - iteration: 54, loss:  1.479e-01,                             time per iter:  7.114e-01
+[2025-03-22 17:47:10,133][main][INFO] - iteration 55, Validation MSE: 1.1059
+[2025-03-22 17:47:10,388][main][INFO] - iteration: 55, loss:  1.383e-01,                             time per iter:  5.381e+00
+[2025-03-22 17:47:11,107][main][INFO] - iteration: 56, loss:  1.125e-01,                             time per iter:  7.188e-01
+[2025-03-22 17:47:11,820][main][INFO] - iteration: 57, loss:  1.306e-01,                             time per iter:  7.116e-01
+[2025-03-22 17:47:12,532][main][INFO] - iteration: 58, loss:  1.347e-01,                             time per iter:  7.104e-01
+[2025-03-22 17:47:13,244][main][INFO] - iteration: 59, loss:  1.013e-01,                             time per iter:  7.114e-01
+[2025-03-22 17:47:18,364][main][INFO] - iteration 60, Validation MSE: 1.0941
+[2025-03-22 17:47:18,619][main][INFO] - iteration: 60, loss:  9.165e-02,                             time per iter:  5.366e+00
+[2025-03-22 17:47:19,338][main][INFO] - iteration: 61, loss:  9.772e-02,                             time per iter:  7.178e-01
+[2025-03-22 17:47:20,048][main][INFO] - iteration: 62, loss:  1.104e-01,                             time per iter:  7.084e-01
+[2025-03-22 17:47:20,764][main][INFO] - iteration: 63, loss:  9.956e-02,                             time per iter:  7.149e-01
+[2025-03-22 17:47:21,478][main][INFO] - iteration: 64, loss:  1.019e-01,                             time per iter:  7.124e-01
+[2025-03-22 17:47:26,589][main][INFO] - iteration 65, Validation MSE: 1.0934
+[2025-03-22 17:47:26,843][main][INFO] - iteration: 65, loss:  1.020e-01,                             time per iter:  5.361e+00
+[2025-03-22 17:47:27,559][main][INFO] - iteration: 66, loss:  9.579e-02,                             time per iter:  7.152e-01
+[2025-03-22 17:47:28,267][main][INFO] - iteration: 67, loss:  9.415e-02,                             time per iter:  7.073e-01
+[2025-03-22 17:47:28,980][main][INFO] - iteration: 68, loss:  1.209e-01,                             time per iter:  7.116e-01
+[2025-03-22 17:47:29,693][main][INFO] - iteration: 69, loss:  8.437e-02,                             time per iter:  7.109e-01
+[2025-03-22 17:47:34,804][main][INFO] - iteration 70, Validation MSE: 1.0830
+[2025-03-22 17:47:35,058][main][INFO] - iteration: 70, loss:  9.173e-02,                             time per iter:  5.362e+00
+[2025-03-22 17:47:35,780][main][INFO] - iteration: 71, loss:  9.241e-02,                             time per iter:  7.211e-01
+[2025-03-22 17:47:36,492][main][INFO] - iteration: 72, loss:  7.691e-02,                             time per iter:  7.104e-01
+[2025-03-22 17:47:37,204][main][INFO] - iteration: 73, loss:  9.723e-02,                             time per iter:  7.112e-01
+[2025-03-22 17:47:37,918][main][INFO] - iteration: 74, loss:  7.728e-02,                             time per iter:  7.124e-01
+[2025-03-22 17:47:43,044][main][INFO] - iteration 75, Validation MSE: 1.0743
+[2025-03-22 17:47:43,299][main][INFO] - iteration: 75, loss:  7.376e-02,                             time per iter:  5.377e+00
+[2025-03-22 17:47:44,018][main][INFO] - iteration: 76, loss:  8.070e-02,                             time per iter:  7.180e-01
+[2025-03-22 17:47:44,727][main][INFO] - iteration: 77, loss:  7.224e-02,                             time per iter:  7.082e-01
+[2025-03-22 17:47:45,457][main][INFO] - iteration: 78, loss:  9.184e-02,                             time per iter:  7.282e-01
+[2025-03-22 17:47:46,177][main][INFO] - iteration: 79, loss:  6.345e-02,                             time per iter:  7.188e-01
+[2025-03-22 17:47:51,319][main][INFO] - iteration 80, Validation MSE: 1.0609
+[2025-03-22 17:47:51,572][main][INFO] - iteration: 80, loss:  6.384e-02,                             time per iter:  5.392e+00
+[2025-03-22 17:47:52,290][main][INFO] - iteration: 81, loss:  6.395e-02,                             time per iter:  7.173e-01
+[2025-03-22 17:47:53,013][main][INFO] - iteration: 82, loss:  6.799e-02,                             time per iter:  7.212e-01
+[2025-03-22 17:47:53,725][main][INFO] - iteration: 83, loss:  6.209e-02,                             time per iter:  7.110e-01
+[2025-03-22 17:47:54,438][main][INFO] - iteration: 84, loss:  8.158e-02,                             time per iter:  7.112e-01
+[2025-03-22 17:47:59,583][main][INFO] - iteration 85, Validation MSE: 1.0539
+[2025-03-22 17:47:59,838][main][INFO] - iteration: 85, loss:  7.567e-02,                             time per iter:  5.397e+00
+[2025-03-22 17:48:00,559][main][INFO] - iteration: 86, loss:  8.822e-02,                             time per iter:  7.203e-01
+[2025-03-22 17:48:01,272][main][INFO] - iteration: 87, loss:  2.176e-01,                             time per iter:  7.115e-01
+[2025-03-22 17:48:01,983][main][INFO] - iteration: 88, loss:  1.075e-01,                             time per iter:  7.103e-01
+[2025-03-22 17:48:02,695][main][INFO] - iteration: 89, loss:  2.284e-01,                             time per iter:  7.107e-01
+[2025-03-22 17:48:07,823][main][INFO] - iteration 90, Validation MSE: 1.0422
+[2025-03-22 17:48:08,077][main][INFO] - iteration: 90, loss:  2.527e-01,                             time per iter:  5.379e+00
+[2025-03-22 17:48:08,790][main][INFO] - iteration: 91, loss:  6.289e-02,                             time per iter:  7.123e-01
+[2025-03-22 17:48:09,503][main][INFO] - iteration: 92, loss:  1.533e-01,                             time per iter:  7.115e-01
+[2025-03-22 17:48:10,217][main][INFO] - iteration: 93, loss:  1.563e-01,                             time per iter:  7.124e-01
+[2025-03-22 17:48:10,929][main][INFO] - iteration: 94, loss:  6.557e-02,                             time per iter:  7.102e-01
+[2025-03-22 17:48:16,043][main][INFO] - iteration 95, Validation MSE: 1.0393
+[2025-03-22 17:48:16,297][main][INFO] - iteration: 95, loss:  1.101e-01,                             time per iter:  5.365e+00
+[2025-03-22 17:48:17,016][main][INFO] - iteration: 96, loss:  9.883e-02,                             time per iter:  7.183e-01
+[2025-03-22 17:48:17,728][main][INFO] - iteration: 97, loss:  6.077e-02,                             time per iter:  7.104e-01
+[2025-03-22 17:48:18,442][main][INFO] - iteration: 98, loss:  6.293e-02,                             time per iter:  7.124e-01
+[2025-03-22 17:48:19,156][main][INFO] - iteration: 99, loss:  6.475e-02,                             time per iter:  7.133e-01
+[2025-03-22 17:48:38,728][main][INFO] - iteration 100, Validation MSE: 1.0500
+[2025-03-22 17:48:39,070][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.100.mdlus[0m
+[2025-03-22 17:48:39,207][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.100.pt[0m
+[2025-03-22 17:48:39,207][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:48:39,207][main][INFO] - iteration: 100, loss:  8.631e-02,                             time per iter:  2.005e+01
+[2025-03-22 17:48:39,946][main][INFO] - iteration: 101, loss:  4.456e-02,                             time per iter:  7.378e-01
+[2025-03-22 17:48:40,662][main][INFO] - iteration: 102, loss:  5.471e-02,                             time per iter:  7.151e-01
+[2025-03-22 17:48:41,375][main][INFO] - iteration: 103, loss:  6.715e-02,                             time per iter:  7.111e-01
+[2025-03-22 17:48:42,086][main][INFO] - iteration: 104, loss:  4.741e-02,                             time per iter:  7.094e-01
+[2025-03-22 17:48:47,238][main][INFO] - iteration 105, Validation MSE: 1.0313
+[2025-03-22 17:48:47,492][main][INFO] - iteration: 105, loss:  7.239e-02,                             time per iter:  5.398e+00
+[2025-03-22 17:48:48,210][main][INFO] - iteration: 106, loss:  5.190e-02,                             time per iter:  7.171e-01
+[2025-03-22 17:48:48,922][main][INFO] - iteration: 107, loss:  4.813e-02,                             time per iter:  7.110e-01
+[2025-03-22 17:48:49,635][main][INFO] - iteration: 108, loss:  4.859e-02,                             time per iter:  7.120e-01
+[2025-03-22 17:48:50,344][main][INFO] - iteration: 109, loss:  4.254e-02,                             time per iter:  7.078e-01
+[2025-03-22 17:48:55,463][main][INFO] - iteration 110, Validation MSE: 0.9985
+[2025-03-22 17:48:55,717][main][INFO] - iteration: 110, loss:  5.664e-02,                             time per iter:  5.369e+00
+[2025-03-22 17:48:56,434][main][INFO] - iteration: 111, loss:  4.360e-02,                             time per iter:  7.164e-01
+[2025-03-22 17:48:57,147][main][INFO] - iteration: 112, loss:  3.339e-02,                             time per iter:  7.119e-01
+[2025-03-22 17:48:57,861][main][INFO] - iteration: 113, loss:  5.355e-02,                             time per iter:  7.123e-01
+[2025-03-22 17:48:58,575][main][INFO] - iteration: 114, loss:  3.949e-02,                             time per iter:  7.128e-01
+[2025-03-22 17:49:03,681][main][INFO] - iteration 115, Validation MSE: 0.9908
+[2025-03-22 17:49:03,935][main][INFO] - iteration: 115, loss:  3.077e-02,                             time per iter:  5.356e+00
+[2025-03-22 17:49:04,648][main][INFO] - iteration: 116, loss:  3.977e-02,                             time per iter:  7.127e-01
+[2025-03-22 17:49:05,361][main][INFO] - iteration: 117, loss:  6.499e-02,                             time per iter:  7.115e-01
+[2025-03-22 17:49:06,075][main][INFO] - iteration: 118, loss:  3.400e-02,                             time per iter:  7.124e-01
+[2025-03-22 17:49:06,792][main][INFO] - iteration: 119, loss:  2.968e-02,                             time per iter:  7.157e-01
+[2025-03-22 17:49:11,922][main][INFO] - iteration 120, Validation MSE: 0.9841
+[2025-03-22 17:49:12,178][main][INFO] - iteration: 120, loss:  4.296e-02,                             time per iter:  5.382e+00
+[2025-03-22 17:49:12,897][main][INFO] - iteration: 121, loss:  3.357e-02,                             time per iter:  7.180e-01
+[2025-03-22 17:49:13,608][main][INFO] - iteration: 122, loss:  3.025e-02,                             time per iter:  7.098e-01
+[2025-03-22 17:49:14,321][main][INFO] - iteration: 123, loss:  2.802e-02,                             time per iter:  7.120e-01
+[2025-03-22 17:49:15,035][main][INFO] - iteration: 124, loss:  3.363e-02,                             time per iter:  7.120e-01
+[2025-03-22 17:49:20,164][main][INFO] - iteration 125, Validation MSE: 0.9436
+[2025-03-22 17:49:20,417][main][INFO] - iteration: 125, loss:  3.074e-02,                             time per iter:  5.381e+00
+[2025-03-22 17:49:21,137][main][INFO] - iteration: 126, loss:  2.701e-02,                             time per iter:  7.193e-01
+[2025-03-22 17:49:21,850][main][INFO] - iteration: 127, loss:  2.931e-02,                             time per iter:  7.118e-01
+[2025-03-22 17:49:22,561][main][INFO] - iteration: 128, loss:  2.790e-02,                             time per iter:  7.098e-01
+[2025-03-22 17:49:23,274][main][INFO] - iteration: 129, loss:  2.384e-02,                             time per iter:  7.118e-01
+[2025-03-22 17:49:28,405][main][INFO] - iteration 130, Validation MSE: 0.9027
+[2025-03-22 17:49:28,660][main][INFO] - iteration: 130, loss:  2.114e-02,                             time per iter:  5.384e+00
+[2025-03-22 17:49:29,387][main][INFO] - iteration: 131, loss:  2.953e-02,                             time per iter:  7.257e-01
+[2025-03-22 17:49:30,101][main][INFO] - iteration: 132, loss:  2.576e-02,                             time per iter:  7.128e-01
+[2025-03-22 17:49:30,815][main][INFO] - iteration: 133, loss:  2.837e-02,                             time per iter:  7.128e-01
+[2025-03-22 17:49:31,527][main][INFO] - iteration: 134, loss:  3.101e-02,                             time per iter:  7.108e-01
+[2025-03-22 17:49:36,660][main][INFO] - iteration 135, Validation MSE: 0.8675
+[2025-03-22 17:49:36,914][main][INFO] - iteration: 135, loss:  2.180e-02,                             time per iter:  5.386e+00
+[2025-03-22 17:49:37,632][main][INFO] - iteration: 136, loss:  2.490e-02,                             time per iter:  7.174e-01
+[2025-03-22 17:49:38,345][main][INFO] - iteration: 137, loss:  2.196e-02,                             time per iter:  7.116e-01
+[2025-03-22 17:49:39,066][main][INFO] - iteration: 138, loss:  1.721e-02,                             time per iter:  7.190e-01
+[2025-03-22 17:49:39,787][main][INFO] - iteration: 139, loss:  1.825e-02,                             time per iter:  7.202e-01
+[2025-03-22 17:49:44,900][main][INFO] - iteration 140, Validation MSE: 0.8126
+[2025-03-22 17:49:45,154][main][INFO] - iteration: 140, loss:  1.906e-02,                             time per iter:  5.365e+00
+[2025-03-22 17:49:45,899][main][INFO] - iteration: 141, loss:  2.993e-02,                             time per iter:  7.446e-01
+[2025-03-22 17:49:46,614][main][INFO] - iteration: 142, loss:  1.962e-02,                             time per iter:  7.139e-01
+[2025-03-22 17:49:47,326][main][INFO] - iteration: 143, loss:  2.076e-02,                             time per iter:  7.109e-01
+[2025-03-22 17:49:48,039][main][INFO] - iteration: 144, loss:  1.749e-02,                             time per iter:  7.108e-01
+[2025-03-22 17:49:53,160][main][INFO] - iteration 145, Validation MSE: 0.7594
+[2025-03-22 17:49:53,415][main][INFO] - iteration: 145, loss:  2.609e-02,                             time per iter:  5.375e+00
+[2025-03-22 17:49:54,134][main][INFO] - iteration: 146, loss:  1.616e-02,                             time per iter:  7.183e-01
+[2025-03-22 17:49:54,850][main][INFO] - iteration: 147, loss:  1.699e-02,                             time per iter:  7.145e-01
+[2025-03-22 17:49:55,562][main][INFO] - iteration: 148, loss:  1.759e-02,                             time per iter:  7.108e-01
+[2025-03-22 17:49:56,275][main][INFO] - iteration: 149, loss:  1.802e-02,                             time per iter:  7.119e-01
+[2025-03-22 17:50:01,419][main][INFO] - iteration 150, Validation MSE: 0.7226
+[2025-03-22 17:50:01,760][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.150.mdlus[0m
+[2025-03-22 17:50:01,897][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.150.pt[0m
+[2025-03-22 17:50:01,898][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:50:01,898][main][INFO] - iteration: 150, loss:  1.694e-02,                             time per iter:  5.621e+00
+[2025-03-22 17:50:02,615][main][INFO] - iteration: 151, loss:  1.578e-02,                             time per iter:  7.160e-01
+[2025-03-22 17:50:03,330][main][INFO] - iteration: 152, loss:  2.448e-02,                             time per iter:  7.139e-01
+[2025-03-22 17:50:04,045][main][INFO] - iteration: 153, loss:  1.832e-02,                             time per iter:  7.135e-01
+[2025-03-22 17:50:04,758][main][INFO] - iteration: 154, loss:  2.570e-02,                             time per iter:  7.115e-01
+[2025-03-22 17:50:09,901][main][INFO] - iteration 155, Validation MSE: 0.6943
+[2025-03-22 17:50:10,155][main][INFO] - iteration: 155, loss:  1.914e-02,                             time per iter:  5.394e+00
+[2025-03-22 17:50:10,874][main][INFO] - iteration: 156, loss:  1.672e-02,                             time per iter:  7.183e-01
+[2025-03-22 17:50:11,586][main][INFO] - iteration: 157, loss:  1.565e-02,                             time per iter:  7.109e-01
+[2025-03-22 17:50:12,300][main][INFO] - iteration: 158, loss:  1.508e-02,                             time per iter:  7.123e-01
+[2025-03-22 17:50:13,030][main][INFO] - iteration: 159, loss:  2.045e-02,                             time per iter:  7.296e-01
+[2025-03-22 17:50:18,159][main][INFO] - iteration 160, Validation MSE: 0.6653
+[2025-03-22 17:50:18,413][main][INFO] - iteration: 160, loss:  1.474e-02,                             time per iter:  5.382e+00
+[2025-03-22 17:50:19,129][main][INFO] - iteration: 161, loss:  2.749e-02,                             time per iter:  7.151e-01
+[2025-03-22 17:50:19,841][main][INFO] - iteration: 162, loss:  3.320e-02,                             time per iter:  7.102e-01
+[2025-03-22 17:50:20,553][main][INFO] - iteration: 163, loss:  1.591e-02,                             time per iter:  7.114e-01
+[2025-03-22 17:50:21,265][main][INFO] - iteration: 164, loss:  5.008e-02,                             time per iter:  7.100e-01
+[2025-03-22 17:50:26,397][main][INFO] - iteration 165, Validation MSE: 0.6699
+[2025-03-22 17:50:26,651][main][INFO] - iteration: 165, loss:  2.125e-02,                             time per iter:  5.385e+00
+[2025-03-22 17:50:27,368][main][INFO] - iteration: 166, loss:  4.621e-02,                             time per iter:  7.162e-01
+[2025-03-22 17:50:28,079][main][INFO] - iteration: 167, loss:  3.864e-02,                             time per iter:  7.091e-01
+[2025-03-22 17:50:28,792][main][INFO] - iteration: 168, loss:  2.249e-02,                             time per iter:  7.123e-01
+[2025-03-22 17:50:29,503][main][INFO] - iteration: 169, loss:  3.346e-02,                             time per iter:  7.095e-01
+[2025-03-22 17:50:34,638][main][INFO] - iteration 170, Validation MSE: 0.6483
+[2025-03-22 17:50:34,893][main][INFO] - iteration: 170, loss:  4.150e-02,                             time per iter:  5.389e+00
+[2025-03-22 17:50:35,606][main][INFO] - iteration: 171, loss:  3.901e-02,                             time per iter:  7.123e-01
+[2025-03-22 17:50:36,319][main][INFO] - iteration: 172, loss:  3.521e-02,                             time per iter:  7.114e-01
+[2025-03-22 17:50:37,034][main][INFO] - iteration: 173, loss:  3.576e-02,                             time per iter:  7.135e-01
+[2025-03-22 17:50:37,744][main][INFO] - iteration: 174, loss:  4.110e-02,                             time per iter:  7.092e-01
+[2025-03-22 17:50:43,059][main][INFO] - iteration 175, Validation MSE: 0.6755
+[2025-03-22 17:50:43,313][main][INFO] - iteration: 175, loss:  6.640e-01,                             time per iter:  5.568e+00
+[2025-03-22 17:50:44,026][main][INFO] - iteration: 176, loss:  1.038e-01,                             time per iter:  7.119e-01
+[2025-03-22 17:50:44,737][main][INFO] - iteration: 177, loss:  4.770e-02,                             time per iter:  7.095e-01
+[2025-03-22 17:50:45,450][main][INFO] - iteration: 178, loss:  1.263e-01,                             time per iter:  7.119e-01
+[2025-03-22 17:50:46,174][main][INFO] - iteration: 179, loss:  4.897e-02,                             time per iter:  7.227e-01
+[2025-03-22 17:50:51,318][main][INFO] - iteration 180, Validation MSE: 0.6477
+[2025-03-22 17:50:51,572][main][INFO] - iteration: 180, loss:  8.654e-02,                             time per iter:  5.397e+00
+[2025-03-22 17:50:52,286][main][INFO] - iteration: 181, loss:  2.212e-01,                             time per iter:  7.134e-01
+[2025-03-22 17:50:52,998][main][INFO] - iteration: 182, loss:  4.175e-02,                             time per iter:  7.111e-01
+[2025-03-22 17:50:53,712][main][INFO] - iteration: 183, loss:  1.168e-01,                             time per iter:  7.127e-01
+[2025-03-22 17:50:54,425][main][INFO] - iteration: 184, loss:  6.046e-02,                             time per iter:  7.115e-01
+[2025-03-22 17:50:59,698][main][INFO] - iteration 185, Validation MSE: 0.6337
+[2025-03-22 17:50:59,954][main][INFO] - iteration: 185, loss:  4.370e-02,                             time per iter:  5.527e+00
+[2025-03-22 17:51:00,676][main][INFO] - iteration: 186, loss:  8.571e-02,                             time per iter:  7.218e-01
+[2025-03-22 17:51:01,388][main][INFO] - iteration: 187, loss:  4.168e-02,                             time per iter:  7.104e-01
+[2025-03-22 17:51:02,100][main][INFO] - iteration: 188, loss:  1.045e-01,                             time per iter:  7.105e-01
+[2025-03-22 17:51:02,812][main][INFO] - iteration: 189, loss:  3.887e-02,                             time per iter:  7.109e-01
+[2025-03-22 17:51:07,977][main][INFO] - iteration 190, Validation MSE: 0.6150
+[2025-03-22 17:51:08,232][main][INFO] - iteration: 190, loss:  2.902e-02,                             time per iter:  5.419e+00
+[2025-03-22 17:51:08,945][main][INFO] - iteration: 191, loss:  8.596e-02,                             time per iter:  7.124e-01
+[2025-03-22 17:51:09,657][main][INFO] - iteration: 192, loss:  8.486e-02,                             time per iter:  7.104e-01
+[2025-03-22 17:51:10,370][main][INFO] - iteration: 193, loss:  2.888e-02,                             time per iter:  7.117e-01
+[2025-03-22 17:51:11,082][main][INFO] - iteration: 194, loss:  6.344e-02,                             time per iter:  7.110e-01
+[2025-03-22 17:51:16,220][main][INFO] - iteration 195, Validation MSE: 0.6150
+[2025-03-22 17:51:16,474][main][INFO] - iteration: 195, loss:  4.504e-02,                             time per iter:  5.391e+00
+[2025-03-22 17:51:17,192][main][INFO] - iteration: 196, loss:  2.608e-02,                             time per iter:  7.171e-01
+[2025-03-22 17:51:17,903][main][INFO] - iteration: 197, loss:  7.909e-02,                             time per iter:  7.092e-01
+[2025-03-22 17:51:18,626][main][INFO] - iteration: 198, loss:  7.728e-02,                             time per iter:  7.216e-01
+[2025-03-22 17:51:19,337][main][INFO] - iteration: 199, loss:  1.572e-02,                             time per iter:  7.103e-01
+[2025-03-22 17:51:39,071][main][INFO] - iteration 200, Validation MSE: 0.6054
+[2025-03-22 17:51:39,414][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.200.mdlus[0m
+[2025-03-22 17:51:39,553][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.200.pt[0m
+[2025-03-22 17:51:39,554][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:51:39,554][main][INFO] - iteration: 200, loss:  7.137e-02,                             time per iter:  2.022e+01
+[2025-03-22 17:51:40,296][main][INFO] - iteration: 201, loss:  4.503e-02,                             time per iter:  7.413e-01
+[2025-03-22 17:51:41,009][main][INFO] - iteration: 202, loss:  3.319e-02,                             time per iter:  7.115e-01
+[2025-03-22 17:51:41,717][main][INFO] - iteration: 203, loss:  2.657e-02,                             time per iter:  7.071e-01
+[2025-03-22 17:51:42,431][main][INFO] - iteration: 204, loss:  3.907e-02,                             time per iter:  7.119e-01
+[2025-03-22 17:51:47,636][main][INFO] - iteration 205, Validation MSE: 0.6055
+[2025-03-22 17:51:47,890][main][INFO] - iteration: 205, loss:  2.901e-02,                             time per iter:  5.458e+00
+[2025-03-22 17:51:48,611][main][INFO] - iteration: 206, loss:  1.295e-02,                             time per iter:  7.201e-01
+[2025-03-22 17:51:49,322][main][INFO] - iteration: 207, loss:  2.685e-02,                             time per iter:  7.098e-01
+[2025-03-22 17:51:50,036][main][INFO] - iteration: 208, loss:  2.703e-02,                             time per iter:  7.122e-01
+[2025-03-22 17:51:50,750][main][INFO] - iteration: 209, loss:  1.788e-02,                             time per iter:  7.122e-01
+[2025-03-22 17:51:55,918][main][INFO] - iteration 210, Validation MSE: 0.5991
+[2025-03-22 17:51:56,172][main][INFO] - iteration: 210, loss:  1.260e-02,                             time per iter:  5.421e+00
+[2025-03-22 17:51:56,896][main][INFO] - iteration: 211, loss:  1.431e-02,                             time per iter:  7.231e-01
+[2025-03-22 17:51:57,608][main][INFO] - iteration: 212, loss:  1.560e-02,                             time per iter:  7.108e-01
+[2025-03-22 17:51:58,319][main][INFO] - iteration: 213, loss:  1.467e-02,                             time per iter:  7.090e-01
+[2025-03-22 17:51:59,031][main][INFO] - iteration: 214, loss:  1.105e-02,                             time per iter:  7.108e-01
+[2025-03-22 17:52:04,198][main][INFO] - iteration 215, Validation MSE: 0.6051
+[2025-03-22 17:52:04,453][main][INFO] - iteration: 215, loss:  1.618e-02,                             time per iter:  5.421e+00
+[2025-03-22 17:52:05,171][main][INFO] - iteration: 216, loss:  1.783e-02,                             time per iter:  7.175e-01
+[2025-03-22 17:52:05,883][main][INFO] - iteration: 217, loss:  1.271e-02,                             time per iter:  7.107e-01
+[2025-03-22 17:52:06,596][main][INFO] - iteration: 218, loss:  1.019e-02,                             time per iter:  7.113e-01
+[2025-03-22 17:52:07,309][main][INFO] - iteration: 219, loss:  9.458e-03,                             time per iter:  7.121e-01
+[2025-03-22 17:52:12,456][main][INFO] - iteration 220, Validation MSE: 0.6023
+[2025-03-22 17:52:12,711][main][INFO] - iteration: 220, loss:  1.168e-02,                             time per iter:  5.401e+00
+[2025-03-22 17:52:13,425][main][INFO] - iteration: 221, loss:  1.123e-02,                             time per iter:  7.128e-01
+[2025-03-22 17:52:14,136][main][INFO] - iteration: 222, loss:  1.017e-02,                             time per iter:  7.103e-01
+[2025-03-22 17:52:14,853][main][INFO] - iteration: 223, loss:  1.496e-02,                             time per iter:  7.151e-01
+[2025-03-22 17:52:15,568][main][INFO] - iteration: 224, loss:  1.355e-02,                             time per iter:  7.140e-01
+[2025-03-22 17:52:20,737][main][INFO] - iteration 225, Validation MSE: 0.6025
+[2025-03-22 17:52:20,992][main][INFO] - iteration: 225, loss:  1.441e-02,                             time per iter:  5.422e+00
+[2025-03-22 17:52:21,711][main][INFO] - iteration: 226, loss:  1.000e-02,                             time per iter:  7.185e-01
+[2025-03-22 17:52:22,420][main][INFO] - iteration: 227, loss:  1.290e-02,                             time per iter:  7.081e-01
+[2025-03-22 17:52:23,133][main][INFO] - iteration: 228, loss:  9.962e-03,                             time per iter:  7.110e-01
+[2025-03-22 17:52:24,010][main][INFO] - iteration: 229, loss:  1.067e-02,                             time per iter:  8.753e-01
+[2025-03-22 17:52:29,180][main][INFO] - iteration 230, Validation MSE: 0.5937
+[2025-03-22 17:52:29,435][main][INFO] - iteration: 230, loss:  1.210e-02,                             time per iter:  5.424e+00
+[2025-03-22 17:52:30,150][main][INFO] - iteration: 231, loss:  2.223e-02,                             time per iter:  7.148e-01
+[2025-03-22 17:52:30,861][main][INFO] - iteration: 232, loss:  9.521e-03,                             time per iter:  7.098e-01
+[2025-03-22 17:52:31,572][main][INFO] - iteration: 233, loss:  1.511e-02,                             time per iter:  7.097e-01
+[2025-03-22 17:52:32,437][main][INFO] - iteration: 234, loss:  1.129e-02,                             time per iter:  8.628e-01
+[2025-03-22 17:52:37,615][main][INFO] - iteration 235, Validation MSE: 0.5941
+[2025-03-22 17:52:37,869][main][INFO] - iteration: 235, loss:  1.080e-02,                             time per iter:  5.431e+00
+[2025-03-22 17:52:38,591][main][INFO] - iteration: 236, loss:  1.210e-02,                             time per iter:  7.216e-01
+[2025-03-22 17:52:39,303][main][INFO] - iteration: 237, loss:  9.366e-03,                             time per iter:  7.101e-01
+[2025-03-22 17:52:40,014][main][INFO] - iteration: 238, loss:  7.103e-03,                             time per iter:  7.102e-01
+[2025-03-22 17:52:40,727][main][INFO] - iteration: 239, loss:  1.132e-02,                             time per iter:  7.116e-01
+[2025-03-22 17:52:45,916][main][INFO] - iteration 240, Validation MSE: 0.5896
+[2025-03-22 17:52:46,170][main][INFO] - iteration: 240, loss:  7.882e-03,                             time per iter:  5.441e+00
+[2025-03-22 17:52:46,884][main][INFO] - iteration: 241, loss:  1.554e-02,                             time per iter:  7.135e-01
+[2025-03-22 17:52:47,597][main][INFO] - iteration: 242, loss:  9.876e-03,                             time per iter:  7.112e-01
+[2025-03-22 17:52:48,309][main][INFO] - iteration: 243, loss:  1.045e-02,                             time per iter:  7.111e-01
+[2025-03-22 17:52:49,026][main][INFO] - iteration: 244, loss:  1.348e-02,                             time per iter:  7.154e-01
+[2025-03-22 17:52:54,175][main][INFO] - iteration 245, Validation MSE: 0.5823
+[2025-03-22 17:52:54,429][main][INFO] - iteration: 245, loss:  1.186e-02,                             time per iter:  5.402e+00
+[2025-03-22 17:52:55,149][main][INFO] - iteration: 246, loss:  1.147e-02,                             time per iter:  7.192e-01
+[2025-03-22 17:52:55,860][main][INFO] - iteration: 247, loss:  1.099e-02,                             time per iter:  7.091e-01
+[2025-03-22 17:52:56,572][main][INFO] - iteration: 248, loss:  1.852e-02,                             time per iter:  7.113e-01
+[2025-03-22 17:52:57,285][main][INFO] - iteration: 249, loss:  5.194e-02,                             time per iter:  7.113e-01
+[2025-03-22 17:53:02,454][main][INFO] - iteration 250, Validation MSE: 0.5750
+[2025-03-22 17:53:02,797][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.250.mdlus[0m
+[2025-03-22 17:53:02,961][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.250.pt[0m
+[2025-03-22 17:53:02,962][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:53:02,962][main][INFO] - iteration: 250, loss:  1.369e-02,                             time per iter:  5.676e+00
+[2025-03-22 17:53:03,677][main][INFO] - iteration: 251, loss:  7.373e-02,                             time per iter:  7.140e-01
+[2025-03-22 17:53:04,392][main][INFO] - iteration: 252, loss:  1.994e-02,                             time per iter:  7.133e-01
+[2025-03-22 17:53:05,102][main][INFO] - iteration: 253, loss:  1.253e-01,                             time per iter:  7.092e-01
+[2025-03-22 17:53:05,827][main][INFO] - iteration: 254, loss:  4.339e-02,                             time per iter:  7.230e-01
+[2025-03-22 17:53:10,993][main][INFO] - iteration 255, Validation MSE: 0.5569
+[2025-03-22 17:53:11,247][main][INFO] - iteration: 255, loss:  5.013e-02,                             time per iter:  5.417e+00
+[2025-03-22 17:53:11,964][main][INFO] - iteration: 256, loss:  5.231e-02,                             time per iter:  7.162e-01
+[2025-03-22 17:53:12,675][main][INFO] - iteration: 257, loss:  2.841e-02,                             time per iter:  7.095e-01
+[2025-03-22 17:53:13,389][main][INFO] - iteration: 258, loss:  3.518e-02,                             time per iter:  7.121e-01
+[2025-03-22 17:53:14,100][main][INFO] - iteration: 259, loss:  4.090e-02,                             time per iter:  7.100e-01
+[2025-03-22 17:53:19,274][main][INFO] - iteration 260, Validation MSE: 0.5480
+[2025-03-22 17:53:19,528][main][INFO] - iteration: 260, loss:  3.551e-02,                             time per iter:  5.427e+00
+[2025-03-22 17:53:20,248][main][INFO] - iteration: 261, loss:  4.449e-02,                             time per iter:  7.191e-01
+[2025-03-22 17:53:20,959][main][INFO] - iteration: 262, loss:  3.150e-02,                             time per iter:  7.097e-01
+[2025-03-22 17:53:21,673][main][INFO] - iteration: 263, loss:  5.092e-02,                             time per iter:  7.122e-01
+[2025-03-22 17:53:22,385][main][INFO] - iteration: 264, loss:  1.465e-01,                             time per iter:  7.110e-01
+[2025-03-22 17:53:27,572][main][INFO] - iteration 265, Validation MSE: 0.5892
+[2025-03-22 17:53:27,827][main][INFO] - iteration: 265, loss:  3.763e-01,                             time per iter:  5.440e+00
+[2025-03-22 17:53:28,542][main][INFO] - iteration: 266, loss:  1.224e-01,                             time per iter:  7.151e-01
+[2025-03-22 17:53:29,253][main][INFO] - iteration: 267, loss:  3.176e-01,                             time per iter:  7.094e-01
+[2025-03-22 17:53:29,967][main][INFO] - iteration: 268, loss:  1.815e-01,                             time per iter:  7.120e-01
+[2025-03-22 17:53:30,684][main][INFO] - iteration: 269, loss:  3.633e-01,                             time per iter:  7.156e-01
+[2025-03-22 17:53:36,114][main][INFO] - iteration 270, Validation MSE: 0.5817
+[2025-03-22 17:53:36,368][main][INFO] - iteration: 270, loss:  3.530e-01,                             time per iter:  5.683e+00
+[2025-03-22 17:53:37,115][main][INFO] - iteration: 271, loss:  6.611e-02,                             time per iter:  7.464e-01
+[2025-03-22 17:53:37,830][main][INFO] - iteration: 272, loss:  1.723e-01,                             time per iter:  7.133e-01
+[2025-03-22 17:53:38,539][main][INFO] - iteration: 273, loss:  1.514e-01,                             time per iter:  7.073e-01
+[2025-03-22 17:53:39,252][main][INFO] - iteration: 274, loss:  6.839e-02,                             time per iter:  7.113e-01
+[2025-03-22 17:53:44,398][main][INFO] - iteration 275, Validation MSE: 0.5659
+[2025-03-22 17:53:44,654][main][INFO] - iteration: 275, loss:  3.828e-02,                             time per iter:  5.401e+00
+[2025-03-22 17:53:45,368][main][INFO] - iteration: 276, loss:  1.192e-01,                             time per iter:  7.134e-01
+[2025-03-22 17:53:46,079][main][INFO] - iteration: 277, loss:  5.090e-02,                             time per iter:  7.093e-01
+[2025-03-22 17:53:46,798][main][INFO] - iteration: 278, loss:  2.545e-02,                             time per iter:  7.179e-01
+[2025-03-22 17:53:47,511][main][INFO] - iteration: 279, loss:  2.927e-02,                             time per iter:  7.112e-01
+[2025-03-22 17:53:52,673][main][INFO] - iteration 280, Validation MSE: 0.5957
+[2025-03-22 17:53:52,928][main][INFO] - iteration: 280, loss:  4.836e-02,                             time per iter:  5.416e+00
+[2025-03-22 17:53:53,643][main][INFO] - iteration: 281, loss:  2.763e-02,                             time per iter:  7.147e-01
+[2025-03-22 17:53:54,355][main][INFO] - iteration: 282, loss:  3.144e-02,                             time per iter:  7.101e-01
+[2025-03-22 17:53:55,064][main][INFO] - iteration: 283, loss:  3.082e-02,                             time per iter:  7.085e-01
+[2025-03-22 17:53:55,785][main][INFO] - iteration: 284, loss:  1.231e-02,                             time per iter:  7.187e-01
+[2025-03-22 17:54:00,933][main][INFO] - iteration 285, Validation MSE: 0.5857
+[2025-03-22 17:54:01,187][main][INFO] - iteration: 285, loss:  2.405e-02,                             time per iter:  5.401e+00
+[2025-03-22 17:54:01,905][main][INFO] - iteration: 286, loss:  1.967e-02,                             time per iter:  7.172e-01
+[2025-03-22 17:54:02,616][main][INFO] - iteration: 287, loss:  2.477e-02,                             time per iter:  7.098e-01
+[2025-03-22 17:54:03,330][main][INFO] - iteration: 288, loss:  1.435e-02,                             time per iter:  7.119e-01
+[2025-03-22 17:54:04,046][main][INFO] - iteration: 289, loss:  9.881e-03,                             time per iter:  7.151e-01
+[2025-03-22 17:54:09,192][main][INFO] - iteration 290, Validation MSE: 0.5589
+[2025-03-22 17:54:09,446][main][INFO] - iteration: 290, loss:  1.094e-02,                             time per iter:  5.399e+00
+[2025-03-22 17:54:10,164][main][INFO] - iteration: 291, loss:  1.009e-02,                             time per iter:  7.175e-01
+[2025-03-22 17:54:10,874][main][INFO] - iteration: 292, loss:  1.695e-02,                             time per iter:  7.078e-01
+[2025-03-22 17:54:11,587][main][INFO] - iteration: 293, loss:  1.144e-02,                             time per iter:  7.118e-01
+[2025-03-22 17:54:12,295][main][INFO] - iteration: 294, loss:  1.493e-02,                             time per iter:  7.073e-01
+[2025-03-22 17:54:17,452][main][INFO] - iteration 295, Validation MSE: 0.5567
+[2025-03-22 17:54:17,706][main][INFO] - iteration: 295, loss:  1.194e-02,                             time per iter:  5.409e+00
+[2025-03-22 17:54:18,424][main][INFO] - iteration: 296, loss:  1.215e-02,                             time per iter:  7.167e-01
+[2025-03-22 17:54:19,134][main][INFO] - iteration: 297, loss:  8.232e-03,                             time per iter:  7.087e-01
+[2025-03-22 17:54:19,846][main][INFO] - iteration: 298, loss:  1.344e-02,                             time per iter:  7.110e-01
+[2025-03-22 17:54:20,558][main][INFO] - iteration: 299, loss:  1.169e-02,                             time per iter:  7.101e-01
+[2025-03-22 17:54:40,120][main][INFO] - iteration 300, Validation MSE: 0.5606
+[2025-03-22 17:54:40,458][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.300.mdlus[0m
+[2025-03-22 17:54:40,600][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.300.pt[0m
+[2025-03-22 17:54:40,600][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:54:40,600][main][INFO] - iteration: 300, loss:  8.777e-03,                             time per iter:  2.004e+01
+[2025-03-22 17:54:41,340][main][INFO] - iteration: 301, loss:  1.051e-02,                             time per iter:  7.389e-01
+[2025-03-22 17:54:42,052][main][INFO] - iteration: 302, loss:  6.970e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:54:42,765][main][INFO] - iteration: 303, loss:  6.848e-03,                             time per iter:  7.117e-01
+[2025-03-22 17:54:43,476][main][INFO] - iteration: 304, loss:  7.744e-03,                             time per iter:  7.097e-01
+[2025-03-22 17:54:48,630][main][INFO] - iteration 305, Validation MSE: 0.5591
+[2025-03-22 17:54:48,883][main][INFO] - iteration: 305, loss:  1.066e-02,                             time per iter:  5.401e+00
+[2025-03-22 17:54:49,606][main][INFO] - iteration: 306, loss:  9.275e-03,                             time per iter:  7.221e-01
+[2025-03-22 17:54:50,318][main][INFO] - iteration: 307, loss:  7.394e-03,                             time per iter:  7.103e-01
+[2025-03-22 17:54:51,031][main][INFO] - iteration: 308, loss:  7.279e-03,                             time per iter:  7.116e-01
+[2025-03-22 17:54:51,743][main][INFO] - iteration: 309, loss:  6.274e-03,                             time per iter:  7.107e-01
+[2025-03-22 17:54:56,909][main][INFO] - iteration 310, Validation MSE: 0.5539
+[2025-03-22 17:54:57,163][main][INFO] - iteration: 310, loss:  7.724e-03,                             time per iter:  5.419e+00
+[2025-03-22 17:54:57,879][main][INFO] - iteration: 311, loss:  8.213e-03,                             time per iter:  7.145e-01
+[2025-03-22 17:54:58,591][main][INFO] - iteration: 312, loss:  6.186e-03,                             time per iter:  7.110e-01
+[2025-03-22 17:54:59,304][main][INFO] - iteration: 313, loss:  5.420e-03,                             time per iter:  7.119e-01
+[2025-03-22 17:55:00,017][main][INFO] - iteration: 314, loss:  6.803e-03,                             time per iter:  7.114e-01
+[2025-03-22 17:55:05,150][main][INFO] - iteration 315, Validation MSE: 0.5509
+[2025-03-22 17:55:05,405][main][INFO] - iteration: 315, loss:  6.158e-03,                             time per iter:  5.387e+00
+[2025-03-22 17:55:06,121][main][INFO] - iteration: 316, loss:  7.570e-03,                             time per iter:  7.146e-01
+[2025-03-22 17:55:06,833][main][INFO] - iteration: 317, loss:  5.856e-03,                             time per iter:  7.113e-01
+[2025-03-22 17:55:07,546][main][INFO] - iteration: 318, loss:  5.522e-03,                             time per iter:  7.110e-01
+[2025-03-22 17:55:08,258][main][INFO] - iteration: 319, loss:  7.430e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:55:13,430][main][INFO] - iteration 320, Validation MSE: 0.5426
+[2025-03-22 17:55:13,685][main][INFO] - iteration: 320, loss:  6.558e-03,                             time per iter:  5.426e+00
+[2025-03-22 17:55:14,403][main][INFO] - iteration: 321, loss:  5.730e-03,                             time per iter:  7.176e-01
+[2025-03-22 17:55:15,114][main][INFO] - iteration: 322, loss:  7.907e-03,                             time per iter:  7.093e-01
+[2025-03-22 17:55:15,830][main][INFO] - iteration: 323, loss:  5.341e-03,                             time per iter:  7.143e-01
+[2025-03-22 17:55:16,543][main][INFO] - iteration: 324, loss:  5.396e-03,                             time per iter:  7.122e-01
+[2025-03-22 17:55:21,711][main][INFO] - iteration 325, Validation MSE: 0.5334
+[2025-03-22 17:55:21,965][main][INFO] - iteration: 325, loss:  5.899e-03,                             time per iter:  5.421e+00
+[2025-03-22 17:55:22,685][main][INFO] - iteration: 326, loss:  5.612e-03,                             time per iter:  7.193e-01
+[2025-03-22 17:55:23,396][main][INFO] - iteration: 327, loss:  5.377e-03,                             time per iter:  7.093e-01
+[2025-03-22 17:55:24,109][main][INFO] - iteration: 328, loss:  5.485e-03,                             time per iter:  7.120e-01
+[2025-03-22 17:55:24,823][main][INFO] - iteration: 329, loss:  6.008e-03,                             time per iter:  7.123e-01
+[2025-03-22 17:55:30,009][main][INFO] - iteration 330, Validation MSE: 0.5251
+[2025-03-22 17:55:30,264][main][INFO] - iteration: 330, loss:  6.698e-03,                             time per iter:  5.439e+00
+[2025-03-22 17:55:30,982][main][INFO] - iteration: 331, loss:  4.963e-03,                             time per iter:  7.182e-01
+[2025-03-22 17:55:31,694][main][INFO] - iteration: 332, loss:  9.760e-03,                             time per iter:  7.103e-01
+[2025-03-22 17:55:32,408][main][INFO] - iteration: 333, loss:  5.908e-03,                             time per iter:  7.122e-01
+[2025-03-22 17:55:33,122][main][INFO] - iteration: 334, loss:  1.615e-02,                             time per iter:  7.126e-01
+[2025-03-22 17:55:38,369][main][INFO] - iteration 335, Validation MSE: 0.5159
+[2025-03-22 17:55:38,625][main][INFO] - iteration: 335, loss:  5.151e-03,                             time per iter:  5.502e+00
+[2025-03-22 17:55:39,341][main][INFO] - iteration: 336, loss:  2.506e-02,                             time per iter:  7.156e-01
+[2025-03-22 17:55:40,052][main][INFO] - iteration: 337, loss:  5.951e-03,                             time per iter:  7.092e-01
+[2025-03-22 17:55:40,768][main][INFO] - iteration: 338, loss:  7.913e-03,                             time per iter:  7.154e-01
+[2025-03-22 17:55:41,482][main][INFO] - iteration: 339, loss:  1.436e-02,                             time per iter:  7.122e-01
+[2025-03-22 17:55:46,650][main][INFO] - iteration 340, Validation MSE: 0.5135
+[2025-03-22 17:55:46,904][main][INFO] - iteration: 340, loss:  3.338e-02,                             time per iter:  5.421e+00
+[2025-03-22 17:55:47,618][main][INFO] - iteration: 341, loss:  8.382e-03,                             time per iter:  7.134e-01
+[2025-03-22 17:55:48,328][main][INFO] - iteration: 342, loss:  6.589e-02,                             time per iter:  7.078e-01
+[2025-03-22 17:55:49,040][main][INFO] - iteration: 343, loss:  1.200e-02,                             time per iter:  7.106e-01
+[2025-03-22 17:55:49,750][main][INFO] - iteration: 344, loss:  2.580e-02,                             time per iter:  7.095e-01
+[2025-03-22 17:55:54,911][main][INFO] - iteration 345, Validation MSE: 0.5180
+[2025-03-22 17:55:55,165][main][INFO] - iteration: 345, loss:  3.639e-02,                             time per iter:  5.414e+00
+[2025-03-22 17:55:55,891][main][INFO] - iteration: 346, loss:  4.970e-02,                             time per iter:  7.250e-01
+[2025-03-22 17:55:56,603][main][INFO] - iteration: 347, loss:  2.779e-02,                             time per iter:  7.103e-01
+[2025-03-22 17:55:57,311][main][INFO] - iteration: 348, loss:  3.119e-02,                             time per iter:  7.071e-01
+[2025-03-22 17:55:58,022][main][INFO] - iteration: 349, loss:  2.426e-02,                             time per iter:  7.097e-01
+[2025-03-22 17:56:03,169][main][INFO] - iteration 350, Validation MSE: 0.5296
+[2025-03-22 17:56:03,512][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.350.mdlus[0m
+[2025-03-22 17:56:03,658][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.350.pt[0m
+[2025-03-22 17:56:03,658][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:56:03,658][main][INFO] - iteration: 350, loss:  5.179e-02,                             time per iter:  5.635e+00
+[2025-03-22 17:56:04,377][main][INFO] - iteration: 351, loss:  1.350e-01,                             time per iter:  7.173e-01
+[2025-03-22 17:56:05,088][main][INFO] - iteration: 352, loss:  1.163e-01,                             time per iter:  7.101e-01
+[2025-03-22 17:56:05,802][main][INFO] - iteration: 353, loss:  4.081e-01,                             time per iter:  7.122e-01
+[2025-03-22 17:56:06,514][main][INFO] - iteration: 354, loss:  1.524e-01,                             time per iter:  7.108e-01
+[2025-03-22 17:56:11,668][main][INFO] - iteration 355, Validation MSE: 0.5149
+[2025-03-22 17:56:11,922][main][INFO] - iteration: 355, loss:  7.681e-02,                             time per iter:  5.405e+00
+[2025-03-22 17:56:12,641][main][INFO] - iteration: 356, loss:  1.458e-01,                             time per iter:  7.183e-01
+[2025-03-22 17:56:13,350][main][INFO] - iteration: 357, loss:  7.565e-02,                             time per iter:  7.078e-01
+[2025-03-22 17:56:14,061][main][INFO] - iteration: 358, loss:  3.626e-02,                             time per iter:  7.102e-01
+[2025-03-22 17:56:14,770][main][INFO] - iteration: 359, loss:  6.087e-02,                             time per iter:  7.071e-01
+[2025-03-22 17:56:19,929][main][INFO] - iteration 360, Validation MSE: 0.5477
+[2025-03-22 17:56:20,184][main][INFO] - iteration: 360, loss:  1.358e-01,                             time per iter:  5.413e+00
+[2025-03-22 17:56:20,912][main][INFO] - iteration: 361, loss:  3.729e-02,                             time per iter:  7.270e-01
+[2025-03-22 17:56:21,626][main][INFO] - iteration: 362, loss:  1.575e-01,                             time per iter:  7.123e-01
+[2025-03-22 17:56:22,336][main][INFO] - iteration: 363, loss:  8.110e-02,                             time per iter:  7.095e-01
+[2025-03-22 17:56:23,050][main][INFO] - iteration: 364, loss:  3.643e-02,                             time per iter:  7.120e-01
+[2025-03-22 17:56:28,187][main][INFO] - iteration 365, Validation MSE: 0.5425
+[2025-03-22 17:56:28,442][main][INFO] - iteration: 365, loss:  7.749e-02,                             time per iter:  5.391e+00
+[2025-03-22 17:56:29,170][main][INFO] - iteration: 366, loss:  5.292e-02,                             time per iter:  7.269e-01
+[2025-03-22 17:56:29,883][main][INFO] - iteration: 367, loss:  3.898e-02,                             time per iter:  7.118e-01
+[2025-03-22 17:56:30,591][main][INFO] - iteration: 368, loss:  7.214e-02,                             time per iter:  7.069e-01
+[2025-03-22 17:56:31,306][main][INFO] - iteration: 369, loss:  2.736e-02,                             time per iter:  7.137e-01
+[2025-03-22 17:56:36,468][main][INFO] - iteration 370, Validation MSE: 0.5439
+[2025-03-22 17:56:36,722][main][INFO] - iteration: 370, loss:  3.360e-02,                             time per iter:  5.415e+00
+[2025-03-22 17:56:37,437][main][INFO] - iteration: 371, loss:  7.075e-02,                             time per iter:  7.142e-01
+[2025-03-22 17:56:38,148][main][INFO] - iteration: 372, loss:  4.636e-02,                             time per iter:  7.092e-01
+[2025-03-22 17:56:38,861][main][INFO] - iteration: 373, loss:  1.324e-02,                             time per iter:  7.123e-01
+[2025-03-22 17:56:39,570][main][INFO] - iteration: 374, loss:  4.505e-02,                             time per iter:  7.073e-01
+[2025-03-22 17:56:44,729][main][INFO] - iteration 375, Validation MSE: 0.5335
+[2025-03-22 17:56:44,984][main][INFO] - iteration: 375, loss:  3.977e-02,                             time per iter:  5.413e+00
+[2025-03-22 17:56:45,701][main][INFO] - iteration: 376, loss:  5.134e-02,                             time per iter:  7.161e-01
+[2025-03-22 17:56:46,410][main][INFO] - iteration: 377, loss:  1.110e-02,                             time per iter:  7.080e-01
+[2025-03-22 17:56:47,122][main][INFO] - iteration: 378, loss:  1.923e-02,                             time per iter:  7.105e-01
+[2025-03-22 17:56:47,832][main][INFO] - iteration: 379, loss:  2.624e-02,                             time per iter:  7.087e-01
+[2025-03-22 17:56:52,987][main][INFO] - iteration 380, Validation MSE: 0.5419
+[2025-03-22 17:56:53,242][main][INFO] - iteration: 380, loss:  2.939e-02,                             time per iter:  5.408e+00
+[2025-03-22 17:56:53,956][main][INFO] - iteration: 381, loss:  1.657e-02,                             time per iter:  7.138e-01
+[2025-03-22 17:56:54,670][main][INFO] - iteration: 382, loss:  9.266e-03,                             time per iter:  7.120e-01
+[2025-03-22 17:56:55,381][main][INFO] - iteration: 383, loss:  1.621e-02,                             time per iter:  7.106e-01
+[2025-03-22 17:56:56,091][main][INFO] - iteration: 384, loss:  1.463e-02,                             time per iter:  7.080e-01
+[2025-03-22 17:57:01,247][main][INFO] - iteration 385, Validation MSE: 0.5477
+[2025-03-22 17:57:01,502][main][INFO] - iteration: 385, loss:  1.979e-02,                             time per iter:  5.410e+00
+[2025-03-22 17:57:02,217][main][INFO] - iteration: 386, loss:  1.612e-02,                             time per iter:  7.141e-01
+[2025-03-22 17:57:02,928][main][INFO] - iteration: 387, loss:  6.805e-03,                             time per iter:  7.096e-01
+[2025-03-22 17:57:03,639][main][INFO] - iteration: 388, loss:  7.092e-03,                             time per iter:  7.099e-01
+[2025-03-22 17:57:04,349][main][INFO] - iteration: 389, loss:  1.295e-02,                             time per iter:  7.087e-01
+[2025-03-22 17:57:09,647][main][INFO] - iteration 390, Validation MSE: 0.5433
+[2025-03-22 17:57:09,901][main][INFO] - iteration: 390, loss:  9.515e-03,                             time per iter:  5.550e+00
+[2025-03-22 17:57:10,616][main][INFO] - iteration: 391, loss:  2.005e-02,                             time per iter:  7.146e-01
+[2025-03-22 17:57:11,329][main][INFO] - iteration: 392, loss:  6.443e-03,                             time per iter:  7.112e-01
+[2025-03-22 17:57:12,043][main][INFO] - iteration: 393, loss:  9.826e-03,                             time per iter:  7.130e-01
+[2025-03-22 17:57:12,755][main][INFO] - iteration: 394, loss:  7.255e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:57:17,906][main][INFO] - iteration 395, Validation MSE: 0.5435
+[2025-03-22 17:57:18,161][main][INFO] - iteration: 395, loss:  7.058e-03,                             time per iter:  5.404e+00
+[2025-03-22 17:57:18,875][main][INFO] - iteration: 396, loss:  1.113e-02,                             time per iter:  7.134e-01
+[2025-03-22 17:57:19,587][main][INFO] - iteration: 397, loss:  9.533e-03,                             time per iter:  7.107e-01
+[2025-03-22 17:57:20,299][main][INFO] - iteration: 398, loss:  5.354e-03,                             time per iter:  7.112e-01
+[2025-03-22 17:57:21,010][main][INFO] - iteration: 399, loss:  1.218e-02,                             time per iter:  7.095e-01
+[2025-03-22 17:57:40,847][main][INFO] - iteration 400, Validation MSE: 0.5154
+[2025-03-22 17:57:41,192][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.400.mdlus[0m
+[2025-03-22 17:57:41,334][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.400.pt[0m
+[2025-03-22 17:57:41,335][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:57:41,335][main][INFO] - iteration: 400, loss:  6.742e-03,                             time per iter:  2.032e+01
+[2025-03-22 17:57:42,081][main][INFO] - iteration: 401, loss:  5.859e-03,                             time per iter:  7.453e-01
+[2025-03-22 17:57:42,795][main][INFO] - iteration: 402, loss:  4.817e-03,                             time per iter:  7.125e-01
+[2025-03-22 17:57:43,506][main][INFO] - iteration: 403, loss:  5.910e-03,                             time per iter:  7.096e-01
+[2025-03-22 17:57:44,218][main][INFO] - iteration: 404, loss:  5.657e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:57:49,386][main][INFO] - iteration 405, Validation MSE: 0.5111
+[2025-03-22 17:57:49,641][main][INFO] - iteration: 405, loss:  5.808e-03,                             time per iter:  5.421e+00
+[2025-03-22 17:57:50,361][main][INFO] - iteration: 406, loss:  5.600e-03,                             time per iter:  7.203e-01
+[2025-03-22 17:57:51,073][main][INFO] - iteration: 407, loss:  9.127e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:57:51,784][main][INFO] - iteration: 408, loss:  6.250e-03,                             time per iter:  7.098e-01
+[2025-03-22 17:57:52,498][main][INFO] - iteration: 409, loss:  6.552e-03,                             time per iter:  7.119e-01
+[2025-03-22 17:57:57,665][main][INFO] - iteration 410, Validation MSE: 0.5040
+[2025-03-22 17:57:57,919][main][INFO] - iteration: 410, loss:  5.300e-03,                             time per iter:  5.420e+00
+[2025-03-22 17:57:58,633][main][INFO] - iteration: 411, loss:  7.832e-03,                             time per iter:  7.133e-01
+[2025-03-22 17:57:59,346][main][INFO] - iteration: 412, loss:  3.998e-03,                             time per iter:  7.114e-01
+[2025-03-22 17:58:00,058][main][INFO] - iteration: 413, loss:  5.002e-03,                             time per iter:  7.106e-01
+[2025-03-22 17:58:00,769][main][INFO] - iteration: 414, loss:  6.212e-03,                             time per iter:  7.095e-01
+[2025-03-22 17:58:05,946][main][INFO] - iteration 415, Validation MSE: 0.5092
+[2025-03-22 17:58:06,202][main][INFO] - iteration: 415, loss:  6.516e-03,                             time per iter:  5.432e+00
+[2025-03-22 17:58:06,922][main][INFO] - iteration: 416, loss:  4.892e-03,                             time per iter:  7.191e-01
+[2025-03-22 17:58:07,634][main][INFO] - iteration: 417, loss:  4.573e-03,                             time per iter:  7.104e-01
+[2025-03-22 17:58:08,346][main][INFO] - iteration: 418, loss:  4.368e-03,                             time per iter:  7.113e-01
+[2025-03-22 17:58:09,060][main][INFO] - iteration: 419, loss:  3.480e-03,                             time per iter:  7.129e-01
+[2025-03-22 17:58:14,224][main][INFO] - iteration 420, Validation MSE: 0.5119
+[2025-03-22 17:58:14,480][main][INFO] - iteration: 420, loss:  4.323e-03,                             time per iter:  5.419e+00
+[2025-03-22 17:58:15,197][main][INFO] - iteration: 421, loss:  3.817e-03,                             time per iter:  7.163e-01
+[2025-03-22 17:58:15,907][main][INFO] - iteration: 422, loss:  3.814e-03,                             time per iter:  7.087e-01
+[2025-03-22 17:58:16,620][main][INFO] - iteration: 423, loss:  4.341e-03,                             time per iter:  7.114e-01
+[2025-03-22 17:58:17,332][main][INFO] - iteration: 424, loss:  3.547e-03,                             time per iter:  7.109e-01
+[2025-03-22 17:58:22,505][main][INFO] - iteration 425, Validation MSE: 0.5090
+[2025-03-22 17:58:22,760][main][INFO] - iteration: 425, loss:  3.349e-03,                             time per iter:  5.427e+00
+[2025-03-22 17:58:23,479][main][INFO] - iteration: 426, loss:  4.061e-03,                             time per iter:  7.179e-01
+[2025-03-22 17:58:24,192][main][INFO] - iteration: 427, loss:  3.401e-03,                             time per iter:  7.115e-01
+[2025-03-22 17:58:24,907][main][INFO] - iteration: 428, loss:  3.180e-03,                             time per iter:  7.138e-01
+[2025-03-22 17:58:25,619][main][INFO] - iteration: 429, loss:  3.579e-03,                             time per iter:  7.104e-01
+[2025-03-22 17:58:30,784][main][INFO] - iteration 430, Validation MSE: 0.4986
+[2025-03-22 17:58:31,040][main][INFO] - iteration: 430, loss:  3.193e-03,                             time per iter:  5.420e+00
+[2025-03-22 17:58:31,755][main][INFO] - iteration: 431, loss:  3.619e-03,                             time per iter:  7.146e-01
+[2025-03-22 17:58:32,466][main][INFO] - iteration: 432, loss:  4.018e-03,                             time per iter:  7.086e-01
+[2025-03-22 17:58:33,177][main][INFO] - iteration: 433, loss:  4.295e-03,                             time per iter:  7.102e-01
+[2025-03-22 17:58:33,889][main][INFO] - iteration: 434, loss:  3.889e-03,                             time per iter:  7.100e-01
+[2025-03-22 17:58:39,082][main][INFO] - iteration 435, Validation MSE: 0.4998
+[2025-03-22 17:58:39,336][main][INFO] - iteration: 435, loss:  4.437e-03,                             time per iter:  5.446e+00
+[2025-03-22 17:58:40,059][main][INFO] - iteration: 436, loss:  3.639e-03,                             time per iter:  7.219e-01
+[2025-03-22 17:58:40,770][main][INFO] - iteration: 437, loss:  3.479e-03,                             time per iter:  7.095e-01
+[2025-03-22 17:58:41,483][main][INFO] - iteration: 438, loss:  3.354e-03,                             time per iter:  7.118e-01
+[2025-03-22 17:58:42,197][main][INFO] - iteration: 439, loss:  2.919e-03,                             time per iter:  7.128e-01
+[2025-03-22 17:58:47,384][main][INFO] - iteration 440, Validation MSE: 0.4983
+[2025-03-22 17:58:47,638][main][INFO] - iteration: 440, loss:  3.557e-03,                             time per iter:  5.440e+00
+[2025-03-22 17:58:48,352][main][INFO] - iteration: 441, loss:  3.096e-03,                             time per iter:  7.128e-01
+[2025-03-22 17:58:49,060][main][INFO] - iteration: 442, loss:  3.699e-03,                             time per iter:  7.072e-01
+[2025-03-22 17:58:49,768][main][INFO] - iteration: 443, loss:  4.354e-03,                             time per iter:  7.069e-01
+[2025-03-22 17:58:50,482][main][INFO] - iteration: 444, loss:  4.239e-03,                             time per iter:  7.125e-01
+[2025-03-22 17:58:55,643][main][INFO] - iteration 445, Validation MSE: 0.5028
+[2025-03-22 17:58:55,897][main][INFO] - iteration: 445, loss:  3.313e-03,                             time per iter:  5.414e+00
+[2025-03-22 17:58:56,614][main][INFO] - iteration: 446, loss:  3.855e-03,                             time per iter:  7.162e-01
+[2025-03-22 17:58:57,325][main][INFO] - iteration: 447, loss:  4.781e-03,                             time per iter:  7.093e-01
+[2025-03-22 17:58:58,037][main][INFO] - iteration: 448, loss:  4.711e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:58:58,750][main][INFO] - iteration: 449, loss:  6.260e-03,                             time per iter:  7.118e-01
+[2025-03-22 17:59:03,944][main][INFO] - iteration 450, Validation MSE: 0.4990
+[2025-03-22 17:59:04,284][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.450.mdlus[0m
+[2025-03-22 17:59:04,420][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.450.pt[0m
+[2025-03-22 17:59:04,421][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 17:59:04,421][main][INFO] - iteration: 450, loss:  3.885e-03,                             time per iter:  5.670e+00
+[2025-03-22 17:59:05,138][main][INFO] - iteration: 451, loss:  5.399e-03,                             time per iter:  7.163e-01
+[2025-03-22 17:59:05,850][main][INFO] - iteration: 452, loss:  5.263e-03,                             time per iter:  7.111e-01
+[2025-03-22 17:59:06,562][main][INFO] - iteration: 453, loss:  4.991e-03,                             time per iter:  7.106e-01
+[2025-03-22 17:59:07,284][main][INFO] - iteration: 454, loss:  4.446e-03,                             time per iter:  7.205e-01
+[2025-03-22 17:59:12,483][main][INFO] - iteration 455, Validation MSE: 0.4750
+[2025-03-22 17:59:12,738][main][INFO] - iteration: 455, loss:  3.285e-03,                             time per iter:  5.452e+00
+[2025-03-22 17:59:13,456][main][INFO] - iteration: 456, loss:  3.448e-03,                             time per iter:  7.180e-01
+[2025-03-22 17:59:14,167][main][INFO] - iteration: 457, loss:  3.724e-03,                             time per iter:  7.096e-01
+[2025-03-22 17:59:14,884][main][INFO] - iteration: 458, loss:  3.523e-03,                             time per iter:  7.152e-01
+[2025-03-22 17:59:15,596][main][INFO] - iteration: 459, loss:  4.309e-03,                             time per iter:  7.105e-01
+[2025-03-22 17:59:20,782][main][INFO] - iteration 460, Validation MSE: 0.4908
+[2025-03-22 17:59:21,037][main][INFO] - iteration: 460, loss:  1.108e-02,                             time per iter:  5.440e+00
+[2025-03-22 17:59:21,748][main][INFO] - iteration: 461, loss:  2.552e-02,                             time per iter:  7.111e-01
+[2025-03-22 17:59:22,457][main][INFO] - iteration: 462, loss:  1.143e-01,                             time per iter:  7.076e-01
+[2025-03-22 17:59:23,170][main][INFO] - iteration: 463, loss:  2.702e-01,                             time per iter:  7.111e-01
+[2025-03-22 17:59:23,883][main][INFO] - iteration: 464, loss:  3.969e-02,                             time per iter:  7.116e-01
+[2025-03-22 17:59:29,043][main][INFO] - iteration 465, Validation MSE: 0.5869
+[2025-03-22 17:59:29,297][main][INFO] - iteration: 465, loss:  3.311e-01,                             time per iter:  5.413e+00
+[2025-03-22 17:59:30,013][main][INFO] - iteration: 466, loss:  8.155e-02,                             time per iter:  7.150e-01
+[2025-03-22 17:59:30,723][main][INFO] - iteration: 467, loss:  2.248e-01,                             time per iter:  7.087e-01
+[2025-03-22 17:59:31,437][main][INFO] - iteration: 468, loss:  5.557e-02,                             time per iter:  7.122e-01
+[2025-03-22 17:59:32,148][main][INFO] - iteration: 469, loss:  2.139e-02,                             time per iter:  7.103e-01
+[2025-03-22 17:59:37,326][main][INFO] - iteration 470, Validation MSE: 0.5669
+[2025-03-22 17:59:37,581][main][INFO] - iteration: 470, loss:  6.584e-02,                             time per iter:  5.431e+00
+[2025-03-22 17:59:38,299][main][INFO] - iteration: 471, loss:  2.305e-02,                             time per iter:  7.169e-01
+[2025-03-22 17:59:39,015][main][INFO] - iteration: 472, loss:  5.949e-02,                             time per iter:  7.146e-01
+[2025-03-22 17:59:39,735][main][INFO] - iteration: 473, loss:  4.597e-02,                             time per iter:  7.187e-01
+[2025-03-22 17:59:40,451][main][INFO] - iteration: 474, loss:  2.255e-02,                             time per iter:  7.148e-01
+[2025-03-22 17:59:45,623][main][INFO] - iteration 475, Validation MSE: 0.5264
+[2025-03-22 17:59:45,879][main][INFO] - iteration: 475, loss:  6.104e-02,                             time per iter:  5.427e+00
+[2025-03-22 17:59:46,598][main][INFO] - iteration: 476, loss:  4.407e-02,                             time per iter:  7.188e-01
+[2025-03-22 17:59:47,321][main][INFO] - iteration: 477, loss:  2.024e-02,                             time per iter:  7.218e-01
+[2025-03-22 17:59:48,034][main][INFO] - iteration: 478, loss:  2.018e-02,                             time per iter:  7.113e-01
+[2025-03-22 17:59:48,746][main][INFO] - iteration: 479, loss:  5.609e-02,                             time per iter:  7.100e-01
+[2025-03-22 17:59:53,922][main][INFO] - iteration 480, Validation MSE: 0.5254
+[2025-03-22 17:59:54,176][main][INFO] - iteration: 480, loss:  4.731e-02,                             time per iter:  5.429e+00
+[2025-03-22 17:59:54,898][main][INFO] - iteration: 481, loss:  1.122e-02,                             time per iter:  7.213e-01
+[2025-03-22 17:59:55,607][main][INFO] - iteration: 482, loss:  2.510e-02,                             time per iter:  7.073e-01
+[2025-03-22 17:59:56,319][main][INFO] - iteration: 483, loss:  3.058e-02,                             time per iter:  7.109e-01
+[2025-03-22 17:59:57,029][main][INFO] - iteration: 484, loss:  2.674e-02,                             time per iter:  7.091e-01
+[2025-03-22 18:00:02,181][main][INFO] - iteration 485, Validation MSE: 0.5603
+[2025-03-22 18:00:02,435][main][INFO] - iteration: 485, loss:  8.150e-03,                             time per iter:  5.405e+00
+[2025-03-22 18:00:03,153][main][INFO] - iteration: 486, loss:  8.645e-03,                             time per iter:  7.169e-01
+[2025-03-22 18:00:03,862][main][INFO] - iteration: 487, loss:  2.306e-02,                             time per iter:  7.080e-01
+[2025-03-22 18:00:04,574][main][INFO] - iteration: 488, loss:  3.405e-02,                             time per iter:  7.102e-01
+[2025-03-22 18:00:05,289][main][INFO] - iteration: 489, loss:  6.664e-03,                             time per iter:  7.136e-01
+[2025-03-22 18:00:10,499][main][INFO] - iteration 490, Validation MSE: 0.5562
+[2025-03-22 18:00:10,755][main][INFO] - iteration: 490, loss:  7.846e-03,                             time per iter:  5.464e+00
+[2025-03-22 18:00:11,473][main][INFO] - iteration: 491, loss:  7.337e-03,                             time per iter:  7.176e-01
+[2025-03-22 18:00:12,183][main][INFO] - iteration: 492, loss:  2.214e-02,                             time per iter:  7.085e-01
+[2025-03-22 18:00:12,894][main][INFO] - iteration: 493, loss:  3.070e-02,                             time per iter:  7.096e-01
+[2025-03-22 18:00:13,604][main][INFO] - iteration: 494, loss:  4.475e-03,                             time per iter:  7.090e-01
+[2025-03-22 18:00:18,760][main][INFO] - iteration 495, Validation MSE: 0.5492
+[2025-03-22 18:00:19,015][main][INFO] - iteration: 495, loss:  9.321e-03,                             time per iter:  5.409e+00
+[2025-03-22 18:00:19,738][main][INFO] - iteration: 496, loss:  1.054e-02,                             time per iter:  7.222e-01
+[2025-03-22 18:00:20,449][main][INFO] - iteration: 497, loss:  1.306e-02,                             time per iter:  7.102e-01
+[2025-03-22 18:00:21,161][main][INFO] - iteration: 498, loss:  7.155e-03,                             time per iter:  7.104e-01
+[2025-03-22 18:00:21,873][main][INFO] - iteration: 499, loss:  8.940e-03,                             time per iter:  7.113e-01
+[2025-03-22 18:00:41,466][main][INFO] - iteration 500, Validation MSE: 0.5640
+[2025-03-22 18:00:41,803][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.500.mdlus[0m
+[2025-03-22 18:00:41,937][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.500.pt[0m
+[2025-03-22 18:00:41,938][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:00:41,938][main][INFO] - iteration: 500, loss:  7.975e-03,                             time per iter:  2.006e+01
+[2025-03-22 18:00:42,683][main][INFO] - iteration: 501, loss:  6.482e-03,                             time per iter:  7.446e-01
+[2025-03-22 18:00:43,393][main][INFO] - iteration: 502, loss:  4.973e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:00:44,103][main][INFO] - iteration: 503, loss:  5.439e-03,                             time per iter:  7.083e-01
+[2025-03-22 18:00:44,818][main][INFO] - iteration: 504, loss:  3.359e-03,                             time per iter:  7.140e-01
+[2025-03-22 18:00:50,000][main][INFO] - iteration 505, Validation MSE: 0.5395
+[2025-03-22 18:00:50,255][main][INFO] - iteration: 505, loss:  4.617e-03,                             time per iter:  5.435e+00
+[2025-03-22 18:00:50,974][main][INFO] - iteration: 506, loss:  6.382e-03,                             time per iter:  7.188e-01
+[2025-03-22 18:00:51,682][main][INFO] - iteration: 507, loss:  5.735e-03,                             time per iter:  7.071e-01
+[2025-03-22 18:00:52,395][main][INFO] - iteration: 508, loss:  5.102e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:00:53,105][main][INFO] - iteration: 509, loss:  4.705e-03,                             time per iter:  7.085e-01
+[2025-03-22 18:00:58,279][main][INFO] - iteration 510, Validation MSE: 0.5455
+[2025-03-22 18:00:58,533][main][INFO] - iteration: 510, loss:  8.368e-03,                             time per iter:  5.427e+00
+[2025-03-22 18:00:59,248][main][INFO] - iteration: 511, loss:  5.740e-03,                             time per iter:  7.142e-01
+[2025-03-22 18:00:59,961][main][INFO] - iteration: 512, loss:  4.929e-03,                             time per iter:  7.115e-01
+[2025-03-22 18:01:00,673][main][INFO] - iteration: 513, loss:  3.382e-03,                             time per iter:  7.113e-01
+[2025-03-22 18:01:01,384][main][INFO] - iteration: 514, loss:  3.779e-03,                             time per iter:  7.094e-01
+[2025-03-22 18:01:06,540][main][INFO] - iteration 515, Validation MSE: 0.5320
+[2025-03-22 18:01:06,795][main][INFO] - iteration: 515, loss:  4.097e-03,                             time per iter:  5.409e+00
+[2025-03-22 18:01:07,508][main][INFO] - iteration: 516, loss:  3.964e-03,                             time per iter:  7.128e-01
+[2025-03-22 18:01:08,220][main][INFO] - iteration: 517, loss:  3.456e-03,                             time per iter:  7.107e-01
+[2025-03-22 18:01:08,934][main][INFO] - iteration: 518, loss:  3.089e-03,                             time per iter:  7.125e-01
+[2025-03-22 18:01:09,648][main][INFO] - iteration: 519, loss:  3.531e-03,                             time per iter:  7.131e-01
+[2025-03-22 18:01:14,859][main][INFO] - iteration 520, Validation MSE: 0.5026
+[2025-03-22 18:01:15,113][main][INFO] - iteration: 520, loss:  3.701e-03,                             time per iter:  5.464e+00
+[2025-03-22 18:01:15,830][main][INFO] - iteration: 521, loss:  3.499e-03,                             time per iter:  7.161e-01
+[2025-03-22 18:01:16,541][main][INFO] - iteration: 522, loss:  2.934e-03,                             time per iter:  7.090e-01
+[2025-03-22 18:01:17,252][main][INFO] - iteration: 523, loss:  2.879e-03,                             time per iter:  7.105e-01
+[2025-03-22 18:01:17,962][main][INFO] - iteration: 524, loss:  3.384e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:01:23,118][main][INFO] - iteration 525, Validation MSE: 0.5173
+[2025-03-22 18:01:23,373][main][INFO] - iteration: 525, loss:  3.023e-03,                             time per iter:  5.409e+00
+[2025-03-22 18:01:24,092][main][INFO] - iteration: 526, loss:  3.113e-03,                             time per iter:  7.181e-01
+[2025-03-22 18:01:24,802][main][INFO] - iteration: 527, loss:  2.666e-03,                             time per iter:  7.087e-01
+[2025-03-22 18:01:25,515][main][INFO] - iteration: 528, loss:  2.832e-03,                             time per iter:  7.121e-01
+[2025-03-22 18:01:26,229][main][INFO] - iteration: 529, loss:  3.344e-03,                             time per iter:  7.123e-01
+[2025-03-22 18:01:31,399][main][INFO] - iteration 530, Validation MSE: 0.5144
+[2025-03-22 18:01:31,654][main][INFO] - iteration: 530, loss:  2.785e-03,                             time per iter:  5.424e+00
+[2025-03-22 18:01:32,367][main][INFO] - iteration: 531, loss:  3.192e-03,                             time per iter:  7.116e-01
+[2025-03-22 18:01:33,078][main][INFO] - iteration: 532, loss:  3.176e-03,                             time per iter:  7.096e-01
+[2025-03-22 18:01:33,791][main][INFO] - iteration: 533, loss:  2.642e-03,                             time per iter:  7.116e-01
+[2025-03-22 18:01:34,502][main][INFO] - iteration: 534, loss:  2.564e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:01:39,679][main][INFO] - iteration 535, Validation MSE: 0.5051
+[2025-03-22 18:01:39,933][main][INFO] - iteration: 535, loss:  2.754e-03,                             time per iter:  5.430e+00
+[2025-03-22 18:01:40,653][main][INFO] - iteration: 536, loss:  2.904e-03,                             time per iter:  7.197e-01
+[2025-03-22 18:01:41,366][main][INFO] - iteration: 537, loss:  3.017e-03,                             time per iter:  7.112e-01
+[2025-03-22 18:01:42,078][main][INFO] - iteration: 538, loss:  2.515e-03,                             time per iter:  7.106e-01
+[2025-03-22 18:01:42,789][main][INFO] - iteration: 539, loss:  2.984e-03,                             time per iter:  7.099e-01
+[2025-03-22 18:01:47,977][main][INFO] - iteration 540, Validation MSE: 0.5278
+[2025-03-22 18:01:48,231][main][INFO] - iteration: 540, loss:  3.064e-03,                             time per iter:  5.441e+00
+[2025-03-22 18:01:48,946][main][INFO] - iteration: 541, loss:  2.969e-03,                             time per iter:  7.138e-01
+[2025-03-22 18:01:49,657][main][INFO] - iteration: 542, loss:  2.953e-03,                             time per iter:  7.096e-01
+[2025-03-22 18:01:50,373][main][INFO] - iteration: 543, loss:  2.790e-03,                             time per iter:  7.149e-01
+[2025-03-22 18:01:51,086][main][INFO] - iteration: 544, loss:  2.447e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:01:56,278][main][INFO] - iteration 545, Validation MSE: 0.5026
+[2025-03-22 18:01:56,533][main][INFO] - iteration: 545, loss:  3.036e-03,                             time per iter:  5.446e+00
+[2025-03-22 18:01:57,256][main][INFO] - iteration: 546, loss:  2.461e-03,                             time per iter:  7.222e-01
+[2025-03-22 18:01:57,966][main][INFO] - iteration: 547, loss:  3.069e-03,                             time per iter:  7.089e-01
+[2025-03-22 18:01:58,678][main][INFO] - iteration: 548, loss:  2.485e-03,                             time per iter:  7.108e-01
+[2025-03-22 18:01:59,392][main][INFO] - iteration: 549, loss:  2.422e-03,                             time per iter:  7.123e-01
+[2025-03-22 18:02:04,597][main][INFO] - iteration 550, Validation MSE: 0.4888
+[2025-03-22 18:02:04,935][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.550.mdlus[0m
+[2025-03-22 18:02:05,067][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.550.pt[0m
+[2025-03-22 18:02:05,067][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:02:05,067][main][INFO] - iteration: 550, loss:  2.913e-03,                             time per iter:  5.674e+00
+[2025-03-22 18:02:05,781][main][INFO] - iteration: 551, loss:  2.408e-03,                             time per iter:  7.126e-01
+[2025-03-22 18:02:06,493][main][INFO] - iteration: 552, loss:  2.868e-03,                             time per iter:  7.107e-01
+[2025-03-22 18:02:07,204][main][INFO] - iteration: 553, loss:  2.578e-03,                             time per iter:  7.102e-01
+[2025-03-22 18:02:07,917][main][INFO] - iteration: 554, loss:  2.765e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:02:13,077][main][INFO] - iteration 555, Validation MSE: 0.5185
+[2025-03-22 18:02:13,332][main][INFO] - iteration: 555, loss:  2.733e-03,                             time per iter:  5.414e+00
+[2025-03-22 18:02:14,054][main][INFO] - iteration: 556, loss:  2.619e-03,                             time per iter:  7.211e-01
+[2025-03-22 18:02:14,765][main][INFO] - iteration: 557, loss:  2.604e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:02:15,477][main][INFO] - iteration: 558, loss:  3.091e-03,                             time per iter:  7.099e-01
+[2025-03-22 18:02:16,193][main][INFO] - iteration: 559, loss:  2.808e-03,                             time per iter:  7.150e-01
+[2025-03-22 18:02:21,377][main][INFO] - iteration 560, Validation MSE: 0.4951
+[2025-03-22 18:02:21,632][main][INFO] - iteration: 560, loss:  2.393e-03,                             time per iter:  5.438e+00
+[2025-03-22 18:02:22,349][main][INFO] - iteration: 561, loss:  2.837e-03,                             time per iter:  7.159e-01
+[2025-03-22 18:02:23,060][main][INFO] - iteration: 562, loss:  3.020e-03,                             time per iter:  7.094e-01
+[2025-03-22 18:02:23,774][main][INFO] - iteration: 563, loss:  2.622e-03,                             time per iter:  7.128e-01
+[2025-03-22 18:02:24,485][main][INFO] - iteration: 564, loss:  2.729e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:02:29,657][main][INFO] - iteration 565, Validation MSE: 0.4906
+[2025-03-22 18:02:29,912][main][INFO] - iteration: 565, loss:  4.437e-03,                             time per iter:  5.425e+00
+[2025-03-22 18:02:30,635][main][INFO] - iteration: 566, loss:  1.151e-02,                             time per iter:  7.227e-01
+[2025-03-22 18:02:31,368][main][INFO] - iteration: 567, loss:  9.552e-02,                             time per iter:  7.315e-01
+[2025-03-22 18:02:32,078][main][INFO] - iteration: 568, loss:  8.256e-02,                             time per iter:  7.092e-01
+[2025-03-22 18:02:32,791][main][INFO] - iteration: 569, loss:  5.739e-02,                             time per iter:  7.113e-01
+[2025-03-22 18:02:37,976][main][INFO] - iteration 570, Validation MSE: 0.5017
+[2025-03-22 18:02:38,230][main][INFO] - iteration: 570, loss:  9.434e-02,                             time per iter:  5.438e+00
+[2025-03-22 18:02:38,947][main][INFO] - iteration: 571, loss:  1.190e-01,                             time per iter:  7.161e-01
+[2025-03-22 18:02:39,658][main][INFO] - iteration: 572, loss:  2.031e-02,                             time per iter:  7.099e-01
+[2025-03-22 18:02:40,372][main][INFO] - iteration: 573, loss:  9.919e-02,                             time per iter:  7.127e-01
+[2025-03-22 18:02:41,082][main][INFO] - iteration: 574, loss:  2.145e-02,                             time per iter:  7.088e-01
+[2025-03-22 18:02:46,656][main][INFO] - iteration 575, Validation MSE: 0.5361
+[2025-03-22 18:02:46,912][main][INFO] - iteration: 575, loss:  1.178e-01,                             time per iter:  5.829e+00
+[2025-03-22 18:02:47,625][main][INFO] - iteration: 576, loss:  2.537e-01,                             time per iter:  7.119e-01
+[2025-03-22 18:02:48,336][main][INFO] - iteration: 577, loss:  3.039e-02,                             time per iter:  7.099e-01
+[2025-03-22 18:02:49,049][main][INFO] - iteration: 578, loss:  1.188e-01,                             time per iter:  7.115e-01
+[2025-03-22 18:02:49,760][main][INFO] - iteration: 579, loss:  7.380e-02,                             time per iter:  7.092e-01
+[2025-03-22 18:02:54,956][main][INFO] - iteration 580, Validation MSE: 0.5706
+[2025-03-22 18:02:55,210][main][INFO] - iteration: 580, loss:  1.542e-02,                             time per iter:  5.449e+00
+[2025-03-22 18:02:55,922][main][INFO] - iteration: 581, loss:  1.345e-01,                             time per iter:  7.114e-01
+[2025-03-22 18:02:56,636][main][INFO] - iteration: 582, loss:  9.830e-02,                             time per iter:  7.123e-01
+[2025-03-22 18:02:57,349][main][INFO] - iteration: 583, loss:  6.790e-03,                             time per iter:  7.122e-01
+[2025-03-22 18:02:58,061][main][INFO] - iteration: 584, loss:  2.899e-02,                             time per iter:  7.098e-01
+[2025-03-22 18:03:03,236][main][INFO] - iteration 585, Validation MSE: 0.6031
+[2025-03-22 18:03:03,492][main][INFO] - iteration: 585, loss:  8.460e-02,                             time per iter:  5.430e+00
+[2025-03-22 18:03:04,207][main][INFO] - iteration: 586, loss:  5.453e-02,                             time per iter:  7.140e-01
+[2025-03-22 18:03:04,923][main][INFO] - iteration: 587, loss:  1.082e-02,                             time per iter:  7.150e-01
+[2025-03-22 18:03:05,636][main][INFO] - iteration: 588, loss:  2.618e-02,                             time per iter:  7.119e-01
+[2025-03-22 18:03:06,349][main][INFO] - iteration: 589, loss:  6.412e-02,                             time per iter:  7.116e-01
+[2025-03-22 18:03:11,515][main][INFO] - iteration 590, Validation MSE: 0.5766
+[2025-03-22 18:03:11,770][main][INFO] - iteration: 590, loss:  3.018e-02,                             time per iter:  5.419e+00
+[2025-03-22 18:03:12,488][main][INFO] - iteration: 591, loss:  5.729e-03,                             time per iter:  7.178e-01
+[2025-03-22 18:03:13,198][main][INFO] - iteration: 592, loss:  3.254e-02,                             time per iter:  7.086e-01
+[2025-03-22 18:03:13,912][main][INFO] - iteration: 593, loss:  2.089e-02,                             time per iter:  7.127e-01
+[2025-03-22 18:03:14,622][main][INFO] - iteration: 594, loss:  2.109e-02,                             time per iter:  7.090e-01
+[2025-03-22 18:03:19,773][main][INFO] - iteration 595, Validation MSE: 0.5648
+[2025-03-22 18:03:20,028][main][INFO] - iteration: 595, loss:  1.309e-02,                             time per iter:  5.404e+00
+[2025-03-22 18:03:20,745][main][INFO] - iteration: 596, loss:  2.473e-02,                             time per iter:  7.165e-01
+[2025-03-22 18:03:21,456][main][INFO] - iteration: 597, loss:  1.639e-02,                             time per iter:  7.097e-01
+[2025-03-22 18:03:22,169][main][INFO] - iteration: 598, loss:  2.987e-02,                             time per iter:  7.123e-01
+[2025-03-22 18:03:22,877][main][INFO] - iteration: 599, loss:  6.946e-03,                             time per iter:  7.066e-01
+[2025-03-22 18:03:42,662][main][INFO] - iteration 600, Validation MSE: 0.5407
+[2025-03-22 18:03:43,005][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.600.mdlus[0m
+[2025-03-22 18:03:43,146][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.600.pt[0m
+[2025-03-22 18:03:43,147][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:03:43,147][main][INFO] - iteration: 600, loss:  7.188e-03,                             time per iter:  2.027e+01
+[2025-03-22 18:03:43,893][main][INFO] - iteration: 601, loss:  6.605e-03,                             time per iter:  7.453e-01
+[2025-03-22 18:03:44,602][main][INFO] - iteration: 602, loss:  1.477e-02,                             time per iter:  7.076e-01
+[2025-03-22 18:03:45,314][main][INFO] - iteration: 603, loss:  1.545e-02,                             time per iter:  7.106e-01
+[2025-03-22 18:03:46,027][main][INFO] - iteration: 604, loss:  1.053e-02,                             time per iter:  7.115e-01
+[2025-03-22 18:03:51,214][main][INFO] - iteration 605, Validation MSE: 0.5264
+[2025-03-22 18:03:51,471][main][INFO] - iteration: 605, loss:  3.649e-03,                             time per iter:  5.442e+00
+[2025-03-22 18:03:52,190][main][INFO] - iteration: 606, loss:  8.894e-03,                             time per iter:  7.183e-01
+[2025-03-22 18:03:52,899][main][INFO] - iteration: 607, loss:  1.828e-02,                             time per iter:  7.078e-01
+[2025-03-22 18:03:53,609][main][INFO] - iteration: 608, loss:  1.000e-02,                             time per iter:  7.087e-01
+[2025-03-22 18:03:54,317][main][INFO] - iteration: 609, loss:  7.631e-03,                             time per iter:  7.063e-01
+[2025-03-22 18:03:59,494][main][INFO] - iteration 610, Validation MSE: 0.5434
+[2025-03-22 18:03:59,748][main][INFO] - iteration: 610, loss:  6.557e-03,                             time per iter:  5.430e+00
+[2025-03-22 18:04:00,460][main][INFO] - iteration: 611, loss:  5.589e-03,                             time per iter:  7.114e-01
+[2025-03-22 18:04:01,174][main][INFO] - iteration: 612, loss:  7.648e-03,                             time per iter:  7.122e-01
+[2025-03-22 18:04:01,885][main][INFO] - iteration: 613, loss:  7.148e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:04:02,594][main][INFO] - iteration: 614, loss:  6.145e-03,                             time per iter:  7.075e-01
+[2025-03-22 18:04:07,753][main][INFO] - iteration 615, Validation MSE: 0.5421
+[2025-03-22 18:04:08,007][main][INFO] - iteration: 615, loss:  4.319e-03,                             time per iter:  5.411e+00
+[2025-03-22 18:04:08,719][main][INFO] - iteration: 616, loss:  3.591e-03,                             time per iter:  7.118e-01
+[2025-03-22 18:04:09,431][main][INFO] - iteration: 617, loss:  4.097e-03,                             time per iter:  7.103e-01
+[2025-03-22 18:04:10,142][main][INFO] - iteration: 618, loss:  5.577e-03,                             time per iter:  7.093e-01
+[2025-03-22 18:04:10,853][main][INFO] - iteration: 619, loss:  8.608e-03,                             time per iter:  7.099e-01
+[2025-03-22 18:04:16,014][main][INFO] - iteration 620, Validation MSE: 0.5354
+[2025-03-22 18:04:16,268][main][INFO] - iteration: 620, loss:  3.686e-03,                             time per iter:  5.414e+00
+[2025-03-22 18:04:16,987][main][INFO] - iteration: 621, loss:  3.305e-03,                             time per iter:  7.189e-01
+[2025-03-22 18:04:17,698][main][INFO] - iteration: 622, loss:  3.729e-03,                             time per iter:  7.089e-01
+[2025-03-22 18:04:18,410][main][INFO] - iteration: 623, loss:  4.270e-03,                             time per iter:  7.108e-01
+[2025-03-22 18:04:19,122][main][INFO] - iteration: 624, loss:  5.241e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:04:24,292][main][INFO] - iteration 625, Validation MSE: 0.5196
+[2025-03-22 18:04:24,547][main][INFO] - iteration: 625, loss:  5.892e-03,                             time per iter:  5.424e+00
+[2025-03-22 18:04:25,259][main][INFO] - iteration: 626, loss:  3.303e-03,                             time per iter:  7.116e-01
+[2025-03-22 18:04:25,973][main][INFO] - iteration: 627, loss:  3.882e-03,                             time per iter:  7.118e-01
+[2025-03-22 18:04:26,684][main][INFO] - iteration: 628, loss:  3.178e-03,                             time per iter:  7.104e-01
+[2025-03-22 18:04:27,400][main][INFO] - iteration: 629, loss:  3.756e-03,                             time per iter:  7.141e-01
+[2025-03-22 18:04:32,573][main][INFO] - iteration 630, Validation MSE: 0.5101
+[2025-03-22 18:04:32,827][main][INFO] - iteration: 630, loss:  3.369e-03,                             time per iter:  5.426e+00
+[2025-03-22 18:04:33,549][main][INFO] - iteration: 631, loss:  3.247e-03,                             time per iter:  7.210e-01
+[2025-03-22 18:04:34,265][main][INFO] - iteration: 632, loss:  2.828e-03,                             time per iter:  7.152e-01
+[2025-03-22 18:04:34,976][main][INFO] - iteration: 633, loss:  3.062e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:04:35,686][main][INFO] - iteration: 634, loss:  2.464e-03,                             time per iter:  7.092e-01
+[2025-03-22 18:04:40,833][main][INFO] - iteration 635, Validation MSE: 0.5177
+[2025-03-22 18:04:41,088][main][INFO] - iteration: 635, loss:  2.941e-03,                             time per iter:  5.400e+00
+[2025-03-22 18:04:41,806][main][INFO] - iteration: 636, loss:  2.560e-03,                             time per iter:  7.173e-01
+[2025-03-22 18:04:42,515][main][INFO] - iteration: 637, loss:  2.903e-03,                             time per iter:  7.083e-01
+[2025-03-22 18:04:43,229][main][INFO] - iteration: 638, loss:  2.695e-03,                             time per iter:  7.123e-01
+[2025-03-22 18:04:43,941][main][INFO] - iteration: 639, loss:  2.785e-03,                             time per iter:  7.109e-01
+[2025-03-22 18:04:49,134][main][INFO] - iteration 640, Validation MSE: 0.5226
+[2025-03-22 18:04:49,389][main][INFO] - iteration: 640, loss:  2.772e-03,                             time per iter:  5.446e+00
+[2025-03-22 18:04:50,104][main][INFO] - iteration: 641, loss:  2.906e-03,                             time per iter:  7.149e-01
+[2025-03-22 18:04:50,812][main][INFO] - iteration: 642, loss:  2.638e-03,                             time per iter:  7.062e-01
+[2025-03-22 18:04:51,523][main][INFO] - iteration: 643, loss:  2.857e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:04:52,234][main][INFO] - iteration: 644, loss:  2.540e-03,                             time per iter:  7.091e-01
+[2025-03-22 18:04:57,396][main][INFO] - iteration 645, Validation MSE: 0.5145
+[2025-03-22 18:04:57,650][main][INFO] - iteration: 645, loss:  2.364e-03,                             time per iter:  5.415e+00
+[2025-03-22 18:04:58,364][main][INFO] - iteration: 646, loss:  2.440e-03,                             time per iter:  7.125e-01
+[2025-03-22 18:04:59,075][main][INFO] - iteration: 647, loss:  2.918e-03,                             time per iter:  7.101e-01
+[2025-03-22 18:04:59,789][main][INFO] - iteration: 648, loss:  2.877e-03,                             time per iter:  7.121e-01
+[2025-03-22 18:05:00,499][main][INFO] - iteration: 649, loss:  2.585e-03,                             time per iter:  7.092e-01
+[2025-03-22 18:05:05,691][main][INFO] - iteration 650, Validation MSE: 0.5138
+[2025-03-22 18:05:06,035][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.650.mdlus[0m
+[2025-03-22 18:05:06,179][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.650.pt[0m
+[2025-03-22 18:05:06,179][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:05:06,180][main][INFO] - iteration: 650, loss:  2.555e-03,                             time per iter:  5.679e+00
+[2025-03-22 18:05:06,894][main][INFO] - iteration: 651, loss:  2.657e-03,                             time per iter:  7.139e-01
+[2025-03-22 18:05:07,604][main][INFO] - iteration: 652, loss:  3.108e-03,                             time per iter:  7.084e-01
+[2025-03-22 18:05:08,314][main][INFO] - iteration: 653, loss:  2.322e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:05:09,026][main][INFO] - iteration: 654, loss:  2.978e-03,                             time per iter:  7.106e-01
+[2025-03-22 18:05:14,231][main][INFO] - iteration 655, Validation MSE: 0.5114
+[2025-03-22 18:05:14,486][main][INFO] - iteration: 655, loss:  2.929e-03,                             time per iter:  5.458e+00
+[2025-03-22 18:05:15,204][main][INFO] - iteration: 656, loss:  1.032e-02,                             time per iter:  7.177e-01
+[2025-03-22 18:05:15,917][main][INFO] - iteration: 657, loss:  9.710e-03,                             time per iter:  7.113e-01
+[2025-03-22 18:05:16,629][main][INFO] - iteration: 658, loss:  5.508e-03,                             time per iter:  7.104e-01
+[2025-03-22 18:05:17,339][main][INFO] - iteration: 659, loss:  4.661e-02,                             time per iter:  7.093e-01
+[2025-03-22 18:05:22,528][main][INFO] - iteration 660, Validation MSE: 0.4866
+[2025-03-22 18:05:22,783][main][INFO] - iteration: 660, loss:  1.691e-02,                             time per iter:  5.442e+00
+[2025-03-22 18:05:23,495][main][INFO] - iteration: 661, loss:  9.483e-03,                             time per iter:  7.117e-01
+[2025-03-22 18:05:24,205][main][INFO] - iteration: 662, loss:  5.639e-03,                             time per iter:  7.079e-01
+[2025-03-22 18:05:24,919][main][INFO] - iteration: 663, loss:  6.726e-03,                             time per iter:  7.136e-01
+[2025-03-22 18:05:25,632][main][INFO] - iteration: 664, loss:  3.480e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:05:30,809][main][INFO] - iteration 665, Validation MSE: 0.5050
+[2025-03-22 18:05:31,064][main][INFO] - iteration: 665, loss:  5.872e-03,                             time per iter:  5.430e+00
+[2025-03-22 18:05:31,784][main][INFO] - iteration: 666, loss:  6.932e-03,                             time per iter:  7.195e-01
+[2025-03-22 18:05:32,493][main][INFO] - iteration: 667, loss:  4.103e-03,                             time per iter:  7.076e-01
+[2025-03-22 18:05:33,204][main][INFO] - iteration: 668, loss:  6.505e-03,                             time per iter:  7.101e-01
+[2025-03-22 18:05:33,913][main][INFO] - iteration: 669, loss:  1.316e-02,                             time per iter:  7.074e-01
+[2025-03-22 18:05:39,085][main][INFO] - iteration 670, Validation MSE: 0.4980
+[2025-03-22 18:05:39,340][main][INFO] - iteration: 670, loss:  1.887e-02,                             time per iter:  5.425e+00
+[2025-03-22 18:05:40,055][main][INFO] - iteration: 671, loss:  3.397e-02,                             time per iter:  7.146e-01
+[2025-03-22 18:05:40,767][main][INFO] - iteration: 672, loss:  3.040e-02,                             time per iter:  7.107e-01
+[2025-03-22 18:05:41,476][main][INFO] - iteration: 673, loss:  3.146e-02,                             time per iter:  7.076e-01
+[2025-03-22 18:05:42,188][main][INFO] - iteration: 674, loss:  2.043e-02,                             time per iter:  7.107e-01
+[2025-03-22 18:05:47,371][main][INFO] - iteration 675, Validation MSE: 0.4885
+[2025-03-22 18:05:47,625][main][INFO] - iteration: 675, loss:  4.068e-02,                             time per iter:  5.436e+00
+[2025-03-22 18:05:48,339][main][INFO] - iteration: 676, loss:  1.048e-02,                             time per iter:  7.128e-01
+[2025-03-22 18:05:49,047][main][INFO] - iteration: 677, loss:  2.948e-02,                             time per iter:  7.068e-01
+[2025-03-22 18:05:49,755][main][INFO] - iteration: 678, loss:  1.263e-02,                             time per iter:  7.061e-01
+[2025-03-22 18:05:50,469][main][INFO] - iteration: 679, loss:  9.119e-03,                             time per iter:  7.132e-01
+[2025-03-22 18:05:55,653][main][INFO] - iteration 680, Validation MSE: 0.5193
+[2025-03-22 18:05:55,908][main][INFO] - iteration: 680, loss:  1.920e-02,                             time per iter:  5.438e+00
+[2025-03-22 18:05:56,623][main][INFO] - iteration: 681, loss:  5.252e-03,                             time per iter:  7.141e-01
+[2025-03-22 18:05:57,332][main][INFO] - iteration: 682, loss:  8.038e-03,                             time per iter:  7.081e-01
+[2025-03-22 18:05:58,043][main][INFO] - iteration: 683, loss:  1.223e-02,                             time per iter:  7.096e-01
+[2025-03-22 18:05:58,753][main][INFO] - iteration: 684, loss:  1.160e-02,                             time per iter:  7.079e-01
+[2025-03-22 18:06:03,930][main][INFO] - iteration 685, Validation MSE: 0.5306
+[2025-03-22 18:06:04,185][main][INFO] - iteration: 685, loss:  1.809e-02,                             time per iter:  5.432e+00
+[2025-03-22 18:06:04,908][main][INFO] - iteration: 686, loss:  1.760e-02,                             time per iter:  7.222e-01
+[2025-03-22 18:06:05,619][main][INFO] - iteration: 687, loss:  9.364e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:06:06,329][main][INFO] - iteration: 688, loss:  1.381e-02,                             time per iter:  7.094e-01
+[2025-03-22 18:06:07,043][main][INFO] - iteration: 689, loss:  3.984e-03,                             time per iter:  7.125e-01
+[2025-03-22 18:06:12,208][main][INFO] - iteration 690, Validation MSE: 0.5401
+[2025-03-22 18:06:12,463][main][INFO] - iteration: 690, loss:  5.533e-03,                             time per iter:  5.418e+00
+[2025-03-22 18:06:13,178][main][INFO] - iteration: 691, loss:  4.142e-03,                             time per iter:  7.151e-01
+[2025-03-22 18:06:13,890][main][INFO] - iteration: 692, loss:  3.061e-03,                             time per iter:  7.108e-01
+[2025-03-22 18:06:14,602][main][INFO] - iteration: 693, loss:  3.970e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:06:15,313][main][INFO] - iteration: 694, loss:  9.455e-03,                             time per iter:  7.095e-01
+[2025-03-22 18:06:20,488][main][INFO] - iteration 695, Validation MSE: 0.5613
+[2025-03-22 18:06:20,743][main][INFO] - iteration: 695, loss:  6.680e-03,                             time per iter:  5.429e+00
+[2025-03-22 18:06:21,455][main][INFO] - iteration: 696, loss:  9.303e-03,                             time per iter:  7.115e-01
+[2025-03-22 18:06:22,168][main][INFO] - iteration: 697, loss:  2.748e-03,                             time per iter:  7.121e-01
+[2025-03-22 18:06:22,881][main][INFO] - iteration: 698, loss:  7.493e-03,                             time per iter:  7.115e-01
+[2025-03-22 18:06:23,591][main][INFO] - iteration: 699, loss:  5.537e-03,                             time per iter:  7.083e-01
+[2025-03-22 18:06:43,052][main][INFO] - iteration 700, Validation MSE: 0.5070
+[2025-03-22 18:06:43,393][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.700.mdlus[0m
+[2025-03-22 18:06:43,534][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.700.pt[0m
+[2025-03-22 18:06:43,534][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:06:43,535][main][INFO] - iteration: 700, loss:  3.337e-03,                             time per iter:  1.994e+01
+[2025-03-22 18:06:44,283][main][INFO] - iteration: 701, loss:  8.073e-03,                             time per iter:  7.476e-01
+[2025-03-22 18:06:44,993][main][INFO] - iteration: 702, loss:  3.847e-03,                             time per iter:  7.085e-01
+[2025-03-22 18:06:45,704][main][INFO] - iteration: 703, loss:  3.999e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:06:46,415][main][INFO] - iteration: 704, loss:  7.634e-03,                             time per iter:  7.096e-01
+[2025-03-22 18:06:51,609][main][INFO] - iteration 705, Validation MSE: 0.5431
+[2025-03-22 18:06:51,863][main][INFO] - iteration: 705, loss:  3.443e-03,                             time per iter:  5.446e+00
+[2025-03-22 18:06:52,574][main][INFO] - iteration: 706, loss:  1.011e-02,                             time per iter:  7.104e-01
+[2025-03-22 18:06:53,289][main][INFO] - iteration: 707, loss:  5.584e-03,                             time per iter:  7.141e-01
+[2025-03-22 18:06:54,006][main][INFO] - iteration: 708, loss:  4.814e-03,                             time per iter:  7.155e-01
+[2025-03-22 18:06:54,715][main][INFO] - iteration: 709, loss:  6.351e-03,                             time per iter:  7.073e-01
+[2025-03-22 18:06:59,889][main][INFO] - iteration 710, Validation MSE: 0.5321
+[2025-03-22 18:07:00,143][main][INFO] - iteration: 710, loss:  6.030e-03,                             time per iter:  5.427e+00
+[2025-03-22 18:07:00,857][main][INFO] - iteration: 711, loss:  5.178e-03,                             time per iter:  7.131e-01
+[2025-03-22 18:07:01,568][main][INFO] - iteration: 712, loss:  4.311e-03,                             time per iter:  7.096e-01
+[2025-03-22 18:07:02,278][main][INFO] - iteration: 713, loss:  5.065e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:07:02,991][main][INFO] - iteration: 714, loss:  3.300e-03,                             time per iter:  7.120e-01
+[2025-03-22 18:07:08,165][main][INFO] - iteration 715, Validation MSE: 0.4970
+[2025-03-22 18:07:08,420][main][INFO] - iteration: 715, loss:  5.239e-03,                             time per iter:  5.427e+00
+[2025-03-22 18:07:09,136][main][INFO] - iteration: 716, loss:  5.413e-03,                             time per iter:  7.158e-01
+[2025-03-22 18:07:09,850][main][INFO] - iteration: 717, loss:  4.262e-03,                             time per iter:  7.125e-01
+[2025-03-22 18:07:10,562][main][INFO] - iteration: 718, loss:  5.774e-03,                             time per iter:  7.107e-01
+[2025-03-22 18:07:11,278][main][INFO] - iteration: 719, loss:  4.569e-03,                             time per iter:  7.146e-01
+[2025-03-22 18:07:16,449][main][INFO] - iteration 720, Validation MSE: 0.4999
+[2025-03-22 18:07:16,703][main][INFO] - iteration: 720, loss:  2.809e-03,                             time per iter:  5.424e+00
+[2025-03-22 18:07:17,420][main][INFO] - iteration: 721, loss:  4.065e-03,                             time per iter:  7.156e-01
+[2025-03-22 18:07:18,130][main][INFO] - iteration: 722, loss:  5.360e-03,                             time per iter:  7.092e-01
+[2025-03-22 18:07:18,841][main][INFO] - iteration: 723, loss:  2.730e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:07:19,550][main][INFO] - iteration: 724, loss:  3.420e-03,                             time per iter:  7.068e-01
+[2025-03-22 18:07:24,708][main][INFO] - iteration 725, Validation MSE: 0.5054
+[2025-03-22 18:07:24,963][main][INFO] - iteration: 725, loss:  3.624e-03,                             time per iter:  5.412e+00
+[2025-03-22 18:07:25,677][main][INFO] - iteration: 726, loss:  2.822e-03,                             time per iter:  7.140e-01
+[2025-03-22 18:07:26,408][main][INFO] - iteration: 727, loss:  2.755e-03,                             time per iter:  7.293e-01
+[2025-03-22 18:07:27,120][main][INFO] - iteration: 728, loss:  3.225e-03,                             time per iter:  7.103e-01
+[2025-03-22 18:07:27,831][main][INFO] - iteration: 729, loss:  3.431e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:07:33,008][main][INFO] - iteration 730, Validation MSE: 0.5283
+[2025-03-22 18:07:33,262][main][INFO] - iteration: 730, loss:  2.975e-03,                             time per iter:  5.430e+00
+[2025-03-22 18:07:33,984][main][INFO] - iteration: 731, loss:  2.946e-03,                             time per iter:  7.211e-01
+[2025-03-22 18:07:34,694][main][INFO] - iteration: 732, loss:  2.915e-03,                             time per iter:  7.090e-01
+[2025-03-22 18:07:35,409][main][INFO] - iteration: 733, loss:  3.150e-03,                             time per iter:  7.135e-01
+[2025-03-22 18:07:36,123][main][INFO] - iteration: 734, loss:  2.880e-03,                             time per iter:  7.124e-01
+[2025-03-22 18:07:41,288][main][INFO] - iteration 735, Validation MSE: 0.5030
+[2025-03-22 18:07:41,543][main][INFO] - iteration: 735, loss:  2.704e-03,                             time per iter:  5.420e+00
+[2025-03-22 18:07:42,262][main][INFO] - iteration: 736, loss:  2.767e-03,                             time per iter:  7.180e-01
+[2025-03-22 18:07:42,971][main][INFO] - iteration: 737, loss:  2.438e-03,                             time per iter:  7.078e-01
+[2025-03-22 18:07:43,686][main][INFO] - iteration: 738, loss:  2.814e-03,                             time per iter:  7.134e-01
+[2025-03-22 18:07:44,396][main][INFO] - iteration: 739, loss:  2.292e-03,                             time per iter:  7.083e-01
+[2025-03-22 18:07:49,571][main][INFO] - iteration 740, Validation MSE: 0.5067
+[2025-03-22 18:07:49,826][main][INFO] - iteration: 740, loss:  2.507e-03,                             time per iter:  5.429e+00
+[2025-03-22 18:07:50,544][main][INFO] - iteration: 741, loss:  2.386e-03,                             time per iter:  7.171e-01
+[2025-03-22 18:07:51,256][main][INFO] - iteration: 742, loss:  2.288e-03,                             time per iter:  7.108e-01
+[2025-03-22 18:07:51,967][main][INFO] - iteration: 743, loss:  2.177e-03,                             time per iter:  7.101e-01
+[2025-03-22 18:07:52,678][main][INFO] - iteration: 744, loss:  2.262e-03,                             time per iter:  7.097e-01
+[2025-03-22 18:07:57,846][main][INFO] - iteration 745, Validation MSE: 0.5119
+[2025-03-22 18:07:58,101][main][INFO] - iteration: 745, loss:  2.635e-03,                             time per iter:  5.422e+00
+[2025-03-22 18:07:58,819][main][INFO] - iteration: 746, loss:  2.613e-03,                             time per iter:  7.169e-01
+[2025-03-22 18:07:59,528][main][INFO] - iteration: 747, loss:  2.610e-03,                             time per iter:  7.077e-01
+[2025-03-22 18:08:00,239][main][INFO] - iteration: 748, loss:  2.754e-03,                             time per iter:  7.101e-01
+[2025-03-22 18:08:00,952][main][INFO] - iteration: 749, loss:  2.571e-03,                             time per iter:  7.112e-01
+[2025-03-22 18:08:06,131][main][INFO] - iteration 750, Validation MSE: 0.5139
+[2025-03-22 18:08:06,472][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.750.mdlus[0m
+[2025-03-22 18:08:06,615][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.750.pt[0m
+[2025-03-22 18:08:06,615][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:08:06,615][main][INFO] - iteration: 750, loss:  3.524e-03,                             time per iter:  5.663e+00
+[2025-03-22 18:08:07,330][main][INFO] - iteration: 751, loss:  3.798e-03,                             time per iter:  7.134e-01
+[2025-03-22 18:08:08,039][main][INFO] - iteration: 752, loss:  1.018e-02,                             time per iter:  7.082e-01
+[2025-03-22 18:08:08,751][main][INFO] - iteration: 753, loss:  4.511e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:08:09,462][main][INFO] - iteration: 754, loss:  7.346e-03,                             time per iter:  7.103e-01
+[2025-03-22 18:08:14,628][main][INFO] - iteration 755, Validation MSE: 0.4885
+[2025-03-22 18:08:14,883][main][INFO] - iteration: 755, loss:  2.436e-03,                             time per iter:  5.420e+00
+[2025-03-22 18:08:15,598][main][INFO] - iteration: 756, loss:  7.304e-03,                             time per iter:  7.137e-01
+[2025-03-22 18:08:16,309][main][INFO] - iteration: 757, loss:  5.770e-03,                             time per iter:  7.102e-01
+[2025-03-22 18:08:17,019][main][INFO] - iteration: 758, loss:  2.621e-02,                             time per iter:  7.087e-01
+[2025-03-22 18:08:17,730][main][INFO] - iteration: 759, loss:  9.618e-03,                             time per iter:  7.092e-01
+[2025-03-22 18:08:22,907][main][INFO] - iteration 760, Validation MSE: 0.4962
+[2025-03-22 18:08:23,162][main][INFO] - iteration: 760, loss:  9.706e-03,                             time per iter:  5.431e+00
+[2025-03-22 18:08:23,876][main][INFO] - iteration: 761, loss:  6.021e-03,                             time per iter:  7.138e-01
+[2025-03-22 18:08:24,590][main][INFO] - iteration: 762, loss:  9.996e-03,                             time per iter:  7.119e-01
+[2025-03-22 18:08:25,303][main][INFO] - iteration: 763, loss:  8.989e-03,                             time per iter:  7.117e-01
+[2025-03-22 18:08:26,016][main][INFO] - iteration: 764, loss:  5.433e-03,                             time per iter:  7.119e-01
+[2025-03-22 18:08:31,167][main][INFO] - iteration 765, Validation MSE: 0.5718
+[2025-03-22 18:08:31,421][main][INFO] - iteration: 765, loss:  5.170e-03,                             time per iter:  5.404e+00
+[2025-03-22 18:08:32,135][main][INFO] - iteration: 766, loss:  4.268e-03,                             time per iter:  7.135e-01
+[2025-03-22 18:08:32,847][main][INFO] - iteration: 767, loss:  6.640e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:08:33,559][main][INFO] - iteration: 768, loss:  6.749e-03,                             time per iter:  7.108e-01
+[2025-03-22 18:08:34,269][main][INFO] - iteration: 769, loss:  2.156e-02,                             time per iter:  7.093e-01
+[2025-03-22 18:08:39,451][main][INFO] - iteration 770, Validation MSE: 0.5829
+[2025-03-22 18:08:39,707][main][INFO] - iteration: 770, loss:  6.339e-03,                             time per iter:  5.436e+00
+[2025-03-22 18:08:40,423][main][INFO] - iteration: 771, loss:  1.755e-02,                             time per iter:  7.154e-01
+[2025-03-22 18:08:41,133][main][INFO] - iteration: 772, loss:  4.520e-03,                             time per iter:  7.095e-01
+[2025-03-22 18:08:41,845][main][INFO] - iteration: 773, loss:  5.653e-03,                             time per iter:  7.100e-01
+[2025-03-22 18:08:42,555][main][INFO] - iteration: 774, loss:  3.448e-03,                             time per iter:  7.094e-01
+[2025-03-22 18:08:47,729][main][INFO] - iteration 775, Validation MSE: 0.6507
+[2025-03-22 18:08:47,983][main][INFO] - iteration: 775, loss:  2.257e-02,                             time per iter:  5.426e+00
+[2025-03-22 18:08:48,702][main][INFO] - iteration: 776, loss:  1.167e-02,                             time per iter:  7.179e-01
+[2025-03-22 18:08:49,409][main][INFO] - iteration: 777, loss:  2.426e-02,                             time per iter:  7.060e-01
+[2025-03-22 18:08:50,124][main][INFO] - iteration: 778, loss:  3.816e-02,                             time per iter:  7.139e-01
+[2025-03-22 18:08:50,834][main][INFO] - iteration: 779, loss:  1.568e-02,                             time per iter:  7.087e-01
+[2025-03-22 18:08:56,010][main][INFO] - iteration 780, Validation MSE: 0.5837
+[2025-03-22 18:08:56,264][main][INFO] - iteration: 780, loss:  5.441e-02,                             time per iter:  5.428e+00
+[2025-03-22 18:08:56,982][main][INFO] - iteration: 781, loss:  1.030e-02,                             time per iter:  7.177e-01
+[2025-03-22 18:08:57,691][main][INFO] - iteration: 782, loss:  8.354e-03,                             time per iter:  7.069e-01
+[2025-03-22 18:08:58,403][main][INFO] - iteration: 783, loss:  8.895e-03,                             time per iter:  7.106e-01
+[2025-03-22 18:08:59,115][main][INFO] - iteration: 784, loss:  9.933e-03,                             time per iter:  7.112e-01
+[2025-03-22 18:09:04,388][main][INFO] - iteration 785, Validation MSE: 0.6878
+[2025-03-22 18:09:04,642][main][INFO] - iteration: 785, loss:  9.535e-03,                             time per iter:  5.525e+00
+[2025-03-22 18:09:05,359][main][INFO] - iteration: 786, loss:  9.187e-03,                             time per iter:  7.170e-01
+[2025-03-22 18:09:06,070][main][INFO] - iteration: 787, loss:  9.323e-03,                             time per iter:  7.091e-01
+[2025-03-22 18:09:06,784][main][INFO] - iteration: 788, loss:  7.864e-03,                             time per iter:  7.129e-01
+[2025-03-22 18:09:07,493][main][INFO] - iteration: 789, loss:  1.187e-02,                             time per iter:  7.075e-01
+[2025-03-22 18:09:12,664][main][INFO] - iteration 790, Validation MSE: 0.5781
+[2025-03-22 18:09:12,918][main][INFO] - iteration: 790, loss:  4.562e-03,                             time per iter:  5.423e+00
+[2025-03-22 18:09:13,631][main][INFO] - iteration: 791, loss:  7.469e-03,                             time per iter:  7.129e-01
+[2025-03-22 18:09:14,341][main][INFO] - iteration: 792, loss:  4.785e-03,                             time per iter:  7.082e-01
+[2025-03-22 18:09:15,049][main][INFO] - iteration: 793, loss:  5.874e-03,                             time per iter:  7.070e-01
+[2025-03-22 18:09:15,760][main][INFO] - iteration: 794, loss:  6.921e-03,                             time per iter:  7.099e-01
+[2025-03-22 18:09:20,906][main][INFO] - iteration 795, Validation MSE: 0.5540
+[2025-03-22 18:09:21,161][main][INFO] - iteration: 795, loss:  2.928e-03,                             time per iter:  5.399e+00
+[2025-03-22 18:09:21,877][main][INFO] - iteration: 796, loss:  6.171e-03,                             time per iter:  7.154e-01
+[2025-03-22 18:09:22,588][main][INFO] - iteration: 797, loss:  5.086e-03,                             time per iter:  7.095e-01
+[2025-03-22 18:09:23,306][main][INFO] - iteration: 798, loss:  5.853e-03,                             time per iter:  7.164e-01
+[2025-03-22 18:09:24,017][main][INFO] - iteration: 799, loss:  4.803e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:09:43,951][main][INFO] - iteration 800, Validation MSE: 0.5860
+[2025-03-22 18:09:44,303][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.800.mdlus[0m
+[2025-03-22 18:09:44,438][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.800.pt[0m
+[2025-03-22 18:09:44,438][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:09:44,438][main][INFO] - iteration: 800, loss:  3.437e-03,                             time per iter:  2.042e+01
+[2025-03-22 18:09:45,185][main][INFO] - iteration: 801, loss:  3.596e-03,                             time per iter:  7.459e-01
+[2025-03-22 18:09:45,903][main][INFO] - iteration: 802, loss:  4.288e-03,                             time per iter:  7.161e-01
+[2025-03-22 18:09:46,611][main][INFO] - iteration: 803, loss:  2.897e-03,                             time per iter:  7.070e-01
+[2025-03-22 18:09:47,323][main][INFO] - iteration: 804, loss:  3.489e-03,                             time per iter:  7.104e-01
+[2025-03-22 18:09:52,505][main][INFO] - iteration 805, Validation MSE: 0.5368
+[2025-03-22 18:09:52,760][main][INFO] - iteration: 805, loss:  5.333e-03,                             time per iter:  5.435e+00
+[2025-03-22 18:09:53,477][main][INFO] - iteration: 806, loss:  2.559e-03,                             time per iter:  7.167e-01
+[2025-03-22 18:09:54,198][main][INFO] - iteration: 807, loss:  3.114e-03,                             time per iter:  7.191e-01
+[2025-03-22 18:09:54,909][main][INFO] - iteration: 808, loss:  3.077e-03,                             time per iter:  7.097e-01
+[2025-03-22 18:09:55,621][main][INFO] - iteration: 809, loss:  2.380e-03,                             time per iter:  7.107e-01
+[2025-03-22 18:10:00,827][main][INFO] - iteration 810, Validation MSE: 0.5601
+[2025-03-22 18:10:01,082][main][INFO] - iteration: 810, loss:  3.137e-03,                             time per iter:  5.460e+00
+[2025-03-22 18:10:01,796][main][INFO] - iteration: 811, loss:  2.771e-03,                             time per iter:  7.131e-01
+[2025-03-22 18:10:02,506][main][INFO] - iteration: 812, loss:  2.585e-03,                             time per iter:  7.086e-01
+[2025-03-22 18:10:03,217][main][INFO] - iteration: 813, loss:  2.423e-03,                             time per iter:  7.097e-01
+[2025-03-22 18:10:03,928][main][INFO] - iteration: 814, loss:  3.267e-03,                             time per iter:  7.092e-01
+[2025-03-22 18:10:09,086][main][INFO] - iteration 815, Validation MSE: 0.5229
+[2025-03-22 18:10:09,341][main][INFO] - iteration: 815, loss:  2.727e-03,                             time per iter:  5.412e+00
+[2025-03-22 18:10:10,069][main][INFO] - iteration: 816, loss:  3.288e-03,                             time per iter:  7.266e-01
+[2025-03-22 18:10:10,780][main][INFO] - iteration: 817, loss:  3.523e-03,                             time per iter:  7.098e-01
+[2025-03-22 18:10:11,490][main][INFO] - iteration: 818, loss:  2.312e-03,                             time per iter:  7.089e-01
+[2025-03-22 18:10:12,201][main][INFO] - iteration: 819, loss:  3.537e-03,                             time per iter:  7.099e-01
+[2025-03-22 18:10:17,367][main][INFO] - iteration 820, Validation MSE: 0.4910
+[2025-03-22 18:10:17,628][main][INFO] - iteration: 820, loss:  3.657e-03,                             time per iter:  5.426e+00
+[2025-03-22 18:10:18,347][main][INFO] - iteration: 821, loss:  2.824e-03,                             time per iter:  7.177e-01
+[2025-03-22 18:10:19,060][main][INFO] - iteration: 822, loss:  2.867e-03,                             time per iter:  7.115e-01
+[2025-03-22 18:10:19,777][main][INFO] - iteration: 823, loss:  2.716e-03,                             time per iter:  7.164e-01
+[2025-03-22 18:10:20,490][main][INFO] - iteration: 824, loss:  2.658e-03,                             time per iter:  7.109e-01
+[2025-03-22 18:10:25,666][main][INFO] - iteration 825, Validation MSE: 0.5584
+[2025-03-22 18:10:25,920][main][INFO] - iteration: 825, loss:  2.591e-03,                             time per iter:  5.429e+00
+[2025-03-22 18:10:26,634][main][INFO] - iteration: 826, loss:  2.418e-03,                             time per iter:  7.131e-01
+[2025-03-22 18:10:27,346][main][INFO] - iteration: 827, loss:  2.576e-03,                             time per iter:  7.106e-01
+[2025-03-22 18:10:28,059][main][INFO] - iteration: 828, loss:  2.356e-03,                             time per iter:  7.113e-01
+[2025-03-22 18:10:28,770][main][INFO] - iteration: 829, loss:  2.399e-03,                             time per iter:  7.095e-01
+[2025-03-22 18:10:33,946][main][INFO] - iteration 830, Validation MSE: 0.5394
+[2025-03-22 18:10:34,200][main][INFO] - iteration: 830, loss:  2.152e-03,                             time per iter:  5.429e+00
+[2025-03-22 18:10:34,918][main][INFO] - iteration: 831, loss:  2.796e-03,                             time per iter:  7.177e-01
+[2025-03-22 18:10:35,628][main][INFO] - iteration: 832, loss:  2.159e-03,                             time per iter:  7.083e-01
+[2025-03-22 18:10:36,339][main][INFO] - iteration: 833, loss:  2.463e-03,                             time per iter:  7.101e-01
+[2025-03-22 18:10:37,048][main][INFO] - iteration: 834, loss:  2.491e-03,                             time per iter:  7.074e-01
+[2025-03-22 18:10:42,205][main][INFO] - iteration 835, Validation MSE: 0.5235
+[2025-03-22 18:10:42,460][main][INFO] - iteration: 835, loss:  2.388e-03,                             time per iter:  5.410e+00
+[2025-03-22 18:10:43,176][main][INFO] - iteration: 836, loss:  2.351e-03,                             time per iter:  7.152e-01
+[2025-03-22 18:10:43,886][main][INFO] - iteration: 837, loss:  2.740e-03,                             time per iter:  7.094e-01
+[2025-03-22 18:10:44,597][main][INFO] - iteration: 838, loss:  2.452e-03,                             time per iter:  7.091e-01
+[2025-03-22 18:10:45,307][main][INFO] - iteration: 839, loss:  2.654e-03,                             time per iter:  7.088e-01
+[2025-03-22 18:10:50,526][main][INFO] - iteration 840, Validation MSE: 0.5491
+[2025-03-22 18:10:50,780][main][INFO] - iteration: 840, loss:  3.509e-03,                             time per iter:  5.472e+00
+[2025-03-22 18:10:51,493][main][INFO] - iteration: 841, loss:  3.908e-03,                             time per iter:  7.117e-01
+[2025-03-22 18:10:52,205][main][INFO] - iteration: 842, loss:  2.941e-03,                             time per iter:  7.110e-01
+[2025-03-22 18:10:52,917][main][INFO] - iteration: 843, loss:  4.791e-03,                             time per iter:  7.105e-01
+[2025-03-22 18:10:53,627][main][INFO] - iteration: 844, loss:  5.644e-03,                             time per iter:  7.090e-01
+[2025-03-22 18:10:58,784][main][INFO] - iteration 845, Validation MSE: 0.5366
+[2025-03-22 18:10:59,039][main][INFO] - iteration: 845, loss:  2.915e-03,                             time per iter:  5.410e+00
+[2025-03-22 18:10:59,756][main][INFO] - iteration: 846, loss:  2.671e-03,                             time per iter:  7.167e-01
+[2025-03-22 18:11:00,470][main][INFO] - iteration: 847, loss:  2.551e-03,                             time per iter:  7.120e-01
+[2025-03-22 18:11:01,185][main][INFO] - iteration: 848, loss:  2.657e-03,                             time per iter:  7.142e-01
+[2025-03-22 18:11:01,899][main][INFO] - iteration: 849, loss:  2.465e-03,                             time per iter:  7.124e-01
+[2025-03-22 18:11:07,062][main][INFO] - iteration 850, Validation MSE: 0.5960
+[2025-03-22 18:11:07,406][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.850.mdlus[0m
+[2025-03-22 18:11:07,541][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.850.pt[0m
+[2025-03-22 18:11:07,542][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:11:07,542][main][INFO] - iteration: 850, loss:  2.469e-03,                             time per iter:  5.642e+00
+[2025-03-22 18:11:08,259][main][INFO] - iteration: 851, loss:  2.382e-03,                             time per iter:  7.165e-01
+[2025-03-22 18:11:08,969][main][INFO] - iteration: 852, loss:  2.937e-03,                             time per iter:  7.085e-01
+[2025-03-22 18:11:09,682][main][INFO] - iteration: 853, loss:  3.609e-03,                             time per iter:  7.112e-01
+[2025-03-22 18:11:10,402][main][INFO] - iteration: 854, loss:  4.963e-03,                             time per iter:  7.187e-01
+[2025-03-22 18:11:15,564][main][INFO] - iteration 855, Validation MSE: 0.4824
+[2025-03-22 18:11:15,819][main][INFO] - iteration: 855, loss:  6.344e-03,                             time per iter:  5.415e+00
+[2025-03-22 18:11:16,537][main][INFO] - iteration: 856, loss:  6.704e-03,                             time per iter:  7.175e-01
+[2025-03-22 18:11:17,247][main][INFO] - iteration: 857, loss:  1.282e-02,                             time per iter:  7.088e-01
+[2025-03-22 18:11:17,959][main][INFO] - iteration: 858, loss:  4.081e-02,                             time per iter:  7.104e-01
+[2025-03-22 18:11:18,667][main][INFO] - iteration: 859, loss:  2.046e-02,                             time per iter:  7.068e-01
+[2025-03-22 18:11:23,844][main][INFO] - iteration 860, Validation MSE: 0.5845
+[2025-03-22 18:11:24,099][main][INFO] - iteration: 860, loss:  9.777e-03,                             time per iter:  5.431e+00
+[2025-03-22 18:11:24,814][main][INFO] - iteration: 861, loss:  2.438e-02,                             time per iter:  7.144e-01
+[2025-03-22 18:11:25,524][main][INFO] - iteration: 862, loss:  1.001e-02,                             time per iter:  7.087e-01
+[2025-03-22 18:11:26,237][main][INFO] - iteration: 863, loss:  1.308e-02,                             time per iter:  7.107e-01
+[2025-03-22 18:11:26,949][main][INFO] - iteration: 864, loss:  1.735e-02,                             time per iter:  7.105e-01
+[2025-03-22 18:11:32,124][main][INFO] - iteration 865, Validation MSE: 0.6116
+[2025-03-22 18:11:32,378][main][INFO] - iteration: 865, loss:  2.439e-02,                             time per iter:  5.428e+00
+[2025-03-22 18:11:33,092][main][INFO] - iteration: 866, loss:  8.286e-03,                             time per iter:  7.135e-01
+[2025-03-22 18:11:33,803][main][INFO] - iteration: 867, loss:  1.162e-02,                             time per iter:  7.095e-01
+[2025-03-22 18:11:34,517][main][INFO] - iteration: 868, loss:  4.258e-03,                             time per iter:  7.126e-01
+[2025-03-22 18:11:35,227][main][INFO] - iteration: 869, loss:  9.288e-03,                             time per iter:  7.090e-01
+[2025-03-22 18:11:40,423][main][INFO] - iteration 870, Validation MSE: 0.5723
+[2025-03-22 18:11:40,677][main][INFO] - iteration: 870, loss:  4.719e-03,                             time per iter:  5.448e+00
+[2025-03-22 18:11:41,389][main][INFO] - iteration: 871, loss:  8.420e-03,                             time per iter:  7.114e-01
+[2025-03-22 18:11:42,104][main][INFO] - iteration: 872, loss:  3.464e-02,                             time per iter:  7.130e-01
+[2025-03-22 18:11:42,815][main][INFO] - iteration: 873, loss:  3.601e-03,                             time per iter:  7.097e-01
+[2025-03-22 18:11:43,526][main][INFO] - iteration: 874, loss:  5.053e-03,                             time per iter:  7.101e-01
+[2025-03-22 18:11:48,684][main][INFO] - iteration 875, Validation MSE: 0.5171
+[2025-03-22 18:11:48,939][main][INFO] - iteration: 875, loss:  7.883e-03,                             time per iter:  5.412e+00
+[2025-03-22 18:11:49,654][main][INFO] - iteration: 876, loss:  6.189e-03,                             time per iter:  7.145e-01
+[2025-03-22 18:11:50,366][main][INFO] - iteration: 877, loss:  1.696e-02,                             time per iter:  7.107e-01
+[2025-03-22 18:11:51,077][main][INFO] - iteration: 878, loss:  6.972e-03,                             time per iter:  7.094e-01
+[2025-03-22 18:11:51,787][main][INFO] - iteration: 879, loss:  4.056e-03,                             time per iter:  7.086e-01
+[2025-03-22 18:11:57,140][main][INFO] - iteration 880, Validation MSE: 0.5694
+[2025-03-22 18:11:57,394][main][INFO] - iteration: 880, loss:  6.842e-03,                             time per iter:  5.606e+00
+[2025-03-22 18:11:58,112][main][INFO] - iteration: 881, loss:  3.858e-03,                             time per iter:  7.175e-01
+[2025-03-22 18:11:58,823][main][INFO] - iteration: 882, loss:  7.464e-03,                             time per iter:  7.094e-01
+[2025-03-22 18:11:59,539][main][INFO] - iteration: 883, loss:  5.072e-03,                             time per iter:  7.145e-01
+[2025-03-22 18:12:00,253][main][INFO] - iteration: 884, loss:  7.748e-03,                             time per iter:  7.123e-01
+[2025-03-22 18:12:05,422][main][INFO] - iteration 885, Validation MSE: 0.5147
+[2025-03-22 18:12:05,677][main][INFO] - iteration: 885, loss:  5.624e-03,                             time per iter:  5.423e+00
+[2025-03-22 18:12:06,431][main][INFO] - iteration: 886, loss:  5.983e-03,                             time per iter:  7.533e-01
+[2025-03-22 18:12:07,143][main][INFO] - iteration: 887, loss:  5.471e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:12:07,877][main][INFO] - iteration: 888, loss:  3.033e-03,                             time per iter:  7.321e-01
+[2025-03-22 18:12:08,584][main][INFO] - iteration: 889, loss:  5.313e-03,                             time per iter:  7.060e-01
+[2025-03-22 18:12:13,759][main][INFO] - iteration 890, Validation MSE: 0.5124
+[2025-03-22 18:12:14,013][main][INFO] - iteration: 890, loss:  5.300e-03,                             time per iter:  5.428e+00
+[2025-03-22 18:12:14,730][main][INFO] - iteration: 891, loss:  5.141e-03,                             time per iter:  7.159e-01
+[2025-03-22 18:12:15,443][main][INFO] - iteration: 892, loss:  3.583e-03,                             time per iter:  7.122e-01
+[2025-03-22 18:12:16,159][main][INFO] - iteration: 893, loss:  4.031e-03,                             time per iter:  7.142e-01
+[2025-03-22 18:12:16,868][main][INFO] - iteration: 894, loss:  3.026e-03,                             time per iter:  7.081e-01
+[2025-03-22 18:12:22,062][main][INFO] - iteration 895, Validation MSE: 0.4887
+[2025-03-22 18:12:22,316][main][INFO] - iteration: 895, loss:  3.837e-03,                             time per iter:  5.447e+00
+[2025-03-22 18:12:23,030][main][INFO] - iteration: 896, loss:  4.510e-03,                             time per iter:  7.130e-01
+[2025-03-22 18:12:23,743][main][INFO] - iteration: 897, loss:  4.601e-03,                             time per iter:  7.116e-01
+[2025-03-22 18:12:24,455][main][INFO] - iteration: 898, loss:  3.677e-03,                             time per iter:  7.110e-01
+[2025-03-22 18:12:25,175][main][INFO] - iteration: 899, loss:  3.582e-03,                             time per iter:  7.187e-01
+[2025-03-22 18:12:44,622][main][INFO] - iteration 900, Validation MSE: 0.4788
+[2025-03-22 18:12:44,963][checkpoint][INFO] - [92mSaved model state dictionary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/GraphCastNet.0.900.mdlus[0m
+[2025-03-22 18:12:45,105][checkpoint][INFO] - [92mSaved training checkpoint: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-dry-run/checkpoints8/checkpoint.0.900.pt[0m
+[2025-03-22 18:12:45,105][main][INFO] - [94mSaved model on rank 0[0m
+[2025-03-22 18:12:45,105][main][INFO] - iteration: 900, loss:  3.899e-03,                             time per iter:  1.993e+01
+[2025-03-22 18:12:45,850][main][INFO] - iteration: 901, loss:  3.162e-03,                             time per iter:  7.439e-01
+[2025-03-22 18:12:46,562][main][INFO] - iteration: 902, loss:  6.124e-03,                             time per iter:  7.107e-01
+[2025-03-22 18:12:47,275][main][INFO] - iteration: 903, loss:  3.722e-03,                             time per iter:  7.111e-01
+[2025-03-22 18:12:47,984][main][INFO] - iteration: 904, loss:  6.067e-03,                             time per iter:  7.085e-01
+[2025-03-22 18:12:53,161][main][INFO] - iteration 905, Validation MSE: 0.4857
+[2025-03-22 18:12:53,415][main][INFO] - iteration: 905, loss:  5.167e-03,                             time per iter:  5.430e+00
+[2025-03-22 18:12:54,130][main][INFO] - iteration: 906, loss:  8.659e-03,                             time per iter:  7.136e-01
+[2025-03-22 18:12:54,842][main][INFO] - iteration: 907, loss:  5.371e-03,                             time per iter:  7.115e-01
+[2025-03-22 18:12:55,763][main][INFO] - iteration: 908, loss:  1.040e-02,                             time per iter:  9.191e-01
+[2025-03-22 18:12:56,478][main][INFO] - iteration: 909, loss:  7.422e-03,                             time per iter:  7.141e-01
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 64083.0 ON nid005235 CANCELLED AT 2025-03-22T18:13:01 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 64083 ON nid005235 CANCELLED AT 2025-03-22T18:13:01 DUE TO TIME LIMIT ***

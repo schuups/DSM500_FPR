@@ -492,7 +492,7 @@ def main(cfg: DictConfig) -> None:
                     logger.log(f"iteration {iter}, Validation MSE: {error:.04f}")
                     wandb.log(
                         {
-                            "Validation MSE": error,
+                            "testing_mse": error,
                         },
                         step=iter,
                     )
@@ -521,7 +521,7 @@ def main(cfg: DictConfig) -> None:
                     if dist.rank == 0:
                         wandb.log(
                             {
-                                "loss": loss,
+                                "training_loss": loss,
                                 "learning_rate": trainer.scheduler.get_last_lr()[0],
                             },
                             step=iter,
