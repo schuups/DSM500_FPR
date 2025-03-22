@@ -23,15 +23,15 @@ class DistributedManager:
             raise RuntimeError("CUDA is not available")
 
         _instance = super().__new__(cls)
-   
-        if "SLURM_PROCID" in os.environ and "SLURM_NPROCS" in os.environ and "SLURM_LOCALID" in os.environ:
-            _instance._rank = int(os.environ["SLURM_PROCID"])
-            _instance._world_size = int(os.environ["SLURM_NPROCS"])
-            _instance._local_rank = int(os.environ.get("SLURM_LOCALID"))
-        elif "RANK" in os.environ and "WORLD_SIZE" in os.environ and "LOCAL_RANK" in os.environ:
+
+        if "RANK" in os.environ and "WORLD_SIZE" in os.environ and "LOCAL_RANK" in os.environ:
             _instance._rank = int(os.environ["RANK"])
             _instance._world_size = int(os.environ["WORLD_SIZE"])
             _instance._local_rank = int(os.environ.get("LOCAL_RANK"))
+        elif "SLURM_PROCID" in os.environ and "SLURM_NPROCS" in os.environ and "SLURM_LOCALID" in os.environ:
+            _instance._rank = int(os.environ["SLURM_PROCID"])
+            _instance._world_size = int(os.environ["SLURM_NPROCS"])
+            _instance._local_rank = int(os.environ.get("SLURM_LOCALID"))
         else:
             _instance._rank = 0
             _instance._world_size = 1
