@@ -11,7 +11,7 @@
   tick_format: '{:,.1f} m/s'
   group: wind-v
 # channel 2
-- key: t2d
+- key: t2m
   label: 2m_temperature
   title: Air Temperature (at 2 meters)
   tick_format: '{:,.1f} K'
