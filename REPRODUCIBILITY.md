@@ -150,3 +150,10 @@ total 40
 8 -rw-rw-r--+ 1 stefschu csstaff 5791 Mar 13 13:12 REPRODUCIBILITY.md
 [clariden][stefschu@clariden-ln001 DSM500_FPR]$
 ```
+
+## Setup FourCastNet
+
+```sh
+git clone https://github.com/NVlabs/FourCastNet.git fourcastnet-92260c1
+rm -rf fourcastnet-92260c1/.git
+```
