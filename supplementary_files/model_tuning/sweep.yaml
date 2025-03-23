@@ -1,0 +1,68 @@
+program: train_graphcast.py
+name: model_tuning
+method: random
+
+metric:
+  goal: minimize
+  name: testing_mse
+
+parameters:
+  checkpoint.enabled:
+    value: false
+  schedule.phase1.iterations:
+    value: 300
+  schedule.phase1.lr_start:
+    value: 5e-3
+  schedule.phase1.lr_end:
+    value: 1.0
+  schedule.phase2.iterations:
+    value: 1500
+  schedule.phase2.lr_objective:
+    value: 1e-3
+  schedule.phase3.iterations:
+    value: 2000
+  schedule.phase3.rollout_steps_increments:
+    value: 5
+  schedule.phase3.lr:
+    value: 5e-3
+
+  datapipe.seed:
+    values: [21, 42, 84]  
+
+  toggles.data.include_sst_channel:
+    values: [true, false]
+  toggles.data.fix_sst_data:
+    values: [true, false]
+  toggles.data.fix_data_centering:
+    values: [true, false]
+  toggles.data.fix_temporal_info:
+    values: [true, false]
+  toggles.data.fix_december_gap:
+    values: [true, false]
+  
+  toggles.model.include_static_data:
+    values: [true, false]
+  toggles.model.include_spatial_info:
+    values: [true, false]
+  toggles.model.include_solar_radiation:
+    values: [true, false]
+  toggles.model.include_temporal_info:
+    values: [true, false]
+
+  toggles.graph.use_multimesh:
+    values: [true, false]
+
+  toggles.loss.fix_inverse_variance_data:
+    values: [true, false]
+  toggles.loss.use_original_variable_weights:
+    values: [true, false]
+
+  
+command:
+  - python
+  - "-m"
+  - "torch.distributed.run"
+  - "--nnodes=1"
+  - "--nproc_per_node=4"
+  - ${program}
+  - ${args_no_hyphens}

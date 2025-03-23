@@ -1,0 +1,304 @@
+wandb: Starting wandb agent 🕵️
+2025-03-23 12:59:53,090 - wandb.wandb_agent - INFO - Running runs: []
+2025-03-23 12:59:53,505 - wandb.wandb_agent - INFO - Agent received command: run
+2025-03-23 12:59:53,507 - wandb.wandb_agent - INFO - Agent starting run with config:
+	checkpoint.enabled: False
+	datapipe.seed: 21
+	schedule.phase1.iterations: 300
+	schedule.phase1.lr_end: 1
+	schedule.phase1.lr_start: 0.005
+	schedule.phase2.iterations: 1500
+	schedule.phase2.lr_objective: 0.001
+	schedule.phase3.iterations: 2000
+	schedule.phase3.lr: 0.005
+	schedule.phase3.rollout_steps_increments: 5
+	toggles.data.fix_data_centering: True
+	toggles.data.fix_december_gap: False
+	toggles.data.fix_sst_data: True
+	toggles.data.fix_temporal_info: True
+	toggles.data.include_sst_channel: True
+	toggles.graph.use_multimesh: True
+	toggles.loss.fix_inverse_variance_data: True
+	toggles.loss.use_original_variable_weights: False
+	toggles.model.include_solar_radiation: True
+	toggles.model.include_spatial_info: True
+	toggles.model.include_static_data: True
+	toggles.model.include_temporal_info: False
+2025-03-23 12:59:53,511 - wandb.wandb_agent - INFO - About to run command: python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 train_graphcast.py checkpoint.enabled=False datapipe.seed=21 schedule.phase1.iterations=300 schedule.phase1.lr_end=1 schedule.phase1.lr_start=0.005 schedule.phase2.iterations=1500 schedule.phase2.lr_objective=0.001 schedule.phase3.iterations=2000 schedule.phase3.lr=0.005 schedule.phase3.rollout_steps_increments=5 toggles.data.fix_data_centering=True toggles.data.fix_december_gap=False toggles.data.fix_sst_data=True toggles.data.fix_temporal_info=True toggles.data.include_sst_channel=True toggles.graph.use_multimesh=True toggles.loss.fix_inverse_variance_data=True toggles.loss.use_original_variable_weights=False toggles.model.include_solar_radiation=True toggles.model.include_spatial_info=True toggles.model.include_static_data=True toggles.model.include_temporal_info=False
+2025-03-23 12:59:58,519 - wandb.wandb_agent - INFO - Running runs: ['406dhdta']
+[2025-03-23 13:00:18,534][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-23 13:00:18,534][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-23 13:00:18,534][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-23 13:00:18,540][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Ignoring project 'DSM500_FPR' when running a sweep.
+wandb: WARNING Ignoring entity 'schups' when running a sweep.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250323_130019-406dhdta
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_64825_25/03/23_13:00:18_RUN_01
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🧹 View sweep at https://wandb.ai/schups/DSM500_FPR/sweeps/bv6kdc3l
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/406dhdta
+[2025-03-23 13:00:20,336][trainer][INFO] - [94mSetting seed to 21[0m
+[2025-03-23 13:00:20,386][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-23 13:00:20,386][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-23 13:00:20,386][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-23 13:00:20,388][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-23 13:00:24,794][trainer][INFO] - [94mModel created. Trainable parameters count is 35'246'101[0m
+[2025-03-23 13:00:30,538][trainer][INFO] - [92mLoaded train datapipe of size 53'947 samples[0m
+/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py:912: Warning: The external source node '<modulus.datapipes.era5_hdf5.ERA5DaliExternalSource object at 0x40018cb465f0>' produces 6 outputs, but the output at the index 4 is not used. For best performance, adjust your callback so that it computes only the needed outputs.
+  warnings.warn(
+[2025-03-23 13:00:32,285][trainer][INFO] - [92mLoaded test datapipe of size 2'903 samples[0m
+[2025-03-23 13:00:32,288][main][INFO] - [94mInitializing dataloaders...[0m
+[2025-03-23 13:00:32,288][main][INFO] - [94mTraining started...[0m
+/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py:912: Warning: The external source node '<modulus.datapipes.era5_hdf5.ERA5DaliExternalSource object at 0x4000ef4ad510>' produces 6 outputs, but the output at the index 4 is not used. For best performance, adjust your callback so that it computes only the needed outputs.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py:912: Warning: The external source node '<modulus.datapipes.era5_hdf5.ERA5DaliExternalSource object at 0x400174fa5ed0>' produces 6 outputs, but the output at the index 4 is not used. For best performance, adjust your callback so that it computes only the needed outputs.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py:912: Warning: The external source node '<modulus.datapipes.era5_hdf5.ERA5DaliExternalSource object at 0x400152bd6170>' produces 6 outputs, but the output at the index 4 is not used. For best performance, adjust your callback so that it computes only the needed outputs.
+  warnings.warn(
+[2025-03-23 13:01:21,231][trainer][INFO] - Iteration     1 | Train loss: 0.03 | Time taken:  7.70/41.24/48.94 sec | GPU memory: 79.1 GB | Global sample ID: 3374
+[2025-03-23 13:01:21,816][trainer][INFO] - Iteration     2 | Train loss: 0.03 | Time taken:  0.00/ 0.27/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30756
+[2025-03-23 13:01:22,203][trainer][INFO] - Iteration     3 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1692
+[2025-03-23 13:01:22,592][trainer][INFO] - Iteration     4 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 14842
+[2025-03-23 13:01:22,984][trainer][INFO] - Iteration     5 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41459
+[2025-03-23 13:01:23,446][trainer][INFO] - Iteration     6 | Train loss: 0.02 | Time taken:  0.00/ 0.30/ 0.30 sec | GPU memory: 82.1 GB | Global sample ID: 22876
+[2025-03-23 13:01:23,834][trainer][INFO] - Iteration     7 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36064
+[2025-03-23 13:01:24,238][trainer][INFO] - Iteration     8 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 37044
+[2025-03-23 13:01:24,626][trainer][INFO] - Iteration     9 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40746
+[2025-03-23 13:01:25,019][trainer][INFO] - Iteration    10 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33084
+[2025-03-23 13:01:25,414][trainer][INFO] - Iteration    11 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45618
+[2025-03-23 13:01:25,871][trainer][INFO] - Iteration    12 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30078
+[2025-03-23 13:01:26,257][trainer][INFO] - Iteration    13 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5703
+[2025-03-23 13:01:26,716][trainer][INFO] - Iteration    14 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 15297
+[2025-03-23 13:01:27,144][trainer][INFO] - Iteration    15 | Train loss: 0.01 | Time taken:  0.00/ 0.27/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 4167
+[2025-03-23 13:01:27,537][trainer][INFO] - Iteration    16 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 16140
+[2025-03-23 13:01:27,926][trainer][INFO] - Iteration    17 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38984
+[2025-03-23 13:01:28,316][trainer][INFO] - Iteration    18 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48331
+[2025-03-23 13:01:28,706][trainer][INFO] - Iteration    19 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34640
+[2025-03-23 13:01:29,095][trainer][INFO] - Iteration    20 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3219
+[2025-03-23 13:01:29,485][trainer][INFO] - Iteration    21 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 15494
+[2025-03-23 13:01:29,877][trainer][INFO] - Iteration    22 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 49159
+[2025-03-23 13:01:30,312][trainer][INFO] - Iteration    23 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40366
+[2025-03-23 13:01:30,732][trainer][INFO] - Iteration    24 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2423
+[2025-03-23 13:01:31,128][trainer][INFO] - Iteration    25 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3703
+[2025-03-23 13:01:31,518][trainer][INFO] - Iteration    26 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 32159
+[2025-03-23 13:01:31,913][trainer][INFO] - Iteration    27 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40868
+[2025-03-23 13:01:32,512][trainer][INFO] - Iteration    28 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26244
+[2025-03-23 13:01:33,014][trainer][INFO] - Iteration    29 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3851
+[2025-03-23 13:01:33,402][trainer][INFO] - Iteration    30 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 31380
+[2025-03-23 13:01:33,829][trainer][INFO] - Iteration    31 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45111
+[2025-03-23 13:01:34,219][trainer][INFO] - Iteration    32 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48735
+[2025-03-23 13:01:34,617][trainer][INFO] - Iteration    33 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52716
+[2025-03-23 13:01:35,178][trainer][INFO] - Iteration    34 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 35442
+[2025-03-23 13:01:35,563][trainer][INFO] - Iteration    35 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 28555
+[2025-03-23 13:01:35,953][trainer][INFO] - Iteration    36 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52525
+[2025-03-23 13:01:36,344][trainer][INFO] - Iteration    37 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53105
+[2025-03-23 13:01:36,787][trainer][INFO] - Iteration    38 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2872
+[2025-03-23 13:01:37,218][trainer][INFO] - Iteration    39 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46733
+[2025-03-23 13:01:37,645][trainer][INFO] - Iteration    40 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26205
+[2025-03-23 13:01:38,034][trainer][INFO] - Iteration    41 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50900
+[2025-03-23 13:01:38,424][trainer][INFO] - Iteration    42 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40652
+[2025-03-23 13:01:38,816][trainer][INFO] - Iteration    43 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20630
+[2025-03-23 13:01:39,230][trainer][INFO] - Iteration    44 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43052
+[2025-03-23 13:01:39,625][trainer][INFO] - Iteration    45 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5155
+[2025-03-23 13:01:40,016][trainer][INFO] - Iteration    46 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28846
+[2025-03-23 13:01:40,407][trainer][INFO] - Iteration    47 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43929
+[2025-03-23 13:01:40,799][trainer][INFO] - Iteration    48 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 12607
+[2025-03-23 13:01:41,202][trainer][INFO] - Iteration    49 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 30861
+[2025-03-23 13:01:41,640][trainer][INFO] - Iteration    50 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 45256
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=21', 'schedule.phase1.iterations=300', 'schedule.phase1.lr_end=1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=1500', 'schedule.phase2.lr_objective=0.001', 'schedule.phase3.iterations=2000', 'schedule.phase3.lr=0.005', 'schedule.phase3.rollout_steps_increments=5', 'toggles.data.fix_data_centering=True', 'toggles.data.fix_december_gap=False', 'toggles.data.fix_sst_data=True', 'toggles.data.fix_temporal_info=True', 'toggles.data.include_sst_channel=True', 'toggles.graph.use_multimesh=True', 'toggles.loss.fix_inverse_variance_data=True', 'toggles.loss.use_original_variable_weights=False', 'toggles.model.include_solar_radiation=True', 'toggles.model.include_spatial_info=True', 'toggles.model.include_static_data=True', 'toggles.model.include_temporal_info=False']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 250, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 377, in _get_outputs
+    self._schedule_runs(False)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 420, in _schedule_runs
+    p.schedule_run()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1183, in schedule_run
+    self._prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1342, in _prefetch
+    self._legacy_interleaved_prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1365, in _legacy_interleaved_prefetch
+    self._iter_setup()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1675, in _iter_setup
+    iters, success = self._run_input_callbacks()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1724, in _run_input_callbacks
+    batch.feed()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 138, in feed
+    self._group.feed(self._pipepline, self._data, self._batch_size)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 292, in feed
+    pipeline._feed_input(
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1057, in _feed_input
+    self._pipe.SetExternalTensorInput(
+RuntimeError: Could not find an input operator with name "__ExternalSource_4"
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=21', 'schedule.phase1.iterations=300', 'schedule.phase1.lr_end=1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=1500', 'schedule.phase2.lr_objective=0.001', 'schedule.phase3.iterations=2000', 'schedule.phase3.lr=0.005', 'schedule.phase3.rollout_steps_increments=5', 'toggles.data.fix_data_centering=True', 'toggles.data.fix_december_gap=False', 'toggles.data.fix_sst_data=True', 'toggles.data.fix_temporal_info=True', 'toggles.data.include_sst_channel=True', 'toggles.graph.use_multimesh=True', 'toggles.loss.fix_inverse_variance_data=True', 'toggles.loss.use_original_variable_weights=False', 'toggles.model.include_solar_radiation=True', 'toggles.model.include_spatial_info=True', 'toggles.model.include_static_data=True', 'toggles.model.include_temporal_info=False']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 250, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 377, in _get_outputs
+    self._schedule_runs(False)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 420, in _schedule_runs
+    p.schedule_run()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1183, in schedule_run
+    self._prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1342, in _prefetch
+    self._legacy_interleaved_prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1365, in _legacy_interleaved_prefetch
+    self._iter_setup()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1675, in _iter_setup
+    iters, success = self._run_input_callbacks()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1724, in _run_input_callbacks
+    batch.feed()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 138, in feed
+    self._group.feed(self._pipepline, self._data, self._batch_size)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 292, in feed
+    pipeline._feed_input(
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1057, in _feed_input
+    self._pipe.SetExternalTensorInput(
+RuntimeError: Could not find an input operator with name "__ExternalSource_4"
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=21', 'schedule.phase1.iterations=300', 'schedule.phase1.lr_end=1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=1500', 'schedule.phase2.lr_objective=0.001', 'schedule.phase3.iterations=2000', 'schedule.phase3.lr=0.005', 'schedule.phase3.rollout_steps_increments=5', 'toggles.data.fix_data_centering=True', 'toggles.data.fix_december_gap=False', 'toggles.data.fix_sst_data=True', 'toggles.data.fix_temporal_info=True', 'toggles.data.include_sst_channel=True', 'toggles.graph.use_multimesh=True', 'toggles.loss.fix_inverse_variance_data=True', 'toggles.loss.use_original_variable_weights=False', 'toggles.model.include_solar_radiation=True', 'toggles.model.include_spatial_info=True', 'toggles.model.include_static_data=True', 'toggles.model.include_temporal_info=False']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 250, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 377, in _get_outputs
+    self._schedule_runs(False)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 420, in _schedule_runs
+    p.schedule_run()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1183, in schedule_run
+    self._prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1342, in _prefetch
+    self._legacy_interleaved_prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1365, in _legacy_interleaved_prefetch
+    self._iter_setup()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1675, in _iter_setup
+    iters, success = self._run_input_callbacks()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1724, in _run_input_callbacks
+    batch.feed()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 138, in feed
+    self._group.feed(self._pipepline, self._data, self._batch_size)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 292, in feed
+    pipeline._feed_input(
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1057, in _feed_input
+    self._pipe.SetExternalTensorInput(
+RuntimeError: Could not find an input operator with name "__ExternalSource_4"
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=21', 'schedule.phase1.iterations=300', 'schedule.phase1.lr_end=1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=1500', 'schedule.phase2.lr_objective=0.001', 'schedule.phase3.iterations=2000', 'schedule.phase3.lr=0.005', 'schedule.phase3.rollout_steps_increments=5', 'toggles.data.fix_data_centering=True', 'toggles.data.fix_december_gap=False', 'toggles.data.fix_sst_data=True', 'toggles.data.fix_temporal_info=True', 'toggles.data.include_sst_channel=True', 'toggles.graph.use_multimesh=True', 'toggles.loss.fix_inverse_variance_data=True', 'toggles.loss.use_original_variable_weights=False', 'toggles.model.include_solar_radiation=True', 'toggles.model.include_spatial_info=True', 'toggles.model.include_static_data=True', 'toggles.model.include_temporal_info=False']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 250, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 377, in _get_outputs
+    self._schedule_runs(False)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 420, in _schedule_runs
+    p.schedule_run()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1183, in schedule_run
+    self._prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1342, in _prefetch
+    self._legacy_interleaved_prefetch()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1365, in _legacy_interleaved_prefetch
+    self._iter_setup()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1675, in _iter_setup
+    iters, success = self._run_input_callbacks()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1724, in _run_input_callbacks
+    batch.feed()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 138, in feed
+    self._group.feed(self._pipepline, self._data, self._batch_size)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/external_source.py", line 292, in feed
+    pipeline._feed_input(
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1057, in _feed_input
+    self._pipe.SetExternalTensorInput(
+RuntimeError: Could not find an input operator with name "__ExternalSource_4"
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+W0323 13:01:52.122000 272663 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 272666 closing signal SIGTERM
+W0323 13:01:52.130000 272663 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 272667 closing signal SIGTERM
+W0323 13:01:52.134000 272663 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 272668 closing signal SIGTERM
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+wandb: - 0.030 MB of 0.030 MB uploadedE0323 13:01:52.952000 272663 torch/distributed/elastic/multiprocessing/api.py:862] failed (exitcode: 1) local_rank: 3 (pid: 272669) of binary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/venv_arm64/bin/python
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 923, in <module>
+    main()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_graphcast.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-23_13:01:52
+  host      : nid006897
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 272669)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:            learning_rate ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:            training_loss ██▇▇▇▅▆▆▅▄▃▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            training_time █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: training_time_dataloader █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:      training_time_model █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:            learning_rate 0.00017
+wandb:            training_loss 0.00287
+wandb:            training_time 0.29455
+wandb: training_time_dataloader 0.00151
+wandb:      training_time_model 0.29303
+wandb: 
+wandb: 🚀 View run Baseline_64825_25/03/23_13:00:18_RUN_01 at: https://wandb.ai/schups/DSM500_FPR/runs/406dhdta
+wandb: ⭐️ View project at: https://wandb.ai/schups/DSM500_FPR
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/wandb/run-20250323_130019-406dhdta/logs
+wandb: WARNING The legacy backend is deprecated. In future versions, `wandb-core` will become the sole backend service, and the `wandb.require('legacy-service')` flag will be removed. For more information, visit https://wandb.me/wandb-core
+2025-03-23 13:01:56,951 - wandb.wandb_agent - INFO - Cleaning up finished run: 406dhdta
+wandb: Terminating and syncing runs. Press ctrl-c to kill.
