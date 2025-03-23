@@ -1,0 +1,196 @@
+wandb: Starting wandb agent 🕵️
+2025-03-22 23:00:42,608 - wandb.wandb_agent - INFO - Running runs: []
+2025-03-22 23:00:42,877 - wandb.wandb_agent - INFO - Agent received command: run
+2025-03-22 23:00:42,877 - wandb.wandb_agent - INFO - Agent starting run with config:
+	checkpoint.enabled: False
+	datapipe.seed: 84
+	schedule.phase1.iterations: 2000
+	schedule.phase1.lr_end: 0.1
+	schedule.phase1.lr_start: 0.005
+	schedule.phase2.iterations: 100
+	schedule.phase2.lr_objective: 0.001
+	schedule.phase3.iterations: 1000
+	schedule.phase3.lr: 0.005
+	schedule.phase3.rollout_steps_increments: 5
+2025-03-22 23:00:42,880 - wandb.wandb_agent - INFO - About to run command: python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 train_graphcast.py checkpoint.enabled=False datapipe.seed=84 schedule.phase1.iterations=2000 schedule.phase1.lr_end=0.1 schedule.phase1.lr_start=0.005 schedule.phase2.iterations=100 schedule.phase2.lr_objective=0.001 schedule.phase3.iterations=1000 schedule.phase3.lr=0.005 schedule.phase3.rollout_steps_increments=5
+2025-03-22 23:00:47,888 - wandb.wandb_agent - INFO - Running runs: ['09sdq863']
+[2025-03-22 23:01:07,799][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-22 23:01:07,799][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-22 23:01:07,800][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-22 23:01:07,801][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Ignoring project 'DSM500_FPR' when running a sweep.
+wandb: WARNING Ignoring entity 'schups' when running a sweep.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250322_230108-09sdq863
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_64390_25/03/22_23:01:07_RUN_01
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🧹 View sweep at https://wandb.ai/schups/DSM500_FPR/sweeps/mpgn79e1
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/09sdq863
+[2025-03-22 23:01:09,850][trainer][INFO] - [94mSetting seed to 84[0m
+[2025-03-22 23:01:09,901][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-22 23:01:09,905][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-22 23:01:09,905][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-22 23:01:09,907][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-22 23:01:14,348][trainer][INFO] - [94mModel created. Trainable parameters count is 35'248'149[0m
+[2025-03-22 23:01:19,893][trainer][INFO] - [92mLoaded train datapipe of size 53'947 samples[0m
+[2025-03-22 23:01:21,647][trainer][INFO] - [92mLoaded test datapipe of size 2'903 samples[0m
+[2025-03-22 23:01:21,661][main][INFO] - [94mInitializing dataloaders...[0m
+[2025-03-22 23:01:21,661][main][INFO] - [94mTraining started...[0m
+[2025-03-22 23:01:55,094][trainer][INFO] - Iteration     1 | Train loss: 6.55 | Time taken:  9.29/24.14/33.43 sec | GPU memory: 79.1 GB | Global sample ID: 39278
+[2025-03-22 23:01:55,668][trainer][INFO] - Iteration     2 | Train loss: 6.68 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 32914
+[2025-03-22 23:01:56,055][trainer][INFO] - Iteration     3 | Train loss: 6.35 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46909
+[2025-03-22 23:01:56,625][trainer][INFO] - Iteration     4 | Train loss: 6.06 | Time taken:  0.00/ 0.31/ 0.31 sec | GPU memory: 82.1 GB | Global sample ID: 33024
+[2025-03-22 23:01:57,013][trainer][INFO] - Iteration     5 | Train loss: 6.11 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53769
+[2025-03-22 23:01:57,411][trainer][INFO] - Iteration     6 | Train loss: 6.31 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 48692
+[2025-03-22 23:01:57,817][trainer][INFO] - Iteration     7 | Train loss: 6.07 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 29769
+[2025-03-22 23:01:58,369][trainer][INFO] - Iteration     8 | Train loss: 6.18 | Time taken:  0.00/ 0.44/ 0.44 sec | GPU memory: 82.1 GB | Global sample ID: 34724
+[2025-03-22 23:01:58,767][trainer][INFO] - Iteration     9 | Train loss: 5.89 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 36387
+[2025-03-22 23:01:59,164][trainer][INFO] - Iteration    10 | Train loss: 5.76 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36237
+[2025-03-22 23:01:59,554][trainer][INFO] - Iteration    11 | Train loss: 5.59 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33738
+[2025-03-22 23:02:00,042][trainer][INFO] - Iteration    12 | Train loss: 5.72 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43183
+[2025-03-22 23:02:00,433][trainer][INFO] - Iteration    13 | Train loss: 5.64 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 42939
+[2025-03-22 23:02:00,822][trainer][INFO] - Iteration    14 | Train loss: 5.79 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52723
+[2025-03-22 23:02:01,215][trainer][INFO] - Iteration    15 | Train loss: 5.85 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5903
+[2025-03-22 23:02:01,608][trainer][INFO] - Iteration    16 | Train loss: 5.41 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44261
+[2025-03-22 23:02:02,067][trainer][INFO] - Iteration    17 | Train loss: 5.56 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 27422
+[2025-03-22 23:02:02,454][trainer][INFO] - Iteration    18 | Train loss: 5.49 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 12162
+[2025-03-22 23:02:02,855][trainer][INFO] - Iteration    19 | Train loss: 5.62 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5842
+[2025-03-22 23:02:03,252][trainer][INFO] - Iteration    20 | Train loss: 5.47 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19253
+[2025-03-22 23:02:03,712][trainer][INFO] - Iteration    21 | Train loss: 5.41 | Time taken:  0.00/ 0.27/ 0.27 sec | GPU memory: 82.1 GB | Global sample ID: 19173
+[2025-03-22 23:02:04,103][trainer][INFO] - Iteration    22 | Train loss: 5.14 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41181
+[2025-03-22 23:02:04,493][trainer][INFO] - Iteration    23 | Train loss: 5.42 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 39557
+[2025-03-22 23:02:04,889][trainer][INFO] - Iteration    24 | Train loss: 5.20 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 35646
+[2025-03-22 23:02:05,277][trainer][INFO] - Iteration    25 | Train loss: 5.21 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 51664
+[2025-03-22 23:02:05,672][trainer][INFO] - Iteration    26 | Train loss: 5.17 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19033
+[2025-03-22 23:02:06,109][trainer][INFO] - Iteration    27 | Train loss: 4.82 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53644
+[2025-03-22 23:02:06,509][trainer][INFO] - Iteration    28 | Train loss: 4.81 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 44125
+[2025-03-22 23:02:06,953][trainer][INFO] - Iteration    29 | Train loss: 4.84 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 11457
+[2025-03-22 23:02:07,342][trainer][INFO] - Iteration    30 | Train loss: 4.97 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7357
+[2025-03-22 23:02:07,736][trainer][INFO] - Iteration    31 | Train loss: 4.95 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 29891
+[2025-03-22 23:02:08,128][trainer][INFO] - Iteration    32 | Train loss: 4.80 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9067
+[2025-03-22 23:02:08,524][trainer][INFO] - Iteration    33 | Train loss: 4.62 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40960
+[2025-03-22 23:02:08,921][trainer][INFO] - Iteration    34 | Train loss: 4.65 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 47292
+[2025-03-22 23:02:09,348][trainer][INFO] - Iteration    35 | Train loss: 4.53 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 16046
+[2025-03-22 23:02:09,745][trainer][INFO] - Iteration    36 | Train loss: 4.55 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28738
+[2025-03-22 23:02:10,208][trainer][INFO] - Iteration    37 | Train loss: 4.67 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50215
+[2025-03-22 23:02:10,598][trainer][INFO] - Iteration    38 | Train loss: 4.52 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30783
+[2025-03-22 23:02:10,992][trainer][INFO] - Iteration    39 | Train loss: 4.45 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 47293
+[2025-03-22 23:02:11,383][trainer][INFO] - Iteration    40 | Train loss: 4.53 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 27122
+[2025-03-22 23:02:11,774][trainer][INFO] - Iteration    41 | Train loss: 4.49 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 42405
+[2025-03-22 23:02:12,210][trainer][INFO] - Iteration    42 | Train loss: 4.32 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 35957
+[2025-03-22 23:02:12,601][trainer][INFO] - Iteration    43 | Train loss: 4.27 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53045
+[2025-03-22 23:02:13,115][trainer][INFO] - Iteration    44 | Train loss: 4.19 | Time taken:  0.00/ 0.27/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45390
+[2025-03-22 23:02:13,508][trainer][INFO] - Iteration    45 | Train loss: 4.21 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41544
+[2025-03-22 23:02:13,974][trainer][INFO] - Iteration    46 | Train loss: 4.33 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3786
+[2025-03-22 23:02:14,369][trainer][INFO] - Iteration    47 | Train loss: 4.05 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 11605
+[2025-03-22 23:02:14,788][trainer][INFO] - Iteration    48 | Train loss: 4.06 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48647
+[2025-03-22 23:02:15,223][trainer][INFO] - Iteration    49 | Train loss: 3.97 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19586
+[2025-03-22 23:02:15,653][trainer][INFO] - Iteration    50 | Train loss: 4.05 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 17615
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=2000', 'schedule.phase1.lr_end=0.1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=100', 'schedule.phase2.lr_objective=0.001', 'schedule.phase3.iterations=1000', 'schedule.phase3.lr=0.005', 'schedule.phase3.rollout_steps_increments=5']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 84, in main
+    mse, global_sample_id = trainer.test(test_sample)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 228, in test
+    output = self.model(model_input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/models/graph_cast_net.py", line 180, in forward
+    grid_input_encoded, m2m_node_encoded = self.checkpoint_filter(partial(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/models/graph_cast_net.py", line 253, in checkpoint_filter
+    return partial_function()
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/models/components/encoder_decoder.py", line 68, in forward
+    edge_feats = self.edge_mlp(
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/models/components/mlp.py", line 141, in forward
+    mlp_sum = sum_efeat(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/models/components/utils.py", line 106, in sum_efeat
+    src_idx, dst_idx = graph.edges()
+  File "/usr/local/lib/python3.10/dist-packages/dgl/view.py", line 179, in __call__
+    return self._graph.all_edges(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/dgl/heterograph.py", line 3591, in all_edges
+    src, dst, eid = self._graph.edges(self.get_etype_id(etype), order)
+  File "/usr/local/lib/python3.10/dist-packages/dgl/heterograph_index.py", line 696, in edges
+    edge_array = _CAPI_DGLHeteroEdges(self, int(etype), order)
+  File "dgl/_ffi/_cython/./function.pxi", line 295, in dgl._ffi._cy3.core.FunctionBase.__call__
+  File "dgl/_ffi/_cython/./function.pxi", line 227, in dgl._ffi._cy3.core.FuncCall
+  File "dgl/_ffi/_cython/./function.pxi", line 217, in dgl._ffi._cy3.core.FuncCall3
+dgl._ffi.base.DGLError: [23:02:24] /workspace/ktangsali/dgl/src/runtime/cuda/cuda_device_api.cc:117: Check failed: e == cudaSuccess || e == cudaErrorCudartUnloading: CUDA: out of memory
+Stack trace:
+  [bt] (0) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dmlc::LogMessageFatal::~LogMessageFatal()+0x58) [0x4000f7611418]
+  [bt] (1) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::runtime::CUDADeviceAPI::AllocDataSpace(DGLContext, unsigned long, unsigned long, DGLDataType)+0x220) [0x4000f80bfb64]
+  [bt] (2) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::runtime::NDArray::Empty(std::vector<long, std::allocator<long> >, DGLDataType, DGLContext)+0xd8) [0x4000f7c9eac4]
+  [bt] (3) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::aten::NewIdArray(long, DGLContext, unsigned char)+0x98) [0x4000f75dd8c0]
+  [bt] (4) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::runtime::NDArray dgl::aten::impl::Range<(DGLDeviceType)2, int>(int, int, DGLContext)+0xc8) [0x4000f80fce4c]
+  [bt] (5) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::aten::Range(long, long, unsigned char, DGLContext)+0x168) [0x4000f75ddc58]
+  [bt] (6) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::UnitGraph::COO::Edges(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const+0x1d8) [0x4000f802c818]
+  [bt] (7) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::UnitGraph::Edges(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const+0x1c4) [0x4000f801e298]
+  [bt] (8) /usr/local/lib/python3.10/dist-packages/dgl/libdgl.so(dgl::HeteroGraph::Edges(unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const+0x78) [0x4000f7db221c]
+
+
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[2025-03-22 23:02:26,182][trainer][INFO] - [94mIteration    50 | Test MSE:   1.23 | Time taken:  9.17/ 1.33/10.50 sec | GPU memory: 82.1 GB | Global sample ID: 2403[0m
+W0322 23:02:29.521000 122762 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 122766 closing signal SIGTERM
+W0322 23:02:29.531000 122762 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 122768 closing signal SIGTERM
+W0322 23:02:29.538000 122762 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 122769 closing signal SIGTERM
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+E0322 23:02:30.463000 122762 torch/distributed/elastic/multiprocessing/api.py:862] failed (exitcode: 1) local_rank: 1 (pid: 122767) of binary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/venv_arm64/bin/python
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 923, in <module>
+    main()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_graphcast.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-22_23:02:29
+  host      : nid006554
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 122767)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+2025-03-22 23:02:31,025 - wandb.wandb_agent - INFO - Cleaning up finished run: 09sdq863
+wandb: Terminating and syncing runs. Press ctrl-c to kill.

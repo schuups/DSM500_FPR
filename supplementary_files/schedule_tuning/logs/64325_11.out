@@ -1,0 +1,902 @@
+wandb: Starting wandb agent 🕵️
+2025-03-22 21:29:06,551 - wandb.wandb_agent - INFO - Running runs: []
+2025-03-22 21:29:06,817 - wandb.wandb_agent - INFO - Agent received command: run
+2025-03-22 21:29:06,817 - wandb.wandb_agent - INFO - Agent starting run with config:
+	checkpoint.enabled: False
+	datapipe.seed: 21
+	schedule.phase1.iterations: 100
+	schedule.phase1.lr_end: 1
+	schedule.phase1.lr_start: 0.001
+	schedule.phase2.iterations: 200
+	schedule.phase2.lr_objective: 0.0001
+	schedule.phase3.iterations: 500
+	schedule.phase3.lr: 0.0001
+	schedule.phase3.rollout_steps_increments: 1
+2025-03-22 21:29:06,820 - wandb.wandb_agent - INFO - About to run command: python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 train_graphcast.py checkpoint.enabled=False datapipe.seed=21 schedule.phase1.iterations=100 schedule.phase1.lr_end=1 schedule.phase1.lr_start=0.001 schedule.phase2.iterations=200 schedule.phase2.lr_objective=0.0001 schedule.phase3.iterations=500 schedule.phase3.lr=0.0001 schedule.phase3.rollout_steps_increments=1
+2025-03-22 21:29:11,828 - wandb.wandb_agent - INFO - Running runs: ['debb30wj']
+[2025-03-22 21:29:34,413][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-22 21:29:34,413][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-22 21:29:34,413][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-22 21:29:34,420][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Ignoring project 'DSM500_FPR' when running a sweep.
+wandb: WARNING Ignoring entity 'schups' when running a sweep.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250322_212935-debb30wj
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_64340_25/03/22_21:29:34_RUN_01
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🧹 View sweep at https://wandb.ai/schups/DSM500_FPR/sweeps/mpgn79e1
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/debb30wj
+[2025-03-22 21:29:36,483][trainer][INFO] - [94mSetting seed to 21[0m
+[2025-03-22 21:29:36,545][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-22 21:29:36,621][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-22 21:29:36,632][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-22 21:29:36,634][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-22 21:29:41,019][trainer][INFO] - [94mModel created. Trainable parameters count is 35'248'149[0m
+[2025-03-22 21:29:46,610][trainer][INFO] - [92mLoaded train datapipe of size 53'947 samples[0m
+[2025-03-22 21:29:48,363][trainer][INFO] - [92mLoaded test datapipe of size 2'903 samples[0m
+[2025-03-22 21:29:48,369][main][INFO] - [94mInitializing dataloaders...[0m
+[2025-03-22 21:29:48,376][main][INFO] - [94mTraining started...[0m
+[2025-03-22 21:30:22,240][trainer][INFO] - Iteration     1 | Train loss: 4.87 | Time taken:  9.44/24.42/33.86 sec | GPU memory: 79.1 GB | Global sample ID: 3374
+[2025-03-22 21:30:22,637][trainer][INFO] - Iteration     2 | Train loss: 4.97 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30756
+[2025-03-22 21:30:23,039][trainer][INFO] - Iteration     3 | Train loss: 4.60 | Time taken:  0.00/ 0.29/ 0.30 sec | GPU memory: 82.1 GB | Global sample ID: 1692
+[2025-03-22 21:30:23,622][trainer][INFO] - Iteration     4 | Train loss: 3.97 | Time taken:  0.00/ 0.30/ 0.30 sec | GPU memory: 82.1 GB | Global sample ID: 14842
+[2025-03-22 21:30:24,007][trainer][INFO] - Iteration     5 | Train loss: 2.58 | Time taken:  0.00/ 0.27/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41459
+[2025-03-22 21:30:24,824][trainer][INFO] - Iteration     6 | Train loss: 1.68 | Time taken:  0.00/ 0.71/ 0.71 sec | GPU memory: 82.1 GB | Global sample ID: 22876
+[2025-03-22 21:30:25,215][trainer][INFO] - Iteration     7 | Train loss: 0.95 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36064
+[2025-03-22 21:30:25,603][trainer][INFO] - Iteration     8 | Train loss: 0.61 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 37044
+[2025-03-22 21:30:26,126][trainer][INFO] - Iteration     9 | Train loss: 0.91 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40746
+[2025-03-22 21:30:26,515][trainer][INFO] - Iteration    10 | Train loss: 1.36 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33084
+[2025-03-22 21:30:26,950][trainer][INFO] - Iteration    11 | Train loss: 0.73 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45618
+[2025-03-22 21:30:27,345][trainer][INFO] - Iteration    12 | Train loss: 0.25 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 30078
+[2025-03-22 21:30:27,735][trainer][INFO] - Iteration    13 | Train loss: 0.61 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5703
+[2025-03-22 21:30:28,123][trainer][INFO] - Iteration    14 | Train loss: 0.34 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 15297
+[2025-03-22 21:30:28,519][trainer][INFO] - Iteration    15 | Train loss: 0.21 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 4167
+[2025-03-22 21:30:28,914][trainer][INFO] - Iteration    16 | Train loss: 0.41 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 16140
+[2025-03-22 21:30:29,419][trainer][INFO] - Iteration    17 | Train loss: 0.21 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38984
+[2025-03-22 21:30:29,806][trainer][INFO] - Iteration    18 | Train loss: 0.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48331
+[2025-03-22 21:30:30,202][trainer][INFO] - Iteration    19 | Train loss: 0.19 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34640
+[2025-03-22 21:30:30,602][trainer][INFO] - Iteration    20 | Train loss: 0.29 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3219
+[2025-03-22 21:30:30,994][trainer][INFO] - Iteration    21 | Train loss: 0.19 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 15494
+[2025-03-22 21:30:31,402][trainer][INFO] - Iteration    22 | Train loss: 0.12 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 49159
+[2025-03-22 21:30:31,804][trainer][INFO] - Iteration    23 | Train loss: 0.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40366
+[2025-03-22 21:30:32,376][trainer][INFO] - Iteration    24 | Train loss: 0.20 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2423
+[2025-03-22 21:30:32,830][trainer][INFO] - Iteration    25 | Train loss: 0.12 | Time taken:  0.07/ 0.28/ 0.35 sec | GPU memory: 82.1 GB | Global sample ID: 3703
+[2025-03-22 21:30:33,220][trainer][INFO] - Iteration    26 | Train loss: 0.10 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 32159
+[2025-03-22 21:30:33,725][trainer][INFO] - Iteration    27 | Train loss: 0.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40868
+[2025-03-22 21:30:34,113][trainer][INFO] - Iteration    28 | Train loss: 0.17 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26244
+[2025-03-22 21:30:34,520][trainer][INFO] - Iteration    29 | Train loss: 0.10 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3851
+[2025-03-22 21:30:34,906][trainer][INFO] - Iteration    30 | Train loss: 0.08 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 31380
+[2025-03-22 21:30:35,301][trainer][INFO] - Iteration    31 | Train loss: 0.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45111
+[2025-03-22 21:30:35,778][trainer][INFO] - Iteration    32 | Train loss: 0.09 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48735
+[2025-03-22 21:30:36,166][trainer][INFO] - Iteration    33 | Train loss: 0.08 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52716
+[2025-03-22 21:30:36,557][trainer][INFO] - Iteration    34 | Train loss: 0.10 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 35442
+[2025-03-22 21:30:36,977][trainer][INFO] - Iteration    35 | Train loss: 0.09 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 28555
+[2025-03-22 21:30:37,366][trainer][INFO] - Iteration    36 | Train loss: 0.07 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52525
+[2025-03-22 21:30:37,761][trainer][INFO] - Iteration    37 | Train loss: 0.06 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53105
+[2025-03-22 21:30:38,158][trainer][INFO] - Iteration    38 | Train loss: 0.09 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2872
+[2025-03-22 21:30:38,586][trainer][INFO] - Iteration    39 | Train loss: 0.10 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46733
+[2025-03-22 21:30:38,977][trainer][INFO] - Iteration    40 | Train loss: 0.07 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 26205
+[2025-03-22 21:30:39,370][trainer][INFO] - Iteration    41 | Train loss: 0.06 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50900
+[2025-03-22 21:30:39,764][trainer][INFO] - Iteration    42 | Train loss: 0.06 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40652
+[2025-03-22 21:30:40,158][trainer][INFO] - Iteration    43 | Train loss: 0.06 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20630
+[2025-03-22 21:30:40,578][trainer][INFO] - Iteration    44 | Train loss: 0.05 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43052
+[2025-03-22 21:30:40,971][trainer][INFO] - Iteration    45 | Train loss: 0.05 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5155
+[2025-03-22 21:30:41,383][trainer][INFO] - Iteration    46 | Train loss: 0.05 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28846
+[2025-03-22 21:30:41,779][trainer][INFO] - Iteration    47 | Train loss: 0.05 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 43929
+[2025-03-22 21:30:42,398][trainer][INFO] - Iteration    48 | Train loss: 0.07 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 12607
+[2025-03-22 21:30:42,785][trainer][INFO] - Iteration    49 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30861
+[2025-03-22 21:30:43,180][trainer][INFO] - Iteration    50 | Train loss: 0.08 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45256
+[2025-03-22 21:30:53,534][trainer][INFO] - [94mIteration    50 | Test MSE:   0.76 | Time taken:  9.06/ 1.29/10.34 sec | GPU memory: 82.1 GB | Global sample ID: 2108[0m
+[2025-03-22 21:30:54,217][trainer][INFO] - Iteration    51 | Train loss: 0.04 | Time taken:  0.00/ 0.30/ 0.31 sec | GPU memory: 82.1 GB | Global sample ID: 40438
+[2025-03-22 21:30:54,601][trainer][INFO] - Iteration    52 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 47893
+[2025-03-22 21:30:54,986][trainer][INFO] - Iteration    53 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44648
+[2025-03-22 21:30:55,441][trainer][INFO] - Iteration    54 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 14521
+[2025-03-22 21:30:55,829][trainer][INFO] - Iteration    55 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40948
+[2025-03-22 21:30:56,223][trainer][INFO] - Iteration    56 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 22288
+[2025-03-22 21:30:56,612][trainer][INFO] - Iteration    57 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43088
+[2025-03-22 21:30:57,039][trainer][INFO] - Iteration    58 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50164
+[2025-03-22 21:30:57,428][trainer][INFO] - Iteration    59 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7864
+[2025-03-22 21:30:57,818][trainer][INFO] - Iteration    60 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2715
+[2025-03-22 21:30:58,216][trainer][INFO] - Iteration    61 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 49640
+[2025-03-22 21:30:58,606][trainer][INFO] - Iteration    62 | Train loss: 0.05 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19685
+[2025-03-22 21:30:59,000][trainer][INFO] - Iteration    63 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 22185
+[2025-03-22 21:30:59,390][trainer][INFO] - Iteration    64 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48658
+[2025-03-22 21:30:59,801][trainer][INFO] - Iteration    65 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19390
+[2025-03-22 21:31:00,239][trainer][INFO] - Iteration    66 | Train loss: 0.04 | Time taken:  0.00/ 0.29/ 0.30 sec | GPU memory: 82.1 GB | Global sample ID: 29893
+[2025-03-22 21:31:00,625][trainer][INFO] - Iteration    67 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36548
+[2025-03-22 21:31:01,038][trainer][INFO] - Iteration    68 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1109
+[2025-03-22 21:31:01,424][trainer][INFO] - Iteration    69 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 35383
+[2025-03-22 21:31:01,821][trainer][INFO] - Iteration    70 | Train loss: 0.09 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26632
+[2025-03-22 21:31:02,208][trainer][INFO] - Iteration    71 | Train loss: 0.23 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 22994
+[2025-03-22 21:31:02,600][trainer][INFO] - Iteration    72 | Train loss: 0.81 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 20667
+[2025-03-22 21:31:02,990][trainer][INFO] - Iteration    73 | Train loss: 0.96 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 12877
+[2025-03-22 21:31:03,380][trainer][INFO] - Iteration    74 | Train loss: 0.07 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 22401
+[2025-03-22 21:31:03,775][trainer][INFO] - Iteration    75 | Train loss: 0.95 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 26415
+[2025-03-22 21:31:04,161][trainer][INFO] - Iteration    76 | Train loss: 0.26 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44852
+[2025-03-22 21:31:04,555][trainer][INFO] - Iteration    77 | Train loss: 1.06 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34553
+[2025-03-22 21:31:04,953][trainer][INFO] - Iteration    78 | Train loss: 0.26 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 39548
+[2025-03-22 21:31:05,342][trainer][INFO] - Iteration    79 | Train loss: 0.63 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9164
+[2025-03-22 21:31:05,819][trainer][INFO] - Iteration    80 | Train loss: 0.37 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2623
+[2025-03-22 21:31:06,210][trainer][INFO] - Iteration    81 | Train loss: 0.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33227
+[2025-03-22 21:31:06,663][trainer][INFO] - Iteration    82 | Train loss: 0.32 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30103
+[2025-03-22 21:31:07,056][trainer][INFO] - Iteration    83 | Train loss: 0.30 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 39450
+[2025-03-22 21:31:07,442][trainer][INFO] - Iteration    84 | Train loss: 0.18 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1509
+[2025-03-22 21:31:07,831][trainer][INFO] - Iteration    85 | Train loss: 0.12 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 6112
+[2025-03-22 21:31:08,219][trainer][INFO] - Iteration    86 | Train loss: 0.23 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52927
+[2025-03-22 21:31:08,606][trainer][INFO] - Iteration    87 | Train loss: 0.10 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5392
+[2025-03-22 21:31:09,000][trainer][INFO] - Iteration    88 | Train loss: 0.59 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41544
+[2025-03-22 21:31:09,392][trainer][INFO] - Iteration    89 | Train loss: 0.13 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 2974
+[2025-03-22 21:31:09,780][trainer][INFO] - Iteration    90 | Train loss: 0.10 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44348
+[2025-03-22 21:31:10,184][trainer][INFO] - Iteration    91 | Train loss: 0.18 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 35994
+[2025-03-22 21:31:10,644][trainer][INFO] - Iteration    92 | Train loss: 0.16 | Time taken:  0.00/ 0.30/ 0.30 sec | GPU memory: 82.1 GB | Global sample ID: 22313
+[2025-03-22 21:31:11,033][trainer][INFO] - Iteration    93 | Train loss: 0.11 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46056
+[2025-03-22 21:31:11,435][trainer][INFO] - Iteration    94 | Train loss: 0.12 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 44871
+[2025-03-22 21:31:11,823][trainer][INFO] - Iteration    95 | Train loss: 0.09 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34732
+[2025-03-22 21:31:12,215][trainer][INFO] - Iteration    96 | Train loss: 0.08 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26301
+[2025-03-22 21:31:12,615][trainer][INFO] - Iteration    97 | Train loss: 0.09 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 33617
+[2025-03-22 21:31:13,004][trainer][INFO] - Iteration    98 | Train loss: 0.07 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 14584
+[2025-03-22 21:31:13,417][trainer][INFO] - Iteration    99 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40648
+/usr/local/lib/python3.10/dist-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/usr/local/lib/python3.10/dist-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/usr/local/lib/python3.10/dist-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+/usr/local/lib/python3.10/dist-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+[2025-03-22 21:31:13,828][trainer][INFO] - Iteration   100 | Train loss: 0.05 | Time taken:  0.00/ 0.31/ 0.31 sec | GPU memory: 82.1 GB | Global sample ID: 19769
+[2025-03-22 21:31:15,131][trainer][INFO] - [94mIteration   100 | Test MSE:   0.62 | Time taken:  0.00/ 1.25/ 1.26 sec | GPU memory: 82.1 GB | Global sample ID: 1368[0m
+[2025-03-22 21:31:15,559][trainer][INFO] - Iteration   101 | Train loss: 0.05 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 29128
+[2025-03-22 21:31:15,956][trainer][INFO] - Iteration   102 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 22555
+[2025-03-22 21:31:16,411][trainer][INFO] - Iteration   103 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 39636
+[2025-03-22 21:31:16,850][trainer][INFO] - Iteration   104 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7424
+[2025-03-22 21:31:17,241][trainer][INFO] - Iteration   105 | Train loss: 0.04 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7005
+[2025-03-22 21:31:17,632][trainer][INFO] - Iteration   106 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 52047
+[2025-03-22 21:31:18,020][trainer][INFO] - Iteration   107 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 11820
+[2025-03-22 21:31:18,412][trainer][INFO] - Iteration   108 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 31454
+[2025-03-22 21:31:18,802][trainer][INFO] - Iteration   109 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 51693
+[2025-03-22 21:31:19,190][trainer][INFO] - Iteration   110 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 23774
+[2025-03-22 21:31:19,580][trainer][INFO] - Iteration   111 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 11400
+[2025-03-22 21:31:19,968][trainer][INFO] - Iteration   112 | Train loss: 0.03 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 28722
+[2025-03-22 21:31:20,360][trainer][INFO] - Iteration   113 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 49144
+[2025-03-22 21:31:20,752][trainer][INFO] - Iteration   114 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3371
+[2025-03-22 21:31:21,200][trainer][INFO] - Iteration   115 | Train loss: 0.02 | Time taken:  0.00/ 0.34/ 0.34 sec | GPU memory: 82.1 GB | Global sample ID: 24121
+[2025-03-22 21:31:21,599][trainer][INFO] - Iteration   116 | Train loss: 0.01 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 1637
+[2025-03-22 21:31:21,989][trainer][INFO] - Iteration   117 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41487
+[2025-03-22 21:31:22,379][trainer][INFO] - Iteration   118 | Train loss: 0.02 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 3191
+[2025-03-22 21:31:22,766][trainer][INFO] - Iteration   119 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44617
+[2025-03-22 21:31:23,160][trainer][INFO] - Iteration   120 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 23794
+[2025-03-22 21:31:23,572][trainer][INFO] - Iteration   121 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41251
+[2025-03-22 21:31:23,963][trainer][INFO] - Iteration   122 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 16088
+[2025-03-22 21:31:24,360][trainer][INFO] - Iteration   123 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52622
+[2025-03-22 21:31:24,902][trainer][INFO] - Iteration   124 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 28
+[2025-03-22 21:31:25,297][trainer][INFO] - Iteration   125 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48646
+[2025-03-22 21:31:25,701][trainer][INFO] - Iteration   126 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40250
+[2025-03-22 21:31:26,099][trainer][INFO] - Iteration   127 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 34084
+[2025-03-22 21:31:26,488][trainer][INFO] - Iteration   128 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 4107
+[2025-03-22 21:31:26,879][trainer][INFO] - Iteration   129 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 49835
+[2025-03-22 21:31:27,268][trainer][INFO] - Iteration   130 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38410
+[2025-03-22 21:31:27,662][trainer][INFO] - Iteration   131 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33641
+[2025-03-22 21:31:28,060][trainer][INFO] - Iteration   132 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 13467
+[2025-03-22 21:31:28,462][trainer][INFO] - Iteration   133 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48613
+[2025-03-22 21:31:28,861][trainer][INFO] - Iteration   134 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34718
+[2025-03-22 21:31:29,276][trainer][INFO] - Iteration   135 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26643
+[2025-03-22 21:31:29,677][trainer][INFO] - Iteration   136 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 53528
+[2025-03-22 21:31:30,124][trainer][INFO] - Iteration   137 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7229
+[2025-03-22 21:31:30,515][trainer][INFO] - Iteration   138 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 6310
+[2025-03-22 21:31:30,906][trainer][INFO] - Iteration   139 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52427
+[2025-03-22 21:31:31,300][trainer][INFO] - Iteration   140 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 44162
+[2025-03-22 21:31:31,689][trainer][INFO] - Iteration   141 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40356
+[2025-03-22 21:31:32,082][trainer][INFO] - Iteration   142 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 25754
+[2025-03-22 21:31:32,543][trainer][INFO] - Iteration   143 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 10066
+[2025-03-22 21:31:32,936][trainer][INFO] - Iteration   144 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 48131
+[2025-03-22 21:31:33,329][trainer][INFO] - Iteration   145 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20224
+[2025-03-22 21:31:33,725][trainer][INFO] - Iteration   146 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 11362
+[2025-03-22 21:31:34,116][trainer][INFO] - Iteration   147 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 32689
+[2025-03-22 21:31:34,503][trainer][INFO] - Iteration   148 | Train loss: 0.01 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 10942
+[2025-03-22 21:31:35,060][trainer][INFO] - Iteration   149 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52942
+[2025-03-22 21:31:35,446][trainer][INFO] - Iteration   150 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9296
+[2025-03-22 21:31:36,758][trainer][INFO] - [94mIteration   150 | Test MSE:   0.59 | Time taken:  0.00/ 1.26/ 1.26 sec | GPU memory: 82.1 GB | Global sample ID: 1263[0m
+[2025-03-22 21:31:37,154][trainer][INFO] - Iteration   151 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36234
+[2025-03-22 21:31:37,543][trainer][INFO] - Iteration   152 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 15007
+[2025-03-22 21:31:37,936][trainer][INFO] - Iteration   153 | Train loss: 0.01 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 53361
+[2025-03-22 21:31:38,323][trainer][INFO] - Iteration   154 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 47303
+[2025-03-22 21:31:38,718][trainer][INFO] - Iteration   155 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 13958
+[2025-03-22 21:31:39,106][trainer][INFO] - Iteration   156 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3403
+[2025-03-22 21:31:39,496][trainer][INFO] - Iteration   157 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5686
+[2025-03-22 21:31:39,884][trainer][INFO] - Iteration   158 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 27331
+[2025-03-22 21:31:40,275][trainer][INFO] - Iteration   159 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 16510
+[2025-03-22 21:31:40,889][trainer][INFO] - Iteration   160 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48035
+[2025-03-22 21:31:41,281][trainer][INFO] - Iteration   161 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 40526
+[2025-03-22 21:31:41,682][trainer][INFO] - Iteration   162 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 27300
+[2025-03-22 21:31:42,161][trainer][INFO] - Iteration   163 | Train loss: 0.00 | Time taken:  0.00/ 0.27/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 11295
+[2025-03-22 21:31:42,551][trainer][INFO] - Iteration   164 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48269
+[2025-03-22 21:31:42,941][trainer][INFO] - Iteration   165 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33544
+[2025-03-22 21:31:43,339][trainer][INFO] - Iteration   166 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46497
+[2025-03-22 21:31:43,735][trainer][INFO] - Iteration   167 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1620
+[2025-03-22 21:31:44,135][trainer][INFO] - Iteration   168 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 468
+[2025-03-22 21:31:44,526][trainer][INFO] - Iteration   169 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 21928
+[2025-03-22 21:31:45,047][trainer][INFO] - Iteration   170 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 17216
+[2025-03-22 21:31:45,448][trainer][INFO] - Iteration   171 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33583
+[2025-03-22 21:31:45,846][trainer][INFO] - Iteration   172 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52366
+[2025-03-22 21:31:46,240][trainer][INFO] - Iteration   173 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 24922
+[2025-03-22 21:31:46,669][trainer][INFO] - Iteration   174 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 23371
+[2025-03-22 21:31:47,061][trainer][INFO] - Iteration   175 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5041
+[2025-03-22 21:31:47,459][trainer][INFO] - Iteration   176 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 31363
+[2025-03-22 21:31:47,888][trainer][INFO] - Iteration   177 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3079
+[2025-03-22 21:31:48,291][trainer][INFO] - Iteration   178 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 25152
+[2025-03-22 21:31:48,682][trainer][INFO] - Iteration   179 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28608
+[2025-03-22 21:31:49,070][trainer][INFO] - Iteration   180 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20180
+[2025-03-22 21:31:49,492][trainer][INFO] - Iteration   181 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 8446
+[2025-03-22 21:31:49,882][trainer][INFO] - Iteration   182 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5259
+[2025-03-22 21:31:50,274][trainer][INFO] - Iteration   183 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9245
+[2025-03-22 21:31:50,662][trainer][INFO] - Iteration   184 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9490
+[2025-03-22 21:31:51,081][trainer][INFO] - Iteration   185 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41102
+[2025-03-22 21:31:51,474][trainer][INFO] - Iteration   186 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 23671
+[2025-03-22 21:31:51,863][trainer][INFO] - Iteration   187 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 10342
+[2025-03-22 21:31:52,254][trainer][INFO] - Iteration   188 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 21488
+[2025-03-22 21:31:52,655][trainer][INFO] - Iteration   189 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 271
+[2025-03-22 21:31:53,045][trainer][INFO] - Iteration   190 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45719
+[2025-03-22 21:31:53,439][trainer][INFO] - Iteration   191 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45338
+[2025-03-22 21:31:53,868][trainer][INFO] - Iteration   192 | Train loss: 0.00 | Time taken:  0.00/ 0.32/ 0.32 sec | GPU memory: 82.1 GB | Global sample ID: 37121
+[2025-03-22 21:31:54,265][trainer][INFO] - Iteration   193 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 29760
+[2025-03-22 21:31:54,656][trainer][INFO] - Iteration   194 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 17322
+[2025-03-22 21:31:55,050][trainer][INFO] - Iteration   195 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26100
+[2025-03-22 21:31:55,452][trainer][INFO] - Iteration   196 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43923
+[2025-03-22 21:31:56,087][trainer][INFO] - Iteration   197 | Train loss: 0.00 | Time taken:  0.00/ 0.27/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 551
+[2025-03-22 21:31:56,510][trainer][INFO] - Iteration   198 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 23485
+[2025-03-22 21:31:56,900][trainer][INFO] - Iteration   199 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36646
+[2025-03-22 21:31:57,289][trainer][INFO] - Iteration   200 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52579
+[2025-03-22 21:31:58,597][trainer][INFO] - [94mIteration   200 | Test MSE:   0.55 | Time taken:  0.00/ 1.26/ 1.26 sec | GPU memory: 82.1 GB | Global sample ID: 995[0m
+[2025-03-22 21:31:58,995][trainer][INFO] - Iteration   201 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 17339
+[2025-03-22 21:31:59,384][trainer][INFO] - Iteration   202 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43080
+[2025-03-22 21:31:59,774][trainer][INFO] - Iteration   203 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 25499
+[2025-03-22 21:32:00,262][trainer][INFO] - Iteration   204 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53865
+[2025-03-22 21:32:00,653][trainer][INFO] - Iteration   205 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 24148
+[2025-03-22 21:32:01,044][trainer][INFO] - Iteration   206 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 33979
+[2025-03-22 21:32:01,434][trainer][INFO] - Iteration   207 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34398
+[2025-03-22 21:32:02,047][trainer][INFO] - Iteration   208 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9655
+[2025-03-22 21:32:02,439][trainer][INFO] - Iteration   209 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 6702
+[2025-03-22 21:32:02,831][trainer][INFO] - Iteration   210 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 50622
+[2025-03-22 21:32:03,221][trainer][INFO] - Iteration   211 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19391
+[2025-03-22 21:32:03,612][trainer][INFO] - Iteration   212 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 1890
+[2025-03-22 21:32:04,002][trainer][INFO] - Iteration   213 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 13005
+[2025-03-22 21:32:04,402][trainer][INFO] - Iteration   214 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46229
+[2025-03-22 21:32:04,805][trainer][INFO] - Iteration   215 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52142
+[2025-03-22 21:32:05,210][trainer][INFO] - Iteration   216 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 24377
+[2025-03-22 21:32:05,665][trainer][INFO] - Iteration   217 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 18391
+[2025-03-22 21:32:06,055][trainer][INFO] - Iteration   218 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 27631
+[2025-03-22 21:32:06,446][trainer][INFO] - Iteration   219 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36326
+[2025-03-22 21:32:06,840][trainer][INFO] - Iteration   220 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 37904
+[2025-03-22 21:32:07,230][trainer][INFO] - Iteration   221 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20821
+[2025-03-22 21:32:07,622][trainer][INFO] - Iteration   222 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 11952
+[2025-03-22 21:32:08,019][trainer][INFO] - Iteration   223 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 40685
+[2025-03-22 21:32:08,408][trainer][INFO] - Iteration   224 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30675
+[2025-03-22 21:32:08,798][trainer][INFO] - Iteration   225 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 47425
+[2025-03-22 21:32:09,187][trainer][INFO] - Iteration   226 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 10239
+[2025-03-22 21:32:09,579][trainer][INFO] - Iteration   227 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48213
+[2025-03-22 21:32:09,967][trainer][INFO] - Iteration   228 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 6981
+[2025-03-22 21:32:10,356][trainer][INFO] - Iteration   229 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 12127
+[2025-03-22 21:32:10,755][trainer][INFO] - Iteration   230 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 36769
+[2025-03-22 21:32:11,149][trainer][INFO] - Iteration   231 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 25161
+[2025-03-22 21:32:11,610][trainer][INFO] - Iteration   232 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52704
+[2025-03-22 21:32:12,123][trainer][INFO] - Iteration   233 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50753
+[2025-03-22 21:32:12,535][trainer][INFO] - Iteration   234 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 32055
+[2025-03-22 21:32:12,922][trainer][INFO] - Iteration   235 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 49895
+[2025-03-22 21:32:13,319][trainer][INFO] - Iteration   236 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1511
+[2025-03-22 21:32:13,717][trainer][INFO] - Iteration   237 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50493
+[2025-03-22 21:32:14,118][trainer][INFO] - Iteration   238 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52535
+[2025-03-22 21:32:14,516][trainer][INFO] - Iteration   239 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38417
+[2025-03-22 21:32:14,955][trainer][INFO] - Iteration   240 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19911
+[2025-03-22 21:32:15,347][trainer][INFO] - Iteration   241 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 8542
+[2025-03-22 21:32:15,739][trainer][INFO] - Iteration   242 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 53193
+[2025-03-22 21:32:16,133][trainer][INFO] - Iteration   243 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 48218
+[2025-03-22 21:32:16,526][trainer][INFO] - Iteration   244 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 9295
+[2025-03-22 21:32:16,918][trainer][INFO] - Iteration   245 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 51890
+[2025-03-22 21:32:17,396][trainer][INFO] - Iteration   246 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1904
+[2025-03-22 21:32:17,824][trainer][INFO] - Iteration   247 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33642
+[2025-03-22 21:32:18,215][trainer][INFO] - Iteration   248 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 3612
+[2025-03-22 21:32:18,609][trainer][INFO] - Iteration   249 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 37343
+[2025-03-22 21:32:19,002][trainer][INFO] - Iteration   250 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7224
+[2025-03-22 21:32:20,323][trainer][INFO] - [94mIteration   250 | Test MSE:   0.46 | Time taken:  0.00/ 1.25/ 1.26 sec | GPU memory: 82.1 GB | Global sample ID: 549[0m
+[2025-03-22 21:32:20,735][trainer][INFO] - Iteration   251 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 23405
+[2025-03-22 21:32:21,121][trainer][INFO] - Iteration   252 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 42901
+[2025-03-22 21:32:21,511][trainer][INFO] - Iteration   253 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 17527
+[2025-03-22 21:32:22,043][trainer][INFO] - Iteration   254 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38111
+[2025-03-22 21:32:22,432][trainer][INFO] - Iteration   255 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20664
+[2025-03-22 21:32:22,821][trainer][INFO] - Iteration   256 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48317
+[2025-03-22 21:32:23,210][trainer][INFO] - Iteration   257 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30129
+[2025-03-22 21:32:23,600][trainer][INFO] - Iteration   258 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36601
+[2025-03-22 21:32:24,016][trainer][INFO] - Iteration   259 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41999
+[2025-03-22 21:32:24,404][trainer][INFO] - Iteration   260 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38616
+[2025-03-22 21:32:24,794][trainer][INFO] - Iteration   261 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 29066
+[2025-03-22 21:32:25,183][trainer][INFO] - Iteration   262 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33021
+[2025-03-22 21:32:25,581][trainer][INFO] - Iteration   263 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7859
+[2025-03-22 21:32:26,064][trainer][INFO] - Iteration   264 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 13261
+[2025-03-22 21:32:26,520][trainer][INFO] - Iteration   265 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 20883
+[2025-03-22 21:32:26,909][trainer][INFO] - Iteration   266 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43840
+[2025-03-22 21:32:27,320][trainer][INFO] - Iteration   267 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53149
+[2025-03-22 21:32:27,720][trainer][INFO] - Iteration   268 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36768
+[2025-03-22 21:32:28,112][trainer][INFO] - Iteration   269 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 29821
+[2025-03-22 21:32:28,502][trainer][INFO] - Iteration   270 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 39859
+[2025-03-22 21:32:28,895][trainer][INFO] - Iteration   271 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40187
+[2025-03-22 21:32:29,381][trainer][INFO] - Iteration   272 | Train loss: 0.00 | Time taken:  0.10/ 0.28/ 0.38 sec | GPU memory: 82.1 GB | Global sample ID: 46182
+[2025-03-22 21:32:29,774][trainer][INFO] - Iteration   273 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 3782
+[2025-03-22 21:32:30,260][trainer][INFO] - Iteration   274 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5898
+[2025-03-22 21:32:30,738][trainer][INFO] - Iteration   275 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 12562
+[2025-03-22 21:32:31,128][trainer][INFO] - Iteration   276 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 46462
+[2025-03-22 21:32:31,518][trainer][INFO] - Iteration   277 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 287
+[2025-03-22 21:32:31,928][trainer][INFO] - Iteration   278 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 31027
+[2025-03-22 21:32:32,318][trainer][INFO] - Iteration   279 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 36375
+[2025-03-22 21:32:32,711][trainer][INFO] - Iteration   280 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 52112
+[2025-03-22 21:32:33,117][trainer][INFO] - Iteration   281 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 15651
+[2025-03-22 21:32:33,510][trainer][INFO] - Iteration   282 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 4517
+[2025-03-22 21:32:33,939][trainer][INFO] - Iteration   283 | Train loss: 0.00 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 24311
+[2025-03-22 21:32:34,335][trainer][INFO] - Iteration   284 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 27824
+[2025-03-22 21:32:34,734][trainer][INFO] - Iteration   285 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1110
+[2025-03-22 21:32:35,125][trainer][INFO] - Iteration   286 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 314
+[2025-03-22 21:32:35,519][trainer][INFO] - Iteration   287 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 17066
+[2025-03-22 21:32:35,922][trainer][INFO] - Iteration   288 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7923
+[2025-03-22 21:32:36,314][trainer][INFO] - Iteration   289 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 51379
+[2025-03-22 21:32:36,701][trainer][INFO] - Iteration   290 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52066
+[2025-03-22 21:32:37,174][trainer][INFO] - Iteration   291 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50122
+[2025-03-22 21:32:37,562][trainer][INFO] - Iteration   292 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 4153
+[2025-03-22 21:32:37,981][trainer][INFO] - Iteration   293 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30739
+[2025-03-22 21:32:38,374][trainer][INFO] - Iteration   294 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 2001
+[2025-03-22 21:32:38,763][trainer][INFO] - Iteration   295 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 13942
+[2025-03-22 21:32:39,193][trainer][INFO] - Iteration   296 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 49535
+[2025-03-22 21:32:39,623][trainer][INFO] - Iteration   297 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1963
+[2025-03-22 21:32:40,013][trainer][INFO] - Iteration   298 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 34958
+[2025-03-22 21:32:40,408][trainer][INFO] - Iteration   299 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 7792
+[2025-03-22 21:32:40,799][trainer][INFO] - Iteration   300 | Train loss: 0.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28632
+[2025-03-22 21:32:42,102][trainer][INFO] - [94mIteration   300 | Test MSE:   0.51 | Time taken:  0.00/ 1.25/ 1.25 sec | GPU memory: 82.1 GB | Global sample ID: 69[0m
+[2025-03-22 21:32:42,107][trainer][INFO] - [94mSwitched to 2-long rollouts.[0m
+[2025-03-22 21:32:42,827][trainer][INFO] - [92mLoaded train datapipe of size 53'910 samples[0m
+[2025-03-22 21:32:43,599][main][INFO] - [94mRe-initializing training dataloader...[0m
+[2025-03-22 21:32:54,100][trainer][INFO] - Iteration   301 | Train loss: 0.00 | Time taken:  8.78/ 1.61/10.38 sec | GPU memory: 82.2 GB | Global sample ID: 3262
+[2025-03-22 21:32:54,997][trainer][INFO] - Iteration   302 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 34147
+[2025-03-22 21:32:55,898][trainer][INFO] - Iteration   303 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11660
+[2025-03-22 21:32:56,798][trainer][INFO] - Iteration   304 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27632
+[2025-03-22 21:32:57,699][trainer][INFO] - Iteration   305 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 48393
+[2025-03-22 21:32:58,598][trainer][INFO] - Iteration   306 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 2027
+[2025-03-22 21:32:59,499][trainer][INFO] - Iteration   307 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18668
+[2025-03-22 21:33:00,578][trainer][INFO] - Iteration   308 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 27286
+[2025-03-22 21:33:01,466][trainer][INFO] - Iteration   309 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 40854
+[2025-03-22 21:33:02,578][trainer][INFO] - Iteration   310 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1250
+[2025-03-22 21:33:03,475][trainer][INFO] - Iteration   311 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41286
+[2025-03-22 21:33:04,380][trainer][INFO] - Iteration   312 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 32699
+[2025-03-22 21:33:05,279][trainer][INFO] - Iteration   313 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14462
+[2025-03-22 21:33:06,220][trainer][INFO] - Iteration   314 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 7010
+[2025-03-22 21:33:07,118][trainer][INFO] - Iteration   315 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4394
+[2025-03-22 21:33:08,018][trainer][INFO] - Iteration   316 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3545
+[2025-03-22 21:33:08,960][trainer][INFO] - Iteration   317 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39183
+[2025-03-22 21:33:09,898][trainer][INFO] - Iteration   318 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40769
+[2025-03-22 21:33:10,798][trainer][INFO] - Iteration   319 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 15220
+[2025-03-22 21:33:11,783][trainer][INFO] - Iteration   320 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 14851
+[2025-03-22 21:33:12,678][trainer][INFO] - Iteration   321 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 43918
+[2025-03-22 21:33:14,473][trainer][INFO] - Iteration   322 | Train loss: 0.00 | Time taken:  0.00/ 1.67/ 1.67 sec | GPU memory: 82.2 GB | Global sample ID: 34331
+[2025-03-22 21:33:15,943][trainer][INFO] - Iteration   323 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 42810
+[2025-03-22 21:33:16,979][trainer][INFO] - Iteration   324 | Train loss: 0.00 | Time taken:  0.00/ 0.76/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 25419
+[2025-03-22 21:33:17,878][trainer][INFO] - Iteration   325 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49214
+[2025-03-22 21:33:18,775][trainer][INFO] - Iteration   326 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9529
+[2025-03-22 21:33:19,676][trainer][INFO] - Iteration   327 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20407
+[2025-03-22 21:33:20,577][trainer][INFO] - Iteration   328 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 36422
+[2025-03-22 21:33:21,476][trainer][INFO] - Iteration   329 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11266
+[2025-03-22 21:33:22,380][trainer][INFO] - Iteration   330 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 30858
+[2025-03-22 21:33:23,378][trainer][INFO] - Iteration   331 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28412
+[2025-03-22 21:33:24,296][trainer][INFO] - Iteration   332 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 36488
+[2025-03-22 21:33:25,197][trainer][INFO] - Iteration   333 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 43798
+[2025-03-22 21:33:26,140][trainer][INFO] - Iteration   334 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 33987
+[2025-03-22 21:33:27,219][trainer][INFO] - Iteration   335 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 2600
+[2025-03-22 21:33:28,117][trainer][INFO] - Iteration   336 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40770
+[2025-03-22 21:33:29,138][trainer][INFO] - Iteration   337 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20041
+[2025-03-22 21:33:30,038][trainer][INFO] - Iteration   338 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47259
+[2025-03-22 21:33:30,936][trainer][INFO] - Iteration   339 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18729
+[2025-03-22 21:33:31,902][trainer][INFO] - Iteration   340 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 23113
+[2025-03-22 21:33:32,798][trainer][INFO] - Iteration   341 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52992
+[2025-03-22 21:33:33,700][trainer][INFO] - Iteration   342 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51117
+[2025-03-22 21:33:34,639][trainer][INFO] - Iteration   343 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40970
+[2025-03-22 21:33:35,551][trainer][INFO] - Iteration   344 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41390
+[2025-03-22 21:33:36,457][trainer][INFO] - Iteration   345 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39202
+[2025-03-22 21:33:37,359][trainer][INFO] - Iteration   346 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 34381
+[2025-03-22 21:33:38,258][trainer][INFO] - Iteration   347 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 15801
+[2025-03-22 21:33:39,156][trainer][INFO] - Iteration   348 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1893
+[2025-03-22 21:33:40,056][trainer][INFO] - Iteration   349 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36886
+[2025-03-22 21:33:40,957][trainer][INFO] - Iteration   350 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4590
+[2025-03-22 21:33:42,314][trainer][INFO] - [94mIteration   350 | Test MSE:   0.57 | Time taken:  0.00/ 1.26/ 1.26 sec | GPU memory: 82.2 GB | Global sample ID: 958[0m
+[2025-03-22 21:33:43,240][trainer][INFO] - Iteration   351 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46995
+[2025-03-22 21:33:44,138][trainer][INFO] - Iteration   352 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51824
+[2025-03-22 21:33:45,036][trainer][INFO] - Iteration   353 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 33264
+[2025-03-22 21:33:45,979][trainer][INFO] - Iteration   354 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 9935
+[2025-03-22 21:33:46,877][trainer][INFO] - Iteration   355 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 17456
+[2025-03-22 21:33:47,798][trainer][INFO] - Iteration   356 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 49277
+[2025-03-22 21:33:48,696][trainer][INFO] - Iteration   357 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 29782
+[2025-03-22 21:33:49,597][trainer][INFO] - Iteration   358 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51719
+[2025-03-22 21:33:50,496][trainer][INFO] - Iteration   359 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39658
+[2025-03-22 21:33:51,413][trainer][INFO] - Iteration   360 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3530
+[2025-03-22 21:33:52,346][trainer][INFO] - Iteration   361 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 156
+[2025-03-22 21:33:53,257][trainer][INFO] - Iteration   362 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 32737
+[2025-03-22 21:33:54,157][trainer][INFO] - Iteration   363 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37961
+[2025-03-22 21:33:55,119][trainer][INFO] - Iteration   364 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 12471
+[2025-03-22 21:33:56,763][trainer][INFO] - Iteration   365 | Train loss: 0.00 | Time taken:  0.00/ 1.52/ 1.53 sec | GPU memory: 82.2 GB | Global sample ID: 53159
+[2025-03-22 21:33:57,659][trainer][INFO] - Iteration   366 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39860
+[2025-03-22 21:33:58,670][trainer][INFO] - Iteration   367 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46754
+[2025-03-22 21:33:59,578][trainer][INFO] - Iteration   368 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 14741
+[2025-03-22 21:34:00,475][trainer][INFO] - Iteration   369 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 2059
+[2025-03-22 21:34:01,377][trainer][INFO] - Iteration   370 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 45125
+[2025-03-22 21:34:02,275][trainer][INFO] - Iteration   371 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 749
+[2025-03-22 21:34:03,685][trainer][INFO] - Iteration   372 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 44016
+[2025-03-22 21:34:04,575][trainer][INFO] - Iteration   373 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 6818
+[2025-03-22 21:34:05,476][trainer][INFO] - Iteration   374 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5610
+[2025-03-22 21:34:06,397][trainer][INFO] - Iteration   375 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 46778
+[2025-03-22 21:34:07,297][trainer][INFO] - Iteration   376 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 1181
+[2025-03-22 21:34:08,218][trainer][INFO] - Iteration   377 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 44105
+[2025-03-22 21:34:09,115][trainer][INFO] - Iteration   378 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36747
+[2025-03-22 21:34:10,013][trainer][INFO] - Iteration   379 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4415
+[2025-03-22 21:34:11,022][trainer][INFO] - Iteration   380 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 49247
+[2025-03-22 21:34:11,917][trainer][INFO] - Iteration   381 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14006
+[2025-03-22 21:34:12,998][trainer][INFO] - Iteration   382 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 24408
+[2025-03-22 21:34:13,915][trainer][INFO] - Iteration   383 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 32875
+[2025-03-22 21:34:14,817][trainer][INFO] - Iteration   384 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 41650
+[2025-03-22 21:34:15,715][trainer][INFO] - Iteration   385 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20330
+[2025-03-22 21:34:16,616][trainer][INFO] - Iteration   386 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52947
+[2025-03-22 21:34:17,515][trainer][INFO] - Iteration   387 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49374
+[2025-03-22 21:34:18,415][trainer][INFO] - Iteration   388 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20497
+[2025-03-22 21:34:19,319][trainer][INFO] - Iteration   389 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 22001
+[2025-03-22 21:34:20,216][trainer][INFO] - Iteration   390 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 9556
+[2025-03-22 21:34:21,117][trainer][INFO] - Iteration   391 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 8714
+[2025-03-22 21:34:22,021][trainer][INFO] - Iteration   392 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 16931
+[2025-03-22 21:34:22,980][trainer][INFO] - Iteration   393 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 49640
+[2025-03-22 21:34:23,916][trainer][INFO] - Iteration   394 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 34257
+[2025-03-22 21:34:24,841][trainer][INFO] - Iteration   395 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 31360
+[2025-03-22 21:34:25,735][trainer][INFO] - Iteration   396 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11863
+[2025-03-22 21:34:26,636][trainer][INFO] - Iteration   397 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52672
+[2025-03-22 21:34:27,534][trainer][INFO] - Iteration   398 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 7977
+[2025-03-22 21:34:28,436][trainer][INFO] - Iteration   399 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1728
+[2025-03-22 21:34:29,334][trainer][INFO] - Iteration   400 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49228
+[2025-03-22 21:34:30,636][trainer][INFO] - [94mIteration   400 | Test MSE:   0.49 | Time taken:  0.00/ 1.25/ 1.26 sec | GPU memory: 82.2 GB | Global sample ID: 2455[0m
+[2025-03-22 21:34:31,542][trainer][INFO] - Iteration   401 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 42871
+[2025-03-22 21:34:32,455][trainer][INFO] - Iteration   402 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50923
+[2025-03-22 21:34:33,378][trainer][INFO] - Iteration   403 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50055
+[2025-03-22 21:34:34,280][trainer][INFO] - Iteration   404 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9012
+[2025-03-22 21:34:35,178][trainer][INFO] - Iteration   405 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 4401
+[2025-03-22 21:34:36,075][trainer][INFO] - Iteration   406 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14546
+[2025-03-22 21:34:36,976][trainer][INFO] - Iteration   407 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 30486
+[2025-03-22 21:34:37,875][trainer][INFO] - Iteration   408 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51144
+[2025-03-22 21:34:38,775][trainer][INFO] - Iteration   409 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 17714
+[2025-03-22 21:34:40,423][trainer][INFO] - Iteration   410 | Train loss: 0.00 | Time taken:  0.00/ 1.53/ 1.53 sec | GPU memory: 82.2 GB | Global sample ID: 50992
+[2025-03-22 21:34:41,329][trainer][INFO] - Iteration   411 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 32788
+[2025-03-22 21:34:42,229][trainer][INFO] - Iteration   412 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 29349
+[2025-03-22 21:34:43,200][trainer][INFO] - Iteration   413 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 196
+[2025-03-22 21:34:44,098][trainer][INFO] - Iteration   414 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41369
+[2025-03-22 21:34:45,485][trainer][INFO] - Iteration   415 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 15104
+[2025-03-22 21:34:46,382][trainer][INFO] - Iteration   416 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39528
+[2025-03-22 21:34:47,277][trainer][INFO] - Iteration   417 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 42068
+[2025-03-22 21:34:48,176][trainer][INFO] - Iteration   418 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46568
+[2025-03-22 21:34:49,075][trainer][INFO] - Iteration   419 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41593
+[2025-03-22 21:34:49,977][trainer][INFO] - Iteration   420 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 26383
+[2025-03-22 21:34:50,874][trainer][INFO] - Iteration   421 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 24782
+[2025-03-22 21:34:51,834][trainer][INFO] - Iteration   422 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4626
+[2025-03-22 21:34:52,735][trainer][INFO] - Iteration   423 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14484
+[2025-03-22 21:34:53,676][trainer][INFO] - Iteration   424 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 20770
+[2025-03-22 21:34:54,576][trainer][INFO] - Iteration   425 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12337
+[2025-03-22 21:34:55,474][trainer][INFO] - Iteration   426 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1142
+[2025-03-22 21:34:56,374][trainer][INFO] - Iteration   427 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 42984
+[2025-03-22 21:34:57,275][trainer][INFO] - Iteration   428 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 47952
+[2025-03-22 21:34:58,175][trainer][INFO] - Iteration   429 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 28000
+[2025-03-22 21:34:59,074][trainer][INFO] - Iteration   430 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20638
+[2025-03-22 21:34:59,974][trainer][INFO] - Iteration   431 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 21131
+[2025-03-22 21:35:00,874][trainer][INFO] - Iteration   432 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11417
+[2025-03-22 21:35:01,774][trainer][INFO] - Iteration   433 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18601
+[2025-03-22 21:35:02,675][trainer][INFO] - Iteration   434 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 23321
+[2025-03-22 21:35:03,573][trainer][INFO] - Iteration   435 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20370
+[2025-03-22 21:35:04,477][trainer][INFO] - Iteration   436 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46466
+[2025-03-22 21:35:05,375][trainer][INFO] - Iteration   437 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47315
+[2025-03-22 21:35:06,274][trainer][INFO] - Iteration   438 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22420
+[2025-03-22 21:35:07,174][trainer][INFO] - Iteration   439 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46441
+[2025-03-22 21:35:08,190][trainer][INFO] - Iteration   440 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46336
+[2025-03-22 21:35:09,093][trainer][INFO] - Iteration   441 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28836
+[2025-03-22 21:35:09,993][trainer][INFO] - Iteration   442 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 48316
+[2025-03-22 21:35:10,902][trainer][INFO] - Iteration   443 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 37870
+[2025-03-22 21:35:11,796][trainer][INFO] - Iteration   444 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 32696
+[2025-03-22 21:35:12,694][trainer][INFO] - Iteration   445 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 2126
+[2025-03-22 21:35:13,594][trainer][INFO] - Iteration   446 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 5750
+[2025-03-22 21:35:14,503][trainer][INFO] - Iteration   447 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 29797
+[2025-03-22 21:35:15,396][trainer][INFO] - Iteration   448 | Train loss: 0.01 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 45390
+[2025-03-22 21:35:16,295][trainer][INFO] - Iteration   449 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12409
+[2025-03-22 21:35:17,193][trainer][INFO] - Iteration   450 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 23447
+[2025-03-22 21:35:18,515][trainer][INFO] - [94mIteration   450 | Test MSE:   0.48 | Time taken:  0.00/ 1.24/ 1.24 sec | GPU memory: 82.2 GB | Global sample ID: 1893[0m
+[2025-03-22 21:35:19,534][trainer][INFO] - Iteration   451 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11533
+[2025-03-22 21:35:20,433][trainer][INFO] - Iteration   452 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27648
+[2025-03-22 21:35:22,081][trainer][INFO] - Iteration   453 | Train loss: 0.00 | Time taken:  0.00/ 1.53/ 1.53 sec | GPU memory: 82.2 GB | Global sample ID: 28209
+[2025-03-22 21:35:22,973][trainer][INFO] - Iteration   454 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9431
+[2025-03-22 21:35:23,872][trainer][INFO] - Iteration   455 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 32388
+[2025-03-22 21:35:24,823][trainer][INFO] - Iteration   456 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 51976
+[2025-03-22 21:35:25,719][trainer][INFO] - Iteration   457 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47946
+[2025-03-22 21:35:26,617][trainer][INFO] - Iteration   458 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28902
+[2025-03-22 21:35:28,006][trainer][INFO] - Iteration   459 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 42187
+[2025-03-22 21:35:28,994][trainer][INFO] - Iteration   460 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 19892
+[2025-03-22 21:35:29,894][trainer][INFO] - Iteration   461 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14804
+[2025-03-22 21:35:31,056][trainer][INFO] - Iteration   462 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 46443
+[2025-03-22 21:35:31,953][trainer][INFO] - Iteration   463 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20922
+[2025-03-22 21:35:32,853][trainer][INFO] - Iteration   464 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27602
+[2025-03-22 21:35:33,755][trainer][INFO] - Iteration   465 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 39987
+[2025-03-22 21:35:34,653][trainer][INFO] - Iteration   466 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 33099
+[2025-03-22 21:35:35,677][trainer][INFO] - Iteration   467 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22380
+[2025-03-22 21:35:36,573][trainer][INFO] - Iteration   468 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4899
+[2025-03-22 21:35:37,473][trainer][INFO] - Iteration   469 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27350
+[2025-03-22 21:35:38,374][trainer][INFO] - Iteration   470 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49129
+[2025-03-22 21:35:39,278][trainer][INFO] - Iteration   471 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9207
+[2025-03-22 21:35:40,174][trainer][INFO] - Iteration   472 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22604
+[2025-03-22 21:35:41,074][trainer][INFO] - Iteration   473 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49455
+[2025-03-22 21:35:41,979][trainer][INFO] - Iteration   474 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 7292
+[2025-03-22 21:35:42,875][trainer][INFO] - Iteration   475 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 34781
+[2025-03-22 21:35:43,786][trainer][INFO] - Iteration   476 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 47990
+[2025-03-22 21:35:44,682][trainer][INFO] - Iteration   477 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4346
+[2025-03-22 21:35:45,576][trainer][INFO] - Iteration   478 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5364
+[2025-03-22 21:35:46,475][trainer][INFO] - Iteration   479 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 29579
+[2025-03-22 21:35:47,377][trainer][INFO] - Iteration   480 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 23997
+[2025-03-22 21:35:48,273][trainer][INFO] - Iteration   481 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 26049
+[2025-03-22 21:35:49,173][trainer][INFO] - Iteration   482 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22881
+[2025-03-22 21:35:50,072][trainer][INFO] - Iteration   483 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40681
+[2025-03-22 21:35:50,972][trainer][INFO] - Iteration   484 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11186
+[2025-03-22 21:35:51,873][trainer][INFO] - Iteration   485 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 42561
+[2025-03-22 21:35:52,772][trainer][INFO] - Iteration   486 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 31550
+[2025-03-22 21:35:53,671][trainer][INFO] - Iteration   487 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13103
+[2025-03-22 21:35:54,575][trainer][INFO] - Iteration   488 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 2425
+[2025-03-22 21:35:55,474][trainer][INFO] - Iteration   489 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18445
+[2025-03-22 21:35:56,374][trainer][INFO] - Iteration   490 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8606
+[2025-03-22 21:35:57,274][trainer][INFO] - Iteration   491 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39238
+[2025-03-22 21:35:58,172][trainer][INFO] - Iteration   492 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13829
+[2025-03-22 21:35:59,073][trainer][INFO] - Iteration   493 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 45185
+[2025-03-22 21:36:00,034][trainer][INFO] - Iteration   494 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 44331
+[2025-03-22 21:36:00,932][trainer][INFO] - Iteration   495 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5595
+[2025-03-22 21:36:02,652][trainer][INFO] - Iteration   496 | Train loss: 0.00 | Time taken:  0.00/ 1.50/ 1.50 sec | GPU memory: 82.2 GB | Global sample ID: 47308
+[2025-03-22 21:36:03,594][trainer][INFO] - Iteration   497 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 25226
+[2025-03-22 21:36:04,494][trainer][INFO] - Iteration   498 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1792
+[2025-03-22 21:36:05,394][trainer][INFO] - Iteration   499 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 39542
+[2025-03-22 21:36:06,353][trainer][INFO] - Iteration   500 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49310
+[2025-03-22 21:36:07,714][trainer][INFO] - [94mIteration   500 | Test MSE:   0.53 | Time taken:  0.00/ 1.25/ 1.25 sec | GPU memory: 82.2 GB | Global sample ID: 1459[0m
+[2025-03-22 21:36:08,633][trainer][INFO] - Iteration   501 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9291
+[2025-03-22 21:36:10,018][trainer][INFO] - Iteration   502 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 36898
+[2025-03-22 21:36:10,918][trainer][INFO] - Iteration   503 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8267
+[2025-03-22 21:36:11,873][trainer][INFO] - Iteration   504 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20809
+[2025-03-22 21:36:12,792][trainer][INFO] - Iteration   505 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51074
+[2025-03-22 21:36:13,731][trainer][INFO] - Iteration   506 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14944
+[2025-03-22 21:36:14,652][trainer][INFO] - Iteration   507 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13749
+[2025-03-22 21:36:15,552][trainer][INFO] - Iteration   508 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18605
+[2025-03-22 21:36:16,451][trainer][INFO] - Iteration   509 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52428
+[2025-03-22 21:36:17,353][trainer][INFO] - Iteration   510 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51635
+[2025-03-22 21:36:18,284][trainer][INFO] - Iteration   511 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 20367
+[2025-03-22 21:36:19,176][trainer][INFO] - Iteration   512 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5498
+[2025-03-22 21:36:20,074][trainer][INFO] - Iteration   513 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9451
+[2025-03-22 21:36:20,974][trainer][INFO] - Iteration   514 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 10331
+[2025-03-22 21:36:21,913][trainer][INFO] - Iteration   515 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 19397
+[2025-03-22 21:36:22,812][trainer][INFO] - Iteration   516 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40208
+[2025-03-22 21:36:23,751][trainer][INFO] - Iteration   517 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46534
+[2025-03-22 21:36:24,652][trainer][INFO] - Iteration   518 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36465
+[2025-03-22 21:36:25,552][trainer][INFO] - Iteration   519 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 23780
+[2025-03-22 21:36:26,452][trainer][INFO] - Iteration   520 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 25605
+[2025-03-22 21:36:27,352][trainer][INFO] - Iteration   521 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9901
+[2025-03-22 21:36:28,254][trainer][INFO] - Iteration   522 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 35535
+[2025-03-22 21:36:29,153][trainer][INFO] - Iteration   523 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 33980
+[2025-03-22 21:36:30,053][trainer][INFO] - Iteration   524 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27100
+[2025-03-22 21:36:30,975][trainer][INFO] - Iteration   525 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 34599
+[2025-03-22 21:36:31,872][trainer][INFO] - Iteration   526 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 31960
+[2025-03-22 21:36:32,771][trainer][INFO] - Iteration   527 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36148
+[2025-03-22 21:36:33,671][trainer][INFO] - Iteration   528 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 35776
+[2025-03-22 21:36:34,577][trainer][INFO] - Iteration   529 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 22765
+[2025-03-22 21:36:35,473][trainer][INFO] - Iteration   530 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12627
+[2025-03-22 21:36:36,371][trainer][INFO] - Iteration   531 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 2576
+[2025-03-22 21:36:37,271][trainer][INFO] - Iteration   532 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50553
+[2025-03-22 21:36:38,175][trainer][INFO] - Iteration   533 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4101
+[2025-03-22 21:36:39,072][trainer][INFO] - Iteration   534 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41855
+[2025-03-22 21:36:39,994][trainer][INFO] - Iteration   535 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 1057
+[2025-03-22 21:36:40,890][trainer][INFO] - Iteration   536 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40139
+[2025-03-22 21:36:41,892][trainer][INFO] - Iteration   537 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 37474
+[2025-03-22 21:36:42,790][trainer][INFO] - Iteration   538 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9029
+[2025-03-22 21:36:43,753][trainer][INFO] - Iteration   539 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 38357
+[2025-03-22 21:36:45,393][trainer][INFO] - Iteration   540 | Train loss: 0.00 | Time taken:  0.00/ 1.50/ 1.50 sec | GPU memory: 82.2 GB | Global sample ID: 10288
+[2025-03-22 21:36:46,342][trainer][INFO] - Iteration   541 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 15197
+[2025-03-22 21:36:47,237][trainer][INFO] - Iteration   542 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12567
+[2025-03-22 21:36:48,134][trainer][INFO] - Iteration   543 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 5067
+[2025-03-22 21:36:49,031][trainer][INFO] - Iteration   544 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46923
+[2025-03-22 21:36:49,930][trainer][INFO] - Iteration   545 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28212
+[2025-03-22 21:36:51,318][trainer][INFO] - Iteration   546 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 11985
+[2025-03-22 21:36:52,211][trainer][INFO] - Iteration   547 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18557
+[2025-03-22 21:36:53,110][trainer][INFO] - Iteration   548 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 32022
+[2025-03-22 21:36:54,081][trainer][INFO] - Iteration   549 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8360
+[2025-03-22 21:36:54,977][trainer][INFO] - Iteration   550 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47211
+[2025-03-22 21:36:56,278][trainer][INFO] - [94mIteration   550 | Test MSE:   0.50 | Time taken:  0.00/ 1.25/ 1.25 sec | GPU memory: 82.2 GB | Global sample ID: 2394[0m
+[2025-03-22 21:36:57,180][trainer][INFO] - Iteration   551 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18259
+[2025-03-22 21:36:58,077][trainer][INFO] - Iteration   552 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41430
+[2025-03-22 21:36:58,973][trainer][INFO] - Iteration   553 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36920
+[2025-03-22 21:36:59,872][trainer][INFO] - Iteration   554 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 10789
+[2025-03-22 21:37:00,772][trainer][INFO] - Iteration   555 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51066
+[2025-03-22 21:37:01,690][trainer][INFO] - Iteration   556 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12632
+[2025-03-22 21:37:02,632][trainer][INFO] - Iteration   557 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 7177
+[2025-03-22 21:37:03,591][trainer][INFO] - Iteration   558 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 48096
+[2025-03-22 21:37:04,583][trainer][INFO] - Iteration   559 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 10369
+[2025-03-22 21:37:05,536][trainer][INFO] - Iteration   560 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47066
+[2025-03-22 21:37:06,430][trainer][INFO] - Iteration   561 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 7401
+[2025-03-22 21:37:07,331][trainer][INFO] - Iteration   562 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12288
+[2025-03-22 21:37:08,230][trainer][INFO] - Iteration   563 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20325
+[2025-03-22 21:37:09,131][trainer][INFO] - Iteration   564 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 2363
+[2025-03-22 21:37:10,031][trainer][INFO] - Iteration   565 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37583
+[2025-03-22 21:37:10,932][trainer][INFO] - Iteration   566 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52980
+[2025-03-22 21:37:12,033][trainer][INFO] - Iteration   567 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 25963
+[2025-03-22 21:37:12,930][trainer][INFO] - Iteration   568 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 31589
+[2025-03-22 21:37:13,830][trainer][INFO] - Iteration   569 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5313
+[2025-03-22 21:37:14,753][trainer][INFO] - Iteration   570 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5237
+[2025-03-22 21:37:15,735][trainer][INFO] - Iteration   571 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 11646
+[2025-03-22 21:37:16,630][trainer][INFO] - Iteration   572 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 4977
+[2025-03-22 21:37:17,529][trainer][INFO] - Iteration   573 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6372
+[2025-03-22 21:37:18,492][trainer][INFO] - Iteration   574 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 9593
+[2025-03-22 21:37:19,391][trainer][INFO] - Iteration   575 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 26451
+[2025-03-22 21:37:20,290][trainer][INFO] - Iteration   576 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50915
+[2025-03-22 21:37:21,231][trainer][INFO] - Iteration   577 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37640
+[2025-03-22 21:37:22,147][trainer][INFO] - Iteration   578 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 24836
+[2025-03-22 21:37:23,050][trainer][INFO] - Iteration   579 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22904
+[2025-03-22 21:37:23,952][trainer][INFO] - Iteration   580 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12271
+[2025-03-22 21:37:24,851][trainer][INFO] - Iteration   581 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 40954
+[2025-03-22 21:37:25,755][trainer][INFO] - Iteration   582 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 32984
+[2025-03-22 21:37:26,654][trainer][INFO] - Iteration   583 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 53328
+[2025-03-22 21:37:27,550][trainer][INFO] - Iteration   584 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 15808
+[2025-03-22 21:37:28,491][trainer][INFO] - Iteration   585 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 16652
+[2025-03-22 21:37:29,392][trainer][INFO] - Iteration   586 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4018
+[2025-03-22 21:37:30,289][trainer][INFO] - Iteration   587 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3077
+[2025-03-22 21:37:31,191][trainer][INFO] - Iteration   588 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6801
+[2025-03-22 21:37:32,091][trainer][INFO] - Iteration   589 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 3296
+[2025-03-22 21:37:33,010][trainer][INFO] - Iteration   590 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28475
+[2025-03-22 21:37:33,911][trainer][INFO] - Iteration   591 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3209
+[2025-03-22 21:37:34,814][trainer][INFO] - Iteration   592 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 20187
+[2025-03-22 21:37:36,490][trainer][INFO] - Iteration   593 | Train loss: 0.00 | Time taken:  0.00/ 1.53/ 1.53 sec | GPU memory: 82.2 GB | Global sample ID: 27397
+[2025-03-22 21:37:37,388][trainer][INFO] - Iteration   594 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 44612
+[2025-03-22 21:37:38,289][trainer][INFO] - Iteration   595 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47011
+[2025-03-22 21:37:39,189][trainer][INFO] - Iteration   596 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 7617
+[2025-03-22 21:37:40,598][trainer][INFO] - Iteration   597 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.82 sec | GPU memory: 82.2 GB | Global sample ID: 30603
+[2025-03-22 21:37:41,492][trainer][INFO] - Iteration   598 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 35049
+[2025-03-22 21:37:42,390][trainer][INFO] - Iteration   599 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 16553
+[2025-03-22 21:37:43,290][trainer][INFO] - Iteration   600 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49397
+[2025-03-22 21:37:44,606][trainer][INFO] - [94mIteration   600 | Test MSE:   0.46 | Time taken:  0.00/ 1.27/ 1.27 sec | GPU memory: 82.2 GB | Global sample ID: 593[0m
+[2025-03-22 21:37:45,509][trainer][INFO] - Iteration   601 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52886
+[2025-03-22 21:37:46,409][trainer][INFO] - Iteration   602 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39412
+[2025-03-22 21:37:47,308][trainer][INFO] - Iteration   603 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4987
+[2025-03-22 21:37:48,210][trainer][INFO] - Iteration   604 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 19011
+[2025-03-22 21:37:49,110][trainer][INFO] - Iteration   605 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 16548
+[2025-03-22 21:37:50,070][trainer][INFO] - Iteration   606 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28850
+[2025-03-22 21:37:50,969][trainer][INFO] - Iteration   607 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 20672
+[2025-03-22 21:37:51,875][trainer][INFO] - Iteration   608 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 159
+[2025-03-22 21:37:52,786][trainer][INFO] - Iteration   609 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13124
+[2025-03-22 21:37:53,806][trainer][INFO] - Iteration   610 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27675
+[2025-03-22 21:37:54,701][trainer][INFO] - Iteration   611 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28052
+[2025-03-22 21:37:55,651][trainer][INFO] - Iteration   612 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 10365
+[2025-03-22 21:37:56,551][trainer][INFO] - Iteration   613 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3658
+[2025-03-22 21:37:57,448][trainer][INFO] - Iteration   614 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28833
+[2025-03-22 21:37:58,370][trainer][INFO] - Iteration   615 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1700
+[2025-03-22 21:37:59,271][trainer][INFO] - Iteration   616 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 120
+[2025-03-22 21:38:00,210][trainer][INFO] - Iteration   617 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49928
+[2025-03-22 21:38:01,108][trainer][INFO] - Iteration   618 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50717
+[2025-03-22 21:38:02,070][trainer][INFO] - Iteration   619 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 23152
+[2025-03-22 21:38:03,171][trainer][INFO] - Iteration   620 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 32287
+[2025-03-22 21:38:04,071][trainer][INFO] - Iteration   621 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12125
+[2025-03-22 21:38:04,969][trainer][INFO] - Iteration   622 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 27138
+[2025-03-22 21:38:05,868][trainer][INFO] - Iteration   623 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 24746
+[2025-03-22 21:38:06,769][trainer][INFO] - Iteration   624 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 21629
+[2025-03-22 21:38:07,669][trainer][INFO] - Iteration   625 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 45162
+[2025-03-22 21:38:08,568][trainer][INFO] - Iteration   626 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 53713
+[2025-03-22 21:38:09,468][trainer][INFO] - Iteration   627 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 25862
+[2025-03-22 21:38:10,369][trainer][INFO] - Iteration   628 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47264
+[2025-03-22 21:38:11,270][trainer][INFO] - Iteration   629 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 26932
+[2025-03-22 21:38:12,170][trainer][INFO] - Iteration   630 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 15648
+[2025-03-22 21:38:13,105][trainer][INFO] - Iteration   631 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3275
+[2025-03-22 21:38:14,002][trainer][INFO] - Iteration   632 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11498
+[2025-03-22 21:38:14,928][trainer][INFO] - Iteration   633 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 21685
+[2025-03-22 21:38:15,830][trainer][INFO] - Iteration   634 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 21956
+[2025-03-22 21:38:16,728][trainer][INFO] - Iteration   635 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 29315
+[2025-03-22 21:38:17,672][trainer][INFO] - Iteration   636 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4591
+[2025-03-22 21:38:19,321][trainer][INFO] - Iteration   637 | Train loss: 0.00 | Time taken:  0.00/ 1.52/ 1.52 sec | GPU memory: 82.2 GB | Global sample ID: 42132
+[2025-03-22 21:38:20,215][trainer][INFO] - Iteration   638 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51192
+[2025-03-22 21:38:21,176][trainer][INFO] - Iteration   639 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 38898
+[2025-03-22 21:38:22,070][trainer][INFO] - Iteration   640 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8882
+[2025-03-22 21:38:22,968][trainer][INFO] - Iteration   641 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51257
+[2025-03-22 21:38:24,353][trainer][INFO] - Iteration   642 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 34658
+[2025-03-22 21:38:25,249][trainer][INFO] - Iteration   643 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 34457
+[2025-03-22 21:38:26,152][trainer][INFO] - Iteration   644 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 4133
+[2025-03-22 21:38:27,074][trainer][INFO] - Iteration   645 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 14122
+[2025-03-22 21:38:27,988][trainer][INFO] - Iteration   646 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4286
+[2025-03-22 21:38:28,948][trainer][INFO] - Iteration   647 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 6357
+[2025-03-22 21:38:29,847][trainer][INFO] - Iteration   648 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 31389
+[2025-03-22 21:38:30,747][trainer][INFO] - Iteration   649 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 33931
+[2025-03-22 21:38:31,688][trainer][INFO] - Iteration   650 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 2901
+[2025-03-22 21:38:33,029][trainer][INFO] - [94mIteration   650 | Test MSE:   0.47 | Time taken:  0.00/ 1.25/ 1.26 sec | GPU memory: 82.2 GB | Global sample ID: 551[0m
+[2025-03-22 21:38:33,970][trainer][INFO] - Iteration   651 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 32600
+[2025-03-22 21:38:34,866][trainer][INFO] - Iteration   652 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6265
+[2025-03-22 21:38:35,768][trainer][INFO] - Iteration   653 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 33466
+[2025-03-22 21:38:36,667][trainer][INFO] - Iteration   654 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37419
+[2025-03-22 21:38:37,566][trainer][INFO] - Iteration   655 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37520
+[2025-03-22 21:38:38,468][trainer][INFO] - Iteration   656 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6896
+[2025-03-22 21:38:39,368][trainer][INFO] - Iteration   657 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50690
+[2025-03-22 21:38:40,290][trainer][INFO] - Iteration   658 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5103
+[2025-03-22 21:38:41,227][trainer][INFO] - Iteration   659 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 43712
+[2025-03-22 21:38:42,126][trainer][INFO] - Iteration   660 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52272
+[2025-03-22 21:38:43,028][trainer][INFO] - Iteration   661 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 33773
+[2025-03-22 21:38:43,930][trainer][INFO] - Iteration   662 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11681
+[2025-03-22 21:38:44,870][trainer][INFO] - Iteration   663 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5590
+[2025-03-22 21:38:45,773][trainer][INFO] - Iteration   664 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 3149
+[2025-03-22 21:38:46,712][trainer][INFO] - Iteration   665 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 12723
+[2025-03-22 21:38:47,607][trainer][INFO] - Iteration   666 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 1461
+[2025-03-22 21:38:48,507][trainer][INFO] - Iteration   667 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 9922
+[2025-03-22 21:38:49,409][trainer][INFO] - Iteration   668 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 24384
+[2025-03-22 21:38:50,324][trainer][INFO] - Iteration   669 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50508
+[2025-03-22 21:38:51,224][trainer][INFO] - Iteration   670 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11180
+[2025-03-22 21:38:52,128][trainer][INFO] - Iteration   671 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 47868
+[2025-03-22 21:38:53,027][trainer][INFO] - Iteration   672 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40544
+[2025-03-22 21:38:53,932][trainer][INFO] - Iteration   673 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 51886
+[2025-03-22 21:38:54,826][trainer][INFO] - Iteration   674 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 23599
+[2025-03-22 21:38:55,726][trainer][INFO] - Iteration   675 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 23836
+[2025-03-22 21:38:56,675][trainer][INFO] - Iteration   676 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 16574
+[2025-03-22 21:38:57,573][trainer][INFO] - Iteration   677 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 3027
+[2025-03-22 21:38:58,470][trainer][INFO] - Iteration   678 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50114
+[2025-03-22 21:38:59,368][trainer][INFO] - Iteration   679 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 46115
+[2025-03-22 21:39:00,269][trainer][INFO] - Iteration   680 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 19152
+[2025-03-22 21:39:01,168][trainer][INFO] - Iteration   681 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 30731
+[2025-03-22 21:39:02,806][trainer][INFO] - Iteration   682 | Train loss: 0.00 | Time taken:  0.00/ 1.52/ 1.52 sec | GPU memory: 82.2 GB | Global sample ID: 30373
+[2025-03-22 21:39:03,730][trainer][INFO] - Iteration   683 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52593
+[2025-03-22 21:39:04,748][trainer][INFO] - Iteration   684 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 21345
+[2025-03-22 21:39:05,649][trainer][INFO] - Iteration   685 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 34920
+[2025-03-22 21:39:06,572][trainer][INFO] - Iteration   686 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 13891
+[2025-03-22 21:39:07,529][trainer][INFO] - Iteration   687 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 35867
+[2025-03-22 21:39:08,427][trainer][INFO] - Iteration   688 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11779
+[2025-03-22 21:39:09,369][trainer][INFO] - Iteration   689 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 20754
+[2025-03-22 21:39:10,267][trainer][INFO] - Iteration   690 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 17957
+[2025-03-22 21:39:11,231][trainer][INFO] - Iteration   691 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22141
+[2025-03-22 21:39:12,146][trainer][INFO] - Iteration   692 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 44454
+[2025-03-22 21:39:13,046][trainer][INFO] - Iteration   693 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 2209
+[2025-03-22 21:39:14,438][trainer][INFO] - Iteration   694 | Train loss: 0.00 | Time taken:  0.00/ 0.82/ 0.82 sec | GPU memory: 82.2 GB | Global sample ID: 41801
+[2025-03-22 21:39:15,332][trainer][INFO] - Iteration   695 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 33489
+[2025-03-22 21:39:16,228][trainer][INFO] - Iteration   696 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13019
+[2025-03-22 21:39:17,128][trainer][INFO] - Iteration   697 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6942
+[2025-03-22 21:39:18,067][trainer][INFO] - Iteration   698 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 53080
+[2025-03-22 21:39:18,966][trainer][INFO] - Iteration   699 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 17587
+[2025-03-22 21:39:19,870][trainer][INFO] - Iteration   700 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 11682
+[2025-03-22 21:39:21,210][trainer][INFO] - [94mIteration   700 | Test MSE:   0.46 | Time taken:  0.00/ 1.24/ 1.24 sec | GPU memory: 82.2 GB | Global sample ID: 753[0m
+[2025-03-22 21:39:22,230][trainer][INFO] - Iteration   701 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27069
+[2025-03-22 21:39:23,130][trainer][INFO] - Iteration   702 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 12031
+[2025-03-22 21:39:24,036][trainer][INFO] - Iteration   703 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 28398
+[2025-03-22 21:39:24,967][trainer][INFO] - Iteration   704 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 53109
+[2025-03-22 21:39:25,866][trainer][INFO] - Iteration   705 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8274
+[2025-03-22 21:39:26,765][trainer][INFO] - Iteration   706 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50804
+[2025-03-22 21:39:27,666][trainer][INFO] - Iteration   707 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 19007
+[2025-03-22 21:39:28,689][trainer][INFO] - Iteration   708 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 971
+[2025-03-22 21:39:29,588][trainer][INFO] - Iteration   709 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 3528
+[2025-03-22 21:39:30,486][trainer][INFO] - Iteration   710 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 14607
+[2025-03-22 21:39:31,387][trainer][INFO] - Iteration   711 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 43232
+[2025-03-22 21:39:32,307][trainer][INFO] - Iteration   712 | Train loss: 0.01 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 35046
+[2025-03-22 21:39:33,269][trainer][INFO] - Iteration   713 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 49545
+[2025-03-22 21:39:34,189][trainer][INFO] - Iteration   714 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 29939
+[2025-03-22 21:39:35,087][trainer][INFO] - Iteration   715 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 42475
+[2025-03-22 21:39:35,987][trainer][INFO] - Iteration   716 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13923
+[2025-03-22 21:39:36,886][trainer][INFO] - Iteration   717 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 12468
+[2025-03-22 21:39:37,847][trainer][INFO] - Iteration   718 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41742
+[2025-03-22 21:39:38,745][trainer][INFO] - Iteration   719 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 31833
+[2025-03-22 21:39:39,646][trainer][INFO] - Iteration   720 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14610
+[2025-03-22 21:39:40,545][trainer][INFO] - Iteration   721 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 10537
+[2025-03-22 21:39:41,447][trainer][INFO] - Iteration   722 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27551
+[2025-03-22 21:39:42,347][trainer][INFO] - Iteration   723 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 24591
+[2025-03-22 21:39:43,248][trainer][INFO] - Iteration   724 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 41939
+[2025-03-22 21:39:44,164][trainer][INFO] - Iteration   725 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 28700
+[2025-03-22 21:39:45,881][trainer][INFO] - Iteration   726 | Train loss: 0.00 | Time taken:  0.00/ 1.51/ 1.51 sec | GPU memory: 82.2 GB | Global sample ID: 28282
+[2025-03-22 21:39:46,783][trainer][INFO] - Iteration   727 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 52725
+[2025-03-22 21:39:47,686][trainer][INFO] - Iteration   728 | Train loss: 0.01 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 53884
+[2025-03-22 21:39:48,587][trainer][INFO] - Iteration   729 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 27183
+[2025-03-22 21:39:49,506][trainer][INFO] - Iteration   730 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 28644
+[2025-03-22 21:39:50,406][trainer][INFO] - Iteration   731 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 43359
+[2025-03-22 21:39:51,305][trainer][INFO] - Iteration   732 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51606
+[2025-03-22 21:39:52,313][trainer][INFO] - Iteration   733 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 46036
+[2025-03-22 21:39:53,246][trainer][INFO] - Iteration   734 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 34027
+[2025-03-22 21:39:54,165][trainer][INFO] - Iteration   735 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 53096
+[2025-03-22 21:39:55,089][trainer][INFO] - Iteration   736 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 42278
+[2025-03-22 21:39:56,488][trainer][INFO] - Iteration   737 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 5201
+[2025-03-22 21:39:57,385][trainer][INFO] - Iteration   738 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8278
+[2025-03-22 21:39:58,329][trainer][INFO] - Iteration   739 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 9965
+[2025-03-22 21:39:59,225][trainer][INFO] - Iteration   740 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11170
+[2025-03-22 21:40:00,125][trainer][INFO] - Iteration   741 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 44147
+[2025-03-22 21:40:01,026][trainer][INFO] - Iteration   742 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 18793
+[2025-03-22 21:40:01,930][trainer][INFO] - Iteration   743 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 53476
+[2025-03-22 21:40:02,825][trainer][INFO] - Iteration   744 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 40328
+[2025-03-22 21:40:03,724][trainer][INFO] - Iteration   745 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 16429
+[2025-03-22 21:40:04,669][trainer][INFO] - Iteration   746 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 2213
+[2025-03-22 21:40:05,567][trainer][INFO] - Iteration   747 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36312
+[2025-03-22 21:40:06,466][trainer][INFO] - Iteration   748 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 26958
+[2025-03-22 21:40:07,367][trainer][INFO] - Iteration   749 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 10487
+[2025-03-22 21:40:08,285][trainer][INFO] - Iteration   750 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 46898
+[2025-03-22 21:40:09,590][trainer][INFO] - [94mIteration   750 | Test MSE:   0.55 | Time taken:  0.00/ 1.25/ 1.25 sec | GPU memory: 82.2 GB | Global sample ID: 2418[0m
+[2025-03-22 21:40:10,494][trainer][INFO] - Iteration   751 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 39977
+[2025-03-22 21:40:11,405][trainer][INFO] - Iteration   752 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 42701
+[2025-03-22 21:40:12,309][trainer][INFO] - Iteration   753 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 27582
+[2025-03-22 21:40:13,208][trainer][INFO] - Iteration   754 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 30850
+[2025-03-22 21:40:14,107][trainer][INFO] - Iteration   755 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37168
+[2025-03-22 21:40:15,005][trainer][INFO] - Iteration   756 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 8520
+[2025-03-22 21:40:15,905][trainer][INFO] - Iteration   757 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 38157
+[2025-03-22 21:40:16,806][trainer][INFO] - Iteration   758 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 36435
+[2025-03-22 21:40:17,712][trainer][INFO] - Iteration   759 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22276
+[2025-03-22 21:40:18,618][trainer][INFO] - Iteration   760 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 26033
+[2025-03-22 21:40:19,595][trainer][INFO] - Iteration   761 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50062
+[2025-03-22 21:40:20,488][trainer][INFO] - Iteration   762 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6542
+[2025-03-22 21:40:21,386][trainer][INFO] - Iteration   763 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 44603
+[2025-03-22 21:40:22,356][trainer][INFO] - Iteration   764 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 14023
+[2025-03-22 21:40:23,288][trainer][INFO] - Iteration   765 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 42841
+[2025-03-22 21:40:24,208][trainer][INFO] - Iteration   766 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 43657
+[2025-03-22 21:40:25,133][trainer][INFO] - Iteration   767 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 50743
+[2025-03-22 21:40:26,113][trainer][INFO] - Iteration   768 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13588
+[2025-03-22 21:40:27,011][trainer][INFO] - Iteration   769 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 13385
+[2025-03-22 21:40:28,685][trainer][INFO] - Iteration   770 | Train loss: 0.00 | Time taken:  0.00/ 1.50/ 1.50 sec | GPU memory: 82.2 GB | Global sample ID: 48607
+[2025-03-22 21:40:29,584][trainer][INFO] - Iteration   771 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4433
+[2025-03-22 21:40:30,484][trainer][INFO] - Iteration   772 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6435
+[2025-03-22 21:40:31,385][trainer][INFO] - Iteration   773 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 51683
+[2025-03-22 21:40:32,361][trainer][INFO] - Iteration   774 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 12502
+[2025-03-22 21:40:33,264][trainer][INFO] - Iteration   775 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 6338
+[2025-03-22 21:40:34,181][trainer][INFO] - Iteration   776 | Train loss: 0.00 | Time taken:  0.00/ 0.80/ 0.80 sec | GPU memory: 82.2 GB | Global sample ID: 28584
+[2025-03-22 21:40:35,104][trainer][INFO] - Iteration   777 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 24148
+[2025-03-22 21:40:36,005][trainer][INFO] - Iteration   778 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 48956
+[2025-03-22 21:40:36,904][trainer][INFO] - Iteration   779 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22825
+[2025-03-22 21:40:37,804][trainer][INFO] - Iteration   780 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28877
+[2025-03-22 21:40:39,208][trainer][INFO] - Iteration   781 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 6197
+[2025-03-22 21:40:40,104][trainer][INFO] - Iteration   782 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 24630
+[2025-03-22 21:40:41,004][trainer][INFO] - Iteration   783 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 17420
+[2025-03-22 21:40:41,904][trainer][INFO] - Iteration   784 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 4246
+[2025-03-22 21:40:42,868][trainer][INFO] - Iteration   785 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 38932
+[2025-03-22 21:40:43,765][trainer][INFO] - Iteration   786 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 25958
+[2025-03-22 21:40:44,757][trainer][INFO] - Iteration   787 | Train loss: 0.00 | Time taken:  0.00/ 0.81/ 0.81 sec | GPU memory: 82.2 GB | Global sample ID: 7450
+[2025-03-22 21:40:45,657][trainer][INFO] - Iteration   788 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 11128
+[2025-03-22 21:40:46,551][trainer][INFO] - Iteration   789 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 28145
+[2025-03-22 21:40:47,508][trainer][INFO] - Iteration   790 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.77 sec | GPU memory: 82.2 GB | Global sample ID: 40789
+[2025-03-22 21:40:48,405][trainer][INFO] - Iteration   791 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 43546
+[2025-03-22 21:40:49,323][trainer][INFO] - Iteration   792 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5929
+[2025-03-22 21:40:50,223][trainer][INFO] - Iteration   793 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 25205
+[2025-03-22 21:40:51,123][trainer][INFO] - Iteration   794 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 21262
+[2025-03-22 21:40:52,024][trainer][INFO] - Iteration   795 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 37810
+[2025-03-22 21:40:52,946][trainer][INFO] - Iteration   796 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 5707
+[2025-03-22 21:40:53,887][trainer][INFO] - Iteration   797 | Train loss: 0.00 | Time taken:  0.00/ 0.77/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 49841
+[2025-03-22 21:40:54,791][trainer][INFO] - Iteration   798 | Train loss: 0.00 | Time taken:  0.00/ 0.79/ 0.79 sec | GPU memory: 82.2 GB | Global sample ID: 34841
+[2025-03-22 21:40:55,687][trainer][INFO] - Iteration   799 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 22140
+[2025-03-22 21:40:56,611][trainer][INFO] - Iteration   800 | Train loss: 0.00 | Time taken:  0.00/ 0.78/ 0.78 sec | GPU memory: 82.2 GB | Global sample ID: 6425
+[2025-03-22 21:40:57,922][trainer][INFO] - [94mIteration   800 | Test MSE:   0.47 | Time taken:  0.00/ 1.25/ 1.26 sec | GPU memory: 82.2 GB | Global sample ID: 1755[0m
+[2025-03-22 21:40:57,927][trainer][INFO] - [94mSwitched to 3-long rollouts.[0m
+[2025-03-22 21:40:58,862][trainer][INFO] - [92mLoaded train datapipe of size 53'873 samples[0m
+[2025-03-22 21:40:59,461][main][INFO] - [94mRe-initializing training dataloader...[0m
+[2025-03-22 21:40:59,466][main][INFO] - [94mTraining ended[0m
+wandb: - 0.030 MB of 0.167 MB uploadedwandb: \ 0.167 MB of 0.167 MB uploadedwandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:            learning_rate ▂▃▄▅▇██▇▆▅▄▃▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              testing_mse █▅▄▃▁▂▃▂▂▃▂▁▁▁▃▁
+wandb:             testing_time █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  testing_time_dataloader █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:       testing_time_model █▃▄▃▃▃▃▃▁▂▂▅▃▁▃▃
+wandb:            training_loss █▃▂▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:            training_time ▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁█████████████████████████
+wandb: training_time_dataloader ▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:      training_time_model ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█████████████████████████
+wandb: 
+wandb: Run summary:
+wandb:            learning_rate 0.0
+wandb:              testing_mse 0.47266
+wandb:             testing_time 1.25649
+wandb:  testing_time_dataloader 0.00219
+wandb:       testing_time_model 1.25428
+wandb:            training_loss 0.00402
+wandb:            training_time 0.7781
+wandb: training_time_dataloader 0.0022
+wandb:      training_time_model 0.77588
+wandb: 
+wandb: 🚀 View run Baseline_64340_25/03/22_21:29:34_RUN_01 at: https://wandb.ai/schups/DSM500_FPR/runs/debb30wj
+wandb: ⭐️ View project at: https://wandb.ai/schups/DSM500_FPR
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/wandb/run-20250322_212935-debb30wj/logs
+wandb: WARNING The legacy backend is deprecated. In future versions, `wandb-core` will become the sole backend service, and the `wandb.require('legacy-service')` flag will be removed. For more information, visit https://wandb.me/wandb-core
+2025-03-22 21:41:11,873 - wandb.wandb_agent - INFO - Cleaning up finished run: debb30wj
+wandb: Terminating and syncing runs. Press ctrl-c to kill.

@@ -1,0 +1,125 @@
+wandb: Starting wandb agent 🕵️
+2025-03-22 22:23:03,413 - wandb.wandb_agent - INFO - Running runs: []
+2025-03-22 22:23:03,735 - wandb.wandb_agent - INFO - Agent received command: run
+2025-03-22 22:23:03,735 - wandb.wandb_agent - INFO - Agent starting run with config:
+	checkpoint.enabled: False
+	datapipe.seed: 84
+	schedule.phase1.iterations: 500
+	schedule.phase1.lr_end: 0.1
+	schedule.phase1.lr_start: 0.005
+	schedule.phase2.iterations: 2000
+	schedule.phase2.lr_objective: 0.0001
+	schedule.phase3.iterations: 200
+	schedule.phase3.lr: 0.001
+	schedule.phase3.rollout_steps_increments: 1
+2025-03-22 22:23:03,738 - wandb.wandb_agent - INFO - About to run command: python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 train_graphcast.py checkpoint.enabled=False datapipe.seed=84 schedule.phase1.iterations=500 schedule.phase1.lr_end=0.1 schedule.phase1.lr_start=0.005 schedule.phase2.iterations=2000 schedule.phase2.lr_objective=0.0001 schedule.phase3.iterations=200 schedule.phase3.lr=0.001 schedule.phase3.rollout_steps_increments=1
+2025-03-22 22:23:08,746 - wandb.wandb_agent - INFO - Running runs: ['sn52u3he']
+[2025-03-22 22:23:31,278][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-22 22:23:31,278][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-22 22:23:31,278][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-22 22:23:31,284][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Ignoring project 'DSM500_FPR' when running a sweep.
+wandb: WARNING Ignoring entity 'schups' when running a sweep.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250322_222332-sn52u3he
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_293563_25/03/22_22:23:31_RUN_01
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🧹 View sweep at https://wandb.ai/schups/DSM500_FPR/sweeps/mpgn79e1
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/sn52u3he
+[2025-03-22 22:23:33,150][trainer][INFO] - [94mSetting seed to 84[0m
+[2025-03-22 22:23:33,201][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-22 22:23:33,201][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-22 22:23:33,201][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-22 22:23:33,203][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-22 22:23:37,632][trainer][INFO] - [94mModel created. Trainable parameters count is 35'248'149[0m
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=500', 'schedule.phase1.lr_end=0.1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=2000', 'schedule.phase2.lr_objective=0.0001', 'schedule.phase3.iterations=200', 'schedule.phase3.lr=0.001', 'schedule.phase3.rollout_steps_increments=1']
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=500', 'schedule.phase1.lr_end=0.1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=2000', 'schedule.phase2.lr_objective=0.0001', 'schedule.phase3.iterations=200', 'schedule.phase3.lr=0.001', 'schedule.phase3.rollout_steps_increments=1']
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=500', 'schedule.phase1.lr_end=0.1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=2000', 'schedule.phase2.lr_objective=0.0001', 'schedule.phase3.iterations=200', 'schedule.phase3.lr=0.001', 'schedule.phase3.rollout_steps_increments=1']
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=500', 'schedule.phase1.lr_end=0.1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=2000', 'schedule.phase2.lr_objective=0.0001', 'schedule.phase3.iterations=200', 'schedule.phase3.lr=0.001', 'schedule.phase3.rollout_steps_increments=1']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 36, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 58, in __init__
+    self.datapipe_training = self.instantiate_datapipe(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 155, in instantiate_datapipe
+    datapipe = ERA5HDF5Datapipe(
+TypeError: ERA5HDF5Datapipe.__init__() got an unexpected keyword argument 'shuffle'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 36, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 58, in __init__
+    self.datapipe_training = self.instantiate_datapipe(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 155, in instantiate_datapipe
+    datapipe = ERA5HDF5Datapipe(
+TypeError: ERA5HDF5Datapipe.__init__() got an unexpected keyword argument 'shuffle'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 36, in main
+    trainer = GraphCastTrainer(cfg)
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 36, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 58, in __init__
+    self.datapipe_training = self.instantiate_datapipe(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 155, in instantiate_datapipe
+    datapipe = ERA5HDF5Datapipe(
+TypeError: ERA5HDF5Datapipe.__init__() got an unexpected keyword argument 'shuffle'
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 58, in __init__
+    self.datapipe_training = self.instantiate_datapipe(
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 155, in instantiate_datapipe
+    datapipe = ERA5HDF5Datapipe(
+TypeError: ERA5HDF5Datapipe.__init__() got an unexpected keyword argument 'shuffle'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+W0322 22:23:44.112000 227783 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 227788 closing signal SIGTERM
+W0322 22:23:44.114000 227783 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 227789 closing signal SIGTERM
+W0322 22:23:44.114000 227783 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 227790 closing signal SIGTERM
+E0322 22:23:44.545000 227783 torch/distributed/elastic/multiprocessing/api.py:862] failed (exitcode: 1) local_rank: 3 (pid: 227791) of binary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/venv_arm64/bin/python
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 923, in <module>
+    main()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_graphcast.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-22_22:23:44
+  host      : nid005010
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 227791)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+wandb: - 0.030 MB of 0.030 MB uploadedwandb: \ 0.032 MB of 0.040 MB uploadedwandb:                                                                                
+wandb: 🚀 View run Baseline_293563_25/03/22_22:23:31_RUN_01 at: https://wandb.ai/schups/DSM500_FPR/runs/sn52u3he
+wandb: ⭐️ View project at: https://wandb.ai/schups/DSM500_FPR
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/wandb/run-20250322_222332-sn52u3he/logs
+wandb: WARNING The legacy backend is deprecated. In future versions, `wandb-core` will become the sole backend service, and the `wandb.require('legacy-service')` flag will be removed. For more information, visit https://wandb.me/wandb-core
+2025-03-22 22:23:49,872 - wandb.wandb_agent - INFO - Cleaning up finished run: sn52u3he
+wandb: Terminating and syncing runs. Press ctrl-c to kill.

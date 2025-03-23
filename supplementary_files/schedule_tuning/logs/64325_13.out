@@ -1,0 +1,144 @@
+wandb: Starting wandb agent 🕵️
+2025-03-22 21:32:43,006 - wandb.wandb_agent - INFO - Running runs: []
+2025-03-22 21:32:43,341 - wandb.wandb_agent - INFO - Agent received command: run
+2025-03-22 21:32:43,341 - wandb.wandb_agent - INFO - Agent starting run with config:
+	checkpoint.enabled: False
+	datapipe.seed: 21
+	schedule.phase1.iterations: 2000
+	schedule.phase1.lr_end: 0.1
+	schedule.phase1.lr_start: 0.005
+	schedule.phase2.iterations: 200
+	schedule.phase2.lr_objective: 0.001
+	schedule.phase3.iterations: 500
+	schedule.phase3.lr: 0.0001
+	schedule.phase3.rollout_steps_increments: 5
+2025-03-22 21:32:43,344 - wandb.wandb_agent - INFO - About to run command: python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 train_graphcast.py checkpoint.enabled=False datapipe.seed=21 schedule.phase1.iterations=2000 schedule.phase1.lr_end=0.1 schedule.phase1.lr_start=0.005 schedule.phase2.iterations=200 schedule.phase2.lr_objective=0.001 schedule.phase3.iterations=500 schedule.phase3.lr=0.0001 schedule.phase3.rollout_steps_increments=5
+2025-03-22 21:32:48,352 - wandb.wandb_agent - INFO - Running runs: ['yww6wem9']
+[2025-03-22 21:33:08,294][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-22 21:33:08,294][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-22 21:33:08,295][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-22 21:33:08,299][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Ignoring project 'DSM500_FPR' when running a sweep.
+wandb: WARNING Ignoring entity 'schups' when running a sweep.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250322_213309-yww6wem9
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_64342_25/03/22_21:33:08_RUN_01
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🧹 View sweep at https://wandb.ai/schups/DSM500_FPR/sweeps/mpgn79e1
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/yww6wem9
+[2025-03-22 21:33:10,348][trainer][INFO] - [94mSetting seed to 21[0m
+[2025-03-22 21:33:10,399][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-22 21:33:10,400][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-22 21:33:10,400][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-22 21:33:10,402][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-22 21:33:14,819][trainer][INFO] - [94mModel created. Trainable parameters count is 35'248'149[0m
+[2025-03-22 21:33:20,605][trainer][INFO] - [92mLoaded train datapipe of size 53'947 samples[0m
+[2025-03-22 21:33:22,355][trainer][INFO] - [92mLoaded test datapipe of size 2'903 samples[0m
+[2025-03-22 21:33:22,484][main][INFO] - [94mInitializing dataloaders...[0m
+[2025-03-22 21:33:22,488][main][INFO] - [94mTraining started...[0m
+[2025-03-22 21:34:16,116][trainer][INFO] - Iteration     1 | Train loss: 4.87 | Time taken:  7.80/45.83/53.63 sec | GPU memory: 79.1 GB | Global sample ID: 3374
+[2025-03-22 21:34:16,677][trainer][INFO] - Iteration     2 | Train loss: 4.92 | Time taken:  0.00/ 0.27/ 0.27 sec | GPU memory: 82.1 GB | Global sample ID: 30756
+[2025-03-22 21:34:17,068][trainer][INFO] - Iteration     3 | Train loss: 4.71 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 1692
+[2025-03-22 21:34:17,649][trainer][INFO] - Iteration     4 | Train loss: 4.83 | Time taken:  0.00/ 0.30/ 0.31 sec | GPU memory: 82.1 GB | Global sample ID: 14842
+[2025-03-22 21:34:18,044][trainer][INFO] - Iteration     5 | Train loss: 4.65 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 41459
+[2025-03-22 21:34:18,622][trainer][INFO] - Iteration     6 | Train loss: 4.59 | Time taken:  0.00/ 0.47/ 0.47 sec | GPU memory: 82.1 GB | Global sample ID: 22876
+[2025-03-22 21:34:19,020][trainer][INFO] - Iteration     7 | Train loss: 4.56 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 36064
+[2025-03-22 21:34:19,414][trainer][INFO] - Iteration     8 | Train loss: 4.39 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 37044
+[2025-03-22 21:34:19,809][trainer][INFO] - Iteration     9 | Train loss: 4.67 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 40746
+[2025-03-22 21:34:20,207][trainer][INFO] - Iteration    10 | Train loss: 4.47 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 33084
+[2025-03-22 21:34:20,617][trainer][INFO] - Iteration    11 | Train loss: 4.27 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 45618
+[2025-03-22 21:34:21,011][trainer][INFO] - Iteration    12 | Train loss: 4.30 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 30078
+[2025-03-22 21:34:21,461][trainer][INFO] - Iteration    13 | Train loss: 4.49 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 5703
+[2025-03-22 21:34:21,853][trainer][INFO] - Iteration    14 | Train loss: 4.23 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 15297
+[2025-03-22 21:34:22,250][trainer][INFO] - Iteration    15 | Train loss: 4.40 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 4167
+[2025-03-22 21:34:22,644][trainer][INFO] - Iteration    16 | Train loss: 4.12 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 16140
+[2025-03-22 21:34:23,034][trainer][INFO] - Iteration    17 | Train loss: 4.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 38984
+[2025-03-22 21:34:23,446][trainer][INFO] - Iteration    18 | Train loss: 4.17 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48331
+[2025-03-22 21:34:23,846][trainer][INFO] - Iteration    19 | Train loss: 4.13 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 34640
+[2025-03-22 21:34:24,340][trainer][INFO] - Iteration    20 | Train loss: 3.99 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3219
+[2025-03-22 21:34:24,745][trainer][INFO] - Iteration    21 | Train loss: 3.92 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 15494
+[2025-03-22 21:34:25,145][trainer][INFO] - Iteration    22 | Train loss: 3.89 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 49159
+[2025-03-22 21:34:25,539][trainer][INFO] - Iteration    23 | Train loss: 3.77 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 40366
+[2025-03-22 21:34:25,934][trainer][INFO] - Iteration    24 | Train loss: 3.79 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 2423
+[2025-03-22 21:34:26,330][trainer][INFO] - Iteration    25 | Train loss: 3.80 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 3703
+[2025-03-22 21:34:26,728][trainer][INFO] - Iteration    26 | Train loss: 3.85 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 32159
+[2025-03-22 21:34:27,128][trainer][INFO] - Iteration    27 | Train loss: 3.80 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 40868
+[2025-03-22 21:34:27,568][trainer][INFO] - Iteration    28 | Train loss: 3.59 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 26244
+[2025-03-22 21:34:27,991][trainer][INFO] - Iteration    29 | Train loss: 3.55 | Time taken:  0.00/ 0.31/ 0.31 sec | GPU memory: 82.1 GB | Global sample ID: 3851
+[2025-03-22 21:34:28,384][trainer][INFO] - Iteration    30 | Train loss: 3.48 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 31380
+[2025-03-22 21:34:28,780][trainer][INFO] - Iteration    31 | Train loss: 3.66 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 45111
+[2025-03-22 21:34:29,173][trainer][INFO] - Iteration    32 | Train loss: 3.37 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48735
+[2025-03-22 21:34:29,569][trainer][INFO] - Iteration    33 | Train loss: 3.42 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 52716
+[2025-03-22 21:34:30,053][trainer][INFO] - Iteration    34 | Train loss: 3.17 | Time taken:  0.10/ 0.28/ 0.38 sec | GPU memory: 82.1 GB | Global sample ID: 35442
+[2025-03-22 21:34:30,449][trainer][INFO] - Iteration    35 | Train loss: 3.40 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28555
+[2025-03-22 21:34:30,845][trainer][INFO] - Iteration    36 | Train loss: 3.33 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 52525
+[2025-03-22 21:34:31,245][trainer][INFO] - Iteration    37 | Train loss: 3.11 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 53105
+[2025-03-22 21:34:31,641][trainer][INFO] - Iteration    38 | Train loss: 3.27 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 2872
+[2025-03-22 21:34:32,034][trainer][INFO] - Iteration    39 | Train loss: 3.16 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 46733
+[2025-03-22 21:34:32,430][trainer][INFO] - Iteration    40 | Train loss: 3.24 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 26205
+[2025-03-22 21:34:32,866][trainer][INFO] - Iteration    41 | Train loss: 3.13 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 50900
+[2025-03-22 21:34:33,260][trainer][INFO] - Iteration    42 | Train loss: 3.00 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 40652
+[2025-03-22 21:34:33,653][trainer][INFO] - Iteration    43 | Train loss: 2.90 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 20630
+[2025-03-22 21:34:34,047][trainer][INFO] - Iteration    44 | Train loss: 2.92 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 43052
+[2025-03-22 21:34:34,443][trainer][INFO] - Iteration    45 | Train loss: 2.88 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 5155
+[2025-03-22 21:34:34,837][trainer][INFO] - Iteration    46 | Train loss: 2.90 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 28846
+[2025-03-22 21:34:35,232][trainer][INFO] - Iteration    47 | Train loss: 2.76 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 43929
+[2025-03-22 21:34:35,627][trainer][INFO] - Iteration    48 | Train loss: 2.81 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 12607
+[2025-03-22 21:34:36,023][trainer][INFO] - Iteration    49 | Train loss: 2.77 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 30861
+[2025-03-22 21:34:36,426][trainer][INFO] - Iteration    50 | Train loss: 2.68 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 45256
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=21', 'schedule.phase1.iterations=2000', 'schedule.phase1.lr_end=0.1', 'schedule.phase1.lr_start=0.005', 'schedule.phase2.iterations=200', 'schedule.phase2.lr_objective=0.001', 'schedule.phase3.iterations=500', 'schedule.phase3.lr=0.0001', 'schedule.phase3.rollout_steps_increments=5']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 228, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 385, in _get_outputs
+    outputs.append(p.share_outputs())
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1215, in share_outputs
+    return self._pipe.ShareOutputs()
+RuntimeError: Critical error in pipeline:
+Error in MIXED operator `nvidia.dali.ops.MakeContiguous` encountered:
+
+Can't allocate 1158676480 bytes on device 2.
+Current pipeline object is no longer valid.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[2025-03-22 21:34:45,373][trainer][INFO] - [94mIteration    50 | Test MSE:   1.19 | Time taken:  7.24/ 1.70/ 8.94 sec | GPU memory: 82.1 GB | Global sample ID: 2108[0m
+[rank2]:[E322 21:44:44.583737132 ProcessGroupNCCL.cpp:616] [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=201, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600072 milliseconds before timing out.
+[rank2]:[E322 21:44:44.583985957 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 2] Exception (either an error or timeout) detected by watchdog at work: 201, last enqueued NCCL work: 201, last completed NCCL work: 200.
+[rank2]:[E322 21:44:44.583995301 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 2] Timeout at NCCL work: 201, last enqueued NCCL work: 201, last completed NCCL work: 200.
+[rank2]:[E322 21:44:44.584002276 ProcessGroupNCCL.cpp:630] [Rank 2] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank3]:[E322 21:44:45.893254716 ProcessGroupNCCL.cpp:616] [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=201, OpType=ALLREDUCE, NumelIn=537109, NumelOut=537109, Timeout(ms)=600000) ran for 600006 milliseconds before timing out.
+[rank3]:[E322 21:44:45.893386648 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 3] Exception (either an error or timeout) detected by watchdog at work: 201, last enqueued NCCL work: 204, last completed NCCL work: 200.
+[rank3]:[E322 21:44:45.893392408 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 3] Timeout at NCCL work: 201, last enqueued NCCL work: 204, last completed NCCL work: 200.
+[rank3]:[E322 21:44:45.893397848 ProcessGroupNCCL.cpp:630] [Rank 3] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E322 21:44:45.952958850 ProcessGroupNCCL.cpp:616] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=201, OpType=ALLREDUCE, NumelIn=537109, NumelOut=537109, Timeout(ms)=600000) ran for 600015 milliseconds before timing out.
+[rank0]:[E322 21:44:45.953022400 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 0] Exception (either an error or timeout) detected by watchdog at work: 201, last enqueued NCCL work: 204, last completed NCCL work: 200.
+[rank0]:[E322 21:44:45.953027264 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 0] Timeout at NCCL work: 201, last enqueued NCCL work: 204, last completed NCCL work: 200.
+[rank0]:[E322 21:44:45.953030080 ProcessGroupNCCL.cpp:630] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank1]:[E322 21:44:45.016922280 ProcessGroupNCCL.cpp:616] [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=201, OpType=ALLREDUCE, NumelIn=537109, NumelOut=537109, Timeout(ms)=600000) ran for 600086 milliseconds before timing out.
+[rank1]:[E322 21:44:45.016981030 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 1] Exception (either an error or timeout) detected by watchdog at work: 201, last enqueued NCCL work: 204, last completed NCCL work: 200.
+[rank1]:[E322 21:44:45.016985862 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 1] Timeout at NCCL work: 201, last enqueued NCCL work: 204, last completed NCCL work: 200.
+[rank1]:[E322 21:44:45.016988934 ProcessGroupNCCL.cpp:630] [Rank 1] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E322 21:44:45.053145004 ProcessGroupNCCL.cpp:616] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=202, OpType=ALLREDUCE, NumelIn=13139968, NumelOut=13139968, Timeout(ms)=600000) ran for 600096 milliseconds before timing out.
+[rank0]:[E322 21:44:45.053160940 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 0] Exception (either an error or timeout) detected by watchdog at work: 202, last enqueued NCCL work: 204, last completed NCCL work: 201.
+[rank0]:[E322 21:44:45.053163755 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 0] Timeout at NCCL work: 202, last enqueued NCCL work: 204, last completed NCCL work: 201.
+[rank0]:[E322 21:44:45.053166187 ProcessGroupNCCL.cpp:630] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E322 21:44:45.053176331 ProcessGroupNCCL.cpp:616] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=203, OpType=ALLREDUCE, NumelIn=13398528, NumelOut=13398528, Timeout(ms)=600000) ran for 600011 milliseconds before timing out.
+[rank0]:[E322 21:44:45.053183339 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 0] Exception (either an error or timeout) detected by watchdog at work: 203, last enqueued NCCL work: 204, last completed NCCL work: 202.
+[rank0]:[E322 21:44:45.053185803 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 0] Timeout at NCCL work: 203, last enqueued NCCL work: 204, last completed NCCL work: 202.
+[rank0]:[E322 21:44:45.053188395 ProcessGroupNCCL.cpp:630] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E322 21:44:45.153252729 ProcessGroupNCCL.cpp:616] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=204, OpType=ALLREDUCE, NumelIn=8172544, NumelOut=8172544, Timeout(ms)=600000) ran for 600078 milliseconds before timing out.
+[rank0]:[E322 21:44:45.153259640 ProcessGroupNCCL.cpp:1795] [PG ID 0 PG GUID 0(default_pg) Rank 0] Exception (either an error or timeout) detected by watchdog at work: 204, last enqueued NCCL work: 204, last completed NCCL work: 203.
+[rank0]:[E322 21:44:45.153262200 ProcessGroupNCCL.cpp:1844] [PG ID 0 PG GUID 0(default_pg) Rank 0] Timeout at NCCL work: 204, last enqueued NCCL work: 204, last completed NCCL work: 203.
+[rank0]:[E322 21:44:45.153264856 ProcessGroupNCCL.cpp:630] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank1]:[E322 21:57:05.509382717 ProcessGroupNCCL.cpp:1496] [PG ID 0 PG GUID 0(default_pg) Rank 1] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+[rank3]:[E322 21:57:05.509589144 ProcessGroupNCCL.cpp:1496] [PG ID 0 PG GUID 0(default_pg) Rank 3] ProcessGroupNCCL's watchdog got stuck for 480 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API (e.g., CudaEventDestroy) hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api (for example, CudaEventDestroy), or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. 
+slurmstepd: error: *** STEP 64342.0 ON nid007329 CANCELLED AT 2025-03-22T22:02:30 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 64342 ON nid007329 CANCELLED AT 2025-03-22T22:02:30 DUE TO TIME LIMIT ***

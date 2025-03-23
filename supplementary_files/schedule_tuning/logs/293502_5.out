@@ -1,0 +1,4 @@
+wandb: Starting wandb agent 🕵️
+wandb: Network error (SSLError), entering retry loop.
+slurmstepd: error: *** STEP 293507.0 ON nid005020 CANCELLED AT 2025-03-22T21:43:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 293507 ON nid005020 CANCELLED AT 2025-03-22T21:43:50 DUE TO TIME LIMIT ***

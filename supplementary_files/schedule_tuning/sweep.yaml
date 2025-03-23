@@ -1,0 +1,42 @@
+program: train_graphcast.py
+name: schedule_tuning
+method: random
+
+metric:
+  goal: minimize
+  name: testing_mse
+
+parameters:
+  checkpoint.enabled:
+    value: false
+  
+  datapipe.seed:
+    values: [21, 42, 84]  
+
+  schedule.phase1.iterations:
+    values: [100, 200, 500, 1000, 2000]
+  schedule.phase1.lr_start:
+    values: [1e-3, 5e-3, 1e-4]
+  schedule.phase1.lr_end:
+    values: [1.0, 0.1, 0.01]
+
+  schedule.phase2.iterations:
+    values: [100, 200, 500, 1000, 2000]
+  schedule.phase2.lr_objective:
+    values: [1e-3, 5e-3, 1e-4]
+  
+  schedule.phase3.iterations:
+    values: [100, 200, 500, 1000, 2000]
+  schedule.phase3.rollout_steps_increments:
+    values: [1, 2, 3, 4, 5]
+  schedule.phase3.lr:
+    values: [1e-3, 5e-3, 1e-4]
+  
+command:
+  - python
+  - "-m"
+  - "torch.distributed.run"
+  - "--nnodes=1"
+  - "--nproc_per_node=4"
+  - ${program}
+  - ${args_no_hyphens}

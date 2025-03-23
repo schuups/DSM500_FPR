@@ -1,0 +1,198 @@
+wandb: Starting wandb agent 🕵️
+2025-03-22 23:43:06,906 - wandb.wandb_agent - INFO - Running runs: []
+2025-03-22 23:43:07,259 - wandb.wandb_agent - INFO - Agent received command: run
+2025-03-22 23:43:07,259 - wandb.wandb_agent - INFO - Agent starting run with config:
+	checkpoint.enabled: False
+	datapipe.seed: 84
+	schedule.phase1.iterations: 2000
+	schedule.phase1.lr_end: 1
+	schedule.phase1.lr_start: 0.0001
+	schedule.phase2.iterations: 100
+	schedule.phase2.lr_objective: 0.005
+	schedule.phase3.iterations: 100
+	schedule.phase3.lr: 0.0001
+	schedule.phase3.rollout_steps_increments: 2
+2025-03-22 23:43:07,263 - wandb.wandb_agent - INFO - About to run command: python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 train_graphcast.py checkpoint.enabled=False datapipe.seed=84 schedule.phase1.iterations=2000 schedule.phase1.lr_end=1 schedule.phase1.lr_start=0.0001 schedule.phase2.iterations=100 schedule.phase2.lr_objective=0.005 schedule.phase3.iterations=100 schedule.phase3.lr=0.0001 schedule.phase3.rollout_steps_increments=2
+2025-03-22 23:43:12,270 - wandb.wandb_agent - INFO - Running runs: ['ky6yj4bi']
+[2025-03-22 23:43:31,476][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-22 23:43:31,476][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-22 23:43:31,476][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-22 23:43:31,480][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+wandb: WARNING Unable to verify login in offline mode.
+wandb: WARNING Ignoring project 'DSM500_FPR' when running a sweep.
+wandb: WARNING Ignoring entity 'schups' when running a sweep.
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250322_234332-ky6yj4bi
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_64408_25/03/22_23:43:31_RUN_01
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🧹 View sweep at https://wandb.ai/schups/DSM500_FPR/sweeps/mpgn79e1
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/ky6yj4bi
+[2025-03-22 23:43:33,510][trainer][INFO] - [94mSetting seed to 84[0m
+[2025-03-22 23:43:33,797][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-22 23:43:33,801][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-22 23:43:33,801][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-22 23:43:33,803][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-22 23:43:38,197][trainer][INFO] - [94mModel created. Trainable parameters count is 35'248'149[0m
+[2025-03-22 23:43:43,850][trainer][INFO] - [92mLoaded train datapipe of size 53'947 samples[0m
+[2025-03-22 23:43:45,999][trainer][INFO] - [92mLoaded test datapipe of size 2'903 samples[0m
+[2025-03-22 23:43:46,003][main][INFO] - [94mInitializing dataloaders...[0m
+[2025-03-22 23:43:46,007][main][INFO] - [94mTraining started...[0m
+[2025-03-22 23:44:42,868][trainer][INFO] - Iteration     1 | Train loss: 6.55 | Time taken:  8.12/48.74/56.86 sec | GPU memory: 79.1 GB | Global sample ID: 39278
+[2025-03-22 23:44:43,441][trainer][INFO] - Iteration     2 | Train loss: 6.76 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 32914
+[2025-03-22 23:44:43,840][trainer][INFO] - Iteration     3 | Train loss: 6.50 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 46909
+[2025-03-22 23:44:44,423][trainer][INFO] - Iteration     4 | Train loss: 6.26 | Time taken:  0.00/ 0.31/ 0.31 sec | GPU memory: 82.1 GB | Global sample ID: 33024
+[2025-03-22 23:44:44,813][trainer][INFO] - Iteration     5 | Train loss: 6.40 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53769
+[2025-03-22 23:44:45,214][trainer][INFO] - Iteration     6 | Train loss: 6.68 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 48692
+[2025-03-22 23:44:45,872][trainer][INFO] - Iteration     7 | Train loss: 6.45 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 29769
+[2025-03-22 23:44:46,426][trainer][INFO] - Iteration     8 | Train loss: 6.65 | Time taken:  0.00/ 0.44/ 0.45 sec | GPU memory: 82.1 GB | Global sample ID: 34724
+[2025-03-22 23:44:46,820][trainer][INFO] - Iteration     9 | Train loss: 6.40 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 36387
+[2025-03-22 23:44:47,218][trainer][INFO] - Iteration    10 | Train loss: 6.22 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 36237
+[2025-03-22 23:44:47,616][trainer][INFO] - Iteration    11 | Train loss: 5.98 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 33738
+[2025-03-22 23:44:48,016][trainer][INFO] - Iteration    12 | Train loss: 6.15 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 43183
+[2025-03-22 23:44:48,412][trainer][INFO] - Iteration    13 | Train loss: 6.06 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 42939
+[2025-03-22 23:44:48,812][trainer][INFO] - Iteration    14 | Train loss: 6.26 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 52723
+[2025-03-22 23:44:49,208][trainer][INFO] - Iteration    15 | Train loss: 6.28 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 5903
+[2025-03-22 23:44:49,675][trainer][INFO] - Iteration    16 | Train loss: 5.74 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44261
+[2025-03-22 23:44:50,071][trainer][INFO] - Iteration    17 | Train loss: 5.93 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 27422
+[2025-03-22 23:44:50,467][trainer][INFO] - Iteration    18 | Train loss: 5.68 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 12162
+[2025-03-22 23:44:50,865][trainer][INFO] - Iteration    19 | Train loss: 5.65 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 5842
+[2025-03-22 23:44:51,354][trainer][INFO] - Iteration    20 | Train loss: 5.37 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19253
+[2025-03-22 23:44:52,215][trainer][INFO] - Iteration    21 | Train loss: 5.19 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 19173
+[2025-03-22 23:44:52,613][trainer][INFO] - Iteration    22 | Train loss: 4.87 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 41181
+[2025-03-22 23:44:53,013][trainer][INFO] - Iteration    23 | Train loss: 4.95 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 39557
+[2025-03-22 23:44:53,489][trainer][INFO] - Iteration    24 | Train loss: 4.70 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 35646
+[2025-03-22 23:44:53,898][trainer][INFO] - Iteration    25 | Train loss: 4.63 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 51664
+[2025-03-22 23:44:54,369][trainer][INFO] - Iteration    26 | Train loss: 4.44 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 19033
+[2025-03-22 23:44:54,834][trainer][INFO] - Iteration    27 | Train loss: 4.20 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 53644
+[2025-03-22 23:44:55,252][trainer][INFO] - Iteration    28 | Train loss: 4.07 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 44125
+[2025-03-22 23:44:55,647][trainer][INFO] - Iteration    29 | Train loss: 3.93 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 11457
+[2025-03-22 23:44:56,050][trainer][INFO] - Iteration    30 | Train loss: 3.90 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 7357
+[2025-03-22 23:44:56,572][trainer][INFO] - Iteration    31 | Train loss: 3.83 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 29891
+[2025-03-22 23:44:56,970][trainer][INFO] - Iteration    32 | Train loss: 3.43 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 9067
+[2025-03-22 23:44:57,395][trainer][INFO] - Iteration    33 | Train loss: 3.24 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 40960
+[2025-03-22 23:44:57,793][trainer][INFO] - Iteration    34 | Train loss: 3.13 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 47292
+[2025-03-22 23:44:58,296][trainer][INFO] - Iteration    35 | Train loss: 2.79 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 16046
+[2025-03-22 23:44:58,734][trainer][INFO] - Iteration    36 | Train loss: 2.76 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 28738
+[2025-03-22 23:44:59,132][trainer][INFO] - Iteration    37 | Train loss: 2.54 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 50215
+[2025-03-22 23:44:59,579][trainer][INFO] - Iteration    38 | Train loss: 2.29 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 30783
+[2025-03-22 23:44:59,977][trainer][INFO] - Iteration    39 | Train loss: 2.08 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 47293
+[2025-03-22 23:45:00,411][trainer][INFO] - Iteration    40 | Train loss: 1.97 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 27122
+[2025-03-22 23:45:00,833][trainer][INFO] - Iteration    41 | Train loss: 1.69 | Time taken:  0.00/ 0.28/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 42405
+[2025-03-22 23:45:01,253][trainer][INFO] - Iteration    42 | Train loss: 1.52 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 35957
+[2025-03-22 23:45:01,649][trainer][INFO] - Iteration    43 | Train loss: 1.30 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 53045
+[2025-03-22 23:45:02,048][trainer][INFO] - Iteration    44 | Train loss: 1.14 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 45390
+[2025-03-22 23:45:02,532][trainer][INFO] - Iteration    45 | Train loss: 1.08 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 41544
+[2025-03-22 23:45:02,931][trainer][INFO] - Iteration    46 | Train loss: 0.86 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 3786
+[2025-03-22 23:45:03,336][trainer][INFO] - Iteration    47 | Train loss: 0.71 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 11605
+[2025-03-22 23:45:03,935][trainer][INFO] - Iteration    48 | Train loss: 0.58 | Time taken:  0.00/ 0.28/ 0.28 sec | GPU memory: 82.1 GB | Global sample ID: 48647
+[2025-03-22 23:45:04,334][trainer][INFO] - Iteration    49 | Train loss: 0.54 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 19586
+[2025-03-22 23:45:04,733][trainer][INFO] - Iteration    50 | Train loss: 0.50 | Time taken:  0.00/ 0.29/ 0.29 sec | GPU memory: 82.1 GB | Global sample ID: 17615
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=2000', 'schedule.phase1.lr_end=1', 'schedule.phase1.lr_start=0.0001', 'schedule.phase2.iterations=100', 'schedule.phase2.lr_objective=0.005', 'schedule.phase3.iterations=100', 'schedule.phase3.lr=0.0001', 'schedule.phase3.rollout_steps_increments=2']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 250, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 385, in _get_outputs
+    outputs.append(p.share_outputs())
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1215, in share_outputs
+    return self._pipe.ShareOutputs()
+RuntimeError: Critical error in pipeline:
+Error in MIXED operator `nvidia.dali.ops.MakeContiguous` encountered:
+
+Can't allocate 1158676480 bytes on device 1.
+Current pipeline object is no longer valid.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Error executing job with overrides: ['checkpoint.enabled=False', 'datapipe.seed=84', 'schedule.phase1.iterations=2000', 'schedule.phase1.lr_end=1', 'schedule.phase1.lr_start=0.0001', 'schedule.phase2.iterations=100', 'schedule.phase2.lr_objective=0.005', 'schedule.phase3.iterations=100', 'schedule.phase3.lr=0.0001', 'schedule.phase3.rollout_steps_increments=2']
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 77, in main
+    test_sample = next(iterator_testing)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/datapipes/era5_hdf5.py", line 250, in __iter__
+    _pipeline = dali_pth.DALIGenericIterator([self.pipe], [
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 224, in __init__
+    self._first_batch = DALIGenericIterator.__next__(self)
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/pytorch/__init__.py", line 239, in __next__
+    outputs = self._get_outputs()
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/plugin/base_iterator.py", line 385, in _get_outputs
+    outputs.append(p.share_outputs())
+  File "/usr/local/lib/python3.10/dist-packages/nvidia/dali/pipeline.py", line 1215, in share_outputs
+    return self._pipe.ShareOutputs()
+RuntimeError: Critical error in pipeline:
+Error in MIXED operator `nvidia.dali.ops.MakeContiguous` encountered:
+
+Can't allocate 1158676480 bytes on device 0.
+Current pipeline object is no longer valid.
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+wandb: - 0.030 MB of 0.030 MB uploadedW0322 23:45:17.425000 277982 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 277985 closing signal SIGTERM
+W0322 23:45:17.432000 277982 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 277987 closing signal SIGTERM
+W0322 23:45:17.440000 277982 torch/distributed/elastic/multiprocessing/api.py:890] Sending process 277988 closing signal SIGTERM
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 16 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+E0322 23:45:18.342000 277982 torch/distributed/elastic/multiprocessing/api.py:862] failed (exitcode: 1) local_rank: 1 (pid: 277986) of binary: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/venv_arm64/bin/python
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 923, in <module>
+    main()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_graphcast.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-22_23:45:17
+  host      : nid007209
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 277986)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:            learning_rate ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:            training_loss ███▇████▇▇▇▇▇▇▇▇▆▆▆▆▅▅▅▅▅▄▄▄▄▃▃▃▂▂▂▂▁▁▁▁
+wandb:            training_time █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: training_time_dataloader █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:      training_time_model █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:            learning_rate 3e-05
+wandb:            training_loss 0.4954
+wandb:            training_time 0.29006
+wandb: training_time_dataloader 0.00217
+wandb:      training_time_model 0.28788
+wandb: 
+wandb: 🚀 View run Baseline_64408_25/03/22_23:43:31_RUN_01 at: https://wandb.ai/schups/DSM500_FPR/runs/ky6yj4bi
+wandb: ⭐️ View project at: https://wandb.ai/schups/DSM500_FPR
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/wandb/run-20250322_234332-ky6yj4bi/logs
+wandb: WARNING The legacy backend is deprecated. In future versions, `wandb-core` will become the sole backend service, and the `wandb.require('legacy-service')` flag will be removed. For more information, visit https://wandb.me/wandb-core
+2025-03-22 23:45:20,937 - wandb.wandb_agent - INFO - Cleaning up finished run: ky6yj4bi
+wandb: Terminating and syncing runs. Press ctrl-c to kill.
