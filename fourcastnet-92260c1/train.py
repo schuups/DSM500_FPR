@@ -88,7 +88,12 @@ class Trainer():
     self.device = torch.cuda.current_device() if torch.cuda.is_available() else 'cpu'
 
     if params.log_to_wandb:
-      wandb.init(config=params, name=params.name, group=params.group, project=params.project, entity=params.entity)
+      wandb.init(
+        entity="schups",
+        project="DSM500_FPR",
+        name="FourCastNet",
+        config=params
+      )
 
     logging.info('rank %d, begin data loader init'%world_rank)
     self.train_data_loader, self.train_dataset, self.train_sampler = get_data_loader(params, params.train_data_path, dist.is_initialized(), train=True)
@@ -248,7 +253,12 @@ class Trainer():
     self.model.train()
     
     for i, data in enumerate(self.train_data_loader, 0):
+      print("Train iteration: ", self.iters)
       self.iters += 1
+      if self.iters >= 3750 and dist.get_rank() == 0:
+        self.save_checkpoint('/iopsstor/scratch/cscs/stefschu/DSM500_FPR/fourcastnet-92260c1/checkpoints/iter3750.pth')
+        print("Completed 3750 iterations. Done!")
+        exit()
       # adjust_LR(optimizer, params, iters)
       data_start = time.time()
       inp, tar = map(lambda x: x.to(self.device, dtype = torch.float), data)      
@@ -268,50 +278,59 @@ class Trainer():
       tr_start = time.time()
 
       self.model.zero_grad()
-      if self.params.two_step_training:
-          with amp.autocast(self.params.enable_amp):
-            gen_step_one = self.model(inp).to(self.device, dtype = torch.float)
-            loss_step_one = self.loss_obj(gen_step_one, tar[:,0:self.params.N_out_channels])
-            if self.params.orography:
-                gen_step_two = self.model(torch.cat( (gen_step_one, orog), axis = 1)  ).to(self.device, dtype = torch.float)
-            else:
-                gen_step_two = self.model(gen_step_one).to(self.device, dtype = torch.float)
-            loss_step_two = self.loss_obj(gen_step_two, tar[:,self.params.N_out_channels:2*self.params.N_out_channels])
-            loss = loss_step_one + loss_step_two
+      
+      if self.precip: # use a wind model to predict 17(+n) channels at t+dt
+        with torch.no_grad():
+          inp = self.model_wind(inp).to(self.device, dtype = torch.float)
+        gen = self.model(inp.detach()).to(self.device, dtype = torch.float)
       else:
-          with amp.autocast(self.params.enable_amp):
-            if self.precip: # use a wind model to predict 17(+n) channels at t+dt
-              with torch.no_grad():
-                inp = self.model_wind(inp).to(self.device, dtype = torch.float)
-              gen = self.model(inp.detach()).to(self.device, dtype = torch.float)
-            else:
-              gen = self.model(inp).to(self.device, dtype = torch.float)
-            loss = self.loss_obj(gen, tar)
+        gen = self.model(inp).to(self.device, dtype = torch.float)
+      loss = self.loss_obj(gen, tar)
 
-      if self.params.enable_amp:
-        self.gscaler.scale(loss).backward()
-        self.gscaler.step(self.optimizer)
-      else:
-        loss.backward()
-        self.optimizer.step()
 
-      if self.params.enable_amp:
-        self.gscaler.update()
+      loss.backward()
+      self.optimizer.step()
 
       tr_time += time.time() - tr_start
+      print("Training step done")
+
+      if dist.get_rank() == 0:
+        wandb.log({
+          "training_loss": loss.detach().cpu().numpy(),
+        }, step=self.iters)
+
+      # # # Validation
+      # # if self.iters % 100 == 0:
+      # #   print("Validating at iteration: ", self.iters)
+      # #   mult = torch.as_tensor(np.load(self.params.global_stds_path)[0, self.params.out_channels, 0, 0]).to(self.device)
+      # #   valid_buff = torch.zeros((3), dtype=torch.float32, device=self.device)
+      # #   with torch.no_grad():
+      # #     for i, data in enumerate(self.valid_data_loader, 0):
+      # #       inp, tar  = map(lambda x: x.to(self.device, dtype = torch.float), data)
+      # #       gen = self.model(inp).to(self.device, dtype = torch.float)
+      # #       valid_loss = self.loss_obj(gen, tar) 
+      # #       valid_weighted_rmse = weighted_rmse_torch(gen, tar)
+      # #       valid_weighted_rmse *= mult
+
+      # #       if dist.get_rank() == 0:
+      # #         wandb.log({
+      # #           "testing_rmse": valid_weighted_rmse.mean().detach().cpu().numpy(),
+      # #         }, step=self.iters)
+            
+      # #       break
     
-    try:
-        logs = {'loss': loss, 'loss_step_one': loss_step_one, 'loss_step_two': loss_step_two}
-    except:
-        logs = {'loss': loss}
+    # try:
+    #     logs = {'loss': loss, 'loss_step_one': loss_step_one, 'loss_step_two': loss_step_two}
+    # except:
+    #     logs = {'loss': loss}
 
-    if dist.is_initialized():
-      for key in sorted(logs.keys()):
-        dist.all_reduce(logs[key].detach())
-        logs[key] = float(logs[key]/dist.get_world_size())
+    # if dist.is_initialized():
+    #   for key in sorted(logs.keys()):
+    #     dist.all_reduce(logs[key].detach())
+    #     logs[key] = float(logs[key]/dist.get_world_size())
 
-    if self.params.log_to_wandb:
-      wandb.log(logs, step=self.epoch)
+    # if self.params.log_to_wandb:
+    #   wandb.log(logs, step=self.epoch)
 
     return tr_time, data_time, logs
 
