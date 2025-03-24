@@ -37,6 +37,11 @@ class ERA5HDF5Datapipe:
 
         prefetch_queue_depth: int,
         num_threads: int,
+
+        shuffle: bool,
+        device: torch.device,
+        rank: int,
+        world_size: int
     ):
         self.cfg = cfg
         self.num_steps = 1 + num_output_steps # i.e. the input datapoint + num_output_steps output datapoints
@@ -66,7 +71,11 @@ class ERA5HDF5Datapipe:
             seed=seed,
             iterator=iterator, 
             prefetch_queue_depth=prefetch_queue_depth,
-            num_threads=num_threads
+            num_threads=num_threads,
+            shuffle=shuffle,
+            device=device,
+            rank=rank,
+            world_size=world_size
         )
 
     def _load_h5_file_paths(self, path: Path):
@@ -153,13 +162,23 @@ class ERA5HDF5Datapipe:
             dtype=dali.types.FLOAT
         )
 
-    def _create_pipeline(self, seed, iterator, prefetch_queue_depth, num_threads):
+    def _create_pipeline(
+        self,
+        seed,
+        iterator,
+        prefetch_queue_depth,
+        num_threads,
+        shuffle,
+        device,
+        rank,
+        world_size
+    ):
         pipe = dali.Pipeline(
             batch_size=1,
             py_start_method="spawn",
             prefetch_queue_depth=prefetch_queue_depth,
             num_threads=num_threads,
-            device_id=DM.device().index,
+            device_id=device.index,
             set_affinity=True,
         )
 
@@ -170,7 +189,10 @@ class ERA5HDF5Datapipe:
                 file_paths=self.file_paths,
                 num_steps=self.num_steps,
                 seed=seed,
-                iterator=iterator
+                iterator=iterator,
+                shuffle=shuffle,
+                rank=rank,
+                world_size=world_size
             )
 
             (
@@ -247,28 +269,9 @@ class ERA5HDF5Datapipe:
 
     def __len__(self):
         if self.cfg.toggles.data.fix_december_gap:
-            return len(self.file_paths) * self.cfg.dataset.samples_per_file - self.num_steps + 1
+            return len(self.file_paths) * self.cfg.dataset.samples_per_file - self.num_steps
         else:
-            return len(self.file_paths) * (self.cfg.dataset.samples_per_file - self.num_steps) + 1
-
-    def next_sample(iterator):
-        """
-        Prepares a ERA5HDF5Datapipe sample for utilization.
-        """
-        sample = next(iterator)[0] # remove batch dimension, as batch_size is always 1 in this project
-        sample["data"] = sample["data"][0].to(dtype=dtype)
-
-        # Prepare sample for utilization.
-        # - batch_size is 1, no need to return that dimension
-        # - dtype and device can be set right away (dtype in particular can't be done through the Dali pipeline)
-        # - for the sample info, no need to return tensors, just the values
-        return {
-            "epoch_idx": sample["epoch_idx"].item(),
-            "idx_in_epoch": sample["idx_in_epoch"].item(),
-            "global_sample_id": sample["global_sample_id"].item(),
-            "data": sample["data"],
-            "timestamps": sample["timestamps"][0].tolist()
-        }
+            return len(self.file_paths) * (self.cfg.dataset.samples_per_file - self.num_steps)
 
 class ERA5DaliExternalSource:
     def __init__(
@@ -279,8 +282,15 @@ class ERA5DaliExternalSource:
         num_steps: int,
         seed: int,
         iterator: dict,
+        shuffle: bool,
+        rank: int,
+        world_size: int
     ):
         self.cfg = cfg
+        self.shuffle = shuffle
+        self.rank = rank
+        self.world_size = world_size
+
         self.num_samples = num_samples
         self.num_steps = num_steps
 
@@ -302,8 +312,9 @@ class ERA5DaliExternalSource:
 
     def build_idx_map(self, epoch_idx=0):
         idx_map = np.arange(self.num_samples, dtype=np.uint16)
-        np.random.default_rng(seed=self.seed + epoch_idx).shuffle(idx_map)
-        self.idx_map = np.array_split(idx_map, DM.world_size())[DM.rank()]
+        if self.shuffle:
+            np.random.default_rng(seed=self.seed + epoch_idx).shuffle(idx_map)
+        self.idx_map = np.array_split(idx_map, self.world_size)[self.rank]
         self.idx_map_length = len(self.idx_map)
 
     def open_files(self):
@@ -385,12 +396,10 @@ class ERA5DaliExternalSource:
                 normalized_day_of_year = torch.tensor(
                     (day_of_year / 365) * (np.pi / 2), 
                     dtype=torch.float32, 
-                    #device=DM.device()
                 )
                 normalized_time_of_day = torch.tensor(
                     (time_of_day / (24 - 6)) * (np.pi / 2),
                     dtype=torch.float32,
-                    #device=DM.device(),
                 )
                 temporal_features.append([
                     np.sin(normalized_day_of_year),

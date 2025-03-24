@@ -30,11 +30,9 @@ class Graph:
         self,
         list_grid_3D_coords,
         mesh_level,
-        use_multimesh,
-        use_four_dim_spatial_location
+        use_multimesh
     ):
         self.list_grid_3D_coords = list_grid_3D_coords
-        self.use_four_dim_spatial_location = use_four_dim_spatial_location
 
         # Load the graph hierarchy from cache
         if Cache.is_initialized():
@@ -145,19 +143,11 @@ class Graph:
         return src, dst
 
     def _compute_vertices_spatial_info(self, vertices_latlon):
-        if self.use_four_dim_spatial_location:
-            spatial_info = torch.stack((
-                torch.sin(vertices_latlon[:, 0]),
-                torch.cos(vertices_latlon[:, 0]),
-                torch.sin(vertices_latlon[:, 1]),
-                torch.cos(vertices_latlon[:, 1])
-            ), dim=-1)
-        else:
-            spatial_info = torch.stack((
-                torch.cos(vertices_latlon[:, 0]),
-                torch.sin(vertices_latlon[:, 1]),
-                torch.cos(vertices_latlon[:, 1])
-            ), dim=-1)
+        spatial_info = torch.stack((
+            torch.cos(vertices_latlon[:, 0]),
+            torch.sin(vertices_latlon[:, 1]),
+            torch.cos(vertices_latlon[:, 1])
+        ), dim=-1)
         
         return spatial_info
 

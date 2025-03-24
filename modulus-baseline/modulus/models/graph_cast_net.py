@@ -13,7 +13,6 @@ from pathlib import Path
 
 from modulus.models.utils.activations import get_activation
 
-from modulus.utils.distributed_manager import DistributedManager as DM
 from modulus.utils.graph_utils import latlon2xyz, deg2rad
 from modulus.utils.graph_structure import Graph
 
@@ -23,10 +22,11 @@ from modulus.models.components.processor import GraphCastProcessor
 from modulus.models.components.mlp import MeshGraphMLP, MeshGraphEdgeMLPSum
 
 class GraphCastNet(nn.Module):
-    def __init__(self, cfg):
+    def __init__(self, cfg, device):
         super().__init__()
 
         self.cfg = cfg
+        self.device = device
         self.checkpoint_enabled = False
 
         self._build_coordinates_data()
@@ -35,7 +35,7 @@ class GraphCastNet(nn.Module):
         self._build_model()
 
         # Move everthing to the intended type and device
-        self = super(GraphCastNet, self).to(dtype=self.dtype(), device=DM.device())
+        self = super(GraphCastNet, self).to(dtype=self.dtype(), device=self.device)
 
     def _build_coordinates_data(self):
         _height = self.cfg.dataset.sample.height
@@ -60,7 +60,7 @@ class GraphCastNet(nn.Module):
         # Normalized area of the latitude-longitude grid cell, of shape (721, 1440)
         area = torch.abs(torch.cos(deg2rad(self.latitudes)))
         area = area / torch.mean(area)
-        self.area = area.unsqueeze(1).expand(-1, _width).to(dtype=self.dtype(), device=DM.device())
+        self.area = area.unsqueeze(1).expand(-1, _width).to(dtype=self.dtype(), device=self.device)
 
     def _build_channels_metadata(self):
         with open(Path(self.cfg.dataset.base_path) / "metadata.yaml", "r") as f:
@@ -75,18 +75,17 @@ class GraphCastNet(nn.Module):
         _graph = Graph(
             list_grid_3D_coords=self.list_grid_3D_coords,
             mesh_level=self.cfg.model.graph.mesh_level,
-            use_multimesh=self.cfg.toggles.graph.use_multimesh,
-            use_four_dim_spatial_location=self.cfg.toggles.graph.use_four_dim_spatial_location,
+            use_multimesh=self.cfg.toggles.graph.use_multimesh
         )
 
-        self.m2m_graph = _graph.create_m2m_graph().to(device=DM.device())
-        self.g2m_graph = _graph.create_g2m_graph().to(device=DM.device())
-        self.m2g_graph = _graph.create_m2g_graph().to(device=DM.device())
+        self.m2m_graph = _graph.create_m2m_graph().to(device=self.device)
+        self.g2m_graph = _graph.create_g2m_graph().to(device=self.device)
+        self.m2g_graph = _graph.create_m2g_graph().to(device=self.device)
 
-        self.m2m_graph.ndata['spatial_info'] = self.m2m_graph.ndata['spatial_info'].to(dtype=self.dtype(), device=DM.device())
-        self.g2m_graph.edata["displacement_info"] = self.g2m_graph.edata["displacement_info"].to(dtype=self.dtype(), device=DM.device())
-        self.m2m_graph.edata['displacement_info'] = self.m2m_graph.edata['displacement_info'].to(dtype=self.dtype(), device=DM.device())
-        self.m2g_graph.edata["displacement_info"] = self.m2g_graph.edata["displacement_info"].to(dtype=self.dtype(), device=DM.device())
+        self.m2m_graph.ndata['spatial_info'] = self.m2m_graph.ndata['spatial_info'].to(dtype=self.dtype(), device=self.device)
+        self.g2m_graph.edata["displacement_info"] = self.g2m_graph.edata["displacement_info"].to(dtype=self.dtype(), device=self.device)
+        self.m2m_graph.edata['displacement_info'] = self.m2m_graph.edata['displacement_info'].to(dtype=self.dtype(), device=self.device)
+        self.m2g_graph.edata["displacement_info"] = self.m2g_graph.edata["displacement_info"].to(dtype=self.dtype(), device=self.device)
 
     def _build_model(self):
         _hidden_dim = self.cfg.model.hidden_dim

@@ -8,7 +8,7 @@ import time
 import hydra
 from omegaconf import DictConfig
 
-from modulus.utils.logging import Logger, initialize_wandb 
+from modulus.utils.logging import Logger, initialize_wandb, flatten_omegaconf
 from modulus.utils.distributed_manager import DistributedManager as DM
 from modulus.utils.caching import Cache
 from modulus.utils.timer import Timer
@@ -23,6 +23,14 @@ def main(cfg: DictConfig) -> None:
     # initialize logging
     logger = Logger("main")
     logger.info(f"Rank: {DM.rank()}, Device: {DM.device()}", all=True)
+    
+    # log the configuration
+    logger.info("=====================================")
+    logger.info("Configuration")
+    for key, value in flatten_omegaconf(cfg):
+        logger.info(f"{key}: {value}")
+    logger.info("=====================================")
+
     if DM.is_rank_zero():
         initialize_wandb(
             mode=cfg.wb.mode,

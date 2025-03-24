@@ -81,7 +81,7 @@ class GraphCastTrainer:
         torch.backends.cudnn.benchmark = False
 
     def instantiate_model(self):
-        model = GraphCastNet(cfg=self.cfg)
+        model = GraphCastNet(cfg=self.cfg, device=DM.device())
 
         parameters_count = sum(p.numel() for p in model.parameters() if p.requires_grad)
         self.logger.info(f"Model created. Trainable parameters count is {parameters_count:,}".replace(",", "'"))
@@ -160,7 +160,12 @@ class GraphCastTrainer:
             seed=self.cfg.datapipe.seed + num_output_steps,
             iterator=iterator,
             prefetch_queue_depth=prefetch_queue_depth,
-            num_threads=num_threads
+            num_threads=num_threads,
+            
+            shuffle=True,
+            device=DM.device(),
+            rank=DM.rank(),
+            world_size=DM.world_size()
         )
 
         self.logger.success(f"Loaded {type} datapipe of size {len(datapipe):,} samples".replace(",", "'"))
@@ -246,7 +251,7 @@ class GraphCastTrainer:
                 "training_time_dataloader": timers["dataloader"].elapsed,
                 "training_time_model": timers["model"].elapsed,
             }
-            self.logger.log(f"Iteration {self.current_iteration:5d} | Train loss: {metric:2.2f} | Time taken: {timers['dataloader'].elapsed:5.2f}/{timers['model'].elapsed:5.2f}/{timers['training'].elapsed:5.2f} sec | GPU memory: {gb:4.1f} GB | Global sample ID: {global_sample_id}")
+            self.logger.log(f"Iteration {self.current_iteration:5d} | Train loss: {metric:6.4f} | Time taken: {timers['dataloader'].elapsed:5.2f}/{timers['model'].elapsed:5.2f}/{timers['training'].elapsed:5.2f} sec | GPU memory: {gb:4.1f} GB | Global sample ID: {global_sample_id}")
         else:
             payload = {
                 "testing_mse": metric,
@@ -254,7 +259,7 @@ class GraphCastTrainer:
                 "testing_time_dataloader": timers["dataloader"].elapsed,
                 "testing_time_model": timers["model"].elapsed,
             }
-            self.logger.info(f"Iteration {self.current_iteration:5d} | Test MSE: {metric:6.2f} | Time taken: {timers['dataloader'].elapsed:5.2f}/{timers['model'].elapsed:5.2f}/{timers['testing'].elapsed:5.2f} sec | GPU memory: {gb:4.1f} GB | Global sample ID: {global_sample_id}")
+            self.logger.info(f"Iteration {self.current_iteration:5d} | Test MSE: {metric:8.4f} | Time taken: {timers['dataloader'].elapsed:5.2f}/{timers['model'].elapsed:5.2f}/{timers['testing'].elapsed:5.2f} sec | GPU memory: {gb:4.1f} GB | Global sample ID: {global_sample_id}")
 
         wandb.log(data=payload, step=self.current_iteration)           
 

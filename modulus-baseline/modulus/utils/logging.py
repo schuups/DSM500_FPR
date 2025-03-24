@@ -9,6 +9,8 @@ import logging
 import os
 from termcolor import colored
 
+from omegaconf import OmegaConf
+
 import wandb
 
 from modulus.utils.distributed_manager import DistributedManager as DM
@@ -82,3 +84,13 @@ class Logger:
     def error(self, message: str, all=False):
         if self.rank == 0 or all:
             self.logger.error(colored(message, "light_red"))
+
+def flatten_omegaconf(cfg, prefix=''):
+    if OmegaConf.is_config(cfg):
+        cfg = OmegaConf.to_container(cfg)
+    for k, v in cfg.items():
+        full_key = f"{prefix}.{k}" if prefix else k
+        if isinstance(v, dict) or OmegaConf.is_config(v):
+            yield from flatten_omegaconf(v, full_key)
+        else:
+            yield full_key, v
