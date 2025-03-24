@@ -1,0 +1,79 @@
+hydra:
+  job:
+    chdir: false
+    name: Inference
+  run:
+    dir: ./outputs/${hydra:job.name}
+  
+# -------------------------------------
+
+seed: 42
+
+models:
+
+- name: gc-baseline-run01
+  type: gc-baseline
+  code_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline
+  config_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/conf/config.yaml
+  weights:
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN01/SEED21/checkpoint/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN01/SEED42/checkpoint/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN01/SEED84/checkpoint/model.iter003750.pth
+
+- name: gc-baseline-run02
+  type: gc-baseline
+  code_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline
+  config_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/conf/config_tuned_config.yaml
+  weights:
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN02/SEED21/checkpoint/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN02/SEED42/checkpoint/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN02/SEED84/checkpoint/model.iter003750.pth
+
+- name: fourcastnet
+  type: fcn
+  code_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/fourcastnet-92260c1
+  config_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/fourcastnet-92260c1/config/AFNO.yaml
+  weights:
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/fourcastnet-92260c1/checkpoints/iter3750.pth
+
+data:
+  metadata: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/metadata.yaml
+  file_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/out_of_sample/2018.h5
+  initial_conditions_idx: [0, 55, 110, 165, 220, 275, 330, 385, 440, 495, 550, 605, 660, 715, 770, 825, 880, 935, 990, 1045, 1100, 1155, 1210, 1265, 1320, 1375, 1430]
+
+metrics:
+  slices:
+    variables:
+    - name: all
+    - name: z_500
+    - name: t_850
+    - name: t2m
+    - name: msl
+    - name: 10u
+    - name: 10v
+    - name: u_850
+    - name: v_850
+
+    regions:
+    - name: global
+    - name: n.hem
+      latitude_range: [20, 90]
+    - name: tropics
+      latitude_range: [-20, 20]
+    - name: s.hem
+      latitude_range: [-90, -20]
+    - name: europe
+      latitude_range: [35, 70]
+      longitude_range: [-12.5, 42.5]
+    - name: n.amer
+      latitude_range: [25, 60]
+      longitude_range: [-120, -75]
+    - name: e.asia
+      latitude_range: [25, 60]
+      longitude_range: [102.5, 150]
+    - name: austnz
+      latitude_range: [-45, -12.5]
+      longitude_range: [120, 175]
+
+inference:
+  rollout_steps: 28
