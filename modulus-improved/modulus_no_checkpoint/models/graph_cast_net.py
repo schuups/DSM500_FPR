@@ -27,7 +27,6 @@ class GraphCastNet(nn.Module):
 
         self.cfg = cfg
         self.device = device
-        self.checkpoint_enabled = False
 
         self._build_coordinates_data()
         self._build_channels_metadata()
@@ -234,22 +233,12 @@ class GraphCastNet(nn.Module):
         
         return output
 
-    def update_checkpointing_config(self, rollout_steps):
-        if rollout_steps == 2:
-            MeshGraphMLP.do_checkpoint = True
-            MeshGraphEdgeMLPSum.do_checkpoint = True
-        elif rollout_steps >= 3:
-            self.checkpoint_enabled = True
-
     def checkpoint_filter(self, partial_function):
-        if self.checkpoint_enabled:
-            return checkpoint(
-                partial_function,
-                use_reentrant=False,
-                preserve_rng_state=False
-            )
-        else:
-            return partial_function()
+        return checkpoint(
+            partial_function,
+            use_reentrant=False,
+            preserve_rng_state=False
+        )
 
     def _prepare_input(self, grid_input):
         """

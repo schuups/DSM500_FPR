@@ -294,7 +294,7 @@ class GraphCastNet(Module):
         )
         self.partition_group_name = partition_group_name
 
-        # create the lat_lon_grid
+        # create the lat_lon_grid for the cos_zenith computation
         self.latitudes = torch.linspace(-90, 90, steps=input_res[0])
         self.longitudes = torch.linspace(-180, 180, steps=input_res[1] + 1)[1:]
         self.lat_lon_grid = torch.stack(

@@ -26,7 +26,6 @@ class MeshGraphMLP(nn.Module):
         final_layer_norm: bool,
     ):
         super().__init__()
-        MeshGraphMLP.do_checkpoint = False
 
         additional_hidden_layers = hidden_layers - 1
 
@@ -47,15 +46,12 @@ class MeshGraphMLP(nn.Module):
         self.model = nn.Sequential(*layers)
 
     def forward(self, x):
-        if MeshGraphMLP.do_checkpoint:
-            return checkpoint(
-                self.model,
-                x,
-                use_reentrant=False,
-                preserve_rng_state=False
-            )
-        else:
-            return self.model(x)
+        return checkpoint(
+            self.model,
+            x,
+            use_reentrant=False,
+            preserve_rng_state=False
+        )
 
 class MeshGraphEdgeMLPSum(nn.Module):
     """
@@ -81,7 +77,6 @@ class MeshGraphEdgeMLPSum(nn.Module):
         final_layer_norm: bool
     ):
         super().__init__()
-        MeshGraphEdgeMLPSum.do_checkpoint = False
 
         self.edges_input_dim = edges_input_dim
         self.src_nodes_input_dim = src_nodes_input_dim
@@ -144,13 +139,9 @@ class MeshGraphEdgeMLPSum(nn.Module):
             graph=graph
         )
 
-        if MeshGraphEdgeMLPSum.do_checkpoint:
-            return checkpoint(
-                self.model,
-                mlp_sum,
-                use_reentrant=False,
-                preserve_rng_state=False
-            )
-        else:
-            return self.model(mlp_sum)
-
+        return checkpoint(
+            self.model,
+            mlp_sum,
+            use_reentrant=False,
+            preserve_rng_state=False
+        )        

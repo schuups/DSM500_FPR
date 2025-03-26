@@ -1,0 +1,136 @@
+[2025-03-24 03:56:21,168][main][INFO] - [94mRank: 1, Device: cuda:1[0m
+[2025-03-24 03:56:21,168][main][INFO] - [94mRank: 2, Device: cuda:2[0m
+[2025-03-24 03:56:21,168][main][INFO] - [94mRank: 3, Device: cuda:3[0m
+[2025-03-24 03:56:21,172][main][INFO] - [94mRank: 0, Device: cuda:0[0m
+[2025-03-24 03:56:21,172][main][INFO] - [94m=====================================[0m
+[2025-03-24 03:56:21,172][main][INFO] - [94mConfiguration[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.data.include_sst_channel: False[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.data.fix_sst_data: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.data.fix_data_centering: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.data.fix_temporal_info: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.data.fix_december_gap: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.model.include_static_data: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.model.include_spatial_info: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.model.include_solar_radiation: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.model.include_temporal_info: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.graph.use_multimesh: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.graph.use_four_dim_spatial_location: False[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.loss.fix_inverse_variance_data: True[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mtoggles.loss.use_original_variable_weights: False[0m
+[2025-03-24 03:56:21,173][main][INFO] - [94mdataset.base_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdataset.samples_per_file: 1460[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdataset.sample.height: 721[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdataset.sample.width: 1440[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdataset.sample.channels: 21[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdatapipe.prefetch_queue_depth: 1[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdatapipe.num_threads: 2[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mdatapipe.seed: 21[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.dtype: bfloat16[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.activation_fn: silu[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.hidden_dim: 512[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.hidden_layers: 1[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.aggregation_op: sum[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.processor_layers: 16[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.graph.mesh_level: 6[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.ddp.broadcast_buffers: False[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.ddp.find_unused_parameters: False[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.ddp.gradient_as_bucket_view: True[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mmodel.ddp.static_graph: True[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase1.iterations: 500[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase1.lr_start: 0.01[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase1.lr_end: 1.0[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase2.iterations: 2000[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase2.lr_objective: 0.005[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase3.iterations: 3000[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase3.rollout_steps_increments: 1[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mschedule.phase3.lr: 0.3[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mtesting.frequency: 50[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mtesting.rollout_steps: 8[0m
+[2025-03-24 03:56:21,174][main][INFO] - [94mtesting.samples_per_rank: 1[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mwb.mode: online[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mwb.entity: schups[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mwb.watch_model: False[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mwb.experiment_label: RUN_03[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcheckpoint.enabled: True[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcheckpoint.frequency: 250[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcheckpoint.folder: checkpoints7[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcheckpoint.names: model[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcache.enabled: True[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcache.verbose: True[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94mcache.dir: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache[0m
+[2025-03-24 03:56:21,175][main][INFO] - [94m=====================================[0m
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: schups to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.8
+wandb: Run data is saved locally in /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/wandb/wandb/run-20250324_035621-pamdup86
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Baseline_65373_25/03/24_03:56:21_RUN_03
+wandb: ⭐️ View project at https://wandb.ai/schups/DSM500_FPR
+wandb: 🚀 View run at https://wandb.ai/schups/DSM500_FPR/runs/pamdup86
+[2025-03-24 03:56:22,584][trainer][INFO] - [94mSetting seed to 21[0m
+[2025-03-24 03:56:22,628][cache][INFO] - [94mLoading cache for 'meshes'.[0m
+[2025-03-24 03:56:22,628][cache][INFO] - [94mChecking if 'meshes' is cached.[0m
+[2025-03-24 03:56:22,628][cache][INFO] - [94m-> HIT! '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache/icosahedron_meshes.pickled' exists.[0m
+[2025-03-24 03:56:22,630][cache][INFO] - [94m-> Checking guard 'MeshesCacheGuard'.[0m
+[2025-03-24 03:56:26,460][trainer][INFO] - [94mModel created. Trainable parameters count is 35'247'124[0m
+Configuration mismatch between checkpoint and current run
+- Current run configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 1, 'lr': 0.3}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+- Checkpoint configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 3, 'lr': 0.5}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 44, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 49, in __init__
+    ) = self.load_checkpoint(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 410, in load_checkpoint
+    raise ValueError("Configuration mismatch between checkpoint and current run")
+ValueError: Configuration mismatch between checkpoint and current run
+Configuration mismatch between checkpoint and current run
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+- Current run configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 1, 'lr': 0.3}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+- Checkpoint configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 3, 'lr': 0.5}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 44, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 49, in __init__
+    ) = self.load_checkpoint(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 410, in load_checkpoint
+    raise ValueError("Configuration mismatch between checkpoint and current run")
+ValueError: Configuration mismatch between checkpoint and current run
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Configuration mismatch between checkpoint and current run
+- Current run configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 1, 'lr': 0.3}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+- Checkpoint configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 3, 'lr': 0.5}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 44, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 49, in __init__
+    ) = self.load_checkpoint(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 410, in load_checkpoint
+    raise ValueError("Configuration mismatch between checkpoint and current run")
+ValueError: Configuration mismatch between checkpoint and current run
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+Configuration mismatch between checkpoint and current run
+- Current run configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 1, 'lr': 0.3}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+- Checkpoint configuration:  {'toggles': {'data': {'include_sst_channel': False, 'fix_sst_data': True, 'fix_data_centering': True, 'fix_temporal_info': True, 'fix_december_gap': True}, 'model': {'include_static_data': True, 'include_spatial_info': True, 'include_solar_radiation': True, 'include_temporal_info': True}, 'graph': {'use_multimesh': True, 'use_four_dim_spatial_location': False}, 'loss': {'fix_inverse_variance_data': True, 'use_original_variable_weights': False}}, 'dataset': {'base_path': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0', 'samples_per_file': 1460, 'sample': {'height': 721, 'width': 1440, 'channels': 21}}, 'datapipe': {'prefetch_queue_depth': 1, 'num_threads': 2, 'seed': 21}, 'model': {'dtype': 'bfloat16', 'activation_fn': 'silu', 'hidden_dim': 512, 'hidden_layers': 1, 'aggregation_op': 'sum', 'processor_layers': 16, 'graph': {'mesh_level': 6}, 'ddp': {'broadcast_buffers': False, 'find_unused_parameters': False, 'gradient_as_bucket_view': True, 'static_graph': True}}, 'schedule': {'phase1': {'iterations': 500, 'lr_start': 0.01, 'lr_end': 1.0}, 'phase2': {'iterations': 2000, 'lr_objective': 0.005}, 'phase3': {'iterations': 3000, 'rollout_steps_increments': 3, 'lr': 0.5}}, 'testing': {'frequency': 50, 'rollout_steps': 8, 'samples_per_rank': 1}, 'wb': {'mode': 'online', 'entity': 'schups', 'watch_model': False, 'experiment_label': 'RUN_03'}, 'checkpoint': {'enabled': True, 'frequency': 250, 'folder': 'checkpoints7', 'names': 'model'}, 'cache': {'enabled': True, 'verbose': True, 'dir': '/iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache'}}
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/train_graphcast.py", line 44, in main
+    trainer = GraphCastTrainer(cfg)
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 49, in __init__
+    ) = self.load_checkpoint(
+  File "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/modulus/utils/trainer.py", line 410, in load_checkpoint
+    raise ValueError("Configuration mismatch between checkpoint and current run")
+ValueError: Configuration mismatch between checkpoint and current run
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+srun: error: nid005764: tasks 1-3: Exited with exit code 1
+srun: Terminating StepId=65373.0
+slurmstepd: error: *** STEP 65373.0 ON nid005764 CANCELLED AT 2025-03-24T03:56:33 ***
+srun: error: nid005764: task 0: Terminated
+srun: Force Terminated StepId=65373.0

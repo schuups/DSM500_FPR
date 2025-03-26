@@ -43,6 +43,14 @@ class ActivityBase:
 
         self.channel_name_to_index_map = None
         self.device = None
+    
+    def __str__(self):
+        return f"""
+        Activity ID:       {self.id}
+        Model name:        {self.model_name}
+        Model type:        {self.model_type}
+        Model weights:     {self.weights_file_path.replace('/iopsstor/scratch/cscs/stefschu/DSM500_FPR', './DSM500_FPR')}
+        Initial condition: {self.dataset_initial_condition_i}"""
 
     def set_device(self, device):
         self.device = device

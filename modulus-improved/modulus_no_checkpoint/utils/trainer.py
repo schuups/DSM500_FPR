@@ -52,8 +52,6 @@ class GraphCastTrainer:
             scheduler=self.scheduler
         )
 
-        self.model.module.update_checkpointing_config(rollout_steps=self.current_rollout_steps)
-
         # Initialize datapipes
         self.datapipe_training = self.instantiate_datapipe(
             type="train",
@@ -279,8 +277,6 @@ class GraphCastTrainer:
                 "initial_sample_idx": 0
             }
         )
-
-        self.model.module.update_checkpointing_config(rollout_steps=self.current_rollout_steps)
     
     @property
     def current_iteration(self):
