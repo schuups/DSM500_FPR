@@ -62,7 +62,7 @@ class ActivityBase:
         self.metadata = metadata
         self.channel_name_to_index_map = {v["key"]: k for k, v in enumerate(metadata)}
 
-    def _get_model_for_gc_baseline(self):
+    def _get_model_for_gc(self):
         assert self.device is not None, "Device not set yet."
 
         # Import modulus-baseline code
@@ -130,7 +130,7 @@ class ActivityBase:
 
         return model
 
-    def _get_sample_for_gc_baseline(self):
+    def _get_sample_for_gc(self):
         assert self.device is not None, "Device not set yet."
         assert self.model is not None, "Model not loaded yet."
 
@@ -193,7 +193,7 @@ class ActivityBase:
 
         valid_data_loader, valid_dataset = get_data_loader(params, params.valid_data_path, False, train=False)
         means = np.load(params.global_means_path)[:, params['in_channels']]
-        stds = np.load(params.global_means_path)[:, params['in_channels']]
+        stds = np.load(params.global_stds_path)[:, params['in_channels']]
 
         sample = torch.empty((self.inference_rollout_steps + 1, 20, 720, 1440))
         for i in range(self.inference_rollout_steps + 1):
@@ -207,7 +207,7 @@ class ActivityBase:
 
         return sample, means, stds
 
-    def _run_inference_for_gc_baseline(self):
+    def _run_inference_for_gc(self):
         assert self.device is not None, "Device not set yet."
         assert self.model is not None, "Model not loaded yet."
         assert self.sample is not None, "Sample not loaded yet."

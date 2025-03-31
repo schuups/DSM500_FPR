@@ -1,0 +1,348 @@
+[92m[2025-03-29 00:19:55,273][Rank 0/8][INFO] Initialized 189 total activities, 24 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,274][Rank 0/8][INFO] Activity 0 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,274][Rank 0/8][INFO] Activity 8 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,275][Rank 0/8][INFO] Activity 16 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,276][Rank 0/8][INFO] Activity 24 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,276][Rank 0/8][INFO] Activity 32 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,277][Rank 0/8][INFO] Activity 40 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,277][Rank 0/8][INFO] Processing activity 48 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,280][Rank 1/8][INFO] Initialized 189 total activities, 24 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,281][Rank 1/8][INFO] Activity 1 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,282][Rank 1/8][INFO] Activity 9 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,283][Rank 1/8][INFO] Activity 17 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,284][Rank 1/8][INFO] Activity 25 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,284][Rank 2/8][INFO] Initialized 189 total activities, 24 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,284][Rank 1/8][INFO] Activity 33 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,284][Rank 3/8][INFO] Initialized 189 total activities, 24 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,285][Rank 1/8][INFO] Activity 41 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,285][Rank 2/8][INFO] Activity 2 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,285][Rank 1/8][INFO] Processing activity 49 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,285][Rank 3/8][INFO] Activity 3 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,286][Rank 2/8][INFO] Activity 10 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,286][Rank 3/8][INFO] Activity 11 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,287][Rank 2/8][INFO] Activity 18 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,287][Rank 3/8][INFO] Activity 19 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,287][Rank 2/8][INFO] Activity 26 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,288][Rank 3/8][INFO] Activity 27 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,288][Rank 2/8][INFO] Activity 34 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,289][Rank 3/8][INFO] Activity 35 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,289][Rank 2/8][INFO] Activity 42 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,289][Rank 2/8][INFO] Processing activity 50 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,289][Rank 3/8][INFO] Activity 43 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,289][Rank 3/8][INFO] Processing activity 51 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,852][Rank 7/8][INFO] Initialized 189 total activities, 23 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,853][Rank 7/8][INFO] Activity 7 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,854][Rank 7/8][INFO] Activity 15 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,855][Rank 6/8][INFO] Initialized 189 total activities, 23 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,855][Rank 7/8][INFO] Activity 23 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,856][Rank 6/8][INFO] Activity 6 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,856][Rank 7/8][INFO] Activity 31 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,856][Rank 6/8][INFO] Activity 14 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,857][Rank 7/8][INFO] Activity 39 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,857][Rank 6/8][INFO] Activity 22 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,857][Rank 7/8][INFO] Activity 47 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,858][Rank 7/8][INFO] Processing activity 55 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,858][Rank 6/8][INFO] Activity 30 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,858][Rank 5/8][INFO] Initialized 189 total activities, 23 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,859][Rank 4/8][INFO] Initialized 189 total activities, 24 assigned to this rank[0m
+[92m[2025-03-29 00:19:55,859][Rank 6/8][INFO] Activity 38 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,859][Rank 5/8][INFO] Activity 5 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,859][Rank 4/8][INFO] Activity 4 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,860][Rank 6/8][INFO] Activity 46 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,860][Rank 6/8][INFO] Processing activity 54 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,860][Rank 5/8][INFO] Activity 13 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,860][Rank 4/8][INFO] Activity 12 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,861][Rank 5/8][INFO] Activity 21 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,861][Rank 4/8][INFO] Activity 20 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,862][Rank 4/8][INFO] Activity 28 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,862][Rank 5/8][INFO] Activity 29 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,862][Rank 4/8][INFO] Activity 36 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,863][Rank 5/8][INFO] Activity 37 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,863][Rank 4/8][INFO] Activity 44 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,863][Rank 4/8][INFO] Processing activity 52 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:19:55,863][Rank 5/8][INFO] Activity 45 already computed, skipping[0m
+[92m[2025-03-29 00:19:55,863][Rank 5/8][INFO] Processing activity 53 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:20:53,966][Rank 7/8][INFO] Activity 55 completed (Local progress: 30.43%)[0m
+[92m[2025-03-29 00:20:54,000][Rank 7/8][INFO] Processing activity 63 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:20:54,429][Rank 2/8][INFO] Activity 50 completed (Local progress: 29.17%)[0m
+[92m[2025-03-29 00:20:54,479][Rank 2/8][INFO] Processing activity 58 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:20:55,051][Rank 5/8][INFO] Activity 53 completed (Local progress: 30.43%)[0m
+[92m[2025-03-29 00:20:55,077][Rank 5/8][INFO] Processing activity 61 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:20:55,836][Rank 3/8][INFO] Activity 51 completed (Local progress: 29.17%)[0m
+[92m[2025-03-29 00:20:55,868][Rank 3/8][INFO] Processing activity 59 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:20:55,927][Rank 1/8][INFO] Activity 49 completed (Local progress: 29.17%)[0m
+[92m[2025-03-29 00:20:55,961][Rank 1/8][INFO] Processing activity 57 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:03,274][Rank 0/8][INFO] Activity 48 completed (Local progress: 29.17%)[0m
+[92m[2025-03-29 00:21:03,299][Rank 0/8][INFO] Processing activity 56 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:04,621][Rank 6/8][INFO] Activity 54 completed (Local progress: 30.43%)[0m
+[92m[2025-03-29 00:21:04,647][Rank 6/8][INFO] Processing activity 62 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:05,005][Rank 4/8][INFO] Activity 52 completed (Local progress: 29.17%)[0m
+[92m[2025-03-29 00:21:05,031][Rank 4/8][INFO] Processing activity 60 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:24,941][Rank 7/8][INFO] Activity 63 completed (Local progress: 34.78%)[0m
+[92m[2025-03-29 00:21:24,980][Rank 7/8][INFO] Processing activity 71 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:25,367][Rank 2/8][INFO] Activity 58 completed (Local progress: 33.33%)[0m
+[92m[2025-03-29 00:21:25,408][Rank 2/8][INFO] Processing activity 66 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:25,903][Rank 5/8][INFO] Activity 61 completed (Local progress: 34.78%)[0m
+[92m[2025-03-29 00:21:25,934][Rank 5/8][INFO] Processing activity 69 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:28,240][Rank 1/8][INFO] Activity 57 completed (Local progress: 33.33%)[0m
+[92m[2025-03-29 00:21:28,272][Rank 1/8][INFO] Processing activity 65 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:28,353][Rank 3/8][INFO] Activity 59 completed (Local progress: 33.33%)[0m
+[92m[2025-03-29 00:21:28,389][Rank 3/8][INFO] Processing activity 67 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:35,497][Rank 0/8][INFO] Activity 56 completed (Local progress: 33.33%)[0m
+[92m[2025-03-29 00:21:35,524][Rank 0/8][INFO] Processing activity 64 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:36,985][Rank 4/8][INFO] Activity 60 completed (Local progress: 33.33%)[0m
+[92m[2025-03-29 00:21:37,013][Rank 4/8][INFO] Processing activity 68 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:37,727][Rank 6/8][INFO] Activity 62 completed (Local progress: 34.78%)[0m
+[92m[2025-03-29 00:21:37,754][Rank 6/8][INFO] Processing activity 70 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:21:56,115][Rank 7/8][INFO] Activity 71 completed (Local progress: 39.13%)[0m
+[92m[2025-03-29 00:21:56,147][Rank 7/8][INFO] Processing activity 79 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:00,078][Rank 2/8][INFO] Activity 66 completed (Local progress: 37.50%)[0m
+[92m[2025-03-29 00:22:00,114][Rank 2/8][INFO] Processing activity 74 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:00,303][Rank 1/8][INFO] Activity 65 completed (Local progress: 37.50%)[0m
+[92m[2025-03-29 00:22:00,341][Rank 1/8][INFO] Processing activity 73 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:00,649][Rank 5/8][INFO] Activity 69 completed (Local progress: 39.13%)[0m
+[92m[2025-03-29 00:22:00,679][Rank 5/8][INFO] Processing activity 77 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:00,955][Rank 3/8][INFO] Activity 67 completed (Local progress: 37.50%)[0m
+[92m[2025-03-29 00:22:00,989][Rank 3/8][INFO] Processing activity 75 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:08,972][Rank 4/8][INFO] Activity 68 completed (Local progress: 37.50%)[0m
+[92m[2025-03-29 00:22:09,005][Rank 4/8][INFO] Processing activity 76 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:10,191][Rank 0/8][INFO] Activity 64 completed (Local progress: 37.50%)[0m
+[92m[2025-03-29 00:22:10,219][Rank 0/8][INFO] Processing activity 72 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:13,427][Rank 6/8][INFO] Activity 70 completed (Local progress: 39.13%)[0m
+[92m[2025-03-29 00:22:13,457][Rank 6/8][INFO] Processing activity 78 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:23,965][Rank 7/8][INFO] Activity 79 completed (Local progress: 43.48%)[0m
+[92m[2025-03-29 00:22:23,995][Rank 7/8][INFO] Processing activity 87 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:30,284][Rank 3/8][INFO] Activity 75 completed (Local progress: 41.67%)[0m
+[92m[2025-03-29 00:22:30,317][Rank 3/8][INFO] Processing activity 83 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:30,336][Rank 1/8][INFO] Activity 73 completed (Local progress: 41.67%)[0m
+[92m[2025-03-29 00:22:30,369][Rank 1/8][INFO] Processing activity 81 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:32,807][Rank 5/8][INFO] Activity 77 completed (Local progress: 43.48%)[0m
+[92m[2025-03-29 00:22:32,839][Rank 5/8][INFO] Processing activity 85 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:33,785][Rank 2/8][INFO] Activity 74 completed (Local progress: 41.67%)[0m
+[92m[2025-03-29 00:22:33,816][Rank 2/8][INFO] Processing activity 82 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:38,059][Rank 4/8][INFO] Activity 76 completed (Local progress: 41.67%)[0m
+[92m[2025-03-29 00:22:38,090][Rank 4/8][INFO] Processing activity 84 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:42,944][Rank 0/8][INFO] Activity 72 completed (Local progress: 41.67%)[0m
+[92m[2025-03-29 00:22:42,972][Rank 0/8][INFO] Processing activity 80 (gc-baseline-run01) ...[0m
+[92m[2025-03-29 00:22:46,126][Rank 6/8][INFO] Activity 78 completed (Local progress: 43.48%)[0m
+[92m[2025-03-29 00:22:46,152][Rank 6/8][INFO] Processing activity 86 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:22:55,829][Rank 7/8][INFO] Activity 87 completed (Local progress: 47.83%)[0m
+[92m[2025-03-29 00:22:55,855][Rank 7/8][INFO] Processing activity 95 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:00,643][Rank 1/8][INFO] Activity 81 completed (Local progress: 45.83%)[0m
+[92m[2025-03-29 00:23:00,687][Rank 1/8][INFO] Processing activity 89 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:01,674][Rank 3/8][INFO] Activity 83 completed (Local progress: 45.83%)[0m
+[92m[2025-03-29 00:23:01,707][Rank 3/8][INFO] Processing activity 91 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:03,305][Rank 5/8][INFO] Activity 85 completed (Local progress: 47.83%)[0m
+[92m[2025-03-29 00:23:03,333][Rank 5/8][INFO] Processing activity 93 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:07,160][Rank 2/8][INFO] Activity 82 completed (Local progress: 45.83%)[0m
+[92m[2025-03-29 00:23:07,189][Rank 2/8][INFO] Processing activity 90 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:07,222][Rank 4/8][INFO] Activity 84 completed (Local progress: 45.83%)[0m
+[92m[2025-03-29 00:23:07,248][Rank 4/8][INFO] Processing activity 92 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:14,561][Rank 0/8][INFO] Activity 80 completed (Local progress: 45.83%)[0m
+[92m[2025-03-29 00:23:14,589][Rank 0/8][INFO] Processing activity 88 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:18,428][Rank 6/8][INFO] Activity 86 completed (Local progress: 47.83%)[0m
+[92m[2025-03-29 00:23:18,454][Rank 6/8][INFO] Processing activity 94 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:30,039][Rank 7/8][INFO] Activity 95 completed (Local progress: 52.17%)[0m
+[92m[2025-03-29 00:23:30,065][Rank 7/8][INFO] Processing activity 103 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:31,845][Rank 3/8][INFO] Activity 91 completed (Local progress: 50.00%)[0m
+[92m[2025-03-29 00:23:31,867][Rank 3/8][INFO] Processing activity 99 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:36,583][Rank 1/8][INFO] Activity 89 completed (Local progress: 50.00%)[0m
+[92m[2025-03-29 00:23:36,606][Rank 1/8][INFO] Processing activity 97 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:37,765][Rank 5/8][INFO] Activity 93 completed (Local progress: 52.17%)[0m
+[92m[2025-03-29 00:23:37,791][Rank 5/8][INFO] Processing activity 101 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:41,662][Rank 2/8][INFO] Activity 90 completed (Local progress: 50.00%)[0m
+[92m[2025-03-29 00:23:41,683][Rank 2/8][INFO] Processing activity 98 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:42,427][Rank 4/8][INFO] Activity 92 completed (Local progress: 50.00%)[0m
+[92m[2025-03-29 00:23:42,449][Rank 4/8][INFO] Processing activity 100 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:47,027][Rank 0/8][INFO] Activity 88 completed (Local progress: 50.00%)[0m
+[92m[2025-03-29 00:23:47,052][Rank 0/8][INFO] Processing activity 96 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:23:53,246][Rank 6/8][INFO] Activity 94 completed (Local progress: 52.17%)[0m
+[92m[2025-03-29 00:23:53,268][Rank 6/8][INFO] Processing activity 102 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:01,411][Rank 3/8][INFO] Activity 99 completed (Local progress: 54.17%)[0m
+[92m[2025-03-29 00:24:01,437][Rank 3/8][INFO] Processing activity 107 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:03,310][Rank 7/8][INFO] Activity 103 completed (Local progress: 56.52%)[0m
+[92m[2025-03-29 00:24:03,344][Rank 7/8][INFO] Processing activity 111 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:11,221][Rank 1/8][INFO] Activity 97 completed (Local progress: 54.17%)[0m
+[92m[2025-03-29 00:24:11,251][Rank 1/8][INFO] Processing activity 105 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:11,359][Rank 5/8][INFO] Activity 101 completed (Local progress: 56.52%)[0m
+[92m[2025-03-29 00:24:11,384][Rank 5/8][INFO] Processing activity 109 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:16,136][Rank 4/8][INFO] Activity 100 completed (Local progress: 54.17%)[0m
+[92m[2025-03-29 00:24:16,162][Rank 4/8][INFO] Processing activity 108 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:16,337][Rank 2/8][INFO] Activity 98 completed (Local progress: 54.17%)[0m
+[92m[2025-03-29 00:24:16,366][Rank 2/8][INFO] Processing activity 106 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:20,848][Rank 0/8][INFO] Activity 96 completed (Local progress: 54.17%)[0m
+[92m[2025-03-29 00:24:20,875][Rank 0/8][INFO] Processing activity 104 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:26,301][Rank 6/8][INFO] Activity 102 completed (Local progress: 56.52%)[0m
+[92m[2025-03-29 00:24:26,333][Rank 6/8][INFO] Processing activity 110 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:30,886][Rank 3/8][INFO] Activity 107 completed (Local progress: 58.33%)[0m
+[92m[2025-03-29 00:24:30,907][Rank 3/8][INFO] Processing activity 115 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:36,000][Rank 7/8][INFO] Activity 111 completed (Local progress: 60.87%)[0m
+[92m[2025-03-29 00:24:36,028][Rank 7/8][INFO] Processing activity 119 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:39,687][Rank 1/8][INFO] Activity 105 completed (Local progress: 58.33%)[0m
+[92m[2025-03-29 00:24:39,713][Rank 1/8][INFO] Processing activity 113 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:39,876][Rank 5/8][INFO] Activity 109 completed (Local progress: 60.87%)[0m
+[92m[2025-03-29 00:24:39,900][Rank 5/8][INFO] Processing activity 117 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:44,953][Rank 4/8][INFO] Activity 108 completed (Local progress: 58.33%)[0m
+[92m[2025-03-29 00:24:44,975][Rank 4/8][INFO] Processing activity 116 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:48,601][Rank 2/8][INFO] Activity 106 completed (Local progress: 58.33%)[0m
+[92m[2025-03-29 00:24:48,629][Rank 2/8][INFO] Processing activity 114 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:55,575][Rank 0/8][INFO] Activity 104 completed (Local progress: 58.33%)[0m
+[92m[2025-03-29 00:24:55,599][Rank 0/8][INFO] Processing activity 112 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:24:58,794][Rank 6/8][INFO] Activity 110 completed (Local progress: 60.87%)[0m
+[92m[2025-03-29 00:24:58,816][Rank 6/8][INFO] Processing activity 118 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:00,606][Rank 3/8][INFO] Activity 115 completed (Local progress: 62.50%)[0m
+[92m[2025-03-29 00:25:00,635][Rank 3/8][INFO] Processing activity 123 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:08,707][Rank 7/8][INFO] Activity 119 completed (Local progress: 65.22%)[0m
+[92m[2025-03-29 00:25:08,739][Rank 7/8][INFO] Processing activity 127 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:09,177][Rank 1/8][INFO] Activity 113 completed (Local progress: 62.50%)[0m
+[92m[2025-03-29 00:25:09,206][Rank 1/8][INFO] Processing activity 121 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:09,682][Rank 5/8][INFO] Activity 117 completed (Local progress: 65.22%)[0m
+[92m[2025-03-29 00:25:09,711][Rank 5/8][INFO] Processing activity 125 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:15,347][Rank 4/8][INFO] Activity 116 completed (Local progress: 62.50%)[0m
+[92m[2025-03-29 00:25:15,374][Rank 4/8][INFO] Processing activity 124 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:22,404][Rank 2/8][INFO] Activity 114 completed (Local progress: 62.50%)[0m
+[92m[2025-03-29 00:25:22,436][Rank 2/8][INFO] Processing activity 122 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:29,053][Rank 0/8][INFO] Activity 112 completed (Local progress: 62.50%)[0m
+[92m[2025-03-29 00:25:29,084][Rank 0/8][INFO] Processing activity 120 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:31,253][Rank 3/8][INFO] Activity 123 completed (Local progress: 66.67%)[0m
+[92m[2025-03-29 00:25:31,274][Rank 3/8][INFO] Processing activity 131 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:33,064][Rank 6/8][INFO] Activity 118 completed (Local progress: 65.22%)[0m
+[92m[2025-03-29 00:25:33,092][Rank 6/8][INFO] Processing activity 126 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:42,860][Rank 7/8][INFO] Activity 127 completed (Local progress: 69.57%)[0m
+[92m[2025-03-29 00:25:42,895][Rank 7/8][INFO] Processing activity 135 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:43,889][Rank 1/8][INFO] Activity 121 completed (Local progress: 66.67%)[0m
+[92m[2025-03-29 00:25:43,911][Rank 1/8][INFO] Processing activity 129 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:44,383][Rank 5/8][INFO] Activity 125 completed (Local progress: 69.57%)[0m
+[92m[2025-03-29 00:25:44,405][Rank 5/8][INFO] Processing activity 133 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:50,298][Rank 4/8][INFO] Activity 124 completed (Local progress: 66.67%)[0m
+[92m[2025-03-29 00:25:50,319][Rank 4/8][INFO] Processing activity 132 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:25:56,494][Rank 2/8][INFO] Activity 122 completed (Local progress: 66.67%)[0m
+[92m[2025-03-29 00:25:56,528][Rank 2/8][INFO] Processing activity 130 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:01,163][Rank 3/8][INFO] Activity 131 completed (Local progress: 70.83%)[0m
+[92m[2025-03-29 00:26:01,189][Rank 3/8][INFO] Processing activity 139 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:02,561][Rank 0/8][INFO] Activity 120 completed (Local progress: 66.67%)[0m
+[92m[2025-03-29 00:26:02,582][Rank 0/8][INFO] Processing activity 128 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:07,295][Rank 6/8][INFO] Activity 126 completed (Local progress: 69.57%)[0m
+[92m[2025-03-29 00:26:07,322][Rank 6/8][INFO] Processing activity 134 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:16,015][Rank 7/8][INFO] Activity 135 completed (Local progress: 73.91%)[0m
+[92m[2025-03-29 00:26:16,045][Rank 7/8][INFO] Processing activity 143 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:17,084][Rank 1/8][INFO] Activity 129 completed (Local progress: 70.83%)[0m
+[92m[2025-03-29 00:26:17,108][Rank 1/8][INFO] Processing activity 137 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:17,460][Rank 5/8][INFO] Activity 133 completed (Local progress: 73.91%)[0m
+[92m[2025-03-29 00:26:17,486][Rank 5/8][INFO] Processing activity 141 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:24,033][Rank 4/8][INFO] Activity 132 completed (Local progress: 70.83%)[0m
+[92m[2025-03-29 00:26:24,058][Rank 4/8][INFO] Processing activity 140 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:31,930][Rank 2/8][INFO] Activity 130 completed (Local progress: 70.83%)[0m
+[92m[2025-03-29 00:26:31,961][Rank 2/8][INFO] Processing activity 138 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:32,643][Rank 3/8][INFO] Activity 139 completed (Local progress: 75.00%)[0m
+[92m[2025-03-29 00:26:32,671][Rank 3/8][INFO] Processing activity 147 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:37,390][Rank 0/8][INFO] Activity 128 completed (Local progress: 70.83%)[0m
+[92m[2025-03-29 00:26:37,411][Rank 0/8][INFO] Processing activity 136 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:39,063][Rank 6/8][INFO] Activity 134 completed (Local progress: 73.91%)[0m
+[92m[2025-03-29 00:26:39,093][Rank 6/8][INFO] Processing activity 142 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:46,148][Rank 5/8][INFO] Activity 141 completed (Local progress: 78.26%)[0m
+[92m[2025-03-29 00:26:46,178][Rank 5/8][INFO] Processing activity 149 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:46,588][Rank 1/8][INFO] Activity 137 completed (Local progress: 75.00%)[0m
+[92m[2025-03-29 00:26:46,616][Rank 1/8][INFO] Processing activity 145 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:48,041][Rank 7/8][INFO] Activity 143 completed (Local progress: 78.26%)[0m
+[92m[2025-03-29 00:26:48,070][Rank 7/8][INFO] Processing activity 151 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:26:52,685][Rank 4/8][INFO] Activity 140 completed (Local progress: 75.00%)[0m
+[92m[2025-03-29 00:26:52,712][Rank 4/8][INFO] Processing activity 148 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:02,738][Rank 3/8][INFO] Activity 147 completed (Local progress: 79.17%)[0m
+[92m[2025-03-29 00:27:02,772][Rank 3/8][INFO] Processing activity 155 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:03,676][Rank 2/8][INFO] Activity 138 completed (Local progress: 75.00%)[0m
+[92m[2025-03-29 00:27:03,706][Rank 2/8][INFO] Processing activity 146 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:09,341][Rank 0/8][INFO] Activity 136 completed (Local progress: 75.00%)[0m
+[92m[2025-03-29 00:27:09,368][Rank 0/8][INFO] Processing activity 144 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:11,035][Rank 6/8][INFO] Activity 142 completed (Local progress: 78.26%)[0m
+[92m[2025-03-29 00:27:11,067][Rank 6/8][INFO] Processing activity 150 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:15,938][Rank 5/8][INFO] Activity 149 completed (Local progress: 82.61%)[0m
+[92m[2025-03-29 00:27:15,960][Rank 5/8][INFO] Processing activity 157 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:21,142][Rank 7/8][INFO] Activity 151 completed (Local progress: 82.61%)[0m
+[92m[2025-03-29 00:27:21,167][Rank 7/8][INFO] Processing activity 159 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:21,330][Rank 1/8][INFO] Activity 145 completed (Local progress: 79.17%)[0m
+[92m[2025-03-29 00:27:21,354][Rank 1/8][INFO] Processing activity 153 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:23,245][Rank 4/8][INFO] Activity 148 completed (Local progress: 79.17%)[0m
+[92m[2025-03-29 00:27:23,267][Rank 4/8][INFO] Processing activity 156 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:35,245][Rank 3/8][INFO] Activity 155 completed (Local progress: 83.33%)[0m
+[92m[2025-03-29 00:27:35,281][Rank 3/8][INFO] Processing activity 163 (fourcastnet) ...[0m
+[92m[2025-03-29 00:27:38,724][Rank 2/8][INFO] Activity 146 completed (Local progress: 79.17%)[0m
+[92m[2025-03-29 00:27:38,753][Rank 2/8][INFO] Processing activity 154 (gc-improved-run05) ...[0m
+[2025-03-29 00:27:38,862][matplotlib.font_manager][INFO] - generated new fontManager
+[92m[2025-03-29 00:27:44,530][Rank 6/8][INFO] Activity 150 completed (Local progress: 82.61%)[0m
+[92m[2025-03-29 00:27:44,558][Rank 6/8][INFO] Processing activity 158 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:44,576][Rank 0/8][INFO] Activity 144 completed (Local progress: 79.17%)[0m
+[92m[2025-03-29 00:27:44,597][Rank 0/8][INFO] Processing activity 152 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:50,552][Rank 5/8][INFO] Activity 157 completed (Local progress: 86.96%)[0m
+[92m[2025-03-29 00:27:50,577][Rank 5/8][INFO] Processing activity 165 (fourcastnet) ...[0m
+[2025-03-29 00:27:51,351][matplotlib.font_manager][INFO] - generated new fontManager
+[92m[2025-03-29 00:27:54,383][Rank 3/8][INFO] Activity 163 completed (Local progress: 87.50%)[0m
+[92m[2025-03-29 00:27:54,418][Rank 3/8][INFO] Processing activity 171 (fourcastnet) ...[0m
+[92m[2025-03-29 00:27:54,610][Rank 1/8][INFO] Activity 153 completed (Local progress: 83.33%)[0m
+[92m[2025-03-29 00:27:54,636][Rank 1/8][INFO] Processing activity 161 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:27:55,391][Rank 7/8][INFO] Activity 159 completed (Local progress: 86.96%)[0m
+[92m[2025-03-29 00:27:55,415][Rank 7/8][INFO] Processing activity 167 (fourcastnet) ...[0m
+[92m[2025-03-29 00:27:58,054][Rank 4/8][INFO] Activity 156 completed (Local progress: 83.33%)[0m
+[92m[2025-03-29 00:27:58,081][Rank 4/8][INFO] Processing activity 164 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:06,791][Rank 5/8][INFO] Activity 165 completed (Local progress: 91.30%)[0m
+[92m[2025-03-29 00:28:06,822][Rank 5/8][INFO] Processing activity 173 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:09,015][Rank 3/8][INFO] Activity 171 completed (Local progress: 91.67%)[0m
+[92m[2025-03-29 00:28:09,053][Rank 3/8][INFO] Processing activity 179 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:10,818][Rank 7/8][INFO] Activity 167 completed (Local progress: 91.30%)[0m
+[92m[2025-03-29 00:28:10,846][Rank 7/8][INFO] Processing activity 175 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:13,436][Rank 2/8][INFO] Activity 154 completed (Local progress: 83.33%)[0m
+[92m[2025-03-29 00:28:13,479][Rank 2/8][INFO] Processing activity 162 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:13,940][Rank 4/8][INFO] Activity 164 completed (Local progress: 87.50%)[0m
+[92m[2025-03-29 00:28:13,970][Rank 4/8][INFO] Processing activity 172 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:17,560][Rank 0/8][INFO] Activity 152 completed (Local progress: 83.33%)[0m
+[92m[2025-03-29 00:28:17,596][Rank 0/8][INFO] Processing activity 160 (gc-improved-run05) ...[0m
+[92m[2025-03-29 00:28:19,153][Rank 6/8][INFO] Activity 158 completed (Local progress: 86.96%)[0m
+[92m[2025-03-29 00:28:19,194][Rank 6/8][INFO] Processing activity 166 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:21,324][Rank 5/8][INFO] Activity 173 completed (Local progress: 95.65%)[0m
+[92m[2025-03-29 00:28:21,357][Rank 5/8][INFO] Processing activity 181 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:22,679][Rank 1/8][INFO] Activity 161 completed (Local progress: 87.50%)[0m
+[92m[2025-03-29 00:28:22,705][Rank 1/8][INFO] Processing activity 169 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:23,041][Rank 3/8][INFO] Activity 179 completed (Local progress: 95.83%)[0m
+[92m[2025-03-29 00:28:23,075][Rank 3/8][INFO] Processing activity 187 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:25,362][Rank 7/8][INFO] Activity 175 completed (Local progress: 95.65%)[0m
+[92m[2025-03-29 00:28:25,395][Rank 7/8][INFO] Processing activity 183 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:28,728][Rank 4/8][INFO] Activity 172 completed (Local progress: 91.67%)[0m
+[92m[2025-03-29 00:28:28,765][Rank 4/8][INFO] Processing activity 180 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:28,824][Rank 2/8][INFO] Activity 162 completed (Local progress: 87.50%)[0m
+[92m[2025-03-29 00:28:28,852][Rank 2/8][INFO] Processing activity 170 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:34,820][Rank 6/8][INFO] Activity 166 completed (Local progress: 91.30%)[0m
+[92m[2025-03-29 00:28:34,849][Rank 6/8][INFO] Processing activity 174 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:35,764][Rank 5/8][INFO] Activity 181 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:28:35,800][Rank 5/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:28:37,195][Rank 3/8][INFO] Activity 187 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:28:37,236][Rank 3/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:28:39,503][Rank 1/8][INFO] Activity 169 completed (Local progress: 91.67%)[0m
+[92m[2025-03-29 00:28:39,534][Rank 1/8][INFO] Processing activity 177 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:39,697][Rank 7/8][INFO] Activity 183 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:28:39,739][Rank 7/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:28:43,487][Rank 4/8][INFO] Activity 180 completed (Local progress: 95.83%)[0m
+[92m[2025-03-29 00:28:43,528][Rank 4/8][INFO] Processing activity 188 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:44,439][Rank 2/8][INFO] Activity 170 completed (Local progress: 91.67%)[0m
+[92m[2025-03-29 00:28:44,472][Rank 2/8][INFO] Processing activity 178 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:49,722][Rank 6/8][INFO] Activity 174 completed (Local progress: 95.65%)[0m
+[92m[2025-03-29 00:28:49,757][Rank 6/8][INFO] Processing activity 182 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:54,149][Rank 1/8][INFO] Activity 177 completed (Local progress: 95.83%)[0m
+[92m[2025-03-29 00:28:54,183][Rank 1/8][INFO] Processing activity 185 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:54,787][Rank 0/8][INFO] Activity 160 completed (Local progress: 87.50%)[0m
+[92m[2025-03-29 00:28:54,813][Rank 0/8][INFO] Processing activity 168 (fourcastnet) ...[0m
+[92m[2025-03-29 00:28:58,084][Rank 4/8][INFO] Activity 188 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:28:58,120][Rank 4/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:28:58,884][Rank 2/8][INFO] Activity 178 completed (Local progress: 95.83%)[0m
+[92m[2025-03-29 00:28:58,919][Rank 2/8][INFO] Processing activity 186 (fourcastnet) ...[0m
+[92m[2025-03-29 00:29:05,051][Rank 6/8][INFO] Activity 182 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:29:05,085][Rank 6/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:29:08,284][Rank 1/8][INFO] Activity 185 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:29:08,323][Rank 1/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:29:10,339][Rank 0/8][INFO] Activity 168 completed (Local progress: 91.67%)[0m
+[92m[2025-03-29 00:29:10,373][Rank 0/8][INFO] Processing activity 176 (fourcastnet) ...[0m
+[92m[2025-03-29 00:29:13,917][Rank 2/8][INFO] Activity 186 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:29:13,954][Rank 2/8][INFO] All activities completed[0m
+[92m[2025-03-29 00:29:24,695][Rank 0/8][INFO] Activity 176 completed (Local progress: 95.83%)[0m
+[92m[2025-03-29 00:29:24,726][Rank 0/8][INFO] Processing activity 184 (fourcastnet) ...[0m
+[92m[2025-03-29 00:29:39,131][Rank 0/8][INFO] Activity 184 completed (Local progress: 100.00%)[0m
+[92m[2025-03-29 00:29:39,164][Rank 0/8][INFO] All activities completed[0m

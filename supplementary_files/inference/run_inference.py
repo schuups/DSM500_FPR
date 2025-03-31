@@ -47,9 +47,6 @@ def main(cfg: DictConfig):
         activity.destroy()
         del activity
 
-        if activity_i >= 5:
-            break
-
     logger.info("All activities completed")
 
 if __name__ == "__main__":

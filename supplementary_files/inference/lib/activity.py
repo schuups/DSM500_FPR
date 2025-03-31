@@ -18,16 +18,16 @@ class Activity(ActivityBase):
         self.metrics = dict()
 
     def load_model(self):
-        if self.model_type == "gc-baseline":
-            self.model = self._get_model_for_gc_baseline()
+        if self.model_type == "gc":
+            self.model = self._get_model_for_gc()
         elif self.model_type == "fcn":
             self.model = self._get_model_for_fcn()
         else:
             raise NotImplementedError()
 
     def load_sample(self):
-        if self.model_type == "gc-baseline":
-            self.sample, means, stds = self._get_sample_for_gc_baseline()
+        if self.model_type == "gc":
+            self.sample, means, stds = self._get_sample_for_gc()
             self.means = means.to(dtype=torch.bfloat16, device=self.device)
             self.stds = stds.to(dtype=torch.bfloat16, device=self.device)
         elif self.model_type == "fcn":
@@ -48,7 +48,7 @@ class Activity(ActivityBase):
             climatology_file_path = "/iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0/climatology.h5"
 
         index_start = self.dataset_initial_condition_i
-        index_end = index_start + self.inference_rollout_steps + 1
+        index_end = index_start + self.inference_rollout_steps + 2
 
         with h5py.File(climatology_file_path, "r") as f:
             if self.model_type != "fcn" and self.model.cfg.toggles.data.include_sst_channel:
@@ -60,8 +60,8 @@ class Activity(ActivityBase):
             self.climatology = self.climatology.to(dtype=torch.float32)
 
     def run_inference(self):
-        if self.model_type == "gc-baseline":
-            reanalysis, forecast = self._run_inference_for_gc_baseline()
+        if self.model_type == "gc":
+            reanalysis, forecast = self._run_inference_for_gc()
         elif self.model_type == "fcn":
             reanalysis, forecast = self._run_inference_for_fcn()
         else:

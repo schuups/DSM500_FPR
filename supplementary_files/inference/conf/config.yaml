@@ -12,7 +12,7 @@ seed: 42
 models:
 
 - name: gc-baseline-run01
-  type: gc-baseline
+  type: gc
   code_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline
   config_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/conf/config.yaml
   weights:
@@ -20,14 +20,14 @@ models:
   - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN01/SEED42/checkpoint/model.iter003750.pth
   - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN01/SEED84/checkpoint/model.iter003750.pth
 
-- name: gc-baseline-run02
-  type: gc-baseline
-  code_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline
-  config_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/conf/config_tuned_config.yaml
+- name: gc-improved-run05
+  type: gc
+  code_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-improved
+  config_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-improved/conf/config.yaml
   weights:
-  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN02/SEED21/checkpoint/model.iter003750.pth
-  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN02/SEED42/checkpoint/model.iter003750.pth
-  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-baseline/runs/RUN02/SEED84/checkpoint/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-improved/runs/RUN05/SEED21/checkpoints/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-improved/runs/RUN05/SEED42/checkpoints/model.iter003750.pth
+  - /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-improved/runs/RUN05/SEED84/checkpoints/model.iter003750.pth
 
 - name: fourcastnet
   type: fcn

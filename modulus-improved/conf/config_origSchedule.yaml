@@ -1,0 +1,113 @@
+# SPDX-FileCopyrightText: Copyright (c) 2023 - 2024 NVIDIA CORPORATION & AFFILIATES.
+# SPDX-FileCopyrightText: Copyright (c) 2025 schups@gmail.com (Modifications)
+# SPDX-License-Identifier: Apache-2.0
+
+hydra:
+  job:
+    chdir: false
+    name: Improved
+  run:
+    dir: ./outputs/${hydra:job.name}
+
+# ┌───────────────────────────────────────────┐
+# │  Features toggles, for ablation studies   │
+# └───────────────────────────────────────────┘
+toggles:
+  data:
+    include_sst_channel: true             # If true, sst (the 21st channel, index 20) is included in the data produced by the dataloader. Sea-surface-temperature data is present in the dataset but it was not employed by FCN. It requires a data fix!
+    fix_sst_data: true                    # If true, the sst channel is fixed by adopting t2m as filler for missing values on land.
+    fix_data_centering: true              # If true, the data is adjusted to have longitude 0 at the center of the picture, thus correcting alignment e.g. with solar radiation but others too.
+    fix_temporal_info: true               # If true, the hourly component of the temporal info is made smoother
+    fix_december_gap: true                # If true, the gap between December 31st and January 1st is filled with the same data
+  model:
+    include_static_data: true             # If true, include static data in the dataset (i.e. geopotential and land-sea mask).
+    include_spatial_info: true            # If true, include spatial data in the dataset (i.e. lat/lon coordinates).
+    include_solar_radiation: true         # If true, includes cosine zenith angle in the dataset, which represents the solar radiation.
+    include_temporal_info: true           # If true, include temporal data in the dataset (i.e. time of day/year).
+  graph:
+    use_multimesh: true                   # If true, uses multimesh. If false, this means nodes are connected just to their immediate neightboors.
+    use_four_dim_spatial_location: false  # If true, includes sin(lat) in the positional encoding of graph nodes
+  loss:
+    fix_inverse_variance_data: true       # If true, it fixed the inverse variance data which is originally very spoiled by the skewed sst channel
+    use_original_variable_weights: false  # If true, it uses the old way of prepareing the channel weights
+
+# ┌───────────────────────────────────────────┐
+# │   Dataset and Dataloader Configuration    │
+# └───────────────────────────────────────────┘
+dataset:
+  base_path: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/data/FCN_ERA5_data_v0  # Path to the dataset.
+  samples_per_file: 1460  # Number of samples per file.
+  sample:
+    height: 721           # Height of the dataset samples.
+    width: 1440           # Width of the dataset samples.
+    channels: 21          # Number of channels in the dataset samples (might be different from the ones actually used for training)
+
+datapipe:
+  prefetch_queue_depth: 1  # Number of batches to prefetch in the dataloader.
+  num_threads: 2           # Number of subprocesses to use for data loading. 0 means data is loaded in the main process.
+  seed: 42                 # Random seed for data shuffle reproducibility. Set to null to disable.
+
+# ┌───────────────────────────────────────────┐
+# │            Model Configuration            │
+# └───────────────────────────────────────────┘
+model:
+  dtype: bfloat16                   # Data type to use
+  activation_fn: silu               # Activation function for the model.
+  hidden_dim: 512                   # Size of each layer.
+  hidden_layers: 1                  # Number of hidden layers.
+  aggregation_op: sum               # Aggregation operation for the graph processor.
+  processor_layers: 16              # Number of processor layers.
+  graph:
+    mesh_level: 6                   # Number of splits to perform on the icosahedral mesh.
+  ddp:
+    broadcast_buffers: false        # If true, broadcast the buffers to all ranks.
+    find_unused_parameters: false   # If true, find unused parameters in the model.
+    gradient_as_bucket_view: true   # If true, the gradient is treated as a bucket view.
+    static_graph: true              # If true, the graph is static.
+
+# ┌───────────────────────────────────────────┐
+# │             Training Schedule             │
+# └───────────────────────────────────────────┘
+schedule:
+  phase1:
+    iterations: 1000               # Phase duration in iteration steps (regardless of number ranks).
+    lr_start: 1e-3                 # Initial learning rate.
+    lr_end: 1.0                    # Learning rate to be reached at the end of this phase.
+  phase2:
+    iterations: 299000             # Phase duration in iteration steps (regardless of number ranks).
+    lr_objective: 1e-3             # Learning rate to be reached at the end of this phase.
+  phase3:
+    iterations: 11000              # Phase duration in iteration steps (regardless of number ranks).
+    rollout_steps_increments: 11   # How many times to increase the rollout steps during phase3.
+    lr: 3e-7                       # Learning rage during phase3.
+
+testing:
+  frequency: 50       # Frequency (iterations) for performing light-weight validation during training.
+  rollout_steps: 8    # Number of rollouts used in light-weight validation during training.
+  samples_per_rank: 1 # Number of samples per year used as the initial condition in light-weight validation during training.
+
+# ┌───────────────────────────────────────────┐
+# │          Logging and Monitoring           │
+# └───────────────────────────────────────────┘
+wb:
+  mode: online                 # Weights and Biases mode ["online", "offline", "disabled"]. If you don’t have a Weights and Biases API key, set this to "disabled".
+  entity: schups               # Weights and Biases entity: usually the account id.
+  watch_model: false           # If true, records the model parameter gradients through Weights and Biases.
+  experiment_label: RUN06_SEED${datapipe.seed}_old_feats      # Weights and Biases experiment label.
+
+# ┌───────────────────────────────────────────┐
+# │            Checkpointing                  │
+# └───────────────────────────────────────────┘
+checkpoint:
+  enabled: true                   # Enable checkpointing.
+  frequency: 250                  # Frequency (iterations) for saving network checkpoints.
+  folder: checkpoints_${datapipe.seed}             # Directory for saving model checkpoints (relative to hydra output directory).
+  names: model                    # Name prefix for the checkpoint files.
+
+# ┌───────────────────────────────────────────┐
+# │      Performance and Optimization         │
+# └───────────────────────────────────────────┘
+cache:
+  enabled: true
+  verbose: true
+  dir: /iopsstor/scratch/cscs/stefschu/DSM500_FPR/cache

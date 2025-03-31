@@ -16,8 +16,8 @@ toggles:
   data:
     include_sst_channel: true             # If true, sst (the 21st channel, index 20) is included in the data produced by the dataloader. Sea-surface-temperature data is present in the dataset but it was not employed by FCN. It requires a data fix!
     fix_sst_data: true                    # If true, the sst channel is fixed by adopting t2m as filler for missing values on land.
-    fix_data_centering: false              # If true, the data is adjusted to have longitude 0 at the center of the picture, thus correcting alignment e.g. with solar radiation but others too.
-    fix_temporal_info: true              # If true, the hourly component of the temporal info is made smoother
+    fix_data_centering: true              # If true, the data is adjusted to have longitude 0 at the center of the picture, thus correcting alignment e.g. with solar radiation but others too.
+    fix_temporal_info: true               # If true, the hourly component of the temporal info is made smoother
     fix_december_gap: true                # If true, the gap between December 31st and January 1st is filled with the same data
   model:
     include_static_data: true             # If true, include static data in the dataset (i.e. geopotential and land-sea mask).
@@ -79,7 +79,7 @@ schedule:
   phase3:
     iterations: 3000               # Phase duration in iteration steps (regardless of number ranks).
     rollout_steps_increments: 3    # How many times to increase the rollout steps during phase3.
-    lr: 5e-3                       # Learning rage during phase3.
+    lr: 7e-3                       # Learning rage during phase3.
 
 testing:
   frequency: 50       # Frequency (iterations) for performing light-weight validation during training.
@@ -90,10 +90,10 @@ testing:
 # │          Logging and Monitoring           │
 # └───────────────────────────────────────────┘
 wb:
-  mode: online                   # Weights and Biases mode ["online", "offline", "disabled"]. If you don’t have a Weights and Biases API key, set this to "disabled".
-  entity: schups                 # Weights and Biases entity: usually the account id.
-  watch_model: false             # If true, records the model parameter gradients through Weights and Biases.
-  experiment_label: "RUN_01"     # Weights and Biases experiment label.
+  mode: online                 # Weights and Biases mode ["online", "offline", "disabled"]. If you don’t have a Weights and Biases API key, set this to "disabled".
+  entity: schups               # Weights and Biases entity: usually the account id.
+  watch_model: false           # If true, records the model parameter gradients through Weights and Biases.
+  experiment_label: RUN06_SEED${datapipe.seed}      # Weights and Biases experiment label.
 
 # ┌───────────────────────────────────────────┐
 # │            Checkpointing                  │
@@ -101,7 +101,7 @@ wb:
 checkpoint:
   enabled: true                   # Enable checkpointing.
   frequency: 250                  # Frequency (iterations) for saving network checkpoints.
-  folder: checkpoints             # Directory for saving model checkpoints (relative to hydra output directory).
+  folder: checkpoints_${datapipe.seed}             # Directory for saving model checkpoints (relative to hydra output directory).
   names: model                    # Name prefix for the checkpoint files.
 
 # ┌───────────────────────────────────────────┐

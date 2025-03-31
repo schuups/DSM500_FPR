@@ -11,5 +11,5 @@ srun --unbuffered --environment=/iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/e
     source /iopsstor/scratch/cscs/stefschu/DSM500_FPR/env/venv_arm64/bin/activate
     cd /iopsstor/scratch/cscs/stefschu/DSM500_FPR/modulus-improved
 
-    python train_graphcast.py
+    python train_graphcast.py datapipe.seed=21 config_name=config_origImplementation
 "
