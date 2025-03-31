@@ -1,0 +1,15 @@
+image = "/iopsstor/scratch/cscs/stefschu/DSM500/github/modulus-ngc-24.12-arm64.sqsh"
+
+mounts = [
+    "/iopsstor/scratch/cscs/stefschu:/iopsstor/scratch/cscs/stefschu",
+    "/users/stefschu/.bash_history:/users/stefschu/.bash_history",
+    "/users/stefschu/.netrc:/users/stefschu/.netrc",
+    "/users/stefschu/.alias:/users/stefschu/.bash_aliases"
+]
+
+workdir = "/iopsstor/scratch/cscs/stefschu/DSM500/github/modulus-a5275d8/examples/weather/graphcast"
+writable = true
+
+[annotations]
+com.hooks.aws_ofi_nccl.enabled = "true"
+com.hooks.aws_ofi_nccl.variant = "cuda12"

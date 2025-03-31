@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: Copyright (c) 2025 schups@gmail.com (Modifications)
+# SPDX-License-Identifier: Apache-2.0
+
+hydra:
+  job:
+    chdir: true
+    name: Inference
+  run:
+    dir: ./outputs/${hydra:job.name}
+
+models:
+  gc_baseline:
+    config_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/experiments/02-Baseline/config.yaml
+    checkpoint_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/experiments/02-Baseline/checkpoints/model.iter007000.pth
+
+  gc_improved:
+    config_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/experiments/03-Improved/config.yaml
+    checkpoint_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/experiments/02-Baseline/checkpoints/model.iter013000.pth
+
+  fcn:
+    config_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/fourcastnet-93360c1/fourcastnet/config/AFNO.yaml
+    checkpoint_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/data/FCN_checkpoint/backbone.ckpt
+
+# How many samples to process in inference 
+samples: 4
+
+# Rollout length
+rollout_steps: 20
+
+# Channels of interest: skip last channel, so to be comparable with FCN
+channels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+# Resolution reduction factor for the visualization: a number higher than 1 reduces the rendering time, which is useful during development.
+resolution_reduction_factor: 8
+
+# Arfifacts folder
+artifacts_folder: /iopsstor/scratch/cscs/stefschu/DSM500/github/inference/artifacts
+
+# Copied from individual model configurations
+dataset:
+  base_path: /iopsstor/scratch/cscs/stefschu/DSM500/data/FCN_ERA5_data_v0
+  samples_per_file: 1460
+seed: 42 

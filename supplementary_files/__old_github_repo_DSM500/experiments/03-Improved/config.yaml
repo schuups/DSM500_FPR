@@ -1,0 +1,108 @@
+# SPDX-FileCopyrightText: Copyright (c) 2023 - 2024 NVIDIA CORPORATION & AFFILIATES.
+# SPDX-FileCopyrightText: Copyright (c) 2025 schups@gmail.com (Modifications)
+# SPDX-License-Identifier: Apache-2.0
+
+hydra:
+  job:
+    chdir: true
+    name: Improved
+  run:
+    dir: ./outputs/${hydra:job.name}
+
+# ┌───────────────────────────────────────────┐
+# │   Dataset and Dataloader Configuration    │
+# └───────────────────────────────────────────┘
+dataset:
+  base_path: /iopsstor/scratch/cscs/stefschu/DSM500/data/FCN_ERA5_data_v0  # Path to the dataset, must contain metadata.json and the folders "stats", "static", "train", "test"  and "out_of_sample".
+  samples_per_file: 1460  # Number of samples per file.
+
+sample:
+  height: 721             # Height of the dataset samples.
+  width: 1440             # Width of the dataset samples.
+  channels: 21            # Number of channels in the dataset samples.
+
+include:
+  static_data: true       # Include static data in the dataset (i.e. geopotential and land-sea mask).
+  spatial_info: true      # Include spatial data in the dataset (i.e. lat/lon coordinates).
+  temporal_info: true     # Include temporal data in the dataset (i.e. time of day/year).
+  solar_radiation: true   # Include cosine zenith angle in the dataset, which represents the solar radiation. 
+
+datapipe:
+  batch_size: 1            # Number of samples per batch.
+  num_threads: 2           # Number of subprocesses to use for data loading. 0 means data is loaded in the main process.
+  prefetch_queue_depth: 2  # Number of batches to prefetch in the dataloader.
+
+num_testing_steps: 8               # Number of rollouts used in light-weight validation during training.
+num_testing_samples_per_rank: 1    # Number of samples per year used as the initial condition in light-weight validation during training.
+
+# ┌───────────────────────────────────────────┐
+# │            Model Configuration            │
+# └───────────────────────────────────────────┘
+input_channels: 21                # Dataset input channels.
+additional_input_channels: 10     # Additional channels, added by the dataloader.
+                                  # - 2 static data (geopotential and land-sea mask)
+                                  # - 3 lat/lon coordinates (cos lat, sin long, cos long)
+                                  # - 1 cosine zenith angle (simulating solar radiation)
+                                  # - 4 time of day/year indices
+output_channels: 21               # Expected model output channels.
+mesh_level: 6                     # Number of splits to perform on the icosahedral mesh.
+activation_fn: silu               # Activation function for the model.
+hidden_dim: 512                   # Size of each layer.
+hidden_layers: 1                  # Number of hidden layers.
+aggregation_op: sum               # Aggregation operation for the graph processor.
+processor_layers: 16              # Number of processor layers.
+dtype: bfloat16                   # Data type to use
+
+# ┌───────────────────────────────────────────┐
+# │             Training Schedule             │
+# └───────────────────────────────────────────┘
+phase1_iters:    1000             # Number of backward passes in the first phase of the learning rate schedule.
+phase2_iters:    9000             # Number of backward passes in the second phase of the learning rate schedule.
+phase3_iters:   11000             # Number of backward passes for incremental fine-tuning, with increments of "step_change_freq".
+phase3_increments: 11             # Number of num_steps increments to be done during phase3.
+
+lr: 1e-3                          # Max learning rate in phase1. Gradually increase from 0, then decays to 0 in phase2.
+phase3_lr: 1e-4                   # Learning rage during phase3. # TODO: Verify if this is correct.
+
+testing_frequency: 50             # Frequency (iterations) for performing light-weight validation during training.
+
+# ┌───────────────────────────────────────────┐
+# │      Performance and Optimization         │
+# └───────────────────────────────────────────┘
+cache_dir: /iopsstor/scratch/cscs/stefschu/DSM500/cache
+
+# ┌───────────────────────────────────────────┐
+# │          Logging and Monitoring           │
+# └───────────────────────────────────────────┘
+wb_mode: online                   # Weights and Biases mode ["online", "offline", "disabled"]. If you don’t have a Weights and Biases API key, set this to "disabled".
+wb_entity: schups                 # Weights and Biases entity: usually the account id.
+wb_watch_model: false             # If true, records the model parameter gradients through Weights and Biases.
+wb_experiment_label: null         # Weights and Biases experiment label.
+
+# ┌───────────────────────────────────────────┐
+# │            Checkpointing                  │
+# └───────────────────────────────────────────┘
+checkpoint_enabled: true         # Enable checkpointing.
+checkpoint_frequency: 5       # Frequency (iterations) for saving network checkpoints.
+checkpoint_folder: checkpoints   # Directory for saving model checkpoints (relative to hydra output directory).
+checkpoint_names: model          # Name prefix for the checkpoint files.
+
+# ┌───────────────────────────────────────────┐
+# │               Inference                   │ 
+# └───────────────────────────────────────────┘
+inference:
+  checkpoint_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/experiments/02-Baseline/checkpoints_old/model.iter007000.pth
+  artifacts_folder: artifacts     # Directory for saving artifacts (relative to hydra output directory).
+  rollout_steps: 6                # Number of steps to roll out the model.
+  samples: 2                      # Number of samples to process.
+  channels: 21                    # The list of channels of interest of the visualization.
+  resolution_reduction_factor: 2  # Resolution reduction factor for the visualization: a number higher than 1 reduces the rendering time, which is useful during development.
+
+inference_fcn:
+  yparam_config_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/github/fourcastnet-93360c1/config/AFNO.yaml
+  weights_file_path: /iopsstor/scratch/cscs/stefschu/DSM500/data/FCN_checkpoint/backbone.ckpt
+
+# ┌───────────────────────────────────────────┐
+# │                 Others                    │
+# └───────────────────────────────────────────┘
+seed: 42                        # Random seed for reproducibility.

@@ -1,0 +1,17 @@
+program: test.py
+name: sweepdemo
+method: grid
+metric:
+  goal: minimize
+  name: loss
+parameters:
+  include.static_data:
+    values: [true, false]
+command:
+  - python
+  - "-m"
+  - "torch.distributed.run"
+  - "--nnodes=1"
+  - "--nproc_per_node=2"
+  - ${program}
+  - ${args_no_hyphens}

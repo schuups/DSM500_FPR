@@ -1,0 +1,12 @@
+**.ipynb_checkpoints
+**.sqsh
+venv_**
+core_*
+outputs
+launch.log
+*.out
+*.png
+__pycache__
+inference/artifacts
+**/checkpoints
+**/wandb

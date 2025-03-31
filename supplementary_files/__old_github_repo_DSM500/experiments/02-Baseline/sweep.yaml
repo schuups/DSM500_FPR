@@ -1,0 +1,50 @@
+# Create with:
+# wandb sweep --project GraphCast sweep.yaml
+
+program: train_graphcast.py
+name: baseline_tuning
+method: random
+metric:
+  goal: minimize
+  name: loss
+parameters:
+  include.static_data:
+    values: [true, false]
+  include.spatial_info:
+    values: [true, false]
+  include.temporal_info:
+    values: [true, false]
+  include.solar_radiation:
+    values: [true, false]
+  
+  mesh_level:
+    values: [4, 5, 6]
+  activation_fn:
+    values: [silu, relu, tanh]
+  hidden_dim:
+    values: [128, 256, 512]
+  hidden_layers:
+    values: [1, 2, 3]
+  aggregation_op:
+    values: [sum, mean]
+  processor_layers:
+    values: [4, 8, 16]
+  
+  lr:
+    values: [1e-3, 5e-3, 1e-4]
+  phase3_lr:
+    values: [1e-3, 5e-3, 1e-4]
+
+  checkpoint_enabled:
+    value: false
+  cache_enabled:
+    value: false
+  
+command:
+  - python
+  - "-m"
+  - "torch.distributed.run"
+  - "--nnodes=1"
+  - "--nproc_per_node=4"
+  - ${program}
+  - ${args_no_hyphens}

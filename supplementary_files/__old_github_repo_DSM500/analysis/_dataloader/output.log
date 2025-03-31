@@ -1,0 +1,156 @@
+[Rank 1][2025-02-15 15:35:07][Datapipe.__init__] Datapipe creation
+[Rank 1][2025-02-15 15:35:07][__main__] Datapipe created, has length 17
+[Rank 0][2025-02-15 15:35:07][Datapipe.__init__] Datapipe creation
+[Rank 0][2025-02-15 15:35:07][__main__] Datapipe created, has length 17
+[Rank 1][2025-02-15 15:35:08][__main__] --------------------------------------------------------------------------------
+[Rank 0][2025-02-15 15:35:08][__main__] --------------------------------------------------------------------------------
+[Rank 1][2025-02-15 15:35:08][__main__] Starting validation_i=0
+[Rank 0][2025-02-15 15:35:08][__main__] Starting validation_i=0
+[Rank 1][2025-02-15 15:35:08][Datapipe.__iter__] Iterator creation
+[Rank 0][2025-02-15 15:35:08][Datapipe.__iter__] Iterator creation
+[Rank 1][2025-02-15 15:35:08][Datapipe._create_pipeline] Pipeline creation
+[Rank 0][2025-02-15 15:35:08][Datapipe._create_pipeline] Pipeline creation
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 2 10  3 11  0  4  7  5 16]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 2 10  3 11  0  4  7  5 16]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 2 10  3 11  0  4  7  5 16]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=0 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=2 ---> 1002.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=1 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=10 ---> 1010.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=2 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=3 ---> 1003.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=3 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=11 ---> 1011.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=0 got 1002 with [sample.idx_in_epoch=0, sample.epoch_idx=0, idx=2]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=4 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=0 ---> 1000.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=1 got 1010 with [sample.idx_in_epoch=1, sample.epoch_idx=0, idx=10]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=5 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=4 ---> 1004.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=2 got 1003 with [sample.idx_in_epoch=2, sample.epoch_idx=0, idx=3]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=6 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=7 ---> 1007.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=3 got 1011 with [sample.idx_in_epoch=3, sample.epoch_idx=0, idx=11]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=7 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=5 ---> 1005.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=4 got 1000 with [sample.idx_in_epoch=4, sample.epoch_idx=0, idx=0]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=8 in self.indices=array([ 2, 10,  3, 11,  0,  4,  7,  5, 16]) gives idx=16 ---> 1016.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=5 got 1004 with [sample.idx_in_epoch=5, sample.epoch_idx=0, idx=4]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	StopIteration: sample.idx_in_epoch=9, len(self.indices)=9
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=6 got 1007 with [sample.idx_in_epoch=6, sample.epoch_idx=0, idx=7]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=7 got 1005 with [sample.idx_in_epoch=7, sample.epoch_idx=0, idx=5]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=8 got 1016 with [sample.idx_in_epoch=8, sample.epoch_idx=0, idx=16]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [12 13  6  9 14  8  1 15]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [12 13  6  9 14  8  1 15]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [12 13  6  9 14  8  1 15]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=0 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=12 ---> 1012.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=1 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=13 ---> 1013.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=2 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=6 ---> 1006.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=3 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=9 ---> 1009.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=0 got 1012 with [sample.idx_in_epoch=0, sample.epoch_idx=0, idx=12]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=1 got 1013 with [sample.idx_in_epoch=1, sample.epoch_idx=0, idx=13]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=4 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=14 ---> 1014.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=2 got 1006 with [sample.idx_in_epoch=2, sample.epoch_idx=0, idx=6]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=5 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=8 ---> 1008.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=6 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=1 ---> 1001.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=3 got 1009 with [sample.idx_in_epoch=3, sample.epoch_idx=0, idx=9]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=7 in self.indices=array([12, 13,  6,  9, 14,  8,  1, 15]) gives idx=15 ---> 1015.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=4 got 1014 with [sample.idx_in_epoch=4, sample.epoch_idx=0, idx=14]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	StopIteration: sample.idx_in_epoch=8, len(self.indices)=8
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=5 got 1008 with [sample.idx_in_epoch=5, sample.epoch_idx=0, idx=8]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=6 got 1001 with [sample.idx_in_epoch=6, sample.epoch_idx=0, idx=1]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=0 iteration_i=7 got 1015 with [sample.idx_in_epoch=7, sample.epoch_idx=0, idx=15]
+[Rank 0][2025-02-15 15:35:12][__main__] Completed validation_i=0
+[Rank 1][2025-02-15 15:35:12][__main__] Completed validation_i=0
+[Rank 1][2025-02-15 15:35:12][__main__] --------------------------------------------------------------------------------
+[Rank 0][2025-02-15 15:35:12][__main__] --------------------------------------------------------------------------------
+[Rank 1][2025-02-15 15:35:12][__main__] Starting validation_i=1
+[Rank 0][2025-02-15 15:35:12][__main__] Starting validation_i=1
+[Rank 1][2025-02-15 15:35:12][Datapipe.__iter__] Iterator creation
+[Rank 0][2025-02-15 15:35:12][Datapipe.__iter__] Iterator creation
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 8  0  9  2 16 13 11  6]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 8  0  9  2 16 13 11  6]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 8  0  9  2 16 13 11  6]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 1 10 14 15  7 12  3  4  5]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 1 10 14 15  7 12  3  4  5]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 1 10 14 15  7 12  3  4  5]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=0 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=8 ---> 1008.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=0 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=1 ---> 1001.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=1 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=0 ---> 1000.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=1 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=10 ---> 1010.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=2 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=14 ---> 1014.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=2 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=9 ---> 1009.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=3 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=15 ---> 1015.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=0 got 1001 with [sample.idx_in_epoch=0, sample.epoch_idx=1, idx=1]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=3 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=2 ---> 1002.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=0 got 1008 with [sample.idx_in_epoch=0, sample.epoch_idx=1, idx=8]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=4 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=7 ---> 1007.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=1 got 1010 with [sample.idx_in_epoch=1, sample.epoch_idx=1, idx=10]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=4 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=16 ---> 1016.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=1 got 1000 with [sample.idx_in_epoch=1, sample.epoch_idx=1, idx=0]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=5 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=12 ---> 1012.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=2 got 1014 with [sample.idx_in_epoch=2, sample.epoch_idx=1, idx=14]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=2 got 1009 with [sample.idx_in_epoch=2, sample.epoch_idx=1, idx=9]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=5 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=13 ---> 1013.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=6 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=3 ---> 1003.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=3 got 1015 with [sample.idx_in_epoch=3, sample.epoch_idx=1, idx=15]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=6 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=11 ---> 1011.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=3 got 1002 with [sample.idx_in_epoch=3, sample.epoch_idx=1, idx=2]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=7 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=4 ---> 1004.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=4 got 1007 with [sample.idx_in_epoch=4, sample.epoch_idx=1, idx=7]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=7 in self.indices=array([ 8,  0,  9,  2, 16, 13, 11,  6]) gives idx=6 ---> 1006.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=4 got 1016 with [sample.idx_in_epoch=4, sample.epoch_idx=1, idx=16]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=8 in self.indices=array([ 1, 10, 14, 15,  7, 12,  3,  4,  5]) gives idx=5 ---> 1005.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=5 got 1012 with [sample.idx_in_epoch=5, sample.epoch_idx=1, idx=12]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	StopIteration: sample.idx_in_epoch=8, len(self.indices)=8
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=5 got 1013 with [sample.idx_in_epoch=5, sample.epoch_idx=1, idx=13]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	StopIteration: sample.idx_in_epoch=9, len(self.indices)=9
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=6 got 1011 with [sample.idx_in_epoch=6, sample.epoch_idx=1, idx=11]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=6 got 1003 with [sample.idx_in_epoch=6, sample.epoch_idx=1, idx=3]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=7 got 1006 with [sample.idx_in_epoch=7, sample.epoch_idx=1, idx=6]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=7 got 1004 with [sample.idx_in_epoch=7, sample.epoch_idx=1, idx=4]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=1 iteration_i=8 got 1005 with [sample.idx_in_epoch=8, sample.epoch_idx=1, idx=5]
+[Rank 1][2025-02-15 15:35:12][__main__] Completed validation_i=1
+[Rank 0][2025-02-15 15:35:12][__main__] Completed validation_i=1
+[Rank 1][2025-02-15 15:35:12][__main__] --------------------------------------------------------------------------------
+[Rank 0][2025-02-15 15:35:12][__main__] --------------------------------------------------------------------------------
+[Rank 1][2025-02-15 15:35:12][__main__] Starting validation_i=2
+[Rank 0][2025-02-15 15:35:12][__main__] Starting validation_i=2
+[Rank 1][2025-02-15 15:35:12][Datapipe.__iter__] Iterator creation
+[Rank 0][2025-02-15 15:35:12][Datapipe.__iter__] Iterator creation
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [13  9 12  5  3  4  8  1]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [13  9 12  5  3  4  8  1]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [13  9 12  5  3  4  8  1]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 6 15  7 10  2 11  0 14 16]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 6 15  7 10  2 11  0 14 16]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__init__] 	Reshuffling! Indices: [ 6 15  7 10  2 11  0 14 16]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=0 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=13 ---> 1013.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=0 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=6 ---> 1006.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=1 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=15 ---> 1015.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=1 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=9 ---> 1009.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=2 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=7 ---> 1007.0)
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=2 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=12 ---> 1012.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=3 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=10 ---> 1010.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=0 got 1006 with [sample.idx_in_epoch=0, sample.epoch_idx=2, idx=6]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=3 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=5 ---> 1005.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=0 got 1013 with [sample.idx_in_epoch=0, sample.epoch_idx=2, idx=13]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=4 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=2 ---> 1002.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=1 got 1015 with [sample.idx_in_epoch=1, sample.epoch_idx=2, idx=15]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=1 got 1009 with [sample.idx_in_epoch=1, sample.epoch_idx=2, idx=9]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=4 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=3 ---> 1003.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=5 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=11 ---> 1011.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=2 got 1007 with [sample.idx_in_epoch=2, sample.epoch_idx=2, idx=7]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=5 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=4 ---> 1004.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=2 got 1012 with [sample.idx_in_epoch=2, sample.epoch_idx=2, idx=12]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=6 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=0 ---> 1000.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=3 got 1010 with [sample.idx_in_epoch=3, sample.epoch_idx=2, idx=10]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=6 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=8 ---> 1008.0)
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=3 got 1005 with [sample.idx_in_epoch=3, sample.epoch_idx=2, idx=5]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=7 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=14 ---> 1014.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=4 got 1002 with [sample.idx_in_epoch=4, sample.epoch_idx=2, idx=2]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=4 got 1003 with [sample.idx_in_epoch=4, sample.epoch_idx=2, idx=3]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=7 in self.indices=array([13,  9, 12,  5,  3,  4,  8,  1]) gives idx=1 ---> 1001.0)
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	Invoked (sample.idx_in_epoch=8 in self.indices=array([ 6, 15,  7, 10,  2, 11,  0, 14, 16]) gives idx=16 ---> 1016.0)
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=5 got 1011 with [sample.idx_in_epoch=5, sample.epoch_idx=2, idx=11]
+[Rank 1][2025-02-15 15:35:12][ExternalSource.__call__] 	StopIteration: sample.idx_in_epoch=8, len(self.indices)=8
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=5 got 1004 with [sample.idx_in_epoch=5, sample.epoch_idx=2, idx=4]
+[Rank 0][2025-02-15 15:35:12][ExternalSource.__call__] 	StopIteration: sample.idx_in_epoch=9, len(self.indices)=9
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=6 got 1000 with [sample.idx_in_epoch=6, sample.epoch_idx=2, idx=0]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=6 got 1008 with [sample.idx_in_epoch=6, sample.epoch_idx=2, idx=8]
+[Rank 1][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=7 got 1001 with [sample.idx_in_epoch=7, sample.epoch_idx=2, idx=1]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=7 got 1014 with [sample.idx_in_epoch=7, sample.epoch_idx=2, idx=14]
+[Rank 0][2025-02-15 15:35:12][__main__] --> validation_i=2 iteration_i=8 got 1016 with [sample.idx_in_epoch=8, sample.epoch_idx=2, idx=16]
+[Rank 1][2025-02-15 15:35:12][__main__] Completed validation_i=2
+[Rank 0][2025-02-15 15:35:12][__main__] Completed validation_i=2
